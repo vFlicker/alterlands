@@ -1,14 +1,4 @@
-import { JSX } from 'react';
+import { withProviders } from './providers';
+import { Routing } from './Routing';
 
-import { Button } from '~/shared/ui/Button';
-
-function App(): JSX.Element {
-  return (
-    <div>
-      <h1>Hello world</h1>
-      <Button>Click me</Button>
-    </div>
-  );
-}
-
-export { App };
+export const App = withProviders(Routing);

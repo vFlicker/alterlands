@@ -1,11 +1,15 @@
-import { JSX, PropsWithChildren } from 'react';
+import styled from '@emotion/styled';
 
-type ButtonProps = PropsWithChildren<{
-  className?: string;
-}>;
+import { Color } from '../theme/colors';
 
-function Button({ children, className }: ButtonProps): JSX.Element {
-  return <button className={className}>{children}</button>;
-}
+const StyledButton = styled('button')`
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: ${Color.ACCENT};
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+`;
 
-export { Button };
+export { StyledButton as Button };
