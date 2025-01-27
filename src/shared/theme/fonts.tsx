@@ -14,15 +14,7 @@ const enum Font {
 const globalFonts = css`
   @font-face {
     font-family: 'Roboto';
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    src: url(${robotoSemiBold}) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
     src: url(${robotoRegular}) format('woff2');
@@ -38,7 +30,15 @@ const globalFonts = css`
 
   @font-face {
     font-family: 'Roboto';
-    font-weight: bold;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url(${robotoSemiBold}) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
     src: url(${robotoBold}) format('woff2');
