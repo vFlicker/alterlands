@@ -3,6 +3,7 @@ import { ComponentType, JSX } from 'react';
 
 import { globalColors } from '~/shared/theme/colors';
 import { globalFonts } from '~/shared/theme/fonts';
+import { SpriteWithIcons } from '~/shared/theme/icons';
 import { globalNormalize } from '~/shared/theme/normalize';
 import { globalRadiuses } from '~/shared/theme/radiuses';
 import { globalResets } from '~/shared/theme/resets';
@@ -18,6 +19,8 @@ export const withTheme = (Component: ComponentType): ComponentType => {
         <Global styles={globalColors} />
 
         <Component />
+
+        <SpriteWithIcons />
       </>
     );
   }

@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 
 import { Button } from '~/shared/ui/Button';
+import { Icons } from '~/shared/ui/Icons';
 import { Typography, TypographyVariant } from '~/shared/ui/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
@@ -11,6 +12,7 @@ function CountryPage(): JSX.Element {
       <StyledParagraph>
         This is a description of the country page.
       </StyledParagraph>
+      <Icons />
       <Button>Click me</Button>
     </div>
   );
