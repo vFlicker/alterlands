@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { Button } from '~/shared/ui/Button';
 import { Icon } from '~/shared/ui/Icon';
+import { IconButton } from '~/shared/ui/IconButton';
 
 function Buttons(): JSX.Element {
   return (
@@ -17,6 +18,14 @@ function Buttons(): JSX.Element {
       >
         Buy
       </Button>
+
+      <IconButton size="medium" variant="outlined" color="accent">
+        <Icon name="icon-chevron" />
+      </IconButton>
+
+      <IconButton size="small" variant="filled" color="transparent">
+        <Icon name="icon-plus" />
+      </IconButton>
     </StyledWrapper>
   );
 }

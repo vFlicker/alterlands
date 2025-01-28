@@ -100,9 +100,6 @@ const StyledButton = styled.button<ButtonProps>(
     const paddingLeft = leftIcon ? '16px' : '20px';
 
     return css`
-      ${ButtonVariantToCSS[variant]}
-      ${ButtonColorToCSS[color]}
-
       display: inline-flex;
       align-items: center;
       gap: 4px;
@@ -129,6 +126,9 @@ const StyledButton = styled.button<ButtonProps>(
         width: 20px;
         height: 20px;
       }
+
+      ${ButtonVariantToCSS[variant]}
+      ${ButtonColorToCSS[color]}
     `;
   },
 );

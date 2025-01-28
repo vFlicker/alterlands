@@ -76,9 +76,9 @@ const TypographyVariantToCSS = {
 
 const StyledTypography = styled.div<TypographyProps>(({ variant }) => {
   return css`
-    ${TypographyVariantToCSS[variant]}
-
     color: ${Color.WHITE_98};
+
+    ${TypographyVariantToCSS[variant]}
   `;
 });
 
