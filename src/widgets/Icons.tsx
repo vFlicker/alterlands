@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { iconUkraine } from '~/shared/assets/images';
 import { IconName } from '~/shared/theme/icons';
 import { Icon } from '~/shared/ui/Icon';
-
-import { iconUkraine } from '../assets/images';
 
 function Icons(): JSX.Element {
   return (
@@ -58,13 +57,13 @@ function Icons(): JSX.Element {
 
 export { Icons };
 
-const StyledBlock = styled('div')`
+const StyledBlock = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
   max-width: 400px;
   padding: 6px;
-  background-color: white;
+  background-color: #0a3d62;
 `;
 
 const StyledIcon = styled(Icon)`
