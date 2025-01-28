@@ -53,48 +53,36 @@ const IconButtonColorToCss = {
   [IconButtonColor.ACCENT]: css`
     --color-button: ${Color.WHITE_5};
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: ${Color.ACCENT};
     }
 
-    &:active {
+    &:active:not(:disabled) {
       --color-button: ${Color.ACCENT_1};
-    }
-
-    &:disabled {
-      --color-button: ${Color.ACCENT_3};
     }
   `,
   [IconButtonColor.NEUTRAL]: css`
     --color-button: ${Color.WHITE_8};
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: ${Color.WHITE_16};
     }
 
-    &:active {
+    &:active:not(:disabled) {
       --color-button: ${Color.WHITE_42};
-    }
-
-    &:disabled {
-      --color-button: ${Color.WHITE_5};
     }
   `,
   [IconButtonColor.TRANSPARENT]: css`
     --color-button: transparent;
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: transparent;
     }
 
-    &:active {
-      --color-button: transparent;
-    }
-
-    &:disabled {
+    &:active:not(:disabled) {
       --color-button: transparent;
     }
   `,
@@ -115,7 +103,7 @@ const StyledIconButton = styled.button<IconButtonProps>(
       cursor: pointer;
 
       &:disabled {
-        color: ${Color.WHITE_87};
+        opacity: 0.5;
         cursor: not-allowed;
       }
 

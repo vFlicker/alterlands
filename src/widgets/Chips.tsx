@@ -2,16 +2,19 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Chip } from '~/shared/ui/Chip';
+import { Typography } from '~/shared/ui/Typography';
 
 function Chips(): JSX.Element {
   const colors = ['orange', 'yellow', 'green', 'white', 'blue', 'red'] as const;
 
   return (
     <StyledWrapper>
+      <Typography variant="heading-3">Chips</Typography>
+
       <StyledChipsWrapper>
         {colors.map((color) => (
           <Chip color={color} size="small">
-            most likes
+            {color} small
           </Chip>
         ))}
       </StyledChipsWrapper>
@@ -19,7 +22,7 @@ function Chips(): JSX.Element {
       <StyledChipsWrapper>
         {colors.map((color) => (
           <Chip color={color} size="small" intensive>
-            most likes
+            {color} small intensive
           </Chip>
         ))}
       </StyledChipsWrapper>
@@ -27,7 +30,7 @@ function Chips(): JSX.Element {
       <StyledChipsWrapper>
         {colors.map((color) => (
           <Chip color={color} size="medium">
-            most likes
+            {color} medium
           </Chip>
         ))}
       </StyledChipsWrapper>
@@ -35,7 +38,7 @@ function Chips(): JSX.Element {
       <StyledChipsWrapper>
         {colors.map((color) => (
           <Chip color={color} size="medium" intensive>
-            most likes
+            {color} medium intensive
           </Chip>
         ))}
       </StyledChipsWrapper>
@@ -55,4 +58,5 @@ const StyledChipsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
 `;

@@ -10,7 +10,8 @@ type ButtonProps = PropsWithChildren<{
   color: `${ButtonColor}`;
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
-}>;
+}> &
+  JSX.IntrinsicElements['button'];
 
 const enum ButtonVariant {
   FILLED = 'filled',
@@ -48,49 +49,37 @@ const ButtonColorToCss = {
   [ButtonColor.ACCENT]: css`
     --color-button: ${Color.ACCENT};
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: ${Color.ACCENT_1};
     }
 
-    &:active {
+    &:active:not(:disabled) {
       --color-button: ${Color.ACCENT_2};
-    }
-
-    &:disabled {
-      --color-button: ${Color.ACCENT_3};
     }
   `,
   [ButtonColor.SECONDARY]: css`
     --color-button: ${Color.GREEN_2};
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: ${Color.GREEN_1};
     }
 
-    &:active {
-      --color-button: ${Color.GREEN_4};
-    }
-
-    &:disabled {
+    &:active:not(:disabled) {
       --color-button: ${Color.GREEN_4};
     }
   `,
   [ButtonColor.NEUTRAL]: css`
     --color-button: ${Color.WHITE_8};
 
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       --color-button: ${Color.WHITE_30};
     }
 
-    &:active {
+    &:active:not(:disabled) {
       --color-button: ${Color.WHITE_64};
-    }
-
-    &:disabled {
-      --color-button: ${Color.WHITE_8};
     }
   `,
 };
@@ -119,7 +108,7 @@ const StyledButton = styled.button<ButtonProps>(
       cursor: pointer;
 
       &:disabled {
-        color: ${Color.WHITE_87};
+        opacity: 0.5;
         cursor: not-allowed;
       }
 
