@@ -5,8 +5,8 @@ import { JSX, PropsWithChildren } from 'react';
 import { Color } from '../theme/colors';
 
 type ButtonProps = PropsWithChildren<{
-  variant: ButtonVariant;
-  color: ButtonColor;
+  variant: `${ButtonVariant}`;
+  color: `${ButtonColor}`;
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
 }>;
@@ -30,7 +30,7 @@ function Button(props: ButtonProps): JSX.Element {
   );
 }
 
-export { Button, ButtonColor, ButtonVariant };
+export { Button };
 
 const ButtonVariantToCSS = {
   [ButtonVariant.FILLED]: css`

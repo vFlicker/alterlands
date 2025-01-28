@@ -1,20 +1,19 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { IconName } from '~/shared/theme/icons';
-import { Button, ButtonColor, ButtonVariant } from '~/shared/ui/Button';
+import { Button } from '~/shared/ui/Button';
 import { Icon } from '~/shared/ui/Icon';
 
 function Buttons(): JSX.Element {
   return (
     <StyledWrapper>
-      <Button color={ButtonColor.ACCENT} variant={ButtonVariant.FILLED}>
+      <Button color="accent" variant="filled">
         Click me
       </Button>
       <Button
-        color={ButtonColor.SECONDARY}
-        variant={ButtonVariant.OUTLINED}
-        leftIcon={<Icon name={IconName.ICON_PLUS} />}
+        variant="filled"
+        color="accent"
+        leftIcon={<Icon name="icon-plus" />}
       >
         Buy
       </Button>

@@ -6,8 +6,8 @@ import { IconName } from '~/shared/theme/icons';
 
 type IconProps = PropsWithChildren<{
   className?: string;
-  name: IconName;
-  size?: IconSize;
+  name: `${IconName}`;
+  size?: `${IconSize}`;
 }>;
 
 const enum IconSize {
@@ -24,7 +24,7 @@ function Icon(props: IconProps) {
   );
 }
 
-export { Icon, IconSize };
+export { Icon };
 
 const IconNameToCSS = {
   [IconName.ICON_ARROW_BIG]: css`

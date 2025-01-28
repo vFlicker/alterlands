@@ -5,8 +5,7 @@ import { PropsWithChildren } from 'react';
 import { Color } from '~/shared/theme/colors';
 
 type TypographyProps = PropsWithChildren<{
-  variant: TypographyVariant;
-  $color?: Color;
+  variant: `${TypographyVariant}`;
 }>;
 
 const enum TypographyVariant {
@@ -75,14 +74,12 @@ const TypographyVariantToCSS = {
   `,
 };
 
-const StyledTypography = styled.div<TypographyProps>(({ $color, variant }) => {
-  const defaultColor = $color || Color.WHITE_98;
-
+const StyledTypography = styled.div<TypographyProps>(({ variant }) => {
   return css`
     ${TypographyVariantToCSS[variant]}
 
-    color: ${defaultColor};
+    color: ${Color.WHITE_98};
   `;
 });
 
-export { StyledTypography as Typography, TypographyVariant };
+export { StyledTypography as Typography };

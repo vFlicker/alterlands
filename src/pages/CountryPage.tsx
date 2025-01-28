@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Typography, TypographyVariant } from '~/shared/ui/Typography';
+import { Typography } from '~/shared/ui/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 import { Buttons } from '~/widgets/Buttons';
 import { Icons } from '~/widgets/Icons';
@@ -29,12 +29,5 @@ const StyledWrapper = styled.div`
   padding: 4px;
 `;
 
-const StyledTitle = withAttrs(
-  { variant: TypographyVariant.HEADING_1 },
-  Typography,
-);
-
-const StyledParagraph = withAttrs(
-  { variant: TypographyVariant.BODY_2 },
-  Typography,
-);
+const StyledTitle = withAttrs({ variant: 'heading-1' }, Typography);
+const StyledParagraph = withAttrs({ variant: 'body-2' }, Typography);
