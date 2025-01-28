@@ -21,7 +21,7 @@ const enum TypographyVariant {
   BODY_5 = 'body-5',
 }
 
-const TypographyVariantToCSS = {
+const TypographyVariantToCss = {
   [TypographyVariant.HEADING_1]: css`
     font-size: 36px;
     line-height: 1.17;
@@ -78,7 +78,7 @@ const StyledTypography = styled.div<TypographyProps>(({ variant }) => {
   return css`
     color: ${Color.WHITE_98};
 
-    ${TypographyVariantToCSS[variant]}
+    ${TypographyVariantToCss[variant]}
   `;
 });
 

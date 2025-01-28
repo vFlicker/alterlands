@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
 import { Color } from '../theme/colors';
+import { Radius } from '../theme/radiuses';
 
 type IconButtonProps = PropsWithChildren<{
   size: `${IconButtonSize}`;
@@ -26,7 +27,7 @@ const enum IconButtonColor {
   TRANSPARENT = 'transparent',
 }
 
-const IconButtonSizeToCSS = {
+const IconButtonSizeToCss = {
   [IconButtonSize.SMALL]: css`
     width: 24px;
     height: 24px;
@@ -37,7 +38,7 @@ const IconButtonSizeToCSS = {
   `,
 };
 
-const IconButtonVariantToCSS = {
+const IconButtonVariantToCss = {
   [IconButtonVariant.FILLED]: css`
     border-color: transparent;
     background-color: var(--color-button);
@@ -48,7 +49,7 @@ const IconButtonVariantToCSS = {
   `,
 };
 
-const IconButtonColorToCSS = {
+const IconButtonColorToCss = {
   [IconButtonColor.ACCENT]: css`
     --color-button: ${Color.WHITE_5};
 
@@ -108,7 +109,7 @@ const StyledIconButton = styled.button<IconButtonProps>(
 
       border-width: 1px;
       border-style: solid;
-      border-radius: 50%;
+      border-radius: ${Radius.RADIUS_CIRCLE};
       color: ${Color.WHITE_98};
 
       cursor: pointer;
@@ -123,9 +124,9 @@ const StyledIconButton = styled.button<IconButtonProps>(
         height: 24px;
       }
 
-      ${IconButtonSizeToCSS[size]}
-      ${IconButtonVariantToCSS[variant]}
-      ${IconButtonColorToCSS[color]}
+      ${IconButtonSizeToCss[size]}
+      ${IconButtonVariantToCss[variant]}
+      ${IconButtonColorToCss[color]}
     `;
   },
 );

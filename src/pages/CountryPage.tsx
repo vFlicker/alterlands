@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Typography } from '~/shared/ui/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 import { Buttons } from '~/widgets/Buttons';
+import { Chips } from '~/widgets/Chips';
 import { Icons } from '~/widgets/Icons';
 
 function CountryPage(): JSX.Element {
@@ -15,6 +16,7 @@ function CountryPage(): JSX.Element {
       </StyledParagraph>
       <Icons />
       <Buttons />
+      <Chips />
     </StyledWrapper>
   );
 }

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { JSX, PropsWithChildren } from 'react';
 
 import { Color } from '../theme/colors';
+import { Radius } from '../theme/radiuses';
 
 type ButtonProps = PropsWithChildren<{
   variant: `${ButtonVariant}`;
@@ -32,7 +33,7 @@ function Button(props: ButtonProps): JSX.Element {
 
 export { Button };
 
-const ButtonVariantToCSS = {
+const ButtonVariantToCss = {
   [ButtonVariant.FILLED]: css`
     border-color: transparent;
     background-color: var(--color-button);
@@ -43,7 +44,7 @@ const ButtonVariantToCSS = {
   `,
 };
 
-const ButtonColorToCSS = {
+const ButtonColorToCss = {
   [ButtonColor.ACCENT]: css`
     --color-button: ${Color.ACCENT};
 
@@ -108,7 +109,7 @@ const StyledButton = styled.button<ButtonProps>(
 
       border-width: 1px;
       border-style: solid;
-      border-radius: 120px;
+      border-radius: ${Radius.RADIUS_120};
       color: ${Color.WHITE_98};
 
       font-size: 14px;
@@ -127,8 +128,8 @@ const StyledButton = styled.button<ButtonProps>(
         height: 20px;
       }
 
-      ${ButtonVariantToCSS[variant]}
-      ${ButtonColorToCSS[color]}
+      ${ButtonVariantToCss[variant]}
+      ${ButtonColorToCss[color]}
     `;
   },
 );

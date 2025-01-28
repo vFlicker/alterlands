@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
 import { Color } from '../theme/colors';
+import { Radius } from '../theme/radiuses';
 
 type LabelButtonProps = PropsWithChildren<{
   color: `${LabelButtonColor}`;
@@ -15,7 +16,7 @@ const enum LabelButtonColor {
   GREEN = 'green',
 }
 
-const LabelButtonColorToCSS = {
+const LabelButtonColorToCss = {
   [LabelButtonColor.WHITE]: css`
     --color-text: ${Color.WHITE_87};
 
@@ -85,7 +86,7 @@ const LabelButtonColorToCSS = {
 const StyledLabelButton = styled.button<LabelButtonProps>(({ color }) => {
   return css`
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: ${Radius.RADIUS_4};
 
     color: var(--color-text);
     background-color: var(--color-button);
@@ -101,7 +102,7 @@ const StyledLabelButton = styled.button<LabelButtonProps>(({ color }) => {
       cursor: not-allowed;
     }
 
-    ${LabelButtonColorToCSS[color]}
+    ${LabelButtonColorToCss[color]}
   `;
 });
 

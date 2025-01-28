@@ -26,7 +26,7 @@ function Icon(props: IconProps) {
 
 export { Icon };
 
-const IconNameToCSS = {
+const IconNameToCss = {
   [IconName.ICON_ARROW_BIG]: css`
     fill: none;
     stroke: currentColor;
@@ -197,7 +197,7 @@ const IconNameToCSS = {
   `,
 };
 
-const IconSizeToCSS = {
+const IconSizeToCss = {
   [IconSize.Medium]: css`
     width: 24px;
     height: 24px;
@@ -208,7 +208,7 @@ const StyledIcon = styled.svg<IconProps>(({ name, size }) => {
   const defaultIconSize = size || IconSize.Medium;
 
   return css`
-    ${IconSizeToCSS[defaultIconSize]};
-    ${IconNameToCSS[name]};
+    ${IconSizeToCss[defaultIconSize]};
+    ${IconNameToCss[name]};
   `;
 });
