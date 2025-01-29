@@ -83,27 +83,25 @@ const LabelButtonColorToCss = {
   `,
 };
 
-const StyledLabelButton = styled.button<LabelButtonProps>(({ color }) => {
-  return css`
-    padding: 4px 8px;
-    border-radius: ${Radius.RADIUS_4};
+const StyledLabelButton = styled.button<LabelButtonProps>`
+  padding: 4px 8px;
+  border-radius: ${Radius.RADIUS_4};
 
-    color: var(--color-text);
-    background-color: var(--color-button);
+  color: var(--color-text);
+  background-color: var(--color-button);
 
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.43;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    &:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 
-    ${LabelButtonColorToCss[color]}
-  `;
-});
+  ${({ color }) => LabelButtonColorToCss[color]}
+`;
 
 export { StyledLabelButton as LabelButton };

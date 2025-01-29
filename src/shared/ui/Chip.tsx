@@ -92,21 +92,21 @@ const ChipIntensiveColorToCss = {
   `,
 };
 
-const StyledChip = styled.div<LabelButtonProps>(
-  ({ color, size, intensive }) => {
-    return css`
-      padding: 4px 8px;
-      border-radius: ${Radius.RADIUS_4};
+const getChipColorCss = (color: `${ChipColor}`, intensive: boolean) => {
+  return intensive ? ChipIntensiveColorToCss[color] : ChipColorToCss[color];
+};
 
-      color: var(--color-text);
-      background-color: var(--color-chip);
+const StyledChip = styled.div<LabelButtonProps>`
+  padding: 4px 8px;
+  border-radius: ${Radius.RADIUS_4};
 
-      line-height: 1.43;
+  color: var(--color-text);
+  background-color: var(--color-chip);
 
-      ${ChipSizeToCss[size]}
-      ${intensive ? ChipIntensiveColorToCss[color] : ChipColorToCss[color]}
-    `;
-  },
-);
+  line-height: 1.43;
+
+  ${({ size }) => ChipSizeToCss[size]}
+  ${({ color, intensive = false }) => getChipColorCss(color, intensive)}
+`;
 
 export { StyledChip as Chip };

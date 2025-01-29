@@ -93,41 +93,42 @@ const ButtonColorToCss = {
   `,
 };
 
-const StyledButton = styled.button<ButtonProps>(
-  ({ variant, color, leftIcon, rightIcon }) => {
-    const paddingRight = rightIcon ? '16px' : '20px';
-    const paddingLeft = leftIcon ? '16px' : '20px';
+const getPaddingCss = (hasLeftIcon: boolean, hasRightIcon: boolean) => {
+  const paddingRight = hasRightIcon ? '16px' : '20px';
+  const paddingLeft = hasLeftIcon ? '16px' : '20px';
 
-    return css`
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+  return css`
+    padding: 8px ${paddingRight} 8px ${paddingLeft};
+  `;
+};
 
-      padding: 8px ${paddingRight} 8px ${paddingLeft};
+const StyledButton = styled.button<ButtonProps>`
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 
-      border-width: 1px;
-      border-style: solid;
-      border-radius: ${Radius.RADIUS_120};
-      color: ${Color.WHITE_98};
+  border-width: 1px;
+  border-style: solid;
+  border-radius: ${Radius.RADIUS_120};
+  color: ${Color.WHITE_98};
 
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.43;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
 
-      cursor: pointer;
+  cursor: pointer;
 
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-      svg {
-        width: 20px;
-        height: 20px;
-      }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
-      ${ButtonVariantToCss[variant]}
-      ${ButtonColorToCss[color]}
-    `;
-  },
-);
+  ${({ variant }) => ButtonVariantToCss[variant]}
+  ${({ color }) => ButtonColorToCss[color]}
+  ${({ leftIcon, rightIcon }) => getPaddingCss(!!leftIcon, !!rightIcon)}
+`;

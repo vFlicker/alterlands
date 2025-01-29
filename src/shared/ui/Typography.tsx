@@ -74,12 +74,10 @@ const TypographyVariantToCss = {
   `,
 };
 
-const StyledTypography = styled.div<TypographyProps>(({ variant }) => {
-  return css`
-    color: ${Color.WHITE_98};
+const StyledTypography = styled.div<TypographyProps>`
+  color: ${Color.WHITE_98};
 
-    ${TypographyVariantToCss[variant]}
-  `;
-});
+  ${({ variant }) => TypographyVariantToCss[variant]}
+`;
 
 export { StyledTypography as Typography };

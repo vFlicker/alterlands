@@ -204,11 +204,7 @@ const IconSizeToCss = {
   `,
 };
 
-const StyledIcon = styled.svg<IconProps>(({ name, size }) => {
-  const defaultIconSize = size || IconSize.Medium;
-
-  return css`
-    ${IconSizeToCss[defaultIconSize]};
-    ${IconNameToCss[name]};
-  `;
-});
+const StyledIcon = styled.svg<IconProps>`
+  ${({ size = IconSize.Medium }) => IconSizeToCss[size]};
+  ${({ name }) => IconNameToCss[name]};
+`;

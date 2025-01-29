@@ -88,35 +88,31 @@ const IconButtonColorToCss = {
   `,
 };
 
-const StyledIconButton = styled.button<IconButtonProps>(
-  ({ variant, color, size }) => {
-    return css`
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+const StyledIconButton = styled.button<IconButtonProps>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-      border-width: 1px;
-      border-style: solid;
-      border-radius: ${Radius.RADIUS_CIRCLE};
-      color: ${Color.WHITE_98};
+  border-width: 1px;
+  border-style: solid;
+  border-radius: ${Radius.RADIUS_CIRCLE};
+  color: ${Color.WHITE_98};
 
-      cursor: pointer;
+  cursor: pointer;
 
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-      svg {
-        width: 24px;
-        height: 24px;
-      }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 
-      ${IconButtonSizeToCss[size]}
-      ${IconButtonVariantToCss[variant]}
-      ${IconButtonColorToCss[color]}
-    `;
-  },
-);
+  ${({ size }) => IconButtonSizeToCss[size]}
+  ${({ variant }) => IconButtonVariantToCss[variant]}
+  ${({ color }) => IconButtonColorToCss[color]}
+`;
 
 export { StyledIconButton as IconButton };
