@@ -13,7 +13,7 @@ function Chips(): JSX.Element {
 
       <StyledChipsWrapper>
         {colors.map((color) => (
-          <Chip color={color} size="small">
+          <Chip key={color + 'small'} color={color} size="small">
             {color} small
           </Chip>
         ))}
@@ -21,7 +21,12 @@ function Chips(): JSX.Element {
 
       <StyledChipsWrapper>
         {colors.map((color) => (
-          <Chip color={color} size="small" intensive>
+          <Chip
+            key={color + 'small intensive'}
+            color={color}
+            size="small"
+            intensive
+          >
             {color} small intensive
           </Chip>
         ))}
@@ -29,7 +34,7 @@ function Chips(): JSX.Element {
 
       <StyledChipsWrapper>
         {colors.map((color) => (
-          <Chip color={color} size="medium">
+          <Chip key={color + 'medium'} color={color} size="medium">
             {color} medium
           </Chip>
         ))}
@@ -37,7 +42,12 @@ function Chips(): JSX.Element {
 
       <StyledChipsWrapper>
         {colors.map((color) => (
-          <Chip color={color} size="medium" intensive>
+          <Chip
+            key={color + 'medium intensive'}
+            color={color}
+            size="medium"
+            intensive
+          >
             {color} medium intensive
           </Chip>
         ))}

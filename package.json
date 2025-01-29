@@ -16,6 +16,7 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "11.13.5",
     "@eslint/js": "9.19.0",
     "@types/compose-function": "0.0.33",
     "@types/react": "19.0.8",
