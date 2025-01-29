@@ -27,7 +27,11 @@ function Icon(props: IconProps) {
 export { Icon };
 
 const IconNameToCss = {
-  [IconName.ICON_ARROW_BIG]: css`
+  [IconName.ICON_ARROW_BIG_DOWN]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_ARROW_BIG_UP]: css`
     fill: none;
     stroke: currentColor;
   `,

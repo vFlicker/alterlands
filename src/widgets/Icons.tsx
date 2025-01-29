@@ -12,7 +12,8 @@ function Icons(): JSX.Element {
       <Typography variant="heading-3">Icons</Typography>
 
       <StyledBlock>
-        <StyledIcon name={IconName.ICON_ARROW_BIG} />
+        <StyledIcon name={IconName.ICON_ARROW_BIG_DOWN} />
+        <StyledIcon name={IconName.ICON_ARROW_BIG_UP} />
         <StyledIcon name={IconName.ICON_BANKNOTE} />
         <StyledIcon name={IconName.ICON_BIG_DOTE} />
         <StyledIcon name={IconName.ICON_CALENDAR} />

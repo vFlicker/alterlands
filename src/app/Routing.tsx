@@ -1,11 +1,11 @@
 import { JSX } from 'react';
 
-import { CountryPage } from '~/pages/CountryPage';
+import { UiKitPage } from '~/pages/UiKitPage';
 
 function Routing(): JSX.Element {
   return (
     <div>
-      <CountryPage />
+      <UiKitPage />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 const enum IconName {
-  ICON_ARROW_BIG = 'icon-arrow-big',
+  ICON_ARROW_BIG_DOWN = 'icon-arrow-big-down',
+  ICON_ARROW_BIG_UP = 'icon-arrow-big-up',
   ICON_BANKNOTE = 'icon-banknote',
   ICON_BIG_DOTE = 'icon-big-dote',
   ICON_CALENDAR = 'icon-calendar',
@@ -52,14 +53,17 @@ const StyledSpriteWithIcons = styled.svg`
 function SpriteWithIcons() {
   return (
     <StyledSpriteWithIcons xmlns="http://www.w3.org/2000/svg">
-      <symbol id="icon-arrow-big" viewBox="0 0 24 24">
+      <symbol id="icon-arrow-big-down" viewBox="0 0 24 24">
         <path d="M14 6C14.5523 6 15 6.44771 15 7L15 11C15 11.5523 15.4477 12 16 12L16.5858 12C17.4767 12 17.9229 13.0771 17.2929 13.7071L12.7071 18.2929C12.3166 18.6834 11.6834 18.6834 11.2929 18.2929L6.70711 13.7071C6.07714 13.0771 6.52331 12 7.41421 12L8 12C8.55229 12 9 11.5523 9 11L9 7C9 6.44771 9.44772 6 10 6L14 6Z" />
+      </symbol>
+      <symbol id="icon-arrow-big-up" viewBox="0 0 24 24">
+        <path d="M10 19C9.44772 19 9 18.5523 9 18V14C9 13.4477 8.55228 13 8 13H7.41421C6.52331 13 6.07714 11.9229 6.70711 11.2929L11.2929 6.70711C11.6834 6.31658 12.3166 6.31658 12.7071 6.70711L17.2929 11.2929C17.9229 11.9229 17.4767 13 16.5858 13H16C15.4477 13 15 13.4477 15 14V18C15 18.5523 14.5523 19 14 19H10Z" />
       </symbol>
       <symbol id="icon-banknote" viewBox="0 0 24 24">
         <path
           d="M7.2 12H7.208M16.8 12C16.8 12 16.8049 12 16.808 12M5.6 7H18.4C19.2837 7 20 7.74619 20 8.66667V15.3333C20 16.2538 19.2837 17 18.4 17H5.6C4.71634 17 4 16.2538 4 15.3333V8.66667C4 7.74619 4.71634 7 5.6 7ZM13.6 12C13.6 12.9205 12.8837 13.6667 12 13.6667C11.1163 13.6667 10.4 12.9205 10.4 12C10.4 11.0795 11.1163 10.3333 12 10.3333C12.8837 10.3333 13.6 11.0795 13.6 12Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-big-dote" viewBox="0 0 24 24">
@@ -68,22 +72,22 @@ function SpriteWithIcons() {
       <symbol id="icon-calendar" viewBox="0 0 24 24">
         <path
           d="M8.88889 5V8.2M15.1111 5V8.2M5 11H19M6.55556 6.6H17.4444C18.3036 6.6 19 7.31634 19 8.2V17.5C19 18.3837 18.3036 19.1 17.4444 19.1H6.55556C5.69645 19.1 5 18.3837 5 17.5V8.2C5 7.31634 5.69645 6.6 6.55556 6.6Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-chevron" viewBox="0 0 24 24">
         <path
           d="M7 10L12 14L17 10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-circle-dollar-sign" viewBox="0 0 24 24">
         <path
           d="M14.8 9.2H10.6C10.2287 9.2 9.8726 9.3475 9.61005 9.61005C9.3475 9.8726 9.2 10.2287 9.2 10.6C9.2 10.9713 9.3475 11.3274 9.61005 11.5899C9.8726 11.8525 10.2287 12 10.6 12H13.4C13.7713 12 14.1274 12.1475 14.3899 12.4101C14.6525 12.6726 14.8 13.0287 14.8 13.4C14.8 13.7713 14.6525 14.1274 14.3899 14.3899C14.1274 14.6525 13.7713 14.8 13.4 14.8H9.2M12 16.2V7.8M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-close" viewBox="0 0 24 24">
@@ -110,23 +114,23 @@ function SpriteWithIcons() {
       <symbol id="icon-full-screen" viewBox="0 0 24 24">
         <path
           d="M8.88889 5H6.55556C6.143 5 5.74733 5.16389 5.45561 5.45561C5.16389 5.74733 5 6.143 5 6.55556V8.88889M19 8.88889V6.55556C19 6.143 18.8361 5.74733 18.5444 5.45561C18.2527 5.16389 17.857 5 17.4444 5H15.1111M5 15.1111V17.4444C5 17.857 5.16389 18.2527 5.45561 18.5444C5.74733 18.8361 6.143 19 6.55556 19H8.88889M15.1111 19H17.4444C17.857 19 18.2527 18.8361 18.5444 18.5444C18.8361 18.2527 19 17.857 19 17.4444V15.1111"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-info" viewBox="0 0 24 24">
         <path
           xmlns="http://www.w3.org/2000/svg"
           d="M12 14.8V12M12 9.2H12.007M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-job" viewBox="0 0 24 24">
         <path
           d="M12 12.7778H12.008M15.2 8.11111V6.55556C15.2 6.143 15.0314 5.74733 14.7314 5.45561C14.4313 5.16389 14.0243 5 13.6 5H10.4C9.97565 5 9.56869 5.16389 9.26863 5.45561C8.96857 5.74733 8.8 6.143 8.8 6.55556V8.11111M20 13.5556C17.6262 15.0792 14.8444 15.8915 12 15.8915C9.15556 15.8915 6.37377 15.0792 4 13.5556M5.6 8.11111H18.4C19.2837 8.11111 20 8.80756 20 9.66667V17.4444C20 18.3036 19.2837 19 18.4 19H5.6C4.71634 19 4 18.3036 4 17.4444V9.66667C4 8.80756 4.71634 8.11111 5.6 8.11111Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-layout-dashboard" viewBox="0 0 24 24">
@@ -138,8 +142,8 @@ function SpriteWithIcons() {
       <symbol id="icon-maximize" viewBox="0 0 24 24">
         <path
           d="M14.3333 5H19M19 5V9.66667M19 5L13.5556 10.4444M9.66667 19H5M5 19V14.3333M5 19L10.4444 13.5556"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-message-circle" viewBox="0 0 24 24">
@@ -148,8 +152,8 @@ function SpriteWithIcons() {
       <symbol id="icon-minimize" viewBox="0 0 24 24">
         <path
           d="M5.77778 13.5556H10.4444M10.4444 13.5556V18.2222M10.4444 13.5556L5 19M18.2222 10.4444H13.5556M13.5556 10.4444V5.77778M13.5556 10.4444L19 5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-minimize-1" viewBox="0 0 24 24">
@@ -179,8 +183,8 @@ function SpriteWithIcons() {
       <symbol id="icon-redirect" viewBox="0 0 24 24">
         <path
           d="M19 12.7778V17.4444C19 17.857 18.8361 18.2527 18.5444 18.5444C18.2527 18.8361 17.857 19 17.4444 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2527 5 17.857 5 17.4444V6.55556C5 6.143 5.16389 5.74733 5.45561 5.45561C5.74733 5.16389 6.143 5 6.55556 5H11.2222M19 5L12 12M19 5H14.3333M19 5V9.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-replay" viewBox="0 0 24 24">
@@ -193,22 +197,22 @@ function SpriteWithIcons() {
       <symbol id="icon-search" viewBox="0 0 24 24">
         <path
           d="M19 19L15.6556 15.6556M17.4444 11.2222C17.4444 14.6587 14.6587 17.4444 11.2222 17.4444C7.78578 17.4444 5 14.6587 5 11.2222C5 7.78578 7.78578 5 11.2222 5C14.6587 5 17.4444 7.78578 17.4444 11.2222Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-send" viewBox="0 0 24 24">
         <path
           d="M11.2386 12.7605C11.1049 12.627 10.9455 12.5219 10.77 12.4517L5.21964 10.2259C5.15337 10.1994 5.09682 10.1531 5.05758 10.0935C5.01834 10.0338 4.99829 9.96358 5.00011 9.8922C5.00194 9.82081 5.02556 9.7517 5.06781 9.69413C5.11005 9.63656 5.16889 9.59329 5.23644 9.57012L18.5349 5.02065C18.5969 4.99825 18.664 4.99397 18.7284 5.00832C18.7928 5.02267 18.8517 5.05506 18.8983 5.10168C18.9449 5.14831 18.9773 5.20725 18.9917 5.27161C19.006 5.33596 19.0018 5.40308 18.9794 5.46509L14.4299 18.7636C14.4067 18.8311 14.3634 18.89 14.3059 18.9322C14.2483 18.9744 14.1792 18.9981 14.1078 18.9999C14.0364 19.0017 13.9662 18.9817 13.9065 18.9424C13.8469 18.9032 13.8006 18.8466 13.7741 18.7804L11.5483 13.2286C11.4777 13.0533 11.3724 12.894 11.2386 12.7605ZM11.2386 12.7605L18.8961 5.10464"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-settings" viewBox="0 0 24 24">
         <path
           d="M19 7.625H10.25M10.25 7.625C10.25 9.07475 9.07475 10.25 7.625 10.25C6.17525 10.25 5 9.07475 5 7.625C5 6.17525 6.17525 5 7.625 5C9.07475 5 10.25 6.17525 10.25 7.625ZM13.75 16.375H5.875M13.75 16.375C13.75 17.8247 14.9253 19 16.375 19C17.8247 19 19 17.8247 19 16.375C19 14.9253 17.8247 13.75 16.375 13.75C14.9253 13.75 13.75 14.9253 13.75 16.375Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-small-dote" viewBox="0 0 24 24">
@@ -219,8 +223,8 @@ function SpriteWithIcons() {
         <path
           d="M18 9.66942V16.6116C18 17.3752 17.3803 18 16.623 18H9.73774M7.37704 6H14.2623C15.0228 6 15.6393 6.62162 15.6393 7.38843V14.3306C15.6393 15.0974 15.0228 15.719 14.2623 15.719H7.37704C6.61652 15.719 6 15.0974 6 14.3306V7.38843C6 6.62162 6.61652 6 7.37704 6Z"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-star" viewBox="0 0 24 24">
@@ -229,16 +233,16 @@ function SpriteWithIcons() {
       <symbol id="icon-trophy" viewBox="0 0 24 24">
         <path
           d="M7.2 9.6H6C5.46957 9.6 4.96086 9.38929 4.58579 9.01421C4.21071 8.63914 4 8.13043 4 7.6C4 7.06957 4.21071 6.56086 4.58579 6.18579C4.96086 5.81071 5.46957 5.6 6 5.6H7.2M7.2 9.6V4H16.8V9.6M7.2 9.6C7.2 10.873 7.70571 12.0939 8.60589 12.9941C9.50606 13.8943 10.727 14.4 12 14.4C13.273 14.4 14.4939 13.8943 15.3941 12.9941C16.2943 12.0939 16.8 10.873 16.8 9.6M16.8 9.6H18C18.5304 9.6 19.0391 9.38929 19.4142 9.01421C19.7893 8.63914 20 8.13043 20 7.6C20 7.06957 19.7893 6.56086 19.4142 6.18579C19.0391 5.81071 18.5304 5.6 18 5.6H16.8M5.6 20H18.4M10.4 14.128V16C10.4 16.44 10.024 16.784 9.624 16.968C8.68 17.4 8 18.592 8 20M13.6 14.128V16C13.6 16.44 13.976 16.784 14.376 16.968C15.32 17.4 16 18.592 16 20"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-users" viewBox="0 0 24 24">
         <path
           d="M14.8 18V16.6667C14.8 15.9594 14.505 15.2811 13.9799 14.781C13.4548 14.281 12.7426 14 12 14H7.8C7.05739 14 6.3452 14.281 5.8201 14.781C5.295 15.2811 5 15.9594 5 16.6667V18M19 18V16.6667C18.9995 16.0758 18.793 15.5018 18.413 15.0349C18.0329 14.5679 17.5007 14.2344 16.9 14.0867M14.8 6.08667C15.4023 6.23353 15.9361 6.56713 16.3173 7.03487C16.6986 7.50261 16.9055 8.07789 16.9055 8.67C16.9055 9.26211 16.6986 9.83739 16.3173 10.3051C15.9361 10.7729 15.4023 11.1065 14.8 11.2533M12.7 8.66667C12.7 10.1394 11.4464 11.3333 9.9 11.3333C8.3536 11.3333 7.1 10.1394 7.1 8.66667C7.1 7.19391 8.3536 6 9.9 6C11.4464 6 12.7 7.19391 12.7 8.66667Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-verified" viewBox="0 0 24 24">
@@ -250,8 +254,8 @@ function SpriteWithIcons() {
       <symbol id="icon-vote" viewBox="0 0 24 24">
         <path
           d="M9.9 12L11.3 13.4286L14.1 10.5714M19 17H5M7.1 8.42857C7.1 7.64286 7.73 7 8.5 7H15.5C15.8713 7 16.2274 7.15051 16.4899 7.41842C16.7525 7.68633 16.9 8.04969 16.9 8.42857V17H7.1V8.42857Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </symbol>
       <symbol id="icon-wallet" viewBox="0 0 24 24">

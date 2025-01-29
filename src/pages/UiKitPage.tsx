@@ -6,8 +6,9 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 import { Buttons } from '~/widgets/Buttons';
 import { Chips } from '~/widgets/Chips';
 import { Icons } from '~/widgets/Icons';
+import { Reactions } from '~/widgets/Reactions';
 
-function CountryPage(): JSX.Element {
+function UiKitPage(): JSX.Element {
   return (
     <StyledWrapper>
       <StyledTitle>CountryPage</StyledTitle>
@@ -15,13 +16,14 @@ function CountryPage(): JSX.Element {
         This is a description of the country page.
       </StyledParagraph>
       <Icons />
+      <Reactions />
       <Buttons />
       <Chips />
     </StyledWrapper>
   );
 }
 
-export { CountryPage };
+export { UiKitPage };
 
 const StyledWrapper = styled.div`
   display: flex;
