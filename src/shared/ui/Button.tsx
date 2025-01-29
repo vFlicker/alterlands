@@ -40,7 +40,7 @@ const ButtonVariantToCss = {
     background-color: var(--color-button);
   `,
   [ButtonVariant.OUTLINED]: css`
-    border-color: var(--color-button);
+    border-color: var(--color-border);
     background-color: transparent;
   `,
 };
@@ -48,38 +48,47 @@ const ButtonVariantToCss = {
 const ButtonColorToCss = {
   [ButtonColor.ACCENT]: css`
     --color-button: ${Color.ACCENT};
+    --color-border: ${Color.ACCENT};
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
       --color-button: ${Color.ACCENT_1};
+      --color-border: ${Color.ACCENT_1};
     }
 
     &:active:not(:disabled) {
       --color-button: ${Color.ACCENT_2};
+      --color-border: ${Color.ACCENT_2};
     }
   `,
   [ButtonColor.SECONDARY]: css`
     --color-button: ${Color.GREEN_2};
+    --color-border: ${Color.GREEN_2};
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
       --color-button: ${Color.GREEN_1};
+      --color-border: ${Color.GREEN_1};
     }
 
     &:active:not(:disabled) {
       --color-button: ${Color.GREEN_4};
+      --color-border: ${Color.GREEN_4};
     }
   `,
   [ButtonColor.NEUTRAL]: css`
     --color-button: ${Color.WHITE_8};
+    --color-border: ${Color.WHITE_30};
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
       --color-button: ${Color.WHITE_30};
+      --color-border: ${Color.WHITE_42};
     }
 
     &:active:not(:disabled) {
       --color-button: ${Color.WHITE_64};
+      --color-border: ${Color.WHITE_64};
     }
   `,
 };
