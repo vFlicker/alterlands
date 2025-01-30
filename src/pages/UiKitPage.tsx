@@ -6,6 +6,7 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 import { Buttons } from '~/widgets/Buttons';
 import { Chips } from '~/widgets/Chips';
 import { Icons } from '~/widgets/Icons';
+import { Inputs } from '~/widgets/Inputs';
 import { Reactions } from '~/widgets/Reactions';
 
 function UiKitPage(): JSX.Element {
@@ -16,6 +17,7 @@ function UiKitPage(): JSX.Element {
         This is a description of the country page.
       </StyledParagraph>
       <Icons />
+      <Inputs />
       <Reactions />
       <Buttons />
       <Chips />
