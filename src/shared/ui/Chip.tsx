@@ -80,7 +80,7 @@ const ChipIntensiveColorToCss = {
   `,
   [ChipColor.WHITE]: css`
     --color-text: ${Color.WHITE_98};
-    --color-chip: ${Color.WHITE_70};
+    --color-chip: ${Color.WHITE_42};
   `,
   [ChipColor.BLUE]: css`
     --color-text: ${Color.WHITE_98};

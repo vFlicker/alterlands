@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
 
 const StyledTitle = withAttrs(
   {
-    variant: 'body-4',
+    variant: 'body-2',
     $color: Color.WHITE_42,
   },
   Typography,

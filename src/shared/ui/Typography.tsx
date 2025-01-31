@@ -66,7 +66,7 @@ const TypographyVariantToCss = {
   [TypographyVariant.BODY_4]: css`
     font-size: 14px;
     line-height: 1.14;
-    font-weight: 500;
+    font-weight: 400;
   `,
   [TypographyVariant.BODY_5]: css`
     font-size: 12px;
