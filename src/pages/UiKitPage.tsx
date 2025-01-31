@@ -12,9 +12,9 @@ import { Reactions } from '~/widgets/Reactions';
 function UiKitPage(): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledTitle>CountryPage</StyledTitle>
+      <StyledTitle>UI Kit page</StyledTitle>
       <StyledParagraph>
-        This is a description of the country page.
+        This is a description of the UI Kit page.
       </StyledParagraph>
       <Icons />
       <Inputs />

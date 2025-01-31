@@ -32,7 +32,7 @@ const StyledInputWrapper = styled.div`
   align-items: center;
   gap: 8px;
 
-  padding: 9px 16px;
+  padding: 7px 16px;
   border: 1px solid ${Color.WHITE_16};
   border-radius: ${Radius.RADIUS_24};
 

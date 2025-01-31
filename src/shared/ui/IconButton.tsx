@@ -106,6 +106,7 @@ const StyledIconButton = styled.button<IconButtonProps>`
   }
 
   svg {
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
   }
