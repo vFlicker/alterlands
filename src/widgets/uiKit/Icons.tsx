@@ -3,8 +3,8 @@ import { JSX } from 'react';
 
 import { iconUkraine } from '~/shared/assets/images';
 import { IconName } from '~/shared/theme/icons';
-import { Icon } from '~/shared/ui/Icon';
-import { Typography } from '~/shared/ui/Typography';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { Typography } from '~/shared/ui/atoms/Typography';
 
 function Icons(): JSX.Element {
   return (

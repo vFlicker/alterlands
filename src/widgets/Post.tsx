@@ -3,15 +3,15 @@ import { JSX } from 'react';
 
 import { postImage } from '~/shared/assets/images';
 import { Radius } from '~/shared/theme/radiuses';
-import { Reactions } from '~/shared/ui/Reactions';
-import { Typography } from '~/shared/ui/Typography';
-import { WidgetHeaderInfo } from '~/shared/ui/WidgetHeaderInfo';
+import { Typography } from '~/shared/ui/atoms/Typography';
+import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
+import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 function Post(): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledWidgetHeaderInfo />
+      <StyledWidgetHeader />
       <StyledText>
         Senna is a true legend of our sport and has inspired not only me but
         every driver who races today. He's the greatest to ever race around
@@ -25,7 +25,7 @@ function Post(): JSX.Element {
 
 export { Post };
 
-const StyledWidgetHeaderInfo = styled(WidgetHeaderInfo)`
+const StyledWidgetHeader = styled(WidgetHeader)`
   margin-bottom: 8px;
 `;
 

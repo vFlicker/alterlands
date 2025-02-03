@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { ProfileDropdown } from '~/entity/user/ProfileDropdown';
-import { ConfigurationHeader } from '~/shared/ui/ConfigurationHeader';
+import { ProfileDropdown } from '~/shared/ui/molecules/ProfileDropdown';
+import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 
 function ProfileType(): JSX.Element {
   return (
     <StyledWrapper>
-      <ConfigurationHeader title="Profile type" />
+      <SideBarWidgetHeader title="Profile type" />
       <ProfileDropdown />
     </StyledWrapper>
   );

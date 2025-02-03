@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
-import { Color } from '../theme/colors';
-import { Radius } from '../theme/radiuses';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
 
 type LabelButtonProps = PropsWithChildren<{
   color: `${LabelButtonColor}`;

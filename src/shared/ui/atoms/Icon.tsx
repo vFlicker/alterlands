@@ -2,7 +2,10 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
+import { Color } from '~/shared/theme/colors';
 import { IconName } from '~/shared/theme/icons';
+
+import { withAttrs } from '../withAttrs';
 
 type IconProps = PropsWithChildren<{
   className?: string;
@@ -24,7 +27,7 @@ function Icon(props: IconProps) {
   );
 }
 
-export { Icon, IconSize };
+export { Icon, IconSize, StyledVerifiedIcon as VerifiedIcon };
 
 const IconNameToCss = {
   [IconName.ICON_ARROW_BIG_DOWN]: css`
@@ -212,3 +215,12 @@ const StyledIcon = styled.svg<IconProps>`
   ${({ size = IconSize.Medium }) => IconSizeToCss[size]};
   ${({ name }) => IconNameToCss[name]};
 `;
+
+const StyledVerifiedIcon = withAttrs(
+  { name: 'icon-verified' },
+  styled(Icon)`
+    width: 18px;
+    height: 17px;
+    fill: ${Color.ACCENT};
+  `,
+);

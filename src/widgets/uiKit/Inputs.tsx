@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Icon } from '~/shared/ui/Icon';
-import { Input } from '~/shared/ui/Input';
-import { Typography } from '~/shared/ui/Typography';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { Input } from '~/shared/ui/atoms/Input';
+import { Typography } from '~/shared/ui/atoms/Typography';
 
 function Inputs(): JSX.Element {
   return (

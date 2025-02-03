@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Typography } from '~/shared/ui/Typography';
+import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 import { Post } from '~/widgets/Post';
 import { Buttons } from '~/widgets/uiKit/Buttons';
 import { Chips } from '~/widgets/uiKit/Chips';
 import { Icons } from '~/widgets/uiKit/Icons';
 import { Inputs } from '~/widgets/uiKit/Inputs';
-import { Reactions } from '~/widgets/uiKit/Reactions';
 
 function UiKitPage(): JSX.Element {
   return (
@@ -21,7 +20,6 @@ function UiKitPage(): JSX.Element {
       </StyledParagraph>
       <Icons />
       <Inputs />
-      <Reactions />
       <Buttons />
       <Chips />
     </StyledWrapper>

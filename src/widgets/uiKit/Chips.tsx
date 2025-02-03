@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Chip } from '~/shared/ui/Chip';
-import { Typography } from '~/shared/ui/Typography';
+import { Chip } from '~/shared/ui/atoms/Chip';
+import { Typography } from '~/shared/ui/atoms/Typography';
 
 function Chips(): JSX.Element {
   const colors = ['orange', 'yellow', 'green', 'white', 'blue', 'red'] as const;

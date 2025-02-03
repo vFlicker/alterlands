@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { ConfigurationHeader } from '~/shared/ui/ConfigurationHeader';
-import { Icon } from '~/shared/ui/Icon';
-import { IconButton } from '~/shared/ui/IconButton';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
+import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const navItems = [
@@ -17,7 +17,7 @@ const navItems = [
 function ModeList(): JSX.Element {
   return (
     <StyledWrapper>
-      <ConfigurationHeader title="Mode" onButtonClick={() => {}} />
+      <SideBarWidgetHeader title="Mode" onButtonClick={() => {}} />
 
       <StyledList>
         {navItems.map(({ icon, title }) => (

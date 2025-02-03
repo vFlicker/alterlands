@@ -1,20 +1,20 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { currentUserImage } from '../assets/images';
-import { Color } from '../theme/colors';
-import { Radius } from '../theme/radiuses';
-import { Avatar } from './Avatar';
-import { Icon } from './Icon';
-import { Typography } from './Typography';
-import { VerifiedIcon } from './VerifiedIcon';
-import { withAttrs } from './withAttrs';
+import { currentUserImage } from '~/shared/assets/images';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
 
-type WidgetHeaderInfoProps = {
+import { Avatar } from '../atoms/Avatar';
+import { Icon, VerifiedIcon } from '../atoms/Icon';
+import { Typography } from '../atoms/Typography';
+import { withAttrs } from '../withAttrs';
+
+type WidgetHeaderProps = {
   className?: string;
 };
 
-function WidgetHeaderInfo({ className }: WidgetHeaderInfoProps): JSX.Element {
+function WidgetHeader({ className }: WidgetHeaderProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
       <UserInfo>
@@ -31,7 +31,7 @@ function WidgetHeaderInfo({ className }: WidgetHeaderInfoProps): JSX.Element {
   );
 }
 
-export { WidgetHeaderInfo };
+export { WidgetHeader };
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -51,6 +51,8 @@ const StyledWrapper = styled.div`
       border-radius: ${Radius.RADIUS_CIRCLE};
       background-color: ${Color.WHITE_42};
       transform: translateY(-50%);
+    }
+  }
 `;
 
 const UserInfo = styled.div`

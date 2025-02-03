@@ -1,23 +1,24 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '../theme/colors';
-import { Icon } from './Icon';
-import { IconButton } from './IconButton';
-import { Typography } from './Typography';
-import { withAttrs } from './withAttrs';
+import { Color } from '~/shared/theme/colors';
 
-type ConfigurationHeaderProps = {
+import { Icon } from '../atoms/Icon';
+import { IconButton } from '../atoms/IconButton';
+import { Typography } from '../atoms/Typography';
+import { withAttrs } from '../withAttrs';
+
+type SideBarWidgetHeaderProps = {
   title: string;
   className?: string;
   onButtonClick?: () => void;
 };
 
-function ConfigurationHeader({
+function SideBarWidgetHeader({
   title,
   className,
   onButtonClick,
-}: ConfigurationHeaderProps): JSX.Element {
+}: SideBarWidgetHeaderProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
       <StyledTitle>{title}</StyledTitle>
@@ -30,7 +31,7 @@ function ConfigurationHeader({
   );
 }
 
-export { ConfigurationHeader };
+export { SideBarWidgetHeader };
 
 const StyledWrapper = styled.div`
   display: flex;

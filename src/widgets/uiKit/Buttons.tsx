@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Button } from '~/shared/ui/Button';
-import { Icon } from '~/shared/ui/Icon';
-import { IconButton } from '~/shared/ui/IconButton';
-import { LabelButton } from '~/shared/ui/LabelButton';
-import { Typography } from '~/shared/ui/Typography';
+import { Button } from '~/shared/ui/atoms/Button';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
+import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { Typography } from '~/shared/ui/atoms/Typography';
 
 function Buttons(): JSX.Element {
   return (

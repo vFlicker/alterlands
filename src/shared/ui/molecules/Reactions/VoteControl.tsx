@@ -2,12 +2,13 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '../theme/colors';
-import { Radius } from '../theme/radiuses';
-import { Icon } from './Icon';
-import { IconButton } from './IconButton';
-import { Typography } from './Typography';
-import { withAttrs } from './withAttrs';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
+
+import { Icon } from '../../atoms/Icon';
+import { IconButton } from '../../atoms/IconButton';
+import { Typography } from '../../atoms/Typography';
+import { withAttrs } from '../../withAttrs';
 
 type VoteControlProps = {
   count: string;

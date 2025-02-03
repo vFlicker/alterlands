@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { allNavigationImages } from '~/shared/assets/images';
-import { ConfigurationHeader } from '~/shared/ui/ConfigurationHeader';
+import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 
 function NavigationPanel(): JSX.Element {
   return (
     <StyledWrapper>
-      <ConfigurationHeader title="Navigation panel" onButtonClick={() => {}} />
+      <SideBarWidgetHeader title="Navigation panel" onButtonClick={() => {}} />
 
       <StyledNavigationList>
         {allNavigationImages.map((image, index) => (

@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { logoImage } from '../assets/images';
+import { logoImage } from '~/shared/assets/images';
 
 type LogotypeProps = {
   className?: string;

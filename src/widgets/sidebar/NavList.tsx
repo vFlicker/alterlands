@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Icon } from '~/shared/ui/Icon';
-import { Typography } from '~/shared/ui/Typography';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const navItems = [

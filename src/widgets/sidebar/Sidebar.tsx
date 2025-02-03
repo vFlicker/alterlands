@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Logotype } from '~/shared/ui/Logotype';
+import { Logotype } from '~/shared/ui/atoms/Logotype';
 
 import { Footer } from './Footer';
 import { ModeList } from './Mode';

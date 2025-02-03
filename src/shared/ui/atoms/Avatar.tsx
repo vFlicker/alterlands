@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { Radius } from '../theme/radiuses';
+import { Radius } from '~/shared/theme/radiuses';
 
 type AvatarProps = {
   size: `${AvatarSize}`;

@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
 import { JSX, useState } from 'react';
 
-import { Color } from '~/shared/theme/colors';
-import { Button } from '~/shared/ui/Button';
-import { Icon } from '~/shared/ui/Icon';
-import { VoteControl } from '~/shared/ui/VoteControl';
-import { withAttrs } from '~/shared/ui/withAttrs';
+import { MessageButton } from './MessageButton';
+import { RepostButton } from './RepostButton';
+import { VoteControl } from './VoteControl';
 
 type VoteState = 'up' | 'down' | null;
 
@@ -27,16 +25,8 @@ function Reactions(): JSX.Element {
         onDown={() => setVote(isDownActive ? null : 'down')}
       />
 
-      <StyledButton
-        leftIcon={<Icon name="icon-message-circle" />}
-        onClick={() => {}}
-      >
-        526
-      </StyledButton>
-
-      <StyledButton leftIcon={<Icon name="icon-repost" />} onClick={() => {}}>
-        18k
-      </StyledButton>
+      <MessageButton onClick={() => {}}>526</MessageButton>
+      <RepostButton onClick={() => {}}>18k</RepostButton>
     </StyledWrapper>
   );
 }
@@ -48,18 +38,3 @@ const StyledWrapper = styled.div`
   align-items: center;
   gap: 8px;
 `;
-
-const StyledButton = withAttrs(
-  {
-    color: 'neutral',
-    variant: 'filled',
-    size: 'small',
-  },
-  styled(Button)`
-    &:active {
-      svg {
-        fill: ${Color.WHITE_98};
-      }
-    }
-  `,
-);

@@ -3,11 +3,10 @@ import { JSX } from 'react';
 
 import { currentUserImage } from '~/shared/assets/images';
 import { Color } from '~/shared/theme/colors';
-import { Avatar } from '~/shared/ui/Avatar';
-import { Icon } from '~/shared/ui/Icon';
-import { IconButton } from '~/shared/ui/IconButton';
-import { Typography } from '~/shared/ui/Typography';
-import { VerifiedIcon } from '~/shared/ui/VerifiedIcon';
+import { Avatar } from '~/shared/ui/atoms/Avatar';
+import { Icon, VerifiedIcon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
+import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const IS_VERIFIED = true;

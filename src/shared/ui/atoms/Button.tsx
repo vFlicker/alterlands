@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX, PropsWithChildren } from 'react';
 
-import { Color } from '../theme/colors';
-import { Radius } from '../theme/radiuses';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
 
 type ButtonProps = PropsWithChildren<{
   variant: `${ButtonVariant}`;
@@ -38,7 +38,7 @@ function Button(props: ButtonProps): JSX.Element {
   );
 }
 
-export { Button };
+export { Button, ButtonColor, ButtonSize, ButtonVariant };
 
 const ButtonVariantToCss = {
   [ButtonVariant.FILLED]: css`

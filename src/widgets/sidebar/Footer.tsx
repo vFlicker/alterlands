@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Typography } from '~/shared/ui/Typography';
+import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 function Footer(): JSX.Element {

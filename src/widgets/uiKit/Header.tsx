@@ -4,10 +4,10 @@ import { JSX } from 'react';
 
 import { currentUserImage, iconUkraine } from '~/shared/assets/images';
 import { Color } from '~/shared/theme/colors';
-import { Avatar } from '~/shared/ui/Avatar';
-import { Icon } from '~/shared/ui/Icon';
-import { IconButton } from '~/shared/ui/IconButton';
-import { Input } from '~/shared/ui/Input';
+import { Avatar } from '~/shared/ui/atoms/Avatar';
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
+import { Input } from '~/shared/ui/atoms/Input';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 function Header(): JSX.Element {
