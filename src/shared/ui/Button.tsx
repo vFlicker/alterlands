@@ -8,6 +8,7 @@ import { Radius } from '../theme/radiuses';
 type ButtonProps = PropsWithChildren<{
   variant: `${ButtonVariant}`;
   color: `${ButtonColor}`;
+  size?: `${ButtonSize}`;
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
 }> &
@@ -22,6 +23,11 @@ const enum ButtonColor {
   ACCENT = 'accent',
   SECONDARY = 'secondary',
   NEUTRAL = 'neutral',
+}
+
+const enum ButtonSize {
+  SMALL = 'small',
+  MEDIUM = 'medium',
 }
 
 function Button(props: ButtonProps): JSX.Element {
@@ -82,23 +88,41 @@ const ButtonColorToCss = {
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      --color-button: ${Color.WHITE_30};
+      --color-button: ${Color.WHITE_16};
       --color-border: ${Color.WHITE_42};
     }
 
     &:active:not(:disabled) {
-      --color-button: ${Color.WHITE_64};
+      --color-button: ${Color.WHITE_30};
       --color-border: ${Color.WHITE_64};
     }
   `,
 };
 
-const getPaddingCss = (hasLeftIcon: boolean, hasRightIcon: boolean) => {
-  const paddingRight = hasRightIcon ? '16px' : '20px';
-  const paddingLeft = hasLeftIcon ? '16px' : '20px';
+const PADDING = {
+  [ButtonSize.SMALL]: {
+    base: '5px',
+    icon: '10px',
+    text: '14px',
+  },
+  [ButtonSize.MEDIUM]: {
+    base: '8px',
+    icon: '16px',
+    text: '20px',
+  },
+};
+
+const getPaddingCss = (
+  hasLeftIcon: boolean,
+  hasRightIcon: boolean,
+  size: `${ButtonSize}`,
+) => {
+  const { base, icon, text } = PADDING[size];
+  const paddingLeft = hasLeftIcon ? icon : text;
+  const paddingRight = hasRightIcon ? icon : text;
 
   return css`
-    padding: 8px ${paddingRight} 8px ${paddingLeft};
+    padding: ${base} ${paddingRight} ${base} ${paddingLeft};
   `;
 };
 
@@ -130,5 +154,6 @@ const StyledButton = styled.button<ButtonProps>`
 
   ${({ variant }) => ButtonVariantToCss[variant]}
   ${({ color }) => ButtonColorToCss[color]}
-  ${({ leftIcon, rightIcon }) => getPaddingCss(!!leftIcon, !!rightIcon)}
+  ${({ leftIcon, rightIcon, size = ButtonSize.MEDIUM }) =>
+    getPaddingCss(!!leftIcon, !!rightIcon, size)}
 `;

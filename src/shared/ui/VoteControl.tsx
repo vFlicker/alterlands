@@ -28,12 +28,12 @@ function VoteControl({
 }: VoteControlProps): JSX.Element {
   return (
     <StyledWrapper filled={filled}>
-      <StyledVoteButton isActive={isDownActive} onClick={onDown}>
-        <StyledIcon name="icon-arrow-big-down" />
-      </StyledVoteButton>
-      <StyledCounter>{count}</StyledCounter>
       <StyledVoteButton isActive={isUpActive} onClick={onUp}>
         <StyledIcon name="icon-arrow-big-up" />
+      </StyledVoteButton>
+      <StyledCounter>{count}</StyledCounter>
+      <StyledVoteButton isActive={isDownActive} onClick={onDown}>
+        <StyledIcon name="icon-arrow-big-down" />
       </StyledVoteButton>
     </StyledWrapper>
   );
@@ -54,6 +54,7 @@ const StyledWrapper = styled.div<Pick<VoteControlProps, 'filled'>>`
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  padding: 3px 6px;
   border-radius: ${Radius.RADIUS_50};
 
   ${({ filled }) => filled && filledBackgroundCss}
