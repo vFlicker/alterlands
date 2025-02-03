@@ -13,7 +13,8 @@
     "@emotion/styled": "11.14.0",
     "compose-function": "3.0.3",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "react-router-dom": "7.1.5"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.13.5",

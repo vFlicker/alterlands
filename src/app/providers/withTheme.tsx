@@ -8,7 +8,7 @@ import { globalNormalize } from '~/shared/theme/normalize';
 import { globalRadiuses } from '~/shared/theme/radiuses';
 import { globalResets } from '~/shared/theme/resets';
 
-export const withTheme = (Component: ComponentType): ComponentType => {
+const withTheme = (Component: ComponentType): ComponentType => {
   function WithTheme(): JSX.Element {
     return (
       <>
@@ -27,3 +27,5 @@ export const withTheme = (Component: ComponentType): ComponentType => {
 
   return WithTheme;
 };
+
+export { withTheme };

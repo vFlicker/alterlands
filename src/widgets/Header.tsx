@@ -1,8 +1,10 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { currentUserImage, iconUkraine } from '~/shared/assets/images';
+import { AppRoute } from '~/shared/libs/router';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
@@ -10,15 +12,40 @@ import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
+const MenuItems = [
+  {
+    title: 'Ukraine',
+    route: AppRoute.UKRAINE,
+    icon: iconUkraine,
+  },
+  {
+    title: 'Formula 1',
+    route: AppRoute.FORMULA_1,
+    icon: null,
+  },
+  {
+    title: 'US Politics',
+    route: AppRoute.US_POLITICS,
+    icon: null,
+  },
+  {
+    title: 'UI Kit',
+    route: AppRoute.UI_KIT,
+    icon: null,
+  },
+];
+
 function Header(): JSX.Element {
+  const { pathname } = useLocation();
+
   return (
     <StyledHeader>
       <HeaderTags>
-        <HeaderTag isActive>
-          <img src={iconUkraine} alt="Ukraine" /> Ukraine
-        </HeaderTag>
-        <HeaderTag>Formula 1</HeaderTag>
-        <HeaderTag>US Politics</HeaderTag>
+        {MenuItems.map(({ icon, route, title }) => (
+          <HeaderTag key={route} to={route} isActive={pathname === route}>
+            {icon && <img src={icon} alt={title} />} {title}
+          </HeaderTag>
+        ))}
       </HeaderTags>
       <HeaderActions>
         <StyledNotification>
@@ -73,7 +100,7 @@ const HeaderTags = styled.div`
   }
 `;
 
-const HeaderTag = styled.div<{ isActive?: boolean }>`
+const HeaderTag = styled(Link)<{ isActive?: boolean }>`
   display: flex;
   align-items: center;
   gap: 6px;
