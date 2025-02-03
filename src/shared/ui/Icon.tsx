@@ -24,7 +24,7 @@ function Icon(props: IconProps) {
   );
 }
 
-export { Icon };
+export { Icon, IconSize };
 
 const IconNameToCss = {
   [IconName.ICON_ARROW_BIG_DOWN]: css`

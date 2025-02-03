@@ -7,6 +7,7 @@ import { Avatar } from '~/shared/ui/Avatar';
 import { Icon } from '~/shared/ui/Icon';
 import { IconButton } from '~/shared/ui/IconButton';
 import { Typography } from '~/shared/ui/Typography';
+import { VerifiedIcon } from '~/shared/ui/VerifiedIcon';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const IS_VERIFIED = true;
@@ -19,7 +20,7 @@ function ProfileDropdown(): JSX.Element {
       <StyledProfileInfo>
         <StyledTop>
           <StyledProfileName>Anna Kushch</StyledProfileName>
-          {IS_VERIFIED && <StyledVerifiedIcon />}
+          {IS_VERIFIED && <VerifiedIcon />}
         </StyledTop>
         <StyledProfileEmail>@anna.kushch</StyledProfileEmail>
       </StyledProfileInfo>
@@ -53,15 +54,6 @@ const StyledTop = styled.div`
 `;
 
 const StyledProfileName = withAttrs({ variant: 'body-3' }, Typography);
-
-const StyledVerifiedIcon = withAttrs(
-  { name: 'icon-verified' },
-  styled(Icon)`
-    width: 18px;
-    height: 17px;
-    fill: ${Color.ACCENT};
-  `,
-);
 
 const StyledProfileEmail = withAttrs(
   { variant: 'body-4' },

@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { Typography } from '~/shared/ui/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
+import { Post } from '~/widgets/Post';
 import { Buttons } from '~/widgets/uiKit/Buttons';
 import { Chips } from '~/widgets/uiKit/Chips';
 import { Icons } from '~/widgets/uiKit/Icons';
@@ -13,6 +14,8 @@ function UiKitPage(): JSX.Element {
   return (
     <StyledWrapper>
       <StyledTitle>UI Kit page</StyledTitle>
+      <Post />
+
       <StyledParagraph>
         This is a description of the UI Kit page.
       </StyledParagraph>

@@ -10,14 +10,19 @@ type AvatarProps = {
 const enum AvatarSize {
   SMALL = 'small',
   MEDIUM = 'medium',
+  LARGE = 'large',
 }
 
 const AvatarSizeToCss = {
   [AvatarSize.SMALL]: css`
+    width: 28px;
+    height: 28px;
+  `,
+  [AvatarSize.MEDIUM]: css`
     width: 32px;
     height: 32px;
   `,
-  [AvatarSize.MEDIUM]: css`
+  [AvatarSize.LARGE]: css`
     width: 40px;
     height: 40px;
   `,

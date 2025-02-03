@@ -11,6 +11,7 @@ import favoriteImage9 from './favorites/9.png';
 import favoriteImage10 from './favorites/10.png';
 import iconUkraine from './icon-ukraine.png';
 import logoImage from './logo.svg';
+import postImage from './post-image.jpg';
 
 const allNavigationImages = [
   favoriteImage1,
@@ -25,4 +26,10 @@ const allNavigationImages = [
   favoriteImage10,
 ];
 
-export { allNavigationImages, currentUserImage, iconUkraine, logoImage };
+export {
+  allNavigationImages,
+  currentUserImage,
+  iconUkraine,
+  logoImage,
+  postImage,
+};
