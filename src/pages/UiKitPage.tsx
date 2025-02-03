@@ -3,11 +3,11 @@ import { JSX } from 'react';
 
 import { Typography } from '~/shared/ui/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
-import { Buttons } from '~/widgets/Buttons';
-import { Chips } from '~/widgets/Chips';
-import { Icons } from '~/widgets/Icons';
-import { Inputs } from '~/widgets/Inputs';
-import { Reactions } from '~/widgets/Reactions';
+import { Buttons } from '~/widgets/uiKit/Buttons';
+import { Chips } from '~/widgets/uiKit/Chips';
+import { Icons } from '~/widgets/uiKit/Icons';
+import { Inputs } from '~/widgets/uiKit/Inputs';
+import { Reactions } from '~/widgets/uiKit/Reactions';
 
 function UiKitPage(): JSX.Element {
   return (

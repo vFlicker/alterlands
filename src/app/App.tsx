@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Header } from '~/widgets/Header';
+import { Header } from '~/widgets/uiKit/Header';
 import { Sidebar } from '~/widgets/sidebar';
 
 import { withProviders } from './providers';
