@@ -10,7 +10,7 @@ type VoteState = 'up' | 'down' | null;
 function Reactions(): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
 
-  const votes = '12k';
+  const votes = '4k';
   const isUpActive = vote === 'up';
   const isDownActive = vote === 'down';
 
@@ -25,8 +25,8 @@ function Reactions(): JSX.Element {
         onDown={() => setVote(isDownActive ? null : 'down')}
       />
 
-      <MessageButton onClick={() => {}}>526</MessageButton>
-      <RepostButton onClick={() => {}}>18k</RepostButton>
+      <MessageButton onClick={() => {}}>30</MessageButton>
+      <RepostButton onClick={() => {}}>1k</RepostButton>
     </StyledWrapper>
   );
 }

@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
@@ -11,36 +12,44 @@ import { Typography } from '../atoms/Typography';
 import { withAttrs } from '../withAttrs';
 
 type WidgetHeaderProps = {
+  orientation: `${Orientation}`;
   className?: string;
 };
 
-function WidgetHeader({ className }: WidgetHeaderProps): JSX.Element {
+const enum Orientation {
+  VERTICAL = 'vertical',
+  HORIZONTAL = 'horizontal',
+}
+
+function WidgetHeader({
+  className,
+  orientation,
+}: WidgetHeaderProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
-      <UserInfo>
-        <Avatar size="small" src={currentUserImage} />
-        <UserFullName>Anna Kushch</UserFullName>
-        <VerifiedIcon />
-      </UserInfo>
-      <SecondaryText>Jul 5</SecondaryText>
-      <SecondaryText>
-        <StyledEyeIcon />
-        847k
-      </SecondaryText>
+      <Avatar size="small" src={currentUserImage} />
+      <StyledContent orientation={orientation}>
+        <UserInfo>
+          <UserFullName>Anna Kushch</UserFullName>
+          <VerifiedIcon />
+        </UserInfo>
+        <StyledTextWrapper>
+          <SecondaryText>Jul 5</SecondaryText>
+          <SecondaryText>
+            <StyledEyeIcon />
+            847k
+          </SecondaryText>
+        </StyledTextWrapper>
+      </StyledContent>
     </StyledWrapper>
   );
 }
 
 export { WidgetHeader };
 
-const StyledWrapper = styled.div`
-  display: flex;
-  gap: 22px;
-  align-items: center;
-
-  & > div:not(:last-child) {
+const dividerDotCss = css`
+  & div:first-child {
     position: relative;
-
     &::after {
       content: '';
       position: absolute;
@@ -55,6 +64,30 @@ const StyledWrapper = styled.div`
   }
 `;
 
+const ContentVariantToCss = {
+  [Orientation.HORIZONTAL]: css`
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+    ${dividerDotCss}
+  `,
+  [Orientation.VERTICAL]: css`
+    flex-direction: column;
+    gap: 4px;
+  `,
+};
+
+const StyledWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+const StyledContent = styled.div<Pick<WidgetHeaderProps, 'orientation'>>`
+  display: flex;
+
+  ${({ orientation }) => ContentVariantToCss[orientation]}
+`;
+
 const UserInfo = styled.div`
   display: flex;
   align-items: center;
@@ -62,6 +95,12 @@ const UserInfo = styled.div`
 `;
 
 const UserFullName = withAttrs({ variant: 'body-1' }, Typography);
+
+const StyledTextWrapper = styled.div`
+  display: flex;
+  gap: 22px;
+  ${dividerDotCss}
+`;
 
 const SecondaryText = withAttrs(
   { variant: 'body-4', $color: Color.WHITE_64, as: 'div' },
