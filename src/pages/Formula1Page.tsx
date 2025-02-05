@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
@@ -10,7 +10,7 @@ import { VideoWidget } from '~/widgets/VideoWidget';
 
 function Formula1Page(): JSX.Element {
   return (
-    <StyledWrapper>
+    <Masonic>
       <WidgetColumn
         title="PROs"
         actionButton={<LabelButton color="white">More</LabelButton>}
@@ -45,23 +45,8 @@ function Formula1Page(): JSX.Element {
         <VideoWidget />
         <VideoWidget />
       </WidgetColumn>
-    </StyledWrapper>
+    </Masonic>
   );
 }
 
 export { Formula1Page };
-
-const StyledWrapper = styled.div`
-  columns: 3;
-  column-gap: 16px;
-
-  & > * {
-    break-inside: avoid;
-    margin-bottom: 16px;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 1280px) {
-    columns: 2;
-  }
-`;
