@@ -38,6 +38,7 @@ const StyedVideo = styled.iframe`
 const StyledWrapper = styled.div`
   width: 100%;
   max-width: 488px;
+  padding: 8px 0;
 `;
 
 const StyledText = withAttrs(

@@ -18,7 +18,7 @@ const enum LabelButtonColor {
 
 const LabelButtonColorToCss = {
   [LabelButtonColor.WHITE]: css`
-    --color-text: ${Color.WHITE_87};
+    --color-text: ${Color.WHITE_64};
 
     &:hover,
     &:focus {

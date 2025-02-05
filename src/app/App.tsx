@@ -36,5 +36,5 @@ const MainContent = styled.div`
 
 const StyledMain = styled.main`
   flex: 1;
-  padding: 16px;
+  padding: 24px;
 `;

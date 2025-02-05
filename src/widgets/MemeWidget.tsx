@@ -42,7 +42,7 @@ const MemeWidgetSizeToCss = {
     max-width: 100%;
   `,
   [MemeWidgetSize.MEDIUM]: css`
-    max-width: 236px;
+    max-width: 234px;
 
     ${StyledImage} {
       height: 354px;
@@ -50,12 +50,13 @@ const MemeWidgetSizeToCss = {
     }
   `,
   [MemeWidgetSize.SMALL]: css`
-    max-width: 236px;
+    max-width: 234px;
   `,
 };
 
 const StyledWrapper = styled.div<MemeWidgetProps>`
   width: 100%;
+  padding: 8px 0;
   ${({ size }) => MemeWidgetSizeToCss[size]}
 `;
 
