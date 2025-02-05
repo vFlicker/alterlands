@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { postImage } from '~/shared/assets/images';
+import { Image } from '~/shared/assets/images';
 import { Radius } from '~/shared/theme/radiuses';
 import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
@@ -24,7 +24,7 @@ function MemeWidget({ size, className }: MemeWidgetProps): JSX.Element {
   return (
     <StyledWrapper className={className} size={size}>
       <StyledWidgetHeader orientation={headerOrientation} />
-      <StyledImage src={postImage} alt="Image description" />
+      <StyledImage src={Image.formula1Page.pro.pros1} alt="Image description" />
       <Reactions />
     </StyledWrapper>
   );

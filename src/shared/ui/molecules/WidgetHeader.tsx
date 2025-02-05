@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { currentUserImage } from '~/shared/assets/images';
+import { Image } from '~/shared/assets/images';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
@@ -27,7 +27,7 @@ function WidgetHeader({
 }: WidgetHeaderProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
-      <Avatar size="small" src={currentUserImage} />
+      <Avatar size="small" src={Image.avatar.currentUser} />
       <StyledContent orientation={orientation}>
         <UserInfo>
           <UserFullName>Anna Kushch</UserFullName>

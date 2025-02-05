@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { iconUkraine } from '~/shared/assets/images';
+import { Image } from '~/shared/assets/images';
 import { IconName } from '~/shared/theme/icons';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { Typography } from '~/shared/ui/atoms/Typography';
@@ -55,7 +55,7 @@ function Icons(): JSX.Element {
         <StyledIcon name={IconName.ICON_VIDEO} />
         <StyledIcon name={IconName.ICON_VOTE} />
         <StyledIcon name={IconName.ICON_WALLET} />
-        <img src={iconUkraine} alt="flag of Ukraine" />
+        <img src={Image.other.iconUkraine} alt="flag of Ukraine" />
       </StyledBlock>
     </div>
   );

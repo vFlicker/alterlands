@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { postImage } from '~/shared/assets/images';
+import { Image } from '~/shared/assets/images';
 import { Radius } from '~/shared/theme/radiuses';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
@@ -17,7 +17,7 @@ function PostWidget(): JSX.Element {
         every driver who races today. He's the greatest to ever race around
         Monaco and I wanted to capture that in this helmet.{' '}
       </StyledText>
-      <StyledImage src={postImage} alt="Image description" />
+      <StyledImage src={Image.formula1Page.pro.pros1} alt="Image description" />
       <Reactions />
     </StyledWrapper>
   );
