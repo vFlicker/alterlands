@@ -6,20 +6,41 @@ import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-function VideoWidget(): JSX.Element {
+type VideoWidgetProps = {
+  avatar: string;
+  date: string;
+  views: string;
+  fullName: string;
+  videoSrc: string;
+  title: string;
+  likes: string;
+  messages: string;
+  reposts: string;
+};
+
+function VideoWidget({
+  avatar,
+  date,
+  fullName,
+  likes,
+  messages,
+  reposts,
+  title,
+  videoSrc,
+  views,
+}: VideoWidgetProps): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledWidgetHeader orientation="horizontal" />
-      <StyedVideo
-        width="100%"
-        height="244"
-        src="https://www.youtube.com/embed/6Ki834aGZk4"
-      ></StyedVideo>
-      <StyledText>
-        F1 news, rumours and gossip: Formula 1 latest updates on teams, driver
-        transfer market and contracts
-      </StyledText>
-      <Reactions />
+      <StyledWidgetHeader
+        avatar={avatar}
+        date={date}
+        fullName={fullName}
+        views={views}
+        orientation="horizontal"
+      />
+      <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
+      <StyledText>{title}</StyledText>
+      <Reactions likes={likes} messages={messages} reposts={reposts} />
     </StyledWrapper>
   );
 }

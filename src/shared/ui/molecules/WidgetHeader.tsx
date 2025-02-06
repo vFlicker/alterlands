@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Image } from '~/shared/assets/images';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
@@ -12,6 +11,10 @@ import { Typography } from '../atoms/Typography';
 import { withAttrs } from '../withAttrs';
 
 type WidgetHeaderProps = {
+  avatar: string;
+  fullName: string;
+  date: string;
+  views: string;
   orientation: `${Orientation}`;
   className?: string;
 };
@@ -23,21 +26,25 @@ const enum Orientation {
 
 function WidgetHeader({
   className,
+  avatar,
+  fullName,
+  date,
+  views,
   orientation,
 }: WidgetHeaderProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
-      <Avatar size="small" src={Image.avatar.currentUser} />
+      <Avatar size="small" src={avatar} />
       <StyledContent orientation={orientation}>
         <UserInfo>
-          <UserFullName>Anna Kushch</UserFullName>
+          <UserFullName>{fullName}</UserFullName>
           <VerifiedIcon />
         </UserInfo>
         <StyledTextWrapper>
-          <SecondaryText>Jul 5</SecondaryText>
+          <SecondaryText>{date}</SecondaryText>
           <SecondaryText>
             <StyledEyeIcon />
-            847k
+            {views}
           </SecondaryText>
         </StyledTextWrapper>
       </StyledContent>

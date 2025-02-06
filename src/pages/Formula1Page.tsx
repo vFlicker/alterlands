@@ -1,5 +1,6 @@
 import { JSX } from 'react';
 
+import { formula1PageData } from '~/shared/data/formula1PageData';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
@@ -15,15 +16,15 @@ function Formula1Page(): JSX.Element {
         title="PROs"
         actionButton={<LabelButton color="white">More</LabelButton>}
       >
-        <PostWidget />
-        <PostWidget />
-        <PostWidget />
+        {formula1PageData.posts.map((post) => (
+          <PostWidget key={post.id} {...post} />
+        ))}
       </WidgetColumn>
       <WidgetColumn title="Merch widget">TODO: add merch widget</WidgetColumn>
       <WidgetColumn title="Memes" columns={2}>
-        <MemeWidget size="large" />
-        <MemeWidget size="medium" />
-        <MemeWidget size="small" />
+        {formula1PageData.mems.map((meme) => (
+          <MemeWidget key={meme.id} {...meme} />
+        ))}
       </WidgetColumn>
 
       <WidgetColumn title="Opinion post widge">
@@ -36,14 +37,14 @@ function Formula1Page(): JSX.Element {
 
       <WidgetColumn title="Chat widget">TODO: add chat widget</WidgetColumn>
       <WidgetColumn title="News">
-        <NewsWidget />
-        <NewsWidget />
-        <NewsWidget />
+        {formula1PageData.news.map((news) => (
+          <NewsWidget key={news.id} {...news} />
+        ))}
       </WidgetColumn>
       <WidgetColumn title="Videos">
-        <VideoWidget />
-        <VideoWidget />
-        <VideoWidget />
+        {formula1PageData.videos.map((video) => (
+          <VideoWidget key={video.id} {...video} />
+        ))}
       </WidgetColumn>
     </Masonic>
   );

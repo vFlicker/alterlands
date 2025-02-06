@@ -3,7 +3,7 @@ import { favoriteImages } from './favorites';
 import { meme as formula1Meme, pro } from './formula1';
 import iconUkraine from './icon-ukraine.png';
 import logo from './logo.svg';
-import { meme as ukraineMeme } from './ukraine';
+import { meme as ukraineMeme, post as ukrainePost } from './ukraine';
 import { meme as usPoliticsMeme } from './usPolitics';
 
 export const Image = {
@@ -14,6 +14,7 @@ export const Image = {
   },
   ukrainePage: {
     meme: ukraineMeme,
+    post: ukrainePost,
   },
   usPolitics: {
     meme: usPoliticsMeme,

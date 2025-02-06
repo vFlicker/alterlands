@@ -6,15 +6,38 @@ import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-function NewsWidget(): JSX.Element {
+type NewsWidgetProps = {
+  avatar: string;
+  date: string;
+  views: string;
+  fullName: string;
+  title: string;
+  likes: string;
+  messages: string;
+  reposts: string;
+};
+
+function NewsWidget({
+  avatar,
+  date,
+  fullName,
+  likes,
+  messages,
+  reposts,
+  title,
+  views,
+}: NewsWidgetProps): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledWidgetHeader orientation="horizontal" />
-      <StyledTitle>
-        F1 news, rumours and gossip: Formula 1 latest updates on teams, driver
-        transfer market and contracts
-      </StyledTitle>
-      <Reactions />
+      <StyledWidgetHeader
+        avatar={avatar}
+        date={date}
+        fullName={fullName}
+        views={views}
+        orientation="horizontal"
+      />
+      <StyledTitle>{title}</StyledTitle>
+      <Reactions likes={likes} messages={messages} reposts={reposts} />
     </StyledWrapper>
   );
 }

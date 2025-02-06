@@ -7,10 +7,15 @@ import { VoteControl } from './VoteControl';
 
 type VoteState = 'up' | 'down' | null;
 
-function Reactions(): JSX.Element {
+type ReactionProps = {
+  likes: string;
+  messages: string;
+  reposts: string;
+};
+
+function Reactions({ likes, messages, reposts }: ReactionProps): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
 
-  const votes = '4k';
   const isUpActive = vote === 'up';
   const isDownActive = vote === 'down';
 
@@ -18,15 +23,15 @@ function Reactions(): JSX.Element {
     <StyledWrapper>
       <VoteControl
         filled
-        count={votes}
+        count={likes}
         isUpActive={isUpActive}
         isDownActive={isDownActive}
         onUp={() => setVote(isUpActive ? null : 'up')}
         onDown={() => setVote(isDownActive ? null : 'down')}
       />
 
-      <MessageButton onClick={() => {}}>30</MessageButton>
-      <RepostButton onClick={() => {}}>1k</RepostButton>
+      <MessageButton onClick={() => {}}>{messages}</MessageButton>
+      <RepostButton onClick={() => {}}>{reposts}</RepostButton>
     </StyledWrapper>
   );
 }

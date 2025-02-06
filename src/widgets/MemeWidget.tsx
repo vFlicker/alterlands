@@ -2,12 +2,19 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Image } from '~/shared/assets/images';
 import { Radius } from '~/shared/theme/radiuses';
 import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 type MemeWidgetProps = {
+  date: string;
+  views: string;
+  fullName: string;
+  image: string;
+  avatar: string;
+  likes: string;
+  messages: string;
+  reposts: string;
   size: `${MemeWidgetSize}`;
   className?: string;
 };
@@ -18,14 +25,31 @@ const enum MemeWidgetSize {
   LARGE = 'large',
 }
 
-function MemeWidget({ size, className }: MemeWidgetProps): JSX.Element {
+function MemeWidget({
+  avatar,
+  date,
+  fullName,
+  image,
+  likes,
+  messages,
+  reposts,
+  size,
+  views,
+  className,
+}: MemeWidgetProps): JSX.Element {
   const headerOrientation = size === 'large' ? 'horizontal' : 'vertical';
 
   return (
     <StyledWrapper className={className} size={size}>
-      <StyledWidgetHeader orientation={headerOrientation} />
-      <StyledImage src={Image.formula1Page.pro.pros1} alt="Image description" />
-      <Reactions />
+      <StyledWidgetHeader
+        avatar={avatar}
+        date={date}
+        fullName={fullName}
+        views={views}
+        orientation={headerOrientation}
+      />
+      <StyledImage src={image} alt="Image description" />
+      <Reactions likes={likes} messages={messages} reposts={reposts} />
     </StyledWrapper>
   );
 }
@@ -54,7 +78,7 @@ const MemeWidgetSizeToCss = {
   `,
 };
 
-const StyledWrapper = styled.div<MemeWidgetProps>`
+const StyledWrapper = styled.div<Pick<MemeWidgetProps, 'size'>>`
   width: 100%;
   padding: 8px 0;
   ${({ size }) => MemeWidgetSizeToCss[size]}

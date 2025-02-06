@@ -1,9 +1,11 @@
 import { JSX } from 'react';
 
+import { ukrainePageData } from '~/shared/data/ukrainePageData';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
+import { PostWidget } from '~/widgets/PostWidget';
 import { VideoWidget } from '~/widgets/VideoWidget';
 
 function UkrainePage(): JSX.Element {
@@ -14,21 +16,25 @@ function UkrainePage(): JSX.Element {
         TODO: add top charts widget
       </WidgetColumn>
       <WidgetColumn title="Videos">
-        <VideoWidget />
-        <VideoWidget />
-        <VideoWidget />
+        {ukrainePageData.videos.map((video) => (
+          <VideoWidget key={video.id} {...video} />
+        ))}
       </WidgetColumn>
       <WidgetColumn title="News">
-        <NewsWidget />
-        <NewsWidget />
-        <NewsWidget />
+        {ukrainePageData.news.map((news) => (
+          <NewsWidget key={news.id} {...news} />
+        ))}
       </WidgetColumn>
 
       <WidgetColumn title="Trend Topics widge">
         TODO: add trend topics widge
       </WidgetColumn>
       <WidgetColumn title="Voice">TODO: add voice widget</WidgetColumn>
-      <WidgetColumn title="Officials">TODO: add officials widget</WidgetColumn>
+      <WidgetColumn title="Officials">
+        {ukrainePageData.posts.map((post) => (
+          <PostWidget key={post.id} {...post} />
+        ))}
+      </WidgetColumn>
       <WidgetColumn title="Trend Topics widge">
         TODO: add trend topics widge
       </WidgetColumn>
@@ -36,15 +42,10 @@ function UkrainePage(): JSX.Element {
         TODO: add top charts widget
       </WidgetColumn>
 
-      <WidgetColumn title="News">
-        <NewsWidget />
-        <NewsWidget />
-        <NewsWidget />
-      </WidgetColumn>
       <WidgetColumn title="Memes" columns={2}>
-        <MemeWidget size="large" />
-        <MemeWidget size="medium" />
-        <MemeWidget size="small" />
+        {ukrainePageData.mems.map((meme) => (
+          <MemeWidget key={meme.id} {...meme} />
+        ))}
       </WidgetColumn>
       <WidgetColumn title="Posts">TODO: add post posts</WidgetColumn>
     </Masonic>

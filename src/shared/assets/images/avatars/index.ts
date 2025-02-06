@@ -15,6 +15,7 @@ import jessicaDavisAvatar from './jessica-davis-avatar.jpg';
 import kamilaAvatar from './kamila-avatar.jpg';
 import landoAvatar from './lando-avatar.jpg';
 import maksymLevchenkoAvatar from './maksym-levchenko-avatar.jpg';
+import officePresidentUkraine from './office-president-ukraine.jpg';
 import oleksandrShevchenkoAvatar from './oleksandr-shevchenko-avatar.jpg';
 import olenaZelenskaAvatar from './olena-zelenska-avatar.jpg';
 import presidentAvatar from './president-avatar.jpg';
@@ -22,6 +23,7 @@ import rbkAvatar from './rbk-avatar.jpg';
 import samaraAvatar from './samara-avatar.jpg';
 import skySportsAvatar from './sky-sports-avatar.jpg';
 import theNewYorkTimesAvatar from './the-new-york-times-avatar.jpg';
+import ukrainianPravdaAvatar from './ukrainian-pravda-avatar.jpg';
 import yahooNewsAvatar from './yahoo-news-avatar.jpg';
 import zelenskiyAvatar from './zelenskiy-avatar.jpg';
 
@@ -43,6 +45,7 @@ export const avatar = {
   kamilaAvatar,
   landoAvatar,
   maksymLevchenkoAvatar,
+  officePresidentUkraine,
   oleksandrShevchenkoAvatar,
   olenaZelenskaAvatar,
   presidentAvatar,
@@ -50,6 +53,7 @@ export const avatar = {
   samaraAvatar,
   skySportsAvatar,
   theNewYorkTimesAvatar,
+  ukrainianPravdaAvatar,
   yahooNewsAvatar,
   zelenskiyAvatar,
 };
