@@ -1,11 +1,28 @@
+import country1 from './country-1.jpg';
+import country2 from './country-2.jpg';
+import country3 from './country-3.jpg';
+import flag1 from './flag-1.jpg';
+import flag2 from './flag-2.jpg';
+import flag3 from './flag-3.jpg';
 import meme1 from './mem-1.jpg';
 import meme2 from './mem-2.jpg';
 import meme3 from './mem-3.jpg';
 import meme4 from './mem-4.jpg';
 import meme5 from './mem-5.jpg';
+import photo1 from './photo-1.jpg';
+import photo2 from './photo-2.jpg';
+import photo3 from './photo-3.jpg';
 import pros1 from './pros-1.jpg';
 import pros2 from './pros-2.png';
 import pros3 from './pros-3.png';
+import logo1 from './team-logo-1.jpg';
+import logo2 from './team-logo-2.jpg';
+import logo3 from './team-logo-3.jpg';
+import track1 from './track-1.png';
+import track2 from './track-2.png';
 
 export const meme = { meme1, meme2, meme3, meme4, meme5 };
 export const pro = { pros1, pros2, pros3 };
+export const upcomingRaces = { track1, track2, country1, country2, country3 };
+export const leaderboards = { photo1, photo2, photo3, flag1, flag2, flag3 };
+export const teamLeaderboards = { logo1, logo2, logo3 };

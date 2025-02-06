@@ -1,6 +1,84 @@
 import { Image } from '~/shared/assets/images';
 
 const formula1PageData = {
+  upcomingRaces: [
+    {
+      id: 1,
+      days: '21-23',
+      month: 'Feb',
+      title: 'Testing',
+      flagImage: Image.formula1Page.upcomingRaces.country1,
+      description: 'Formula 1 Aramco pre-season testing 2024',
+      trackImage: Image.formula1Page.upcomingRaces.track1,
+    },
+    {
+      id: 2,
+      days: '29-02',
+      month: 'Feb-Mar',
+      title: 'Round 1',
+      flagImage: Image.formula1Page.upcomingRaces.country2,
+      description: 'Formula 1 Gulf air Bahrain grand prix 2024',
+      trackImage: Image.formula1Page.upcomingRaces.track1,
+    },
+    {
+      id: 3,
+      days: '07-09',
+      month: 'Mar',
+      title: 'Round 2',
+      flagImage: Image.formula1Page.upcomingRaces.country3,
+      description: 'Formula 1 Heineken Australian grand prix 2024',
+      trackImage: Image.formula1Page.upcomingRaces.track2,
+    },
+  ],
+  leaderboards: [
+    {
+      id: 1,
+      position: 1,
+      name: 'Max Verstappen',
+      photo: Image.formula1Page.leaderboards.photo1,
+      countryFlag: Image.formula1Page.leaderboards.flag1,
+      points: 393,
+    },
+    {
+      id: 1,
+      position: 2,
+      name: 'Charles Leclerc',
+      photo: Image.formula1Page.leaderboards.photo2,
+      countryFlag: Image.formula1Page.leaderboards.flag2,
+      points: 331,
+    },
+    {
+      id: 1,
+      position: 3,
+      name: 'Lando Norris',
+      photo: Image.formula1Page.leaderboards.photo3,
+      countryFlag: Image.formula1Page.leaderboards.flag3,
+      points: 307,
+    },
+  ],
+  teamLeaderboards: [
+    {
+      id: 1,
+      position: 1,
+      logo: Image.formula1Page.teamLeaderboards.logo1,
+      name: 'McLaren',
+      points: 593,
+    },
+    {
+      id: 2,
+      position: 2,
+      logo: Image.formula1Page.teamLeaderboards.logo2,
+      name: 'Ferrari',
+      points: 557,
+    },
+    {
+      id: 3,
+      position: 3,
+      logo: Image.formula1Page.teamLeaderboards.logo3,
+      name: 'Red Bull',
+      points: 554,
+    },
+  ],
   posts: [
     {
       id: 1,

@@ -80,4 +80,4 @@ const StyledTypography = styled.div<TypographyProps>`
   ${({ variant }) => TypographyVariantToCss[variant]}
 `;
 
-export { StyledTypography as Typography };
+export { StyledTypography as Typography, TypographyVariantToCss };
