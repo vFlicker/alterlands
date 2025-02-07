@@ -17,9 +17,11 @@ type VoteControlProps = {
   filled?: boolean;
   onUp: () => void;
   onDown: () => void;
+  className?: string;
 };
 
 function VoteControl({
+  className,
   filled,
   count,
   isUpActive,
@@ -28,7 +30,7 @@ function VoteControl({
   onDown,
 }: VoteControlProps): JSX.Element {
   return (
-    <StyledWrapper filled={filled}>
+    <StyledWrapper className={className} filled={filled}>
       <StyledVoteButton isActive={isUpActive} onClick={onUp}>
         <StyledIcon name="icon-arrow-big-up" />
       </StyledVoteButton>

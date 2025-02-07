@@ -1,15 +1,14 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PropsWithChildren } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
-type IconButtonProps = PropsWithChildren<{
+type IconButtonProps = {
   size: `${IconButtonSize}`;
   variant: `${IconButtonVariant}`;
   color: `${IconButtonColor}`;
-}>;
+};
 
 const enum IconButtonSize {
   SMALL = 'small',
@@ -116,4 +115,9 @@ const StyledIconButton = styled.button<IconButtonProps>`
   ${({ color }) => IconButtonColorToCss[color]}
 `;
 
-export { StyledIconButton as IconButton };
+export {
+  StyledIconButton as IconButton,
+  IconButtonColor,
+  IconButtonSize,
+  IconButtonVariant,
+};

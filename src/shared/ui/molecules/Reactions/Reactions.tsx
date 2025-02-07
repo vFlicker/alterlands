@@ -11,16 +11,22 @@ type ReactionProps = {
   likes: string;
   messages: string;
   reposts: string;
+  className?: string;
 };
 
-function Reactions({ likes, messages, reposts }: ReactionProps): JSX.Element {
+function Reactions({
+  className,
+  likes,
+  messages,
+  reposts,
+}: ReactionProps): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
 
   const isUpActive = vote === 'up';
   const isDownActive = vote === 'down';
 
   return (
-    <StyledWrapper>
+    <StyledWrapper className={className}>
       <VoteControl
         filled
         count={likes}

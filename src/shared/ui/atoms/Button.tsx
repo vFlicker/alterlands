@@ -1,18 +1,19 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { JSX, PropsWithChildren } from 'react';
+import { ComponentProps, JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
-type ButtonProps = PropsWithChildren<{
+type ButtonBaseProps = {
   variant: `${ButtonVariant}`;
   color: `${ButtonColor}`;
   size?: `${ButtonSize}`;
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
-}> &
-  JSX.IntrinsicElements['button'];
+};
+
+type ButtonProps = ComponentProps<typeof StyledButton>;
 
 const enum ButtonVariant {
   FILLED = 'filled',
@@ -126,7 +127,7 @@ const getPaddingCss = (
   `;
 };
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButton = styled.button<ButtonBaseProps>`
   display: inline-flex;
   align-items: center;
   gap: 4px;

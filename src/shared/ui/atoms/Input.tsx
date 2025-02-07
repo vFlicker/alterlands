@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
-import { JSX, PropsWithChildren } from 'react';
+import { ComponentProps, JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
-type InputProps = PropsWithChildren<{
+type InputBaseProps = {
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
-}> &
-  JSX.IntrinsicElements['input'];
+};
+
+type InputProps = ComponentProps<typeof StyledInput>;
 
 function Input({
   className,
@@ -59,7 +60,7 @@ const IconBox = styled.div`
   justify-content: center;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<InputBaseProps>`
   flex-grow: 1;
   color: ${Color.WHITE_98};
 

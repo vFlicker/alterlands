@@ -6,8 +6,9 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
 import { Avatar } from '../atoms/Avatar';
-import { Icon, VerifiedIcon } from '../atoms/Icon';
+import { Icon } from '../atoms/Icon';
 import { Typography } from '../atoms/Typography';
+import { VerifiedIcon } from '../atoms/VerifiedIcon';
 import { withAttrs } from '../withAttrs';
 
 type WidgetHeaderProps = {
@@ -36,10 +37,10 @@ function WidgetHeader({
     <StyledWrapper className={className}>
       <Avatar size="small" src={avatar} />
       <StyledContent orientation={orientation}>
-        <UserInfo>
-          <UserFullName>{fullName}</UserFullName>
+        <StyledUserInfo>
+          <StyledUserFullName>{fullName}</StyledUserFullName>
           <VerifiedIcon />
-        </UserInfo>
+        </StyledUserInfo>
         <StyledTextWrapper>
           <SecondaryText>{date}</SecondaryText>
           <SecondaryText>
@@ -95,13 +96,13 @@ const StyledContent = styled.div<Pick<WidgetHeaderProps, 'orientation'>>`
   ${({ orientation }) => ContentVariantToCss[orientation]}
 `;
 
-const UserInfo = styled.div`
+const StyledUserInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
 `;
 
-const UserFullName = withAttrs({ variant: 'body-1' }, Typography);
+const StyledUserFullName = withAttrs({ variant: 'body-1' }, Typography);
 
 const StyledTextWrapper = styled.div`
   display: flex;

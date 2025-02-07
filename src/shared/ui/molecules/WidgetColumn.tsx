@@ -28,7 +28,7 @@ function WidgetColumn({
         {actionButton}
       </StyledHeader>
 
-      <ListWrapper columns={columns}>{children}</ListWrapper>
+      <StyledListWrapper columns={columns}>{children}</StyledListWrapper>
     </StyledWrapper>
   );
 }
@@ -78,7 +78,7 @@ const StyledHeader = styled.div`
   border-bottom: 1px solid ${Color.WHITE_16};
 `;
 
-const ListWrapper = styled.div<Pick<WidgetColumnProps, 'columns'>>`
+const StyledListWrapper = styled.div<Pick<WidgetColumnProps, 'columns'>>`
   display: flex;
   ${({ columns = 1 }) => ContentColumnsToCss[columns]}
 `;

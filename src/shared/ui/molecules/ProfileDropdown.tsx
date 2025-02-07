@@ -3,17 +3,23 @@ import { JSX } from 'react';
 
 import { avatarImage } from '~/shared/assets/images/avatars';
 import { Color } from '~/shared/theme/colors';
-import { Avatar } from '~/shared/ui/atoms/Avatar';
-import { Icon, VerifiedIcon } from '~/shared/ui/atoms/Icon';
-import { IconButton } from '~/shared/ui/atoms/IconButton';
-import { Typography } from '~/shared/ui/atoms/Typography';
-import { withAttrs } from '~/shared/ui/withAttrs';
+
+import { Avatar } from '../atoms/Avatar';
+import { Icon } from '../atoms/Icon';
+import { IconButton } from '../atoms/IconButton';
+import { Typography } from '../atoms/Typography';
+import { VerifiedIcon } from '../atoms/VerifiedIcon';
+import { withAttrs } from '../withAttrs';
 
 const IS_VERIFIED = true;
 
-function ProfileDropdown(): JSX.Element {
+type ProfileDropdownProps = {
+  className?: string;
+};
+
+function ProfileDropdown({ className }: ProfileDropdownProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledWrapper className={className}>
       <Avatar size="medium" src={avatarImage.currentUser} />
 
       <StyledProfileInfo>

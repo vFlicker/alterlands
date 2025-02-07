@@ -34,4 +34,4 @@ const StyledAvatar = styled.img<AvatarProps>`
   ${({ size }) => AvatarSizeToCss[size]};
 `;
 
-export { StyledAvatar as Avatar };
+export { StyledAvatar as Avatar, AvatarSize };

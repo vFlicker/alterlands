@@ -1,15 +1,14 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PropsWithChildren } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
-type LabelButtonProps = PropsWithChildren<{
+type LabelButtonProps = {
   size: `${ChipSize}`;
   color: `${ChipColor}`;
   intensive?: boolean;
-}>;
+};
 
 const enum ChipSize {
   SMALL = 'small',
@@ -109,4 +108,4 @@ const StyledChip = styled.div<LabelButtonProps>`
   ${({ color, intensive = false }) => getChipColorCss(color, intensive)}
 `;
 
-export { StyledChip as Chip };
+export { StyledChip as Chip, ChipColor, ChipSize };

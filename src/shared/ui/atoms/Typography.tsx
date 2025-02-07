@@ -1,13 +1,12 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { PropsWithChildren } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 
-type TypographyProps = PropsWithChildren<{
+type TypographyProps = {
   variant: `${TypographyVariant}`;
   $color?: Color;
-}>;
+};
 
 const enum TypographyVariant {
   HEADING_1 = 'heading-1',
