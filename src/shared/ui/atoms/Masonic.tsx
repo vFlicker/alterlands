@@ -1,18 +1,22 @@
 import styled from '@emotion/styled';
 
-const StyledMasonic = styled.div`
-  columns: 3;
-  column-gap: 16px;
-
-  & > * {
-    break-inside: avoid;
-    margin-bottom: 16px;
-    width: 100%;
-  }
+const StyledMasonicList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
 
   @media screen and (max-width: 1280px) {
-    columns: 2;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
-export { StyledMasonic as Masonic };
+const StyledMasonicItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const Masonic = {
+  List: StyledMasonicList,
+  Item: StyledMasonicItem,
+};
