@@ -27,7 +27,7 @@ import ukrainianPravdaAvatar from './ukrainian-pravda-avatar.jpg';
 import yahooNewsAvatar from './yahoo-news-avatar.jpg';
 import zelenskiyAvatar from './zelenskiy-avatar.jpg';
 
-export const avatar = {
+export const avatarImage = {
   alexaAvatar,
   annaKushchAvatar,
   bbcAvatar,
@@ -56,4 +56,5 @@ export const avatar = {
   ukrainianPravdaAvatar,
   yahooNewsAvatar,
   zelenskiyAvatar,
+  currentUser: annaKushchAvatar,
 };

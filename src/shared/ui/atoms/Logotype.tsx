@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Image } from '~/shared/assets/images';
+import { commonImage } from '~/shared/assets/images/common';
 
 type LogotypeProps = {
   className?: string;
@@ -9,7 +9,7 @@ type LogotypeProps = {
 function Logotype({ className }: LogotypeProps): JSX.Element {
   return (
     <div className={className}>
-      <img width="166" height="38" src={Image.other.logo} alt="Alterlands" />
+      <img width="166" height="38" src={commonImage.logo} alt="Alterlands" />
     </div>
   );
 }

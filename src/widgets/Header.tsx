@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { Image } from '~/shared/assets/images';
+import { avatarImage } from '~/shared/assets/images/avatars';
+import { commonImage } from '~/shared/assets/images/common';
 import { AppRoute } from '~/shared/libs/router';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
@@ -16,11 +17,11 @@ const MenuItems = [
   {
     title: 'Ukraine',
     route: AppRoute.UKRAINE,
-    icon: Image.other.iconUkraine,
+    icon: commonImage.iconUkraine,
   },
   {
     title: 'Formula 1',
-    route: AppRoute.FORMULA_1,
+    route: AppRoute.F1,
     icon: null,
   },
   {
@@ -55,7 +56,7 @@ function Header(): JSX.Element {
           placeholder="Search"
           leftIcon={<Icon name="icon-search" />}
         />
-        <Avatar size="small" src={Image.avatar.currentUser} />
+        <Avatar size="small" src={avatarImage.currentUser} />
       </HeaderActions>
     </StyledHeader>
   );

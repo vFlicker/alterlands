@@ -1,0 +1,1 @@
+export { UsPoliticsPage } from './UsPoliticsPage';

@@ -1,33 +1,34 @@
-import { Image } from '~/shared/assets/images';
+import { avatarImage } from '~/shared/assets/images/avatars';
+import { f1Image } from '~/shared/assets/images/f1';
 
-const formula1PageData = {
+const f1PageData = {
   upcomingRaces: [
     {
       id: 1,
       days: '21-23',
       month: 'Feb',
       title: 'Testing',
-      flagImage: Image.formula1Page.upcomingRaces.country1,
+      flagImage: f1Image.upcomingRace.flag1,
       description: 'Formula 1 Aramco pre-season testing 2024',
-      trackImage: Image.formula1Page.upcomingRaces.track1,
+      trackImage: f1Image.upcomingRace.track1,
     },
     {
       id: 2,
       days: '29-02',
       month: 'Feb-Mar',
       title: 'Round 1',
-      flagImage: Image.formula1Page.upcomingRaces.country2,
+      flagImage: f1Image.upcomingRace.flag2,
       description: 'Formula 1 Gulf air Bahrain grand prix 2024',
-      trackImage: Image.formula1Page.upcomingRaces.track1,
+      trackImage: f1Image.upcomingRace.track1,
     },
     {
       id: 3,
       days: '07-09',
       month: 'Mar',
       title: 'Round 2',
-      flagImage: Image.formula1Page.upcomingRaces.country3,
+      flagImage: f1Image.upcomingRace.flag3,
       description: 'Formula 1 Heineken Australian grand prix 2024',
-      trackImage: Image.formula1Page.upcomingRaces.track2,
+      trackImage: f1Image.upcomingRace.track2,
     },
   ],
   leaderboards: [
@@ -35,24 +36,24 @@ const formula1PageData = {
       id: 1,
       position: 1,
       name: 'Max Verstappen',
-      photo: Image.formula1Page.leaderboards.photo1,
-      countryFlag: Image.formula1Page.leaderboards.flag1,
+      photo: f1Image.leaderboard.driver1,
+      countryFlag: f1Image.leaderboard.flag1,
       points: 393,
     },
     {
       id: 1,
       position: 2,
       name: 'Charles Leclerc',
-      photo: Image.formula1Page.leaderboards.photo2,
-      countryFlag: Image.formula1Page.leaderboards.flag2,
+      photo: f1Image.leaderboard.driver2,
+      countryFlag: f1Image.leaderboard.flag2,
       points: 331,
     },
     {
       id: 1,
       position: 3,
       name: 'Lando Norris',
-      photo: Image.formula1Page.leaderboards.photo3,
-      countryFlag: Image.formula1Page.leaderboards.flag3,
+      photo: f1Image.leaderboard.driver3,
+      countryFlag: f1Image.leaderboard.flag3,
       points: 307,
     },
   ],
@@ -60,21 +61,21 @@ const formula1PageData = {
     {
       id: 1,
       position: 1,
-      logo: Image.formula1Page.teamLeaderboards.logo1,
+      logo: f1Image.teamLeaderboard.teamLogo1,
       name: 'McLaren',
       points: 593,
     },
     {
       id: 2,
       position: 2,
-      logo: Image.formula1Page.teamLeaderboards.logo2,
+      logo: f1Image.teamLeaderboard.teamLogo2,
       name: 'Ferrari',
       points: 557,
     },
     {
       id: 3,
       position: 3,
-      logo: Image.formula1Page.teamLeaderboards.logo3,
+      logo: f1Image.teamLeaderboard.teamLogo3,
       name: 'Red Bull',
       points: 554,
     },
@@ -86,8 +87,8 @@ const formula1PageData = {
       views: '91k',
       fullName: 'Lando Norris',
       text: ['😈😈😈😈😈'],
-      image: Image.formula1Page.pro.pros1,
-      avatar: Image.avatar.landoAvatar,
+      image: f1Image.post.post1,
+      avatar: avatarImage.landoAvatar,
       likes: '32k',
       messages: '523',
       reposts: '1.2k',
@@ -101,8 +102,8 @@ const formula1PageData = {
         'My tribute to a hero of mine 🇧🇷',
         "Senna is a true legend of our sport and has inspired not only me but every driver who races today. He's the greatest to ever race around Monaco and I wanted to capture that in this helmet. His iconic design combined with mirrored chrome to reflect the streets he was so great on.",
       ],
-      image: Image.formula1Page.pro.pros2,
-      avatar: Image.avatar.landoAvatar,
+      image: f1Image.post.post2,
+      avatar: avatarImage.landoAvatar,
       likes: '42k',
       messages: '872',
       reposts: '2.1k',
@@ -113,8 +114,8 @@ const formula1PageData = {
       views: '910k',
       fullName: 'Lando Norris',
       text: ['The first crunch of tayto cheese and onion crisps'],
-      image: Image.formula1Page.pro.pros3,
-      avatar: Image.avatar.landoAvatar,
+      image: f1Image.post.post3,
+      avatar: avatarImage.landoAvatar,
       likes: '310k',
       messages: '2k',
       reposts: '3.6k',
@@ -123,11 +124,11 @@ const formula1PageData = {
   mems: [
     {
       id: 1,
-      avatar: Image.avatar.kamilaAvatar,
+      avatar: avatarImage.kamilaAvatar,
       fullName: 'Kamila Crown',
       date: 'Jul 7',
       views: '31k',
-      image: Image.formula1Page.meme.meme1,
+      image: f1Image.meme.meme1,
       size: 'small' as const,
       likes: '60',
       messages: '15',
@@ -135,11 +136,11 @@ const formula1PageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.landoAvatar,
+      avatar: avatarImage.landoAvatar,
       fullName: 'Lando Norris',
       date: 'Jul 7',
       views: '31k',
-      image: Image.formula1Page.meme.meme2,
+      image: f1Image.meme.meme2,
       size: 'small' as const,
       likes: '12',
       messages: '99',
@@ -147,11 +148,11 @@ const formula1PageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.cheeAvatar,
+      avatar: avatarImage.cheeAvatar,
       fullName: 'Chee Chok',
       date: 'Jul 7',
       views: '31k',
-      image: Image.formula1Page.meme.meme3,
+      image: f1Image.meme.meme3,
       size: 'medium' as const,
       likes: '13',
       messages: '99',
@@ -159,11 +160,11 @@ const formula1PageData = {
     },
     {
       id: 4,
-      avatar: Image.avatar.alexaAvatar,
+      avatar: avatarImage.alexaAvatar,
       fullName: 'Alexa Green',
       date: 'Jul 5',
       views: '31k',
-      image: Image.formula1Page.meme.meme4,
+      image: f1Image.meme.meme4,
       size: 'medium' as const,
       likes: '10',
       messages: '90',
@@ -171,11 +172,11 @@ const formula1PageData = {
     },
     {
       id: 5,
-      avatar: Image.avatar.samaraAvatar,
+      avatar: avatarImage.samaraAvatar,
       fullName: 'Samara Tompson',
       date: 'Jul 8',
       views: '31k',
-      image: Image.formula1Page.meme.meme5,
+      image: f1Image.meme.meme5,
       size: 'large' as const,
       likes: '11',
       messages: '45',
@@ -185,7 +186,7 @@ const formula1PageData = {
   news: [
     {
       id: 1,
-      avatar: Image.avatar.skySportsAvatar,
+      avatar: avatarImage.skySportsAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Sky Sports',
@@ -197,7 +198,7 @@ const formula1PageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.f1Avatar,
+      avatar: avatarImage.f1Avatar,
       date: '12h',
       views: '91k',
       fullName: 'Formula 1',
@@ -209,7 +210,7 @@ const formula1PageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.f1Avatar,
+      avatar: avatarImage.f1Avatar,
       date: '12h',
       views: '91k',
       fullName: 'Formula 1',
@@ -223,7 +224,7 @@ const formula1PageData = {
   videos: [
     {
       id: 1,
-      avatar: Image.avatar.f1Avatar,
+      avatar: avatarImage.f1Avatar,
       date: '12h',
       views: '91k',
       fullName: 'Formula 1',
@@ -236,7 +237,7 @@ const formula1PageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.landoAvatar,
+      avatar: avatarImage.landoAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Lando Norris',
@@ -248,7 +249,7 @@ const formula1PageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.landoAvatar,
+      avatar: avatarImage.landoAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Lando Norris',
@@ -261,4 +262,4 @@ const formula1PageData = {
   ],
 };
 
-export { formula1PageData };
+export { f1PageData };

@@ -29,6 +29,7 @@ const StyledWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 34px;
+  flex-shrink: 0;
 
   width: 281px;
   padding: 16px 8px;

@@ -1,11 +1,12 @@
 import { JSX } from 'react';
 
-import { usPoliticsPageData } from '~/shared/data/usPoliticsPageData';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
 import { VideoWidget } from '~/widgets/VideoWidget';
+
+import { usPoliticsPageData } from './usPoliticsPageData';
 
 function UsPoliticsPage(): JSX.Element {
   return (

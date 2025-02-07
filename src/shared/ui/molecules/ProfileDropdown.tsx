@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Image } from '~/shared/assets/images';
+import { avatarImage } from '~/shared/assets/images/avatars';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon, VerifiedIcon } from '~/shared/ui/atoms/Icon';
@@ -14,7 +14,7 @@ const IS_VERIFIED = true;
 function ProfileDropdown(): JSX.Element {
   return (
     <StyledWrapper>
-      <Avatar size="medium" src={Image.avatar.currentUser} />
+      <Avatar size="medium" src={avatarImage.currentUser} />
 
       <StyledProfileInfo>
         <StyledTop>

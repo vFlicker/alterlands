@@ -1,12 +1,13 @@
 import { JSX } from 'react';
 
-import { ukrainePageData } from '~/shared/data/ukrainePageData';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
 import { PostWidget } from '~/widgets/PostWidget';
 import { VideoWidget } from '~/widgets/VideoWidget';
+
+import { ukrainePageData } from './ukrainePageData';
 
 function UkrainePage(): JSX.Element {
   return (

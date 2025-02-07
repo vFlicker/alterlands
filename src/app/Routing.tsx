@@ -1,10 +1,10 @@
 import { JSX } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { Formula1Page } from '~/pages/Formula1Page';
+import { F1Page } from '~/pages/f1Page';
 import { UiKitPage } from '~/pages/UiKitPage';
-import { UkrainePage } from '~/pages/UkrainePage';
-import { UsPoliticsPage } from '~/pages/UsPoliticsPage';
+import { UkrainePage } from '~/pages/ukrainePage';
+import { UsPoliticsPage } from '~/pages/usPoliticsPage';
 import { AppRoute } from '~/shared/libs/router';
 
 function Routing(): JSX.Element {
@@ -16,7 +16,7 @@ function Routing(): JSX.Element {
       />
 
       <Route path={AppRoute.UKRAINE} element={<UkrainePage />} />
-      <Route path={AppRoute.FORMULA_1} element={<Formula1Page />} />
+      <Route path={AppRoute.F1} element={<F1Page />} />
       <Route path={AppRoute.US_POLITICS} element={<UsPoliticsPage />} />
       <Route path={AppRoute.UI_KIT} element={<UiKitPage />} />
     </Routes>

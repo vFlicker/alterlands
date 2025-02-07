@@ -1,14 +1,15 @@
-import { Image } from '~/shared/assets/images';
+import { avatarImage } from '~/shared/assets/images/avatars';
+import { usPoliticsImage } from '~/shared/assets/images/usPolitics';
 
 const usPoliticsPageData = {
   mems: [
     {
       id: 1,
-      avatar: Image.avatar.jessicaDavisAvatar,
+      avatar: avatarImage.jessicaDavisAvatar,
       fullName: 'Jessica Davis',
       date: 'Jul 7',
       views: '31k',
-      image: Image.usPolitics.meme.meme1,
+      image: usPoliticsImage.meme.meme1,
       size: 'large' as const,
       likes: '1.2k',
       messages: '451',
@@ -16,11 +17,11 @@ const usPoliticsPageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.jamesMillerAvatar,
+      avatar: avatarImage.jamesMillerAvatar,
       fullName: 'James Miller',
       date: 'Jul 7',
       views: '31k',
-      image: Image.usPolitics.meme.meme2,
+      image: usPoliticsImage.meme.meme2,
       size: 'large' as const,
       likes: '2k',
       messages: '610',
@@ -28,11 +29,11 @@ const usPoliticsPageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.ethanAndersonAvatar,
+      avatar: avatarImage.ethanAndersonAvatar,
       fullName: 'Ethan Anderson',
       date: 'Jul 7',
       views: '31k',
-      image: Image.usPolitics.meme.meme3,
+      image: usPoliticsImage.meme.meme3,
       size: 'large' as const,
       likes: '1.5k',
       messages: '523',
@@ -42,7 +43,7 @@ const usPoliticsPageData = {
   longreads: [
     {
       id: 1,
-      avatar: Image.avatar.indianaAvatar,
+      avatar: avatarImage.indianaAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Indiana CAPITAL Chronicle',
@@ -54,7 +55,7 @@ const usPoliticsPageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.theNewYorkTimesAvatar,
+      avatar: avatarImage.theNewYorkTimesAvatar,
       date: '12h',
       views: '91k',
       fullName: 'The New York Times',
@@ -65,7 +66,7 @@ const usPoliticsPageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.cnnAvatar,
+      avatar: avatarImage.cnnAvatar,
       date: '12h',
       views: '91k',
       fullName: 'CNN',
@@ -79,7 +80,7 @@ const usPoliticsPageData = {
   videos: [
     {
       id: 1,
-      avatar: Image.avatar.bbcAvatar,
+      avatar: avatarImage.bbcAvatar,
       date: '12h',
       views: '91k',
       fullName: 'BBC',
@@ -91,7 +92,7 @@ const usPoliticsPageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.cnnAvatar,
+      avatar: avatarImage.cnnAvatar,
       date: '12h',
       views: '91k',
       fullName: 'CNN',
@@ -104,7 +105,7 @@ const usPoliticsPageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.bbcAvatar,
+      avatar: avatarImage.bbcAvatar,
       date: '12h',
       views: '91k',
       fullName: 'BBC',

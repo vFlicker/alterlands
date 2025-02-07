@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Image } from '~/shared/assets/images';
+import { favoriteImages } from '~/shared/assets/images/favorites';
 import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 
 function NavigationPanel(): JSX.Element {
@@ -10,7 +10,7 @@ function NavigationPanel(): JSX.Element {
       <SideBarWidgetHeader title="Navigation panel" onButtonClick={() => {}} />
 
       <StyledNavigationList>
-        {Image.favorites.map((image, index) => (
+        {favoriteImages.map((image, index) => (
           <StyledNavigationItem key={image}>
             <img src={image} alt={`image-${index}`} />
           </StyledNavigationItem>

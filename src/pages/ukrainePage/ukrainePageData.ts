@@ -1,4 +1,5 @@
-import { Image } from '~/shared/assets/images';
+import { avatarImage } from '~/shared/assets/images/avatars';
+import { ukraineImage } from '~/shared/assets/images/ukraine';
 
 const ukrainePageData = {
   posts: [
@@ -13,8 +14,8 @@ const ukrainePageData = {
         'And one more thing. We are preparing several important personnel decisions. The decrees will be announced soon. I want to thank everyone who helps!',
         'Glory to Ukraine!',
       ],
-      image: Image.ukrainePage.post.post1,
-      avatar: Image.avatar.zelenskiyAvatar,
+      image: ukraineImage.post.post1,
+      avatar: avatarImage.zelenskiyAvatar,
       likes: '32k',
       messages: '523',
       reposts: '1.2k',
@@ -31,8 +32,8 @@ const ukrainePageData = {
 
         'I really want no child in Ukraine who does not have parental warmth to be lonely during these holidays, but instead to feel the support of adults.',
       ],
-      image: Image.ukrainePage.post.post2,
-      avatar: Image.avatar.olenaZelenskaAvatar,
+      image: ukraineImage.post.post2,
+      avatar: avatarImage.olenaZelenskaAvatar,
       likes: '42k',
       messages: '872',
       reposts: '2.1k',
@@ -41,11 +42,11 @@ const ukrainePageData = {
   mems: [
     {
       id: 1,
-      avatar: Image.avatar.oleksandrShevchenkoAvatar,
+      avatar: avatarImage.oleksandrShevchenkoAvatar,
       fullName: 'Oleksandr Shevchenko',
       date: 'Jul 7',
       views: '31k',
-      image: Image.ukrainePage.meme.meme1,
+      image: ukraineImage.meme.meme1,
       size: 'large' as const,
       likes: '60',
       messages: '15',
@@ -53,11 +54,11 @@ const ukrainePageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.dmytroBondarenkoAvatar,
+      avatar: avatarImage.dmytroBondarenkoAvatar,
       fullName: 'Dmytro Bondarenko',
       date: 'Jul 7',
       views: '31k',
-      image: Image.ukrainePage.meme.meme2,
+      image: ukraineImage.meme.meme2,
       size: 'large' as const,
       likes: '12',
       messages: '99',
@@ -65,11 +66,11 @@ const ukrainePageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.ivanSydorenkoAvatar,
+      avatar: avatarImage.ivanSydorenkoAvatar,
       fullName: 'Ivan Sydorenko',
       date: 'Jul 7',
       views: '31k',
-      image: Image.ukrainePage.meme.meme3,
+      image: ukraineImage.meme.meme3,
       size: 'large' as const,
       likes: '13',
       messages: '99',
@@ -77,11 +78,11 @@ const ukrainePageData = {
     },
     {
       id: 4,
-      avatar: Image.avatar.maksymLevchenkoAvatar,
+      avatar: avatarImage.maksymLevchenkoAvatar,
       fullName: 'Maksym Levchenko',
       date: 'Jul 5',
       views: '31k',
-      image: Image.ukrainePage.meme.meme4,
+      image: ukraineImage.meme.meme4,
       size: 'large' as const,
       likes: '10',
       messages: '90',
@@ -91,7 +92,7 @@ const ukrainePageData = {
   news: [
     {
       id: 1,
-      avatar: Image.avatar.bbcAvatar,
+      avatar: avatarImage.bbcAvatar,
       date: '12h',
       views: '91k',
       fullName: 'BBC News Ukraine',
@@ -103,7 +104,7 @@ const ukrainePageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.presidentAvatar,
+      avatar: avatarImage.presidentAvatar,
       date: '12h',
       views: '91k',
       fullName: 'President of Ukraine - Volodymyr Zelensky',
@@ -115,7 +116,7 @@ const ukrainePageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.rbkAvatar,
+      avatar: avatarImage.rbkAvatar,
       date: '12h',
       views: '91k',
       fullName: 'RBK Ukraine',
@@ -129,7 +130,7 @@ const ukrainePageData = {
   videos: [
     {
       id: 1,
-      avatar: Image.avatar.ukrainianPravdaAvatar,
+      avatar: avatarImage.ukrainianPravdaAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Ukrainian Pravda',
@@ -142,7 +143,7 @@ const ukrainePageData = {
     },
     {
       id: 2,
-      avatar: Image.avatar.officePresidentUkraine,
+      avatar: avatarImage.officePresidentUkraine,
       date: '12h',
       views: '91k',
       fullName: 'Office of the President of Ukraine',
@@ -154,7 +155,7 @@ const ukrainePageData = {
     },
     {
       id: 3,
-      avatar: Image.avatar.landoAvatar,
+      avatar: avatarImage.landoAvatar,
       date: '12h',
       views: '91k',
       fullName: 'Zagin Kinomaniv',
