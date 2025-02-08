@@ -48,9 +48,9 @@ const StyledTable = styled.div`
 
 const StyledHeader = styled.div`
   display: grid;
-  grid-template-columns: 26px 80px 240px 40px;
+  grid-template-columns: 10px 80px 1fr 40px;
   justify-items: center;
-  gap: 29px;
+  gap: 16px;
 
   padding: 8px 12px;
 
@@ -66,10 +66,10 @@ const StyledBody = styled.div`
 
 const StyledRow = styled.div`
   display: grid;
-  grid-template-columns: 26px 80px 240px 40px;
+  grid-template-columns: 10px 80px 1fr 40px;
   align-items: center;
   justify-items: center;
-  gap: 29px;
+  gap: 16px;
 
   padding: 8px 12px;
   background-color: ${Color.WHITE_5};
