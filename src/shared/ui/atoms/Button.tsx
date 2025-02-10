@@ -17,6 +17,7 @@ type ButtonProps = ComponentProps<typeof StyledButton>;
 
 const enum ButtonVariant {
   FILLED = 'filled',
+  NOT_FIELD = 'not field',
   OUTLINED = 'outlined',
 }
 
@@ -45,6 +46,10 @@ const ButtonVariantToCss = {
   [ButtonVariant.FILLED]: css`
     border-color: transparent;
     background-color: var(--color-button);
+  `,
+  [ButtonVariant.NOT_FIELD]: css`
+    border-color: transparent;
+    background-color: transparent;
   `,
   [ButtonVariant.OUTLINED]: css`
     border-color: var(--color-border);

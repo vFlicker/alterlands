@@ -9,7 +9,6 @@ import { withAttrs } from '../../withAttrs';
 const StyledRepostButton = withAttrs(
   {
     color: 'neutral',
-    variant: 'filled',
     size: 'small',
     leftIcon: <Icon name="icon-repost" />,
   },

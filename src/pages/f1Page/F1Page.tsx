@@ -5,6 +5,7 @@ import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
+import { ChatWidget } from '~/widgets/ChatWidget';
 import { Leaderboards } from '~/widgets/f1/Leaderboards';
 import { TeamLeaderboards } from '~/widgets/f1/TeamLeaderboards';
 import { UpcomingRaceWidget } from '~/widgets/f1/UpcomingRacesWidget';
@@ -71,7 +72,9 @@ function F1Page(): JSX.Element {
           <TeamLeaderboards teams={f1PageData.teamLeaderboards} />
         </WidgetColumn>
 
-        <WidgetColumn title="Chat widget">TODO: add chat widget</WidgetColumn>
+        <WidgetColumn title="Chat">
+          <ChatWidget data={f1PageData.chat} />
+        </WidgetColumn>
 
         <WidgetColumn title="News">
           {f1PageData.news.map((news) => (

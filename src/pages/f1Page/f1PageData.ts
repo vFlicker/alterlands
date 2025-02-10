@@ -80,6 +80,36 @@ const f1PageData = {
       points: 554,
     },
   ],
+  chat: [
+    {
+      id: 1,
+      avatar: avatarImage.maksymLevchenkoAvatar,
+      fullName: 'Maksym Levchenko',
+      date: '42m',
+      message: 'Haha, every race weekend is the highlight of my life',
+      likes: '24',
+      reposts: '0',
+    },
+    {
+      id: 2,
+      avatar: avatarImage.annaKushchAvatar,
+      fullName: 'Anna Kushch',
+      date: '24m',
+      message:
+        'Kamala Harris is an inspiring trailblazer, embodying strength, intelligence, and resilience as the first woman, first Black, and first South Asian Vice President of the United States. Her ability to break barriers and champion justice is truly uplifting, giving hope to future generations. She radiates determination and warmth, proving that bold leadership and compassion can coexist beautifully.',
+      likes: '30',
+      reposts: '0',
+    },
+    {
+      id: 3,
+      avatar: avatarImage.danielMooreAvatar,
+      fullName: 'Daniel Moore',
+      date: '4',
+      message: 'Who believes? What are you saying?',
+      likes: '0',
+      reposts: '0',
+    },
+  ],
   posts: [
     {
       id: 1,

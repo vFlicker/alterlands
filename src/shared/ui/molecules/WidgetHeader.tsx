@@ -15,8 +15,8 @@ type WidgetHeaderProps = {
   avatar: string;
   fullName: string;
   date: string;
-  views: string;
   orientation: `${Orientation}`;
+  views?: string;
   className?: string;
 };
 
@@ -43,10 +43,12 @@ function WidgetHeader({
         </StyledUserInfo>
         <StyledTextWrapper>
           <SecondaryText>{date}</SecondaryText>
-          <SecondaryText>
-            <StyledEyeIcon />
-            {views}
-          </SecondaryText>
+          {views && (
+            <SecondaryText>
+              <StyledEyeIcon />
+              {views}
+            </SecondaryText>
+          )}
         </StyledTextWrapper>
       </StyledContent>
     </StyledWrapper>

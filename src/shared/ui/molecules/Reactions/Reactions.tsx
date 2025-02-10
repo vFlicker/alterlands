@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX, useState } from 'react';
 
+import { ButtonVariant } from '../../atoms/Button';
 import { MessageButton } from './MessageButton';
 import { RepostButton } from './RepostButton';
 import { VoteControl } from './VoteControl';
@@ -9,8 +10,8 @@ type VoteState = 'up' | 'down' | null;
 
 type ReactionProps = {
   likes: string;
-  messages: string;
   reposts: string;
+  variant?: `${ButtonVariant}`;
   commentCount?: string;
   className?: string;
 };
@@ -20,6 +21,7 @@ function Reactions({
   likes,
   commentCount,
   reposts,
+  variant = ButtonVariant.FILLED,
 }: ReactionProps): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
 
@@ -29,7 +31,7 @@ function Reactions({
   return (
     <StyledWrapper className={className}>
       <VoteControl
-        filled
+        filled={variant === ButtonVariant.FILLED}
         count={likes}
         isUpActive={isUpActive}
         isDownActive={isDownActive}
@@ -37,7 +39,14 @@ function Reactions({
         onDown={() => setVote(isDownActive ? null : 'down')}
       />
 
+      {commentCount && (
+        <MessageButton variant={variant} onClick={() => {}}>
           {commentCount}
+        </MessageButton>
+      )}
+      <RepostButton variant={variant} onClick={() => {}}>
+        {reposts}
+      </RepostButton>
     </StyledWrapper>
   );
 }
