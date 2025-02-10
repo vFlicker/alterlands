@@ -5,6 +5,7 @@ import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
+import { Card } from '~/widgets/Card';
 import { ChatWidget } from '~/widgets/ChatWidget';
 import { DiscussionWidget } from '~/widgets/DiscussionWidget';
 import { Leaderboards } from '~/widgets/f1/Leaderboards';
@@ -43,7 +44,11 @@ function F1Page(): JSX.Element {
           ))}
         </WidgetColumn>
 
-        <WidgetColumn title="Merch widget">TODO: add merch widget</WidgetColumn>
+        <WidgetColumn title="Merch" columns={3}>
+          {f1PageData.merch.map((item) => (
+            <Card key={item.id} {...item} />
+          ))}
+        </WidgetColumn>
 
         <WidgetColumn title="Memes" columns={2}>
           {f1PageData.mems.map((meme) => (
@@ -67,7 +72,11 @@ function F1Page(): JSX.Element {
           ))}
         </WidgetColumn>
 
-        <WidgetColumn title="Post widget">TODO: add post widget</WidgetColumn>
+        <WidgetColumn title="Post">
+          {f1PageData.posts.map((post) => (
+            <PostWidget key={post.id} {...post} />
+          ))}
+        </WidgetColumn>
       </Masonic.Item>
 
       <Masonic.Item>

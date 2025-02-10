@@ -366,6 +366,44 @@ const f1PageData = {
       reposts: '1.2k',
     },
   ],
+  merch: [
+    {
+      id: 1,
+      imageUrl: f1Image.merch.item1,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '91.00$',
+    },
+    {
+      id: 2,
+      imageUrl: f1Image.merch.item2,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '100.00$',
+    },
+    {
+      id: 3,
+      imageUrl: f1Image.merch.item3,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '105.00$',
+    },
+    {
+      id: 4,
+      imageUrl: f1Image.merch.item4,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '76.00$',
+    },
+    {
+      id: 5,
+      imageUrl: f1Image.merch.item5,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '81.00$',
+    },
+    {
+      id: 6,
+      imageUrl: f1Image.merch.item6,
+      title: 'Formula 1 Neon Nights Gradient Foundation Jersey',
+      price: '140.00$',
+    },
+  ],
 };
 
 export { f1PageData };

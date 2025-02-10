@@ -134,6 +134,7 @@ const getPaddingCss = (
 
 const StyledButton = styled.button<ButtonBaseProps>`
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   gap: 4px;
 

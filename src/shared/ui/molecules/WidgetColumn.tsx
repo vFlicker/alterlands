@@ -9,7 +9,7 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 
 type WidgetColumnProps = PropsWithChildren<{
   title: string;
-  columns?: 1 | 2;
+  columns?: 1 | 2 | 3;
   actionButton?: JSX.Element;
   className?: string;
 }>;
@@ -57,6 +57,11 @@ const ContentColumnsToCss = {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+  `,
+  3: css`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   `,
 };
 
