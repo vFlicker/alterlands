@@ -6,6 +6,7 @@ import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { ChatWidget } from '~/widgets/ChatWidget';
+import { DiscussionWidget } from '~/widgets/DiscussionWidget';
 import { Leaderboards } from '~/widgets/f1/Leaderboards';
 import { TeamLeaderboards } from '~/widgets/f1/TeamLeaderboards';
 import { UpcomingRaceWidget } from '~/widgets/f1/UpcomingRacesWidget';
@@ -60,8 +61,10 @@ function F1Page(): JSX.Element {
           TODO: add post widge
         </WidgetColumn>
 
-        <WidgetColumn title="Discussion widget">
-          TODO: add discussion widget
+        <WidgetColumn title="Discussion">
+          {f1PageData.discussion.map((item) => (
+            <DiscussionWidget {...item} />
+          ))}
         </WidgetColumn>
 
         <WidgetColumn title="Post widget">TODO: add post widget</WidgetColumn>

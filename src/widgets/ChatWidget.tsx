@@ -24,21 +24,8 @@ function ChatWidget({ className, data }: ChatWidgetProps): JSX.Element {
   return (
     <StyledWrapper className={className}>
       <StyledList>
-        {data.map(({ avatar, date, fullName, id, likes, reposts, message }) => (
-          <StyledItem key={id}>
-            <StyledWidgetHeader
-              avatar={avatar}
-              date={date}
-              fullName={fullName}
-              orientation="horizontal"
-            />
-            <StyledMessage>{message}</StyledMessage>
-            <StyledReactions
-              variant="not field"
-              likes={likes}
-              reposts={reposts}
-            />
-          </StyledItem>
+        {data.map((itemData) => (
+          <MessageItem key={itemData.id} {...itemData}></MessageItem>
         ))}
       </StyledList>
 
@@ -50,7 +37,42 @@ function ChatWidget({ className, data }: ChatWidgetProps): JSX.Element {
   );
 }
 
-export { ChatWidget };
+type MessageItemProps = {
+  id: number;
+  avatar: string;
+  fullName: string;
+  date: string;
+  message: string;
+  likes: string;
+  reposts: string;
+  className?: string;
+};
+
+function MessageItem({
+  className,
+  avatar,
+  date,
+  fullName,
+  id,
+  likes,
+  message,
+  reposts,
+}: MessageItemProps): JSX.Element {
+  return (
+    <StyledItem className={className} key={id}>
+      <StyledWidgetHeader
+        avatar={avatar}
+        date={date}
+        fullName={fullName}
+        orientation="horizontal"
+      />
+      <StyledMessage>{message}</StyledMessage>
+      <StyledReactions variant="not field" likes={likes} reposts={reposts} />
+    </StyledItem>
+  );
+}
+
+export { ChatWidget, MessageItem };
 
 const StyledWrapper = styled.div`
   display: flex;

@@ -110,6 +110,82 @@ const f1PageData = {
       reposts: '0',
     },
   ],
+  discussion: [
+    {
+      id: 1,
+      avatar: avatarImage.oleksandrShevchenkoAvatar,
+      fullName: 'Oleksandr Shevchenko',
+      date: '12h',
+      views: '20k',
+      title:
+        'The strategy call during that pit stop completely changed the race!',
+      likes: '16k',
+      messagesCount: '300',
+      reposts: '6k',
+      answers: [
+        {
+          id: 1,
+          avatar: avatarImage.landoAvatar,
+          fullName: 'Lando Norris',
+          date: '11h',
+          views: '12k',
+          message: 'They drive faster into the pits than I do on the highway',
+          likes: '10k',
+          reposts: '1k',
+          label: 'funny',
+        },
+        {
+          id: 2,
+          avatar: avatarImage.alexaAvatar,
+          fullName: 'Alexa Green',
+          date: '10h',
+          views: '12k',
+          message:
+            "it's a thrilling blend of speed, skill, and cutting-edge technology",
+          likes: '17k',
+          reposts: '6k',
+          label: 'likes',
+        },
+      ],
+    },
+    {
+      id: 2,
+      avatar: avatarImage.alexaAvatar,
+      fullName: 'Alexa Green',
+      date: '1h',
+      views: '7k',
+      title:
+        'The strategy call during that pit stop completely changed the race!',
+      likes: '16k',
+      messagesCount: '300',
+      reposts: '6k',
+      answers: [
+        {
+          id: 1,
+          avatar: avatarImage.cameronAvatar,
+          fullName: 'Cameron Williamson',
+          date: '11h',
+          views: '12k',
+          message:
+            'Their reaction time is so fast, I bet they dodge raindrops too!',
+          likes: '10k',
+          reposts: '1k',
+          label: 'likes',
+        },
+        {
+          id: 2,
+          avatar: avatarImage.cheeAvatar,
+          fullName: 'Chee Chok',
+          date: '10h',
+          views: '12k',
+          message: 'They survived that crash? Unreal!',
+          likes: '17k',
+          reposts: '6k',
+          label: 'shocked',
+        },
+      ],
+    },
+  ],
   posts: [
     {
       id: 1,
