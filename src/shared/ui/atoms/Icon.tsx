@@ -48,7 +48,19 @@ const IconNameToCss = {
     fill: none;
     stroke: currentColor;
   `,
-  [IconName.ICON_CHEVRON]: css`
+  [IconName.ICON_CHEVRON_UP]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_CHEVRON_RIGHT]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_CHEVRON_DOWN]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_CHEVRON_LEFT]: css`
     fill: none;
     stroke: currentColor;
   `,

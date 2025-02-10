@@ -82,97 +82,97 @@ function Buttons(): JSX.Element {
       <StyledButtonsWrapper>
         <p>accent filled medium</p>
         <IconButton color="accent" variant="filled" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral filled medium</p>
         <IconButton color="neutral" variant="filled" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent filled medium</p>
         <IconButton color="transparent" variant="filled" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent filled medium disabled</p>
         <IconButton color="accent" variant="filled" size="medium" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral filled medium disabled</p>
         <IconButton color="neutral" variant="filled" size="medium" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent filled medium disabled</p>
         <IconButton color="transparent" variant="filled" size="medium" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent filled small</p>
         <IconButton color="accent" variant="filled" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral filled small</p>
         <IconButton color="neutral" variant="filled" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent filled small</p>
         <IconButton color="transparent" variant="filled" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent filled small disabled</p>
         <IconButton color="accent" variant="filled" size="small" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral filled small disabled</p>
         <IconButton color="neutral" variant="filled" size="small" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent filled small disabled</p>
         <IconButton color="transparent" variant="filled" size="small" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent outlined medium</p>
         <IconButton color="accent" variant="outlined" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral outlined medium</p>
         <IconButton color="neutral" variant="outlined" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent outlined medium</p>
         <IconButton color="transparent" variant="outlined" size="medium">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent outlined medium disabled</p>
         <IconButton color="accent" variant="outlined" size="medium" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral outlined medium disabled</p>
         <IconButton color="neutral" variant="outlined" size="medium" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent outlined medium disabled</p>
@@ -182,36 +182,36 @@ function Buttons(): JSX.Element {
           size="medium"
           disabled
         >
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent outlined small</p>
         <IconButton color="accent" variant="outlined" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral outlined small</p>
         <IconButton color="neutral" variant="outlined" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent outlined small</p>
         <IconButton color="transparent" variant="outlined" size="small">
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <p>accent outlined small disabled</p>
         <IconButton color="accent" variant="outlined" size="small" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>neutral outlined small disabled</p>
         <IconButton color="neutral" variant="outlined" size="small" disabled>
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
 
         <p>transparent outlined small disabled</p>
@@ -221,7 +221,7 @@ function Buttons(): JSX.Element {
           size="small"
           disabled
         >
-          <Icon name="icon-chevron" />
+          <Icon name="icon-chevron-down" />
         </IconButton>
       </StyledButtonsWrapper>
 

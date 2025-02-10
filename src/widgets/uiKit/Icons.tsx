@@ -16,7 +16,10 @@ function Icons(): JSX.Element {
         <StyledIcon name={IconName.ICON_BANKNOTE} />
         <StyledIcon name={IconName.ICON_BIG_DOTE} />
         <StyledIcon name={IconName.ICON_CALENDAR} />
-        <StyledIcon name={IconName.ICON_CHEVRON} />
+        <StyledIcon name={IconName.ICON_CHEVRON_UP} />
+        <StyledIcon name={IconName.ICON_CHEVRON_RIGHT} />
+        <StyledIcon name={IconName.ICON_CHEVRON_DOWN} />
+        <StyledIcon name={IconName.ICON_CHEVRON_LEFT} />
         <StyledIcon name={IconName.ICON_CIRCLE_DOLLAR_SIGN} />
         <StyledIcon name={IconName.ICON_CLOSE} />
         <StyledIcon name={IconName.ICON_DOTS} />

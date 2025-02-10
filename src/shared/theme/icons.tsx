@@ -6,7 +6,10 @@ const enum IconName {
   ICON_BANKNOTE = 'icon-banknote',
   ICON_BIG_DOTE = 'icon-big-dote',
   ICON_CALENDAR = 'icon-calendar',
-  ICON_CHEVRON = 'icon-chevron',
+  ICON_CHEVRON_UP = 'icon-chevron-up',
+  ICON_CHEVRON_RIGHT = 'icon-chevron-right',
+  ICON_CHEVRON_DOWN = 'icon-chevron-down',
+  ICON_CHEVRON_LEFT = 'icon-chevron-left',
   ICON_CIRCLE_DOLLAR_SIGN = 'icon-circle-dollar-sign',
   ICON_CLOSE = 'icon-close',
   ICON_DOTS = 'icon-dots',
@@ -76,12 +79,33 @@ function SpriteWithIcons() {
           strokeLinejoin="round"
         />
       </symbol>
-      <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <symbol id="icon-chevron-up" viewBox="0 0 24 24">
+        <path
+          d="M17 14L12 10L7 14"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path
+          d="M11 17L15 12L11 7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24">
         <path
           d="M7 10L12 14L17 10"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+          <path
+            d="M13 7L9 12L13 17"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </symbol>
       </symbol>
       <symbol id="icon-circle-dollar-sign" viewBox="0 0 24 24">
         <path

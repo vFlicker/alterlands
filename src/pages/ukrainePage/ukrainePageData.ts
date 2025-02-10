@@ -187,6 +187,14 @@ const ukrainePageData = {
       votesCount: '1k',
     },
   ],
+  cities: [
+    {
+      id: 1,
+      imageUrl: ukraineImage.city.city1,
+      cityName: 'Kyiv',
+      population: '2 952 145',
+    },
+  ],
 };
 
 export { ukrainePageData };

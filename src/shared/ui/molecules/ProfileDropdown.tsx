@@ -31,7 +31,7 @@ function ProfileDropdown({ className }: ProfileDropdownProps): JSX.Element {
       </StyledProfileInfo>
 
       <StyledToggler>
-        <Icon name="icon-chevron" />
+        <Icon name="icon-chevron-down" />
       </StyledToggler>
     </StyledWrapper>
   );

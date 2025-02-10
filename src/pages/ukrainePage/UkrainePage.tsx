@@ -1,11 +1,13 @@
 import { JSX } from 'react';
 
+import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
 import { PostWidget } from '~/widgets/PostWidget';
-import { TrendsWidget } from '~/widgets/ukraine/Trend';
+import { CitiesWidget } from '~/widgets/ukraine/CitiesWidget';
+import { TrendsWidget } from '~/widgets/ukraine/TrendsWidget';
 import { VideoWidget } from '~/widgets/VideoWidget';
 
 import { ukrainePageData } from './ukrainePageData';
@@ -14,7 +16,12 @@ function UkrainePage(): JSX.Element {
   return (
     <Masonic.List>
       <Masonic.Item>
-        <WidgetColumn title="Cities">TODO: add cities widget</WidgetColumn>
+        <WidgetColumn
+          title="Cities"
+          actionButton={<LabelButton color="white">More</LabelButton>}
+        >
+          <CitiesWidget cities={ukrainePageData.cities} />
+        </WidgetColumn>
 
         <WidgetColumn title="Top Charts">
           TODO: add top charts widget
