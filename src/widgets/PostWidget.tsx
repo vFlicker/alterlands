@@ -15,7 +15,7 @@ type PostWidgetProps = {
   image: string;
   avatar: string;
   likes: string;
-  messages: string;
+  messagesCount: string;
   reposts: string;
 };
 
@@ -27,7 +27,7 @@ function PostWidget({
   image,
   text,
   likes,
-  messages,
+  messagesCount,
   reposts,
 }: PostWidgetProps): JSX.Element {
   return (
@@ -43,7 +43,7 @@ function PostWidget({
         <StyledText key={row}>{row}</StyledText>
       ))}
       <StyledImage src={image} alt="Image description" />
-      <Reactions likes={likes} messages={messages} reposts={reposts} />
+      <Reactions likes={likes} commentCount={messagesCount} reposts={reposts} />
     </StyledWrapper>
   );
 }

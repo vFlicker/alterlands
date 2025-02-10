@@ -11,13 +11,14 @@ type ReactionProps = {
   likes: string;
   messages: string;
   reposts: string;
+  commentCount?: string;
   className?: string;
 };
 
 function Reactions({
   className,
   likes,
-  messages,
+  commentCount,
   reposts,
 }: ReactionProps): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
@@ -36,8 +37,7 @@ function Reactions({
         onDown={() => setVote(isDownActive ? null : 'down')}
       />
 
-      <MessageButton onClick={() => {}}>{messages}</MessageButton>
-      <RepostButton onClick={() => {}}>{reposts}</RepostButton>
+          {commentCount}
     </StyledWrapper>
   );
 }

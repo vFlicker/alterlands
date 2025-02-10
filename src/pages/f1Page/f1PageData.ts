@@ -90,7 +90,7 @@ const f1PageData = {
       image: f1Image.post.post1,
       avatar: avatarImage.landoAvatar,
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -105,7 +105,7 @@ const f1PageData = {
       image: f1Image.post.post2,
       avatar: avatarImage.landoAvatar,
       likes: '42k',
-      messages: '872',
+      messagesCount: '872',
       reposts: '2.1k',
     },
     {
@@ -117,7 +117,7 @@ const f1PageData = {
       image: f1Image.post.post3,
       avatar: avatarImage.landoAvatar,
       likes: '310k',
-      messages: '2k',
+      messagesCount: '2k',
       reposts: '3.6k',
     },
   ],
@@ -131,7 +131,7 @@ const f1PageData = {
       image: f1Image.meme.meme1,
       size: 'small' as const,
       likes: '60',
-      messages: '15',
+      messagesCount: '15',
       reposts: '88',
     },
     {
@@ -143,7 +143,7 @@ const f1PageData = {
       image: f1Image.meme.meme2,
       size: 'small' as const,
       likes: '12',
-      messages: '99',
+      messagesCount: '99',
       reposts: '12',
     },
     {
@@ -155,7 +155,7 @@ const f1PageData = {
       image: f1Image.meme.meme3,
       size: 'medium' as const,
       likes: '13',
-      messages: '99',
+      messagesCount: '99',
       reposts: '12',
     },
     {
@@ -167,7 +167,7 @@ const f1PageData = {
       image: f1Image.meme.meme4,
       size: 'medium' as const,
       likes: '10',
-      messages: '90',
+      messagesCount: '90',
       reposts: '10',
     },
     {
@@ -179,7 +179,7 @@ const f1PageData = {
       image: f1Image.meme.meme5,
       size: 'large' as const,
       likes: '11',
-      messages: '45',
+      messagesCount: '45',
       reposts: '9',
     },
   ],
@@ -193,7 +193,7 @@ const f1PageData = {
       title:
         'F1 news, rumours and gossip: Formula 1 latest updates on teams, driver transfer market and contracts',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -205,7 +205,7 @@ const f1PageData = {
       title:
         'Formula 1 comes to life in brick form as full LEGO range unveiled',
       likes: '3k',
-      messages: '2k',
+      messagesCount: '2k',
       reposts: '406',
     },
     {
@@ -217,7 +217,7 @@ const f1PageData = {
       title:
         'What time is the Formula 1 2024 Las Vegas Grand Prix and how can I watch it?',
       likes: '2k',
-      messages: '1k',
+      messagesCount: '1k',
       reposts: '750',
     },
   ],
@@ -232,7 +232,7 @@ const f1PageData = {
       title:
         "Final Q3 lap 'a nightmare' - Leclerc unhappy with his Vegas Qualifying performance",
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -244,7 +244,7 @@ const f1PageData = {
       videoSrc: 'https://www.youtube.com/embed/dDMplXKlz6E',
       title: 'Qualifying Highlights: 2024 Las Vegas Grand Prix',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -256,7 +256,7 @@ const f1PageData = {
       videoSrc: 'https://www.youtube.com/embed/LXuTH26m11c',
       title: 'NO WAY EDDIE JORDAN SAID THIS ABOUT OSCAR PIASTRI! F1 News',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
   ],

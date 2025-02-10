@@ -14,7 +14,7 @@ type VideoWidgetProps = {
   videoSrc: string;
   title: string;
   likes: string;
-  messages: string;
+  messagesCount: string;
   reposts: string;
 };
 
@@ -23,7 +23,7 @@ function VideoWidget({
   date,
   fullName,
   likes,
-  messages,
+  messagesCount,
   reposts,
   title,
   videoSrc,
@@ -40,7 +40,7 @@ function VideoWidget({
       />
       <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
       <StyledText>{title}</StyledText>
-      <Reactions likes={likes} messages={messages} reposts={reposts} />
+      <Reactions likes={likes} commentCount={messagesCount} reposts={reposts} />
     </StyledWrapper>
   );
 }

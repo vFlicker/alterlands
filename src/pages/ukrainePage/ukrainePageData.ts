@@ -17,7 +17,7 @@ const ukrainePageData = {
       image: ukraineImage.post.post1,
       avatar: avatarImage.zelenskiyAvatar,
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -35,7 +35,7 @@ const ukrainePageData = {
       image: ukraineImage.post.post2,
       avatar: avatarImage.olenaZelenskaAvatar,
       likes: '42k',
-      messages: '872',
+      messagesCount: '872',
       reposts: '2.1k',
     },
   ],
@@ -49,7 +49,7 @@ const ukrainePageData = {
       image: ukraineImage.meme.meme1,
       size: 'large' as const,
       likes: '60',
-      messages: '15',
+      messagesCount: '15',
       reposts: '88',
     },
     {
@@ -61,7 +61,7 @@ const ukrainePageData = {
       image: ukraineImage.meme.meme2,
       size: 'large' as const,
       likes: '12',
-      messages: '99',
+      messagesCount: '99',
       reposts: '12',
     },
     {
@@ -73,7 +73,7 @@ const ukrainePageData = {
       image: ukraineImage.meme.meme3,
       size: 'large' as const,
       likes: '13',
-      messages: '99',
+      messagesCount: '99',
       reposts: '12',
     },
     {
@@ -85,7 +85,7 @@ const ukrainePageData = {
       image: ukraineImage.meme.meme4,
       size: 'large' as const,
       likes: '10',
-      messages: '90',
+      messagesCount: '90',
       reposts: '10',
     },
   ],
@@ -99,7 +99,7 @@ const ukrainePageData = {
       title:
         'Sociologist Oleksiy Antipovych: "Zaluzhny embodies the hopes and aspirations of Ukrainians"',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -111,7 +111,7 @@ const ukrainePageData = {
       title:
         'President: National communities are very important for preserving internal peace in Ukraine and realizing its geopolitical choice',
       likes: '3k',
-      messages: '2k',
+      messagesCount: '2k',
       reposts: '406',
     },
     {
@@ -123,7 +123,7 @@ const ukrainePageData = {
       title:
         "Fico's statement on the termination of electricity supply will not affect Ukraine's energy supply",
       likes: '2k',
-      messages: '1k',
+      messagesCount: '1k',
       reposts: '750',
     },
   ],
@@ -138,7 +138,7 @@ const ukrainePageData = {
       title:
         'Chaos in Pokrovsk / Yermak vs. Fedorov and Kubrakov / Pressure on the Deep State – Butusov | UP. Interview',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -150,7 +150,7 @@ const ukrainePageData = {
       videoSrc: 'https://www.youtube.com/embed/uULRo4e9RE4',
       title: 'Merry Christmas greetings from Volodymyr Zelensky',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -163,7 +163,7 @@ const ukrainePageData = {
       title:
         'GALUBOI AGANIOK, MUSICALS, BIG DIFFERENCE: What did TV feed us before the New Year?',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
   ],

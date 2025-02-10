@@ -12,7 +12,7 @@ const usPoliticsPageData = {
       image: usPoliticsImage.meme.meme1,
       size: 'large' as const,
       likes: '1.2k',
-      messages: '451',
+      messagesCount: '451',
       reposts: '104',
     },
     {
@@ -24,7 +24,7 @@ const usPoliticsPageData = {
       image: usPoliticsImage.meme.meme2,
       size: 'large' as const,
       likes: '2k',
-      messages: '610',
+      messagesCount: '610',
       reposts: '165',
     },
     {
@@ -36,7 +36,7 @@ const usPoliticsPageData = {
       image: usPoliticsImage.meme.meme3,
       size: 'large' as const,
       likes: '1.5k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '199',
     },
   ],
@@ -50,7 +50,7 @@ const usPoliticsPageData = {
       title:
         'A nation exhausted: The neuroscience of why Americans are tuning out political news',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -61,7 +61,7 @@ const usPoliticsPageData = {
       fullName: 'The New York Times',
       title: 'Will the U.S. Ever Be Ready for a Female President?',
       likes: '3k',
-      messages: '2k',
+      messagesCount: '2k',
       reposts: '406',
     },
     {
@@ -73,7 +73,7 @@ const usPoliticsPageData = {
       title:
         'Trump names ambassador to Panama after suggesting US control of Panama Canal',
       likes: '2k',
-      messages: '1k',
+      messagesCount: '1k',
       reposts: '750',
     },
   ],
@@ -87,7 +87,7 @@ const usPoliticsPageData = {
       videoSrc: 'https://www.youtube.com/embed/QB-7p6zKIVU',
       title: 'Biden commutes nearly all federal death row sentences | BBC',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -100,7 +100,7 @@ const usPoliticsPageData = {
       title:
         "Former prosecutor: January 6 investigation 'already having an impact' on U.S. politics",
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
     {
@@ -112,7 +112,7 @@ const usPoliticsPageData = {
       videoSrc: 'https://www.youtube.com/embed/ehL5uwNNHvM',
       title: 'Relive a wild month in US politics in about two minutes',
       likes: '32k',
-      messages: '523',
+      messagesCount: '523',
       reposts: '1.2k',
     },
   ],
