@@ -5,6 +5,7 @@ import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
 import { PostWidget } from '~/widgets/PostWidget';
+import { TrendsWidget } from '~/widgets/ukraine/Trend';
 import { VideoWidget } from '~/widgets/VideoWidget';
 
 import { ukrainePageData } from './ukrainePageData';
@@ -33,8 +34,8 @@ function UkrainePage(): JSX.Element {
       </Masonic.Item>
 
       <Masonic.Item>
-        <WidgetColumn title="Trend Topics widge">
-          TODO: add trend topics widge
+        <WidgetColumn title="Trend Topics" columns={1}>
+          <TrendsWidget data={ukrainePageData.trends} />
         </WidgetColumn>
 
         <WidgetColumn title="Voice">TODO: add voice widget</WidgetColumn>

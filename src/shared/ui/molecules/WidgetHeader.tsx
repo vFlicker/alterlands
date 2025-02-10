@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Radius } from '~/shared/theme/radiuses';
 
 import { Avatar } from '../atoms/Avatar';
 import { Icon } from '../atoms/Icon';
 import { Typography } from '../atoms/Typography';
 import { VerifiedIcon } from '../atoms/VerifiedIcon';
+import { dividerDotCss } from '../dividerDotCss';
 import { withAttrs } from '../withAttrs';
 
 type WidgetHeaderProps = {
@@ -57,29 +57,17 @@ function WidgetHeader({
 
 export { WidgetHeader };
 
-const dividerDotCss = css`
-  & div:first-child {
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -14px;
-      width: 4px;
-      height: 4px;
-      border-radius: ${Radius.RADIUS_CIRCLE};
-      background-color: ${Color.WHITE_42};
-      transform: translateY(-50%);
-    }
-  }
-`;
-
 const ContentVariantToCss = {
   [Orientation.HORIZONTAL]: css`
     flex-direction: row;
     align-items: center;
     gap: 22px;
-    ${dividerDotCss}
+    & div:first-child {
+      position: relative;
+      &::after {
+        ${dividerDotCss}
+      }
+    }
   `,
   [Orientation.VERTICAL]: css`
     flex-direction: column;
@@ -109,7 +97,12 @@ const StyledUserFullName = withAttrs({ variant: 'body-1' }, Typography);
 const StyledTextWrapper = styled.div`
   display: flex;
   gap: 22px;
-  ${dividerDotCss}
+  & div:first-child {
+    position: relative;
+    &::after {
+      ${dividerDotCss}
+    }
+  }
 `;
 
 const SecondaryText = withAttrs(

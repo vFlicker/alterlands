@@ -167,6 +167,26 @@ const ukrainePageData = {
       reposts: '1.2k',
     },
   ],
+  trends: [
+    {
+      id: 1,
+      title: 'Russian-Ukrainian War',
+      postsCount: '36k',
+      votesCount: '1.2k',
+    },
+    {
+      id: 2,
+      title: 'Alterlands Startups',
+      postsCount: '12k',
+      votesCount: '1.7k',
+    },
+    {
+      id: 3,
+      title: 'Trump',
+      postsCount: '17k',
+      votesCount: '1k',
+    },
+  ],
 };
 
 export { ukrainePageData };
