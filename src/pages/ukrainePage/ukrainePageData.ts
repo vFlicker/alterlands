@@ -195,6 +195,29 @@ const ukrainePageData = {
       population: '2 952 145',
     },
   ],
+  topCharts: [
+    {
+      id: 1,
+      imageUrl: avatarImage.artemPivovarovAvatar,
+      fullName: 'Artem Pivovarov',
+      songsCount: 45,
+      albumsCount: 4,
+    },
+    {
+      id: 2,
+      imageUrl: avatarImage.tinaKarolAvatar,
+      fullName: 'Tina Karol',
+      songsCount: 85,
+      albumsCount: 7,
+    },
+    {
+      id: 3,
+      imageUrl: avatarImage.nadiaDorofeevaAvatar,
+      fullName: 'Naadia Dorofeeva',
+      songsCount: 99,
+      albumsCount: 8,
+    },
+  ],
 };
 
 export { ukrainePageData };

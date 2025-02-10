@@ -7,6 +7,7 @@ import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
 import { PostWidget } from '~/widgets/PostWidget';
 import { CitiesWidget } from '~/widgets/ukraine/CitiesWidget';
+import { TopChartsWidget } from '~/widgets/ukraine/TopCharts';
 import { TrendsWidget } from '~/widgets/ukraine/TrendsWidget';
 import { VideoWidget } from '~/widgets/VideoWidget';
 
@@ -23,9 +24,7 @@ function UkrainePage(): JSX.Element {
           <CitiesWidget cities={ukrainePageData.cities} />
         </WidgetColumn>
 
-        <WidgetColumn title="Top Charts">
-          TODO: add top charts widget
-        </WidgetColumn>
+        <TopChartsWidget data={ukrainePageData.topCharts} />
 
         <WidgetColumn title="Videos">
           {ukrainePageData.videos.map((video) => (

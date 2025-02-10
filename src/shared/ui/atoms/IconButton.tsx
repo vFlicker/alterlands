@@ -13,6 +13,7 @@ type IconButtonProps = {
 const enum IconButtonSize {
   SMALL = 'small',
   MEDIUM = 'medium',
+  LARGE = 'large',
 }
 
 const enum IconButtonVariant {
@@ -32,6 +33,10 @@ const IconButtonSizeToCss = {
     height: 24px;
   `,
   [IconButtonSize.MEDIUM]: css`
+    width: 32px;
+    height: 32px;
+  `,
+  [IconButtonSize.LARGE]: css`
     width: 44px;
     height: 44px;
   `,
