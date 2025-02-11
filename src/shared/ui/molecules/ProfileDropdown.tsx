@@ -19,7 +19,7 @@ type ProfileDropdownProps = {
 
 function ProfileDropdown({ className }: ProfileDropdownProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledProfileDropdownWrapper className={className}>
       <Avatar size="medium" src={avatarImage.currentUser} />
 
       <StyledProfileInfo>
@@ -33,13 +33,13 @@ function ProfileDropdown({ className }: ProfileDropdownProps): JSX.Element {
       <StyledToggler>
         <Icon name="icon-chevron-down" />
       </StyledToggler>
-    </StyledWrapper>
+    </StyledProfileDropdownWrapper>
   );
 }
 
 export { ProfileDropdown };
 
-const StyledWrapper = styled.div`
+const StyledProfileDropdownWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;

@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
+import { TypographyVariantToCss } from './Typography';
+
 type LabelButtonProps = {
   color: `${LabelButtonColor}`;
 };
@@ -89,9 +91,7 @@ const StyledLabelButton = styled.button<LabelButtonProps>`
   color: var(--color-text);
   background-color: var(--color-button);
 
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
+  ${TypographyVariantToCss['body-3']}
 
   cursor: pointer;
 

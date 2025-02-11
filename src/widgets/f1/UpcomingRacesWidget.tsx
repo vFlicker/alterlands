@@ -27,7 +27,7 @@ function UpcomingRaceWidget({
   trackImage,
 }: UpcomingRaceWidgetProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledUpcomingRaceWidgetWrapper>
       <StyledLeftCol>
         <StyledDays>{days}</StyledDays>
         <StyledMonth>{month}</StyledMonth>
@@ -42,13 +42,13 @@ function UpcomingRaceWidget({
         </StyledInfoWrapper>
         <StyledTrackImage src={trackImage} />
       </StyledRightCol>
-    </StyledWrapper>
+    </StyledUpcomingRaceWidgetWrapper>
   );
 }
 
 export { UpcomingRaceWidget };
 
-const StyledWrapper = styled.div`
+const StyledUpcomingRaceWidgetWrapper = styled.div`
   display: flex;
 `;
 

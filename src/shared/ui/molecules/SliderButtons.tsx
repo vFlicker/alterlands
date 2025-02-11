@@ -4,22 +4,26 @@ import { JSX } from 'react';
 import { Icon } from '../atoms/Icon';
 import { IconButton } from '../atoms/IconButton';
 
-function SliderButtons(): JSX.Element {
+type SliderButtonsProps = {
+  className?: string;
+};
+
+function SliderButtons({ className }: SliderButtonsProps): JSX.Element {
   return (
-    <StyledSliderButtons>
+    <StyledSliderButtonsWrapper className={className}>
       <IconButton color="neutral" variant="filled" size="small">
         <Icon name="icon-chevron-left" />
       </IconButton>
       <IconButton color="neutral" variant="filled" size="small">
         <Icon name="icon-chevron-right" />
       </IconButton>
-    </StyledSliderButtons>
+    </StyledSliderButtonsWrapper>
   );
 }
 
 export { SliderButtons };
 
-const StyledSliderButtons = styled.div`
+const StyledSliderButtonsWrapper = styled.div`
   display: flex;
   gap: 12px;
 `;

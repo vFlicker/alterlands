@@ -10,7 +10,7 @@ import { Inputs } from '~/widgets/uiKit/Inputs';
 
 function UiKitPage(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledUiKitPageWrapper>
       <StyledTitle>UI Kit page</StyledTitle>
       <StyledParagraph>
         This is a description of the UI Kit page.
@@ -19,13 +19,13 @@ function UiKitPage(): JSX.Element {
       <Inputs />
       <Buttons />
       <Chips />
-    </StyledWrapper>
+    </StyledUiKitPageWrapper>
   );
 }
 
 export { UiKitPage };
 
-const StyledWrapper = styled.div`
+const StyledUiKitPageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

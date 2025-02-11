@@ -12,20 +12,20 @@ import { ProfileType } from './ProfileType';
 
 function Sidebar(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledSidebarWrapper>
       <StyledLogotype />
       <NavigationPanel />
       <NavList />
       <ProfileType />
       <ModeList />
       <Footer />
-    </StyledWrapper>
+    </StyledSidebarWrapper>
   );
 }
 
 export { Sidebar };
 
-const StyledWrapper = styled.aside`
+const StyledSidebarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 34px;

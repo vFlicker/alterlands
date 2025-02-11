@@ -22,7 +22,7 @@ type ChatWidgetProps = {
 
 function ChatWidget({ className, data }: ChatWidgetProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledChatWidgetWrapper className={className}>
       <StyledList>
         {data.map((itemData) => (
           <MessageItem key={itemData.id} {...itemData}></MessageItem>
@@ -33,7 +33,7 @@ function ChatWidget({ className, data }: ChatWidgetProps): JSX.Element {
         placeholder="Write comment..."
         rightIcon={<Icon name="icon-send" />}
       />
-    </StyledWrapper>
+    </StyledChatWidgetWrapper>
   );
 }
 
@@ -79,7 +79,7 @@ function MessageItem({
 
 export { ChatWidget, MessageItem };
 
-const StyledWrapper = styled.div`
+const StyledChatWidgetWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;

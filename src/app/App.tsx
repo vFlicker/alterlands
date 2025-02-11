@@ -9,7 +9,7 @@ import { Routing } from './Routing';
 
 function App(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledAppWrapper>
       <Sidebar />
       <MainContent>
         <Header />
@@ -17,13 +17,13 @@ function App(): JSX.Element {
           <Routing />
         </StyledMain>
       </MainContent>
-    </StyledWrapper>
+    </StyledAppWrapper>
   );
 }
 
 export const AppWithProviders = withProviders(App);
 
-const StyledWrapper = styled.div`
+const StyledAppWrapper = styled.div`
   display: flex;
   min-height: 100vh;
 `;

@@ -16,20 +16,20 @@ type CardProps = {
 
 function Card({ imageUrl, price, title }: CardProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledCardWrapper>
       <StyledImage src={imageUrl} alt={title} />
       <StyledTitle>{title}</StyledTitle>
       <StyledPrice>{price}</StyledPrice>
       <Button color="accent" variant="filled">
         Buy
       </Button>
-    </StyledWrapper>
+    </StyledCardWrapper>
   );
 }
 
 export { Card };
 
-const StyledWrapper = styled.div`
+const StyledCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;

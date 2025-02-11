@@ -20,11 +20,11 @@ type TrendsWidgetProps = {
 
 function TrendsWidget({ className, data }: TrendsWidgetProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledTrendsWidgetWrapper className={className}>
       {data.map((topic) => (
         <TrendItem key={topic.id} {...topic} />
       ))}
-    </StyledWrapper>
+    </StyledTrendsWidgetWrapper>
   );
 }
 
@@ -56,7 +56,7 @@ function TrendItem({
 
 export { TrendsWidget };
 
-const StyledWrapper = styled.div`
+const StyledTrendsWidgetWrapper = styled.div`
   display: grid;
   gap: 8px;
 `;

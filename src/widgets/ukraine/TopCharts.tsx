@@ -35,7 +35,7 @@ function TopChartsWidget({
   className,
 }: TopChartsWidgetProps): JSX.Element {
   return (
-    <StyledTopChartsWidget className={className}>
+    <StyledTopChartsWidgetWrapper className={className}>
       <WidgetHeader
         title="Top charts"
         actions={
@@ -49,7 +49,7 @@ function TopChartsWidget({
         }
       />
 
-      <StyledWrapper>
+      <StyledContentWrapper>
         <StyledHeader>
           <StyledTitleWrapper>
             <IconButton size="small" color="transparent" variant="filled">
@@ -73,21 +73,21 @@ function TopChartsWidget({
             </StyledItem>
           ))}
         </StyledList>
-      </StyledWrapper>
-    </StyledTopChartsWidget>
+      </StyledContentWrapper>
+    </StyledTopChartsWidgetWrapper>
   );
 }
 
 export { TopChartsWidget };
 
-const StyledTopChartsWidget = styled.div``;
+const StyledTopChartsWidgetWrapper = styled.div``;
 
 const StyledActionsWrapper = styled.div`
   display: flex;
   gap: 8px;
 `;
 
-const StyledWrapper = styled.div`
+const StyledContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;

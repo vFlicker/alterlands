@@ -35,7 +35,7 @@ function VoteControl({
   onDown,
 }: VoteControlProps): JSX.Element {
   return (
-    <StyledWrapper className={className} variant={variant}>
+    <StyledVoteControlWrapper className={className} variant={variant}>
       <StyledVoteButton isActive={isUpActive} onClick={onUp}>
         <StyledIcon name="icon-arrow-big-up" />
       </StyledVoteButton>
@@ -43,7 +43,7 @@ function VoteControl({
       <StyledVoteButton isActive={isDownActive} onClick={onDown}>
         <StyledIcon name="icon-arrow-big-down" />
       </StyledVoteButton>
-    </StyledWrapper>
+    </StyledVoteControlWrapper>
   );
 }
 
@@ -61,7 +61,7 @@ const VoteControlVariantToCss = {
   [VoteControlVariant.NOT_FILLED]: css``,
 };
 
-const StyledWrapper = styled.div<Pick<VoteControlProps, 'variant'>>`
+const StyledVoteControlWrapper = styled.div<Pick<VoteControlProps, 'variant'>>`
   display: inline-flex;
   align-items: center;
   gap: 4px;

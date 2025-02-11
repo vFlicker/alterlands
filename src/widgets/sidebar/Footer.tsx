@@ -2,12 +2,15 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Typography } from '~/shared/ui/atoms/Typography';
+import {
+  Typography,
+  TypographyVariantToCss,
+} from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 function Footer(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledFooterWrapper>
       <StyledLinks>
         <StyledLink href="#">Privacy Policy</StyledLink>
         <StyledLink href="#">Cookies</StyledLink>
@@ -15,13 +18,13 @@ function Footer(): JSX.Element {
         <StyledLink href="#">Contact us</StyledLink>
       </StyledLinks>
       <StyledCopyrightText>© 2025 Alterlands</StyledCopyrightText>
-    </StyledWrapper>
+    </StyledFooterWrapper>
   );
 }
 
 export { Footer };
 
-const StyledWrapper = styled.div`
+const StyledFooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -56,9 +59,7 @@ const StyledLink = styled.a`
 
   color: ${Color.WHITE_42};
 
-  font-size: 12px;
-  line-height: 1.42;
-  font-weight: 400;
+  ${TypographyVariantToCss['body-5']}
 
   &:hover {
     color: ${Color.WHITE_98};

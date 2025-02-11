@@ -6,7 +6,7 @@ import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 
 function NavigationPanel(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledNavigationPanelWrapper>
       <SideBarWidgetHeader title="Navigation panel" onButtonClick={() => {}} />
 
       <StyledNavigationList>
@@ -16,13 +16,13 @@ function NavigationPanel(): JSX.Element {
           </StyledNavigationItem>
         ))}
       </StyledNavigationList>
-    </StyledWrapper>
+    </StyledNavigationPanelWrapper>
   );
 }
 
 export { NavigationPanel };
 
-const StyledWrapper = styled.div`
+const StyledNavigationPanelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;

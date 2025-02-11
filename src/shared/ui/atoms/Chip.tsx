@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
+import { TypographyVariantToCss } from './Typography';
+
 type LabelButtonProps = {
   size: `${ChipSize}`;
   color: `${ChipColor}`;
@@ -27,13 +29,11 @@ const enum ChipColor {
 const ChipSizeToCss = {
   [ChipSize.SMALL]: css`
     padding: 2px 6px;
-    font-size: 12px;
-    font-weight: 500;
+    ${TypographyVariantToCss['body-5']}
   `,
   [ChipSize.MEDIUM]: css`
     padding: 4px 16px;
-    font-size: 14px;
-    font-weight: 500;
+    ${TypographyVariantToCss['body-2']}
   `,
 };
 

@@ -6,7 +6,7 @@ const ukrainePageData = {
     {
       id: 1,
       date: 'Jul 5',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'Zelenskiy / Official',
       text: [
         'Today, I spoke with Prime Minister of Ukraine Denys Shmyhal and had a discussion with Minister of Energy German Galushchenko. I heard the details of electricity imports from the European Union to Ukraine via Slovakia – about 19 percent of the total volume. We are working with other neighbors in the EU.',
@@ -23,7 +23,7 @@ const ukrainePageData = {
     {
       id: 2,
       date: 'Jul 7',
-      views: '84k',
+      viewCount: '84k',
       fullName: 'Olena Zelenska',
       text: [
         '🎄 During the Christmas holidays, together with the Foundation team, I held a warm meeting with the children of an orphanage from Chernivtsi region, for which the Foundation became a mentor.',
@@ -45,7 +45,7 @@ const ukrainePageData = {
       avatar: avatarImage.oleksandrShevchenkoAvatar,
       fullName: 'Oleksandr Shevchenko',
       date: 'Jul 7',
-      views: '31k',
+      viewCount: '31k',
       image: ukraineImage.meme.meme1,
       size: 'large' as const,
       likesCount: '60',
@@ -57,7 +57,7 @@ const ukrainePageData = {
       avatar: avatarImage.dmytroBondarenkoAvatar,
       fullName: 'Dmytro Bondarenko',
       date: 'Jul 7',
-      views: '31k',
+      viewCount: '31k',
       image: ukraineImage.meme.meme2,
       size: 'large' as const,
       likesCount: '12',
@@ -69,7 +69,7 @@ const ukrainePageData = {
       avatar: avatarImage.ivanSydorenkoAvatar,
       fullName: 'Ivan Sydorenko',
       date: 'Jul 7',
-      views: '31k',
+      viewCount: '31k',
       image: ukraineImage.meme.meme3,
       size: 'large' as const,
       likesCount: '13',
@@ -81,7 +81,7 @@ const ukrainePageData = {
       avatar: avatarImage.maksymLevchenkoAvatar,
       fullName: 'Maksym Levchenko',
       date: 'Jul 5',
-      views: '31k',
+      viewCount: '31k',
       image: ukraineImage.meme.meme4,
       size: 'large' as const,
       likesCount: '10',
@@ -94,7 +94,7 @@ const ukrainePageData = {
       id: 1,
       avatar: avatarImage.bbcAvatar,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'BBC News Ukraine',
       title:
         'Sociologist Oleksiy Antipovych: "Zaluzhny embodies the hopes and aspirations of Ukrainians"',
@@ -106,7 +106,7 @@ const ukrainePageData = {
       id: 2,
       avatar: avatarImage.presidentAvatar,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'President of Ukraine - Volodymyr Zelensky',
       title:
         'President: National communities are very important for preserving internal peace in Ukraine and realizing its geopolitical choice',
@@ -118,7 +118,7 @@ const ukrainePageData = {
       id: 3,
       avatar: avatarImage.rbkAvatar,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'RBK Ukraine',
       title:
         "Fico's statement on the termination of electricity supply will not affect Ukraine's energy supply",
@@ -132,7 +132,7 @@ const ukrainePageData = {
       id: 1,
       avatar: avatarImage.ukrainianPravdaAvatar,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'Ukrainian Pravda',
       videoSrc: 'https://www.youtube.com/embed/mm7wvbhBTNw',
       title:
@@ -145,7 +145,7 @@ const ukrainePageData = {
       id: 2,
       avatar: avatarImage.officePresidentUkraine,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'Office of the President of Ukraine',
       videoSrc: 'https://www.youtube.com/embed/uULRo4e9RE4',
       title: 'Merry Christmas greetings from Volodymyr Zelensky',
@@ -157,7 +157,7 @@ const ukrainePageData = {
       id: 3,
       avatar: avatarImage.landoAvatar,
       date: '12h',
-      views: '91k',
+      viewCount: '91k',
       fullName: 'Zagin Kinomaniv',
       videoSrc: 'https://www.youtube.com/embed/uaYJ4pxMl0o',
       title:

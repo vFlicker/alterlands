@@ -11,6 +11,7 @@ import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
+import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const MenuItems = [
@@ -107,9 +108,7 @@ const HeaderTag = styled(Link)<{ isActive?: boolean }>`
   gap: 6px;
 
   color: ${Color.WHITE_64};
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
+  ${TypographyVariantToCss['body-3']}
 
   ${({ isActive = false }) => isActive && activeTag}
 `;

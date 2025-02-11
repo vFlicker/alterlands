@@ -5,6 +5,8 @@ import { ComponentProps, JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
+import { TypographyVariantToCss } from './Typography';
+
 type ButtonBaseProps = {
   variant: `${ButtonVariant}`;
   color: `${ButtonColor}`;
@@ -143,9 +145,7 @@ const StyledButton = styled.button<ButtonBaseProps>`
   border-radius: ${Radius.RADIUS_120};
   color: ${Color.WHITE_98};
 
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.43;
+  ${TypographyVariantToCss['body-2']}
 
   cursor: pointer;
 

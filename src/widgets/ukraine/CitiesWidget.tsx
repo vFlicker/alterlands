@@ -21,13 +21,13 @@ function CitiesWidget({ cities, className }: CitiesWidgetProps): JSX.Element {
     <StyledCitiesWidget className={className}>
       <StyledImage src={imageUrl} alt="city" />
       <StyledFooter>
-        <StyledWrapper>
+        <StyledLeftWrapper>
           <StyledInfo>
             <StyledCityName>{cityName}</StyledCityName>
             <StyledPopulation>{population}</StyledPopulation>
           </StyledInfo>
           <SliderButtons />
-        </StyledWrapper>
+        </StyledLeftWrapper>
         <Button color="accent" variant="outlined">
           Follow
         </Button>
@@ -54,7 +54,7 @@ const StyledFooter = styled.div`
   align-items: center;
 `;
 
-const StyledWrapper = styled.div`
+const StyledLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;

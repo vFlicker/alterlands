@@ -14,7 +14,7 @@ type DiscussionWidgetProps = {
   avatar: string;
   fullName: string;
   date: string;
-  views: string;
+  viewCount: string;
   title: string;
   likesCount: string;
   messagesCount: string;
@@ -24,7 +24,7 @@ type DiscussionWidgetProps = {
     avatar: string;
     fullName: string;
     date: string;
-    views: string;
+    viewCount: string;
     message: string;
     likesCount: string;
     reposts: string;
@@ -37,7 +37,7 @@ function DiscussionWidget({
   avatar,
   date,
   fullName,
-  views,
+  viewCount,
   id,
   likesCount,
   reposts,
@@ -45,7 +45,7 @@ function DiscussionWidget({
   answers,
 }: DiscussionWidgetProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledDiscussionWidgetWrapper className={className}>
       <StyledList>
         <div>
           <StyledItem key={id}>
@@ -53,7 +53,7 @@ function DiscussionWidget({
               avatar={avatar}
               date={date}
               fullName={fullName}
-              views={views}
+              viewCount={viewCount}
               orientation="horizontal"
             />
             <StyledTitle>{title}</StyledTitle>
@@ -67,7 +67,7 @@ function DiscussionWidget({
           </StyledMessagesWrapper>
         </div>
       </StyledList>
-    </StyledWrapper>
+    </StyledDiscussionWidgetWrapper>
   );
 }
 
@@ -75,7 +75,7 @@ export { DiscussionWidget };
 
 const StyledTitle = withAttrs({ variant: 'heading-5' }, Typography);
 
-const StyledWrapper = styled.div`
+const StyledDiscussionWidgetWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;

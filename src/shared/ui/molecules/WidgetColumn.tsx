@@ -14,6 +14,7 @@ type WidgetColumnProps = PropsWithChildren<{
   className?: string;
 }>;
 
+// TODO: do we need this in this form?
 function WidgetColumn({
   className,
   title,
@@ -22,14 +23,14 @@ function WidgetColumn({
   children,
 }: WidgetColumnProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledWidgetColumnWrapper className={className}>
       <StyledHeader>
         <StyledTitle>{title}</StyledTitle>
         {actionButton}
       </StyledHeader>
 
       <StyledListWrapper columns={columns}>{children}</StyledListWrapper>
-    </StyledWrapper>
+    </StyledWidgetColumnWrapper>
   );
 }
 
@@ -65,7 +66,7 @@ const ContentColumnsToCss = {
   `,
 };
 
-const StyledWrapper = styled.div`
+const StyledWidgetColumnWrapper = styled.div`
   padding: 20px 16px;
   border-radius: ${Radius.RADIUS_16};
   background-color: ${Color.DARK};

@@ -9,7 +9,7 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 type VideoWidgetProps = {
   avatar: string;
   date: string;
-  views: string;
+  viewCount: string;
   fullName: string;
   videoSrc: string;
   title: string;
@@ -27,15 +27,15 @@ function VideoWidget({
   reposts,
   title,
   videoSrc,
-  views,
+  viewCount,
 }: VideoWidgetProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledVideoWidgetWrapper>
       <StyledUserMeta
         avatar={avatar}
         date={date}
         fullName={fullName}
-        views={views}
+        viewCount={viewCount}
         orientation="horizontal"
       />
       <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
@@ -46,7 +46,7 @@ function VideoWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledWrapper>
+    </StyledVideoWidgetWrapper>
   );
 }
 
@@ -61,7 +61,7 @@ const StyedVideo = styled.iframe`
   margin-bottom: 8px;
 `;
 
-const StyledWrapper = styled.div`
+const StyledVideoWidgetWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;

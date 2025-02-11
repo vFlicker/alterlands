@@ -9,7 +9,7 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 type NewsWidgetProps = {
   avatar: string;
   date: string;
-  views: string;
+  viewCount: string;
   fullName: string;
   title: string;
   likesCount: string;
@@ -25,15 +25,15 @@ function NewsWidget({
   messagesCount,
   reposts,
   title,
-  views,
+  viewCount,
 }: NewsWidgetProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledNewsWidgetWrapper>
       <StyledUserMeta
         avatar={avatar}
         date={date}
         fullName={fullName}
-        views={views}
+        viewCount={viewCount}
         orientation="horizontal"
       />
       <StyledTitle>{title}</StyledTitle>
@@ -43,7 +43,7 @@ function NewsWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledWrapper>
+    </StyledNewsWidgetWrapper>
   );
 }
 
@@ -53,7 +53,7 @@ const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 
-const StyledWrapper = styled.div`
+const StyledNewsWidgetWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;

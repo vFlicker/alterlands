@@ -16,7 +16,7 @@ const navItems = [
 
 function ModeList(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledModeListWrapper>
       <SideBarWidgetHeader title="Mode" onButtonClick={() => {}} />
 
       <StyledList>
@@ -26,13 +26,13 @@ function ModeList(): JSX.Element {
           </StyledButton>
         ))}
       </StyledList>
-    </StyledWrapper>
+    </StyledModeListWrapper>
   );
 }
 
 export { ModeList };
 
-const StyledWrapper = styled.div`
+const StyledModeListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;

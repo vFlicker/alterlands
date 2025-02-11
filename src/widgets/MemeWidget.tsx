@@ -8,7 +8,7 @@ import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
 type MemeWidgetProps = {
   date: string;
-  views: string;
+  viewCount: string;
   fullName: string;
   image: string;
   avatar: string;
@@ -34,18 +34,18 @@ function MemeWidget({
   messagesCount,
   reposts,
   size,
-  views,
+  viewCount,
   className,
 }: MemeWidgetProps): JSX.Element {
   const headerOrientation = size === 'large' ? 'horizontal' : 'vertical';
 
   return (
-    <StyledWrapper className={className} size={size}>
+    <StyledMemeWidgetWrapper className={className} size={size}>
       <StyledUserMeta
         avatar={avatar}
         date={date}
         fullName={fullName}
-        views={views}
+        viewCount={viewCount}
         orientation={headerOrientation}
       />
       <StyledImage src={image} alt="Image description" />
@@ -55,7 +55,7 @@ function MemeWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledWrapper>
+    </StyledMemeWidgetWrapper>
   );
 }
 
@@ -83,7 +83,7 @@ const MemeWidgetSizeToCss = {
   `,
 };
 
-const StyledWrapper = styled.div<Pick<MemeWidgetProps, 'size'>>`
+const StyledMemeWidgetWrapper = styled.div<Pick<MemeWidgetProps, 'size'>>`
   width: 100%;
   padding: 8px 0;
   ${({ size }) => MemeWidgetSizeToCss[size]}

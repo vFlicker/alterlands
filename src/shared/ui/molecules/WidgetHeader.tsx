@@ -18,16 +18,16 @@ function WidgetHeader({
   className,
 }: WidgetHeaderProps): JSX.Element {
   return (
-    <StyledHeader className={className}>
+    <StyledWidgetHeaderWrapper className={className}>
       <StyledTitle>{title}</StyledTitle>
       {actions}
-    </StyledHeader>
+    </StyledWidgetHeaderWrapper>
   );
 }
 
 export { WidgetHeader };
 
-const StyledHeader = styled.div`
+const StyledWidgetHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

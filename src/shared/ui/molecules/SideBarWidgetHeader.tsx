@@ -20,20 +20,20 @@ function SideBarWidgetHeader({
   onButtonClick,
 }: SideBarWidgetHeaderProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledSideBarWidgetHeaderWrapper className={className}>
       <StyledTitle>{title}</StyledTitle>
       {onButtonClick && (
         <StyledButton onClick={onButtonClick}>
           <Icon name="icon-settings" />
         </StyledButton>
       )}
-    </StyledWrapper>
+    </StyledSideBarWidgetHeaderWrapper>
   );
 }
 
 export { SideBarWidgetHeader };
 
-const StyledWrapper = styled.div`
+const StyledSideBarWidgetHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

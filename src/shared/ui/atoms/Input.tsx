@@ -4,6 +4,8 @@ import { ComponentProps, JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
+import { TypographyVariantToCss } from './Typography';
+
 type InputBaseProps = {
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
@@ -65,8 +67,7 @@ const StyledInput = styled.input<InputBaseProps>`
   flex-grow: 1;
   color: ${Color.WHITE_98};
 
-  font-size: 14px;
-  line-height: 1.43;
+  ${TypographyVariantToCss['body-3']}
 
   outline: none;
 

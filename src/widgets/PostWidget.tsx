@@ -9,7 +9,7 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 
 type PostWidgetProps = {
   date: string;
-  views: string;
+  viewCount: string;
   fullName: string;
   text: string[];
   image: string;
@@ -21,7 +21,7 @@ type PostWidgetProps = {
 
 function PostWidget({
   date,
-  views,
+  viewCount,
   fullName,
   avatar,
   image,
@@ -31,11 +31,11 @@ function PostWidget({
   reposts,
 }: PostWidgetProps): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledPostWidgetWrapper>
       <StyledUserMeta
         date={date}
         fullName={fullName}
-        views={views}
+        viewCount={viewCount}
         avatar={avatar}
         orientation="horizontal"
       />
@@ -49,7 +49,7 @@ function PostWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledWrapper>
+    </StyledPostWidgetWrapper>
   );
 }
 
@@ -59,7 +59,7 @@ const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 
-const StyledWrapper = styled.div`
+const StyledPostWidgetWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;

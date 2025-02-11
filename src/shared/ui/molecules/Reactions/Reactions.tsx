@@ -29,7 +29,7 @@ function Reactions({
   const isDownActive = vote === 'down';
 
   return (
-    <StyledWrapper className={className}>
+    <StyledReactionsWrapper className={className}>
       {likesCount && (
         <VoteControl
           variant={variant}
@@ -52,13 +52,13 @@ function Reactions({
           {sharesCount}
         </RepostButton>
       )}
-    </StyledWrapper>
+    </StyledReactionsWrapper>
   );
 }
 
 export { Reactions };
 
-const StyledWrapper = styled.div`
+const StyledReactionsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;

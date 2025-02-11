@@ -6,16 +6,16 @@ import { SideBarWidgetHeader } from '~/shared/ui/molecules/SideBarWidgetHeader';
 
 function ProfileType(): JSX.Element {
   return (
-    <StyledWrapper>
+    <StyledProfileTypeWrapper>
       <SideBarWidgetHeader title="Profile type" />
       <ProfileDropdown />
-    </StyledWrapper>
+    </StyledProfileTypeWrapper>
   );
 }
 
 export { ProfileType };
 
-const StyledWrapper = styled.div`
+const StyledProfileTypeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;

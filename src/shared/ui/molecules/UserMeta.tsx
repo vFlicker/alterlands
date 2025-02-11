@@ -16,7 +16,7 @@ type UserMetaProps = {
   fullName: string;
   date: string;
   orientation: `${Orientation}`;
-  views?: string;
+  viewCount?: string;
   className?: string;
 };
 
@@ -30,11 +30,11 @@ function UserMeta({
   avatar,
   fullName,
   date,
-  views,
+  viewCount,
   orientation,
 }: UserMetaProps): JSX.Element {
   return (
-    <StyledWrapper className={className}>
+    <StyledUserMetaWrapper className={className}>
       <Avatar size="small" src={avatar} />
       <StyledContent orientation={orientation}>
         <StyledUserInfo>
@@ -43,15 +43,15 @@ function UserMeta({
         </StyledUserInfo>
         <StyledTextWrapper>
           <SecondaryText>{date}</SecondaryText>
-          {views && (
+          {viewCount && (
             <SecondaryText>
               <StyledEyeIcon />
-              {views}
+              {viewCount}
             </SecondaryText>
           )}
         </StyledTextWrapper>
       </StyledContent>
-    </StyledWrapper>
+    </StyledUserMetaWrapper>
   );
 }
 
@@ -75,7 +75,7 @@ const ContentVariantToCss = {
   `,
 };
 
-const StyledWrapper = styled.div`
+const StyledUserMetaWrapper = styled.div`
   display: flex;
   gap: 8px;
 `;
