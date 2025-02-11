@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
-import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { Card } from '~/widgets/Card';
@@ -13,7 +12,7 @@ import { TeamLeaderboards } from '~/widgets/f1/TeamLeaderboards';
 import { UpcomingRaceWidget } from '~/widgets/f1/UpcomingRacesWidget';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
-import { PostWidget } from '~/widgets/PostWidget';
+import { PostWidget } from '~/widgets/post';
 import { VideoWidget } from '~/widgets/VideoWidget';
 
 import { f1PageData } from './f1PageData';
@@ -35,14 +34,7 @@ function F1Page(): JSX.Element {
           ))}
         </WidgetColumn>
 
-        <WidgetColumn
-          title="PROs"
-          actionButton={<LabelButton color="white">More</LabelButton>}
-        >
-          {f1PageData.posts.map((post) => (
-            <PostWidget key={post.id} {...post} />
-          ))}
-        </WidgetColumn>
+        <PostWidget {...f1PageData.posts} />
 
         <WidgetColumn title="Merch" columns={3}>
           {f1PageData.merch.map((item) => (
@@ -72,11 +64,7 @@ function F1Page(): JSX.Element {
           ))}
         </WidgetColumn>
 
-        <WidgetColumn title="Post">
-          {f1PageData.posts.map((post) => (
-            <PostWidget key={post.id} {...post} />
-          ))}
-        </WidgetColumn>
+        <PostWidget {...f1PageData.posts} />
       </Masonic.Item>
 
       <Masonic.Item>

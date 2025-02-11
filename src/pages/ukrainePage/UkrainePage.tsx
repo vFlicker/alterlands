@@ -5,7 +5,7 @@ import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemeWidget } from '~/widgets/MemeWidget';
 import { NewsWidget } from '~/widgets/NewsWidget';
-import { PostWidget } from '~/widgets/PostWidget';
+import { PostWidget } from '~/widgets/post';
 import { CitiesWidget } from '~/widgets/ukraine/CitiesWidget';
 import { TopChartsWidget } from '~/widgets/ukraine/TopCharts';
 import { TrendsWidget } from '~/widgets/ukraine/TrendsWidget';
@@ -45,11 +45,8 @@ function UkrainePage(): JSX.Element {
         </WidgetColumn>
 
         <WidgetColumn title="Voice">TODO: add voice widget</WidgetColumn>
-        <WidgetColumn title="Officials">
-          {ukrainePageData.posts.map((post) => (
-            <PostWidget key={post.id} {...post} />
-          ))}
-        </WidgetColumn>
+
+        <PostWidget {...ukrainePageData.posts} />
 
         <WidgetColumn title="Trend Topics widge">
           TODO: add trend topics widge

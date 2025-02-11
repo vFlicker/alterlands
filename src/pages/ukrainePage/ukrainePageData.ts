@@ -2,43 +2,46 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { ukraineImage } from '~/shared/assets/images/ukraine';
 
 const ukrainePageData = {
-  posts: [
-    {
-      id: 1,
-      date: 'Jul 5',
-      viewCount: '91k',
-      fullName: 'Zelenskiy / Official',
-      text: [
-        'Today, I spoke with Prime Minister of Ukraine Denys Shmyhal and had a discussion with Minister of Energy German Galushchenko. I heard the details of electricity imports from the European Union to Ukraine via Slovakia – about 19 percent of the total volume. We are working with other neighbors in the EU.',
-        'And I have instructed our Government officials to do everything possible, together with the European Commission, together with all our partners in Europe, everything possible to maintain the stability of the united European energy system and uphold European energy rules. Whatever Putin may have told Fico during his visit to the Kremlin, European rules must prevail over any individual’s ties with Moscow.',
-        'And one more thing. We are preparing several important personnel decisions. The decrees will be announced soon. I want to thank everyone who helps!',
-        'Glory to Ukraine!',
-      ],
-      image: ukraineImage.post.post1,
-      avatar: avatarImage.zelenskiyAvatar,
-      likesCount: '32k',
-      messagesCount: '523',
-      reposts: '1.2k',
-    },
-    {
-      id: 2,
-      date: 'Jul 7',
-      viewCount: '84k',
-      fullName: 'Olena Zelenska',
-      text: [
-        '🎄 During the Christmas holidays, together with the Foundation team, I held a warm meeting with the children of an orphanage from Chernivtsi region, for which the Foundation became a mentor.',
+  posts: {
+    widgetTitle: 'Officials',
+    data: [
+      {
+        id: 1,
+        date: 'Jul 5',
+        viewCount: '91k',
+        fullName: 'Zelenskiy / Official',
+        text: [
+          'Today, I spoke with Prime Minister of Ukraine Denys Shmyhal and had a discussion with Minister of Energy German Galushchenko. I heard the details of electricity imports from the European Union to Ukraine via Slovakia – about 19 percent of the total volume. We are working with other neighbors in the EU.',
+          'And I have instructed our Government officials to do everything possible, together with the European Commission, together with all our partners in Europe, everything possible to maintain the stability of the united European energy system and uphold European energy rules. Whatever Putin may have told Fico during his visit to the Kremlin, European rules must prevail over any individual’s ties with Moscow.',
+          'And one more thing. We are preparing several important personnel decisions. The decrees will be announced soon. I want to thank everyone who helps!',
+          'Glory to Ukraine!',
+        ],
+        image: ukraineImage.post.post1,
+        avatar: avatarImage.zelenskiyAvatar,
+        likesCount: '32k',
+        messagesCount: '523',
+        reposts: '1.2k',
+      },
+      {
+        id: 2,
+        date: 'Jul 7',
+        viewCount: '84k',
+        fullName: 'Olena Zelenska',
+        text: [
+          '🎄 During the Christmas holidays, together with the Foundation team, I held a warm meeting with the children of an orphanage from Chernivtsi region, for which the Foundation became a mentor.',
 
-        'During the day, the children had many activities in Kyiv, and at the end - a tea party at Sofia Kyivska. Here, we discussed with them our impressions of the trip. It was very touching to see the emotions of the children, and to hear from someone about their dreams.',
+          'During the day, the children had many activities in Kyiv, and at the end - a tea party at Sofia Kyivska. Here, we discussed with them our impressions of the trip. It was very touching to see the emotions of the children, and to hear from someone about their dreams.',
 
-        'I really want no child in Ukraine who does not have parental warmth to be lonely during these holidays, but instead to feel the support of adults.',
-      ],
-      image: ukraineImage.post.post2,
-      avatar: avatarImage.olenaZelenskaAvatar,
-      likesCount: '42k',
-      messagesCount: '872',
-      reposts: '2.1k',
-    },
-  ],
+          'I really want no child in Ukraine who does not have parental warmth to be lonely during these holidays, but instead to feel the support of adults.',
+        ],
+        image: ukraineImage.post.post2,
+        avatar: avatarImage.olenaZelenskaAvatar,
+        likesCount: '42k',
+        messagesCount: '872',
+        reposts: '2.1k',
+      },
+    ],
+  },
   mems: [
     {
       id: 1,

@@ -7,19 +7,14 @@ import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type PostWidgetProps = {
-  date: string;
-  viewCount: string;
-  fullName: string;
-  text: string[];
-  image: string;
-  avatar: string;
-  likesCount: string;
-  messagesCount: string;
-  reposts: string;
+import { PostData } from './postType';
+
+type PostProps = PostData & {
+  className?: string;
 };
 
-function PostWidget({
+function Post({
+  className,
   date,
   viewCount,
   fullName,
@@ -29,9 +24,9 @@ function PostWidget({
   likesCount,
   messagesCount,
   reposts,
-}: PostWidgetProps): JSX.Element {
+}: PostProps): JSX.Element {
   return (
-    <StyledPostWidgetWrapper>
+    <StyledPostWrapper className={className}>
       <StyledUserMeta
         date={date}
         fullName={fullName}
@@ -49,17 +44,17 @@ function PostWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledPostWidgetWrapper>
+    </StyledPostWrapper>
   );
 }
 
-export { PostWidget };
+export { Post };
 
 const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 
-const StyledPostWidgetWrapper = styled.div`
+const StyledPostWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;
