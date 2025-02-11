@@ -15,7 +15,7 @@ type ChatWidgetProps = {
     fullName: string;
     date: string;
     message: string;
-    likes: string;
+    likesCount: string;
     reposts: string;
   }[];
 };
@@ -43,18 +43,19 @@ type MessageItemProps = {
   fullName: string;
   date: string;
   message: string;
-  likes: string;
+  likesCount: string;
   reposts: string;
   className?: string;
 };
 
+// TODO: move to separate file
 function MessageItem({
   className,
   avatar,
   date,
   fullName,
   id,
-  likes,
+  likesCount,
   message,
   reposts,
 }: MessageItemProps): JSX.Element {
@@ -67,7 +68,11 @@ function MessageItem({
         orientation="horizontal"
       />
       <StyledMessage>{message}</StyledMessage>
-      <StyledReactions variant="not field" likes={likes} reposts={reposts} />
+      <StyledReactions
+        likesCount={likesCount}
+        sharesCount={reposts}
+        filled={false}
+      />
     </StyledItem>
   );
 }

@@ -14,23 +14,28 @@ type VoteControlProps = {
   count: string;
   isUpActive: boolean;
   isDownActive: boolean;
-  filled?: boolean;
+  variant: `${VoteControlVariant}`;
+  className?: string;
   onUp: () => void;
   onDown: () => void;
-  className?: string;
 };
+
+const enum VoteControlVariant {
+  FILLED = 'filled',
+  NOT_FILLED = 'not filled',
+}
 
 function VoteControl({
   className,
-  filled,
   count,
   isUpActive,
   isDownActive,
+  variant,
   onUp,
   onDown,
 }: VoteControlProps): JSX.Element {
   return (
-    <StyledWrapper className={className} filled={filled}>
+    <StyledWrapper className={className} variant={variant}>
       <StyledVoteButton isActive={isUpActive} onClick={onUp}>
         <StyledIcon name="icon-arrow-big-up" />
       </StyledVoteButton>
@@ -42,25 +47,28 @@ function VoteControl({
   );
 }
 
-export { VoteControl };
+export { VoteControl, VoteControlVariant };
 
-const filledBackgroundCss = css`
-  background-color: ${Color.WHITE_8};
+const VoteControlVariantToCss = {
+  [VoteControlVariant.FILLED]: css`
+    background-color: ${Color.WHITE_8};
 
-  &:hover,
-  &:focus {
-    background-color: ${Color.WHITE_16};
-  }
-`;
+    &:hover,
+    &:focus {
+      background-color: ${Color.WHITE_16};
+    }
+  `,
+  [VoteControlVariant.NOT_FILLED]: css``,
+};
 
-const StyledWrapper = styled.div<Pick<VoteControlProps, 'filled'>>`
+const StyledWrapper = styled.div<Pick<VoteControlProps, 'variant'>>`
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 3px 6px;
   border-radius: ${Radius.RADIUS_50};
 
-  ${({ filled }) => filled && filledBackgroundCss}
+  ${({ variant }) => VoteControlVariantToCss[variant]}
 `;
 
 const StyledCounter = withAttrs({ variant: 'body-2', as: 'span' }, Typography);

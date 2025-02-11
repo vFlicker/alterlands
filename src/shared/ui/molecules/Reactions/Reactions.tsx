@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { JSX, useState } from 'react';
 
-import { ButtonVariant } from '../../atoms/Button';
 import { MessageButton } from './MessageButton';
 import { RepostButton } from './RepostButton';
 import { VoteControl } from './VoteControl';
@@ -9,44 +8,50 @@ import { VoteControl } from './VoteControl';
 type VoteState = 'up' | 'down' | null;
 
 type ReactionProps = {
-  likes: string;
-  reposts: string;
-  variant?: `${ButtonVariant}`;
+  likesCount?: string;
+  sharesCount?: string;
   commentCount?: string;
+  filled: boolean;
   className?: string;
 };
 
 function Reactions({
   className,
-  likes,
+  likesCount,
   commentCount,
-  reposts,
-  variant = ButtonVariant.FILLED,
+  sharesCount,
+  filled,
 }: ReactionProps): JSX.Element {
   const [vote, setVote] = useState<VoteState>(null);
 
+  const variant = filled ? 'filled' : 'not filled';
   const isUpActive = vote === 'up';
   const isDownActive = vote === 'down';
 
   return (
     <StyledWrapper className={className}>
-      <VoteControl
-        filled={variant === ButtonVariant.FILLED}
-        count={likes}
-        isUpActive={isUpActive}
-        isDownActive={isDownActive}
-        onUp={() => setVote(isUpActive ? null : 'up')}
-        onDown={() => setVote(isDownActive ? null : 'down')}
-      />
+      {likesCount && (
+        <VoteControl
+          variant={variant}
+          count={likesCount}
+          isUpActive={isUpActive}
+          isDownActive={isDownActive}
+          onUp={() => setVote(isUpActive ? null : 'up')}
+          onDown={() => setVote(isDownActive ? null : 'down')}
+        />
+      )}
 
       {commentCount && (
         <MessageButton variant={variant} onClick={() => {}}>
           {commentCount}
         </MessageButton>
       )}
-      <RepostButton variant={variant} onClick={() => {}}>
-        {reposts}
-      </RepostButton>
+
+      {sharesCount && (
+        <RepostButton variant={variant} onClick={() => {}}>
+          {sharesCount}
+        </RepostButton>
+      )}
     </StyledWrapper>
   );
 }

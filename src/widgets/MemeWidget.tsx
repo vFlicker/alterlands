@@ -12,7 +12,7 @@ type MemeWidgetProps = {
   fullName: string;
   image: string;
   avatar: string;
-  likes: string;
+  likesCount: string;
   messagesCount: string;
   reposts: string;
   size: `${MemeWidgetSize}`;
@@ -30,7 +30,7 @@ function MemeWidget({
   date,
   fullName,
   image,
-  likes,
+  likesCount,
   messagesCount,
   reposts,
   size,
@@ -49,7 +49,12 @@ function MemeWidget({
         orientation={headerOrientation}
       />
       <StyledImage src={image} alt="Image description" />
-      <Reactions likes={likes} commentCount={messagesCount} reposts={reposts} />
+      <Reactions
+        likesCount={likesCount}
+        commentCount={messagesCount}
+        sharesCount={reposts}
+        filled
+      />
     </StyledWrapper>
   );
 }

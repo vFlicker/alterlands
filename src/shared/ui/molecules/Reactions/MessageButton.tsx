@@ -9,7 +9,6 @@ import { withAttrs } from '../../withAttrs';
 const StyledMessageButton = withAttrs(
   {
     color: 'neutral',
-    variant: 'filled',
     size: 'small',
     leftIcon: <Icon name="icon-message-circle" />,
   },

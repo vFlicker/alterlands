@@ -12,7 +12,7 @@ type NewsWidgetProps = {
   views: string;
   fullName: string;
   title: string;
-  likes: string;
+  likesCount: string;
   messagesCount: string;
   reposts: string;
 };
@@ -21,7 +21,7 @@ function NewsWidget({
   avatar,
   date,
   fullName,
-  likes,
+  likesCount,
   messagesCount,
   reposts,
   title,
@@ -37,7 +37,12 @@ function NewsWidget({
         orientation="horizontal"
       />
       <StyledTitle>{title}</StyledTitle>
-      <Reactions likes={likes} commentCount={messagesCount} reposts={reposts} />
+      <Reactions
+        likesCount={likesCount}
+        commentCount={messagesCount}
+        sharesCount={reposts}
+        filled
+      />
     </StyledWrapper>
   );
 }

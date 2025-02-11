@@ -16,7 +16,7 @@ type DiscussionWidgetProps = {
   date: string;
   views: string;
   title: string;
-  likes: string;
+  likesCount: string;
   messagesCount: string;
   reposts: string;
   answers: {
@@ -26,7 +26,7 @@ type DiscussionWidgetProps = {
     date: string;
     views: string;
     message: string;
-    likes: string;
+    likesCount: string;
     reposts: string;
     label: string;
   }[];
@@ -39,7 +39,7 @@ function DiscussionWidget({
   fullName,
   views,
   id,
-  likes,
+  likesCount,
   reposts,
   title,
   answers,
@@ -57,7 +57,7 @@ function DiscussionWidget({
               orientation="horizontal"
             />
             <StyledTitle>{title}</StyledTitle>
-            <Reactions likes={likes} reposts={reposts} />
+            <Reactions likesCount={likesCount} sharesCount={reposts} filled />
           </StyledItem>
 
           <StyledMessagesWrapper>
