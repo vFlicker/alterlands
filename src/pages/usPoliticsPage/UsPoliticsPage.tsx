@@ -2,9 +2,9 @@ import { JSX } from 'react';
 
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
-import { MemeWidget } from '~/widgets/MemeWidget';
-import { NewsWidget } from '~/widgets/NewsWidget';
-import { VideoWidget } from '~/widgets/VideoWidget';
+import { MemeWidget } from '~/widgets/meme';
+import { NewsWidget } from '~/widgets/news';
+import { VideoWidget } from '~/widgets/video';
 
 import { usPoliticsPageData } from './usPoliticsPageData';
 
@@ -13,12 +13,7 @@ function UsPoliticsPage(): JSX.Element {
     <Masonic.List>
       <Masonic.Item>
         <WidgetColumn title="Posts">TODO: add post posts</WidgetColumn>
-
-        <WidgetColumn title="Memes" columns={2}>
-          {usPoliticsPageData.mems.map((meme) => (
-            <MemeWidget key={meme.id} {...meme} />
-          ))}
-        </WidgetColumn>
+        <MemeWidget {...usPoliticsPageData.memes} />
       </Masonic.Item>
 
       <Masonic.Item>
@@ -26,21 +21,13 @@ function UsPoliticsPage(): JSX.Element {
           TODO: add post widge
         </WidgetColumn>
 
-        <WidgetColumn title="Longreads">
-          {usPoliticsPageData.longreads.map((news) => (
-            <NewsWidget key={news.id} {...news} />
-          ))}
-        </WidgetColumn>
+        <NewsWidget {...usPoliticsPageData.longreads} />
 
         <WidgetColumn title="Posts">TODO: add post posts</WidgetColumn>
       </Masonic.Item>
 
       <Masonic.Item>
-        <WidgetColumn title="Videos">
-          {usPoliticsPageData.videos.map((video) => (
-            <VideoWidget key={video.id} {...video} />
-          ))}
-        </WidgetColumn>
+        <VideoWidget {...usPoliticsPageData.videos} />
       </Masonic.Item>
     </Masonic.List>
   );

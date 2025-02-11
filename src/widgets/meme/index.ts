@@ -1,0 +1,1 @@
+export { MemeWidget } from './MemeWidget';

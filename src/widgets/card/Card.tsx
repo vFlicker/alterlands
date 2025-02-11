@@ -7,16 +7,15 @@ import { Button } from '~/shared/ui/atoms/Button';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type CardProps = {
-  imageUrl: string;
-  title: string;
-  price: string;
+import { CardData } from './cardTypes';
+
+type CardProps = CardData & {
   className?: string;
 };
 
-function Card({ imageUrl, price, title }: CardProps): JSX.Element {
+function Card({ className, imageUrl, price, title }: CardProps): JSX.Element {
   return (
-    <StyledCardWrapper>
+    <StyledCardWrapper className={className}>
       <StyledImage src={imageUrl} alt={title} />
       <StyledTitle>{title}</StyledTitle>
       <StyledPrice>{price}</StyledPrice>

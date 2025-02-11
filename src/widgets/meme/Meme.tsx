@@ -3,29 +3,17 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Radius } from '~/shared/theme/radiuses';
-import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
+import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
-type MemeWidgetProps = {
-  date: string;
-  viewCount: string;
-  fullName: string;
-  image: string;
-  avatar: string;
-  likesCount: string;
-  messagesCount: string;
-  reposts: string;
-  size: `${MemeWidgetSize}`;
+import { MemeData, MemeSize } from './memeTypes';
+
+type MemeProps = MemeData & {
   className?: string;
 };
 
-const enum MemeWidgetSize {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-}
-
-function MemeWidget({
+function Meme({
+  className,
   avatar,
   date,
   fullName,
@@ -35,12 +23,11 @@ function MemeWidget({
   reposts,
   size,
   viewCount,
-  className,
-}: MemeWidgetProps): JSX.Element {
+}: MemeProps): JSX.Element {
   const headerOrientation = size === 'large' ? 'horizontal' : 'vertical';
 
   return (
-    <StyledMemeWidgetWrapper className={className} size={size}>
+    <StyledMemeWrapper className={className} size={size}>
       <StyledUserMeta
         avatar={avatar}
         date={date}
@@ -55,22 +42,22 @@ function MemeWidget({
         sharesCount={reposts}
         filled
       />
-    </StyledMemeWidgetWrapper>
+    </StyledMemeWrapper>
   );
 }
 
-export { MemeWidget };
+export { Meme };
 
 const StyledImage = styled.img`
   margin-bottom: 10px;
   border-radius: ${Radius.RADIUS_4};
 `;
 
-const MemeWidgetSizeToCss = {
-  [MemeWidgetSize.LARGE]: css`
+const MemeSizeToCss = {
+  [MemeSize.LARGE]: css`
     max-width: 100%;
   `,
-  [MemeWidgetSize.MEDIUM]: css`
+  [MemeSize.MEDIUM]: css`
     max-width: 234px;
 
     ${StyledImage} {
@@ -78,15 +65,15 @@ const MemeWidgetSizeToCss = {
       object-fit: cover;
     }
   `,
-  [MemeWidgetSize.SMALL]: css`
+  [MemeSize.SMALL]: css`
     max-width: 234px;
   `,
 };
 
-const StyledMemeWidgetWrapper = styled.div<Pick<MemeWidgetProps, 'size'>>`
+const StyledMemeWrapper = styled.div<Pick<MemeProps, 'size'>>`
   width: 100%;
   padding: 8px 0;
-  ${({ size }) => MemeWidgetSizeToCss[size]}
+  ${({ size }) => MemeSizeToCss[size]}
 `;
 
 const StyledUserMeta = styled(UserMeta)`

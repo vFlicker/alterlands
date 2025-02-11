@@ -5,46 +5,46 @@ import { Color } from '~/shared/theme/colors';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
-import { Post } from './Post';
-import { PostData } from './postType';
+import { Video } from './Video';
+import { VideoData } from './videoType';
 
-type PostWidgetProps = {
+type VideoWidgetProps = {
   widgetTitle: string;
-  data: PostData[];
+  data: VideoData[];
   className?: string;
 };
 
-function PostWidget({
+function VideoWidget({
   widgetTitle,
   data,
   className,
-}: PostWidgetProps): JSX.Element {
+}: VideoWidgetProps): JSX.Element {
   return (
-    <StyledPostWidgetWrapper className={className}>
+    <StyledVideoWidgetWrapper className={className}>
       <WidgetHeader
         title={widgetTitle}
         actions={<LabelButton color="white">More</LabelButton>}
       />
-      <StyledPostList>
-        {data.map((post) => (
-          <StyledPost key={post.id} {...post} />
+      <StyledVideoList>
+        {data.map((video) => (
+          <StyledVideo key={video.id} {...video} />
         ))}
-      </StyledPostList>
-    </StyledPostWidgetWrapper>
+      </StyledVideoList>
+    </StyledVideoWidgetWrapper>
   );
 }
 
-export { PostWidget };
+export { VideoWidget };
 
-const StyledPostWidgetWrapper = styled.div``;
+const StyledVideoWidgetWrapper = styled.div``;
 
-const StyledPostList = styled.div`
+const StyledVideoList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
 `;
 
-const StyledPost = styled(Post)`
+const StyledVideo = styled(Video)`
   &:not(:last-child) {
     position: relative;
 

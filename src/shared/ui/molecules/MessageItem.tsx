@@ -1,41 +1,9 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Icon } from '~/shared/ui/atoms/Icon';
-import { Input } from '~/shared/ui/atoms/Input';
 import { Message } from '~/shared/ui/atoms/Message';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
-
-type ChatWidgetProps = {
-  className?: string;
-  data: {
-    id: number;
-    avatar: string;
-    fullName: string;
-    date: string;
-    message: string;
-    likesCount: string;
-    reposts: string;
-  }[];
-};
-
-function ChatWidget({ className, data }: ChatWidgetProps): JSX.Element {
-  return (
-    <StyledChatWidgetWrapper className={className}>
-      <StyledList>
-        {data.map((itemData) => (
-          <MessageItem key={itemData.id} {...itemData}></MessageItem>
-        ))}
-      </StyledList>
-
-      <Input
-        placeholder="Write comment..."
-        rightIcon={<Icon name="icon-send" />}
-      />
-    </StyledChatWidgetWrapper>
-  );
-}
 
 type MessageItemProps = {
   id: number;
@@ -48,7 +16,6 @@ type MessageItemProps = {
   className?: string;
 };
 
-// TODO: move to separate file
 function MessageItem({
   className,
   avatar,
@@ -77,19 +44,7 @@ function MessageItem({
   );
 }
 
-export { ChatWidget, MessageItem };
-
-const StyledChatWidgetWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-
-const StyledList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
+export { MessageItem };
 
 const StyledItem = styled.div``;
 

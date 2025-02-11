@@ -3,13 +3,13 @@ import { JSX } from 'react';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
-import { MemeWidget } from '~/widgets/MemeWidget';
-import { NewsWidget } from '~/widgets/NewsWidget';
+import { MemeWidget } from '~/widgets/meme';
+import { NewsWidget } from '~/widgets/news';
 import { PostWidget } from '~/widgets/post';
 import { CitiesWidget } from '~/widgets/ukraine/CitiesWidget';
 import { TopChartsWidget } from '~/widgets/ukraine/TopCharts';
 import { TrendsWidget } from '~/widgets/ukraine/TrendsWidget';
-import { VideoWidget } from '~/widgets/VideoWidget';
+import { VideoWidget } from '~/widgets/video';
 
 import { ukrainePageData } from './ukrainePageData';
 
@@ -25,18 +25,9 @@ function UkrainePage(): JSX.Element {
         </WidgetColumn>
 
         <TopChartsWidget data={ukrainePageData.topCharts} />
+        <VideoWidget {...ukrainePageData.videos} />
 
-        <WidgetColumn title="Videos">
-          {ukrainePageData.videos.map((video) => (
-            <VideoWidget key={video.id} {...video} />
-          ))}
-        </WidgetColumn>
-
-        <WidgetColumn title="News">
-          {ukrainePageData.news.map((news) => (
-            <NewsWidget key={news.id} {...news} />
-          ))}
-        </WidgetColumn>
+        <NewsWidget {...ukrainePageData.news} />
       </Masonic.Item>
 
       <Masonic.Item>
@@ -58,12 +49,7 @@ function UkrainePage(): JSX.Element {
       </Masonic.Item>
 
       <Masonic.Item>
-        <WidgetColumn title="Memes" columns={2}>
-          {ukrainePageData.mems.map((meme) => (
-            <MemeWidget key={meme.id} {...meme} />
-          ))}
-        </WidgetColumn>
-
+        <MemeWidget {...ukrainePageData.memes} />
         <WidgetColumn title="Posts">TODO: add post posts</WidgetColumn>
       </Masonic.Item>
     </Masonic.List>

@@ -6,18 +6,14 @@ import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type NewsWidgetProps = {
-  avatar: string;
-  date: string;
-  viewCount: string;
-  fullName: string;
-  title: string;
-  likesCount: string;
-  messagesCount: string;
-  reposts: string;
+import { VideoData } from './videoType';
+
+type VideoProps = VideoData & {
+  className?: string;
 };
 
-function NewsWidget({
+function Video({
+  className,
   avatar,
   date,
   fullName,
@@ -25,10 +21,11 @@ function NewsWidget({
   messagesCount,
   reposts,
   title,
+  videoSrc,
   viewCount,
-}: NewsWidgetProps): JSX.Element {
+}: VideoProps): JSX.Element {
   return (
-    <StyledNewsWidgetWrapper>
+    <StyledVideoWrapper className={className}>
       <StyledUserMeta
         avatar={avatar}
         date={date}
@@ -36,30 +33,36 @@ function NewsWidget({
         viewCount={viewCount}
         orientation="horizontal"
       />
-      <StyledTitle>{title}</StyledTitle>
+      <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
+      <StyledText>{title}</StyledText>
       <Reactions
         likesCount={likesCount}
         commentCount={messagesCount}
         sharesCount={reposts}
         filled
       />
-    </StyledNewsWidgetWrapper>
+    </StyledVideoWrapper>
   );
 }
 
-export { NewsWidget };
+export { Video };
 
 const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 
-const StyledNewsWidgetWrapper = styled.div`
+const StyedVideo = styled.iframe`
+  display: block;
+  margin-bottom: 8px;
+`;
+
+const StyledVideoWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;
 `;
 
-const StyledTitle = withAttrs(
+const StyledText = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
     margin-bottom: 10px;
