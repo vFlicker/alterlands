@@ -4,7 +4,7 @@ import { JSX } from 'react';
 import { Radius } from '~/shared/theme/radiuses';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
-import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
+import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 type PostWidgetProps = {
@@ -32,7 +32,7 @@ function PostWidget({
 }: PostWidgetProps): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledWidgetHeader
+      <StyledUserMeta
         date={date}
         fullName={fullName}
         views={views}
@@ -55,7 +55,7 @@ function PostWidget({
 
 export { PostWidget };
 
-const StyledWidgetHeader = styled(WidgetHeader)`
+const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 

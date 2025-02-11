@@ -4,7 +4,7 @@ import { JSX } from 'react';
 
 import { Radius } from '~/shared/theme/radiuses';
 import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
-import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
+import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
 type MemeWidgetProps = {
   date: string;
@@ -41,7 +41,7 @@ function MemeWidget({
 
   return (
     <StyledWrapper className={className} size={size}>
-      <StyledWidgetHeader
+      <StyledUserMeta
         avatar={avatar}
         date={date}
         fullName={fullName}
@@ -89,6 +89,6 @@ const StyledWrapper = styled.div<Pick<MemeWidgetProps, 'size'>>`
   ${({ size }) => MemeWidgetSizeToCss[size]}
 `;
 
-const StyledWidgetHeader = styled(WidgetHeader)`
+const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;

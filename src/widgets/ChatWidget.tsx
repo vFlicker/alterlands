@@ -5,7 +5,7 @@ import { Icon } from '~/shared/ui/atoms/Icon';
 import { Input } from '~/shared/ui/atoms/Input';
 import { Message } from '~/shared/ui/atoms/Message';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
-import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
+import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
 type ChatWidgetProps = {
   className?: string;
@@ -61,7 +61,7 @@ function MessageItem({
 }: MessageItemProps): JSX.Element {
   return (
     <StyledItem className={className} key={id}>
-      <StyledWidgetHeader
+      <StyledUserMeta
         avatar={avatar}
         date={date}
         fullName={fullName}
@@ -93,7 +93,7 @@ const StyledList = styled.div`
 
 const StyledItem = styled.div``;
 
-const StyledWidgetHeader = styled(WidgetHeader)`
+const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
 `;
 

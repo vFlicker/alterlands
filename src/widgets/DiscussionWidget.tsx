@@ -3,7 +3,7 @@ import { JSX } from 'react';
 
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
-import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
+import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { MessageItem } from './ChatWidget';
@@ -49,7 +49,7 @@ function DiscussionWidget({
       <StyledList>
         <div>
           <StyledItem key={id}>
-            <WidgetHeader
+            <UserMeta
               avatar={avatar}
               date={date}
               fullName={fullName}

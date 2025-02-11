@@ -8,8 +8,8 @@ import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { dividerDotCss } from '~/shared/ui/dividerDotCss';
-import { WidgetHeader } from '~/shared/ui/molecules/RealWodgetHeader';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
+import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 type TopChartsWidgetProps = {
