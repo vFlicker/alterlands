@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '~/shared/theme/colors';
+import { separatorCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Discussion } from './Discussion';
@@ -22,11 +22,11 @@ function DiscussionWidget({
     <StyledDiscussionWidgetWrapper className={className}>
       <WidgetHeader title={widgetTitle} />
 
-      <StyledList>
+      <StyledDiscussionList>
         {data.map((discussion) => (
           <StyledDiscussion key={discussion.id} {...discussion} />
         ))}
-      </StyledList>
+      </StyledDiscussionList>
     </StyledDiscussionWidgetWrapper>
   );
 }
@@ -35,23 +35,12 @@ export { DiscussionWidget };
 
 const StyledDiscussionWidgetWrapper = styled.div``;
 
-const StyledList = styled.div`
+const StyledDiscussionList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `;
 
 const StyledDiscussion = styled(Discussion)`
-  &:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_16};
-    }
-  }
+  ${separatorCss}
 `;

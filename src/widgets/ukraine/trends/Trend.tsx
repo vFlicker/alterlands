@@ -5,7 +5,7 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { dividerDotCss } from '~/shared/ui/dividerDotCss';
+import { dividerDotCss } from '~/shared/ui/css/dividerDotCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { TrendData } from './trendsTypes';

@@ -19,13 +19,13 @@ function ModeList(): JSX.Element {
     <StyledModeListWrapper>
       <SideBarWidgetHeader title="Mode" onButtonClick={() => {}} />
 
-      <StyledList>
+      <StyledNavList>
         {navItems.map(({ icon, title }) => (
           <StyledButton key={title}>
             <Icon name={icon} />
           </StyledButton>
         ))}
-      </StyledList>
+      </StyledNavList>
     </StyledModeListWrapper>
   );
 }
@@ -38,7 +38,7 @@ const StyledModeListWrapper = styled.div`
   gap: 14px;
 `;
 
-const StyledList = styled.ul`
+const StyledNavList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0 2px;

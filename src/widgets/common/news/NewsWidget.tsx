@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '~/shared/theme/colors';
+import { separatorCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { News } from './News';
@@ -22,11 +22,11 @@ function NewsWidget({
     <StyledNewsWidgetWrapper className={className}>
       <WidgetHeader title={widgetTitle} />
 
-      <StyledList>
+      <StyledNewsList>
         {data.map((news) => (
           <StyledNews key={news.id} {...news} />
         ))}
-      </StyledList>
+      </StyledNewsList>
     </StyledNewsWidgetWrapper>
   );
 }
@@ -35,24 +35,12 @@ export { NewsWidget };
 
 const StyledNewsWidgetWrapper = styled.div``;
 
-const StyledList = styled.div`
+const StyledNewsList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `;
 
 const StyledNews = styled(News)`
-  // TODO: use helper
-  &:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_16};
-    }
-  }
+  ${separatorCss}
 `;

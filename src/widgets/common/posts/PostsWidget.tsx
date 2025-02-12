@@ -1,26 +1,26 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '~/shared/theme/colors';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { separatorCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Post } from './Post';
-import { PostData } from './postType';
+import { PostData } from './postsTypes';
 
-type PostWidgetProps = {
+type PostsWidgetProps = {
   widgetTitle: string;
   data: PostData[];
   className?: string;
 };
 
-function PostWidget({
+function PostsWidget({
   widgetTitle,
   data,
   className,
-}: PostWidgetProps): JSX.Element {
+}: PostsWidgetProps): JSX.Element {
   return (
-    <StyledPostWidgetWrapper className={className}>
+    <StyledPostsWidgetWrapper className={className}>
       <WidgetHeader
         title={widgetTitle}
         actions={<LabelButton color="white">More</LabelButton>}
@@ -30,13 +30,13 @@ function PostWidget({
           <StyledPost key={post.id} {...post} />
         ))}
       </StyledPostList>
-    </StyledPostWidgetWrapper>
+    </StyledPostsWidgetWrapper>
   );
 }
 
-export { PostWidget };
+export { PostsWidget };
 
-const StyledPostWidgetWrapper = styled.div``;
+const StyledPostsWidgetWrapper = styled.div``;
 
 const StyledPostList = styled.div`
   display: flex;
@@ -45,16 +45,5 @@ const StyledPostList = styled.div`
 `;
 
 const StyledPost = styled(Post)`
-  &:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_16};
-    }
-  }
+  ${separatorCss}
 `;

@@ -1,1 +1,0 @@
-export { VideoWidget } from './VideoWidget';

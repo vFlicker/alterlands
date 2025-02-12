@@ -2,9 +2,9 @@ import { JSX } from 'react';
 
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
-import { MemeWidget } from '~/widgets/common/meme';
+import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
-import { VideoWidget } from '~/widgets/common/video';
+import { VideosWidget } from '~/widgets/common/videos';
 
 import { usPoliticsPageData } from './usPoliticsPageData';
 
@@ -13,7 +13,7 @@ function UsPoliticsPage(): JSX.Element {
     <Masonic.List>
       <Masonic.Item>
         <WidgetColumn title="Posts">TODO: add post widget</WidgetColumn>
-        <MemeWidget {...usPoliticsPageData.memes} />
+        <MemesWidget {...usPoliticsPageData.memes} />
       </Masonic.Item>
 
       <Masonic.Item>
@@ -23,7 +23,7 @@ function UsPoliticsPage(): JSX.Element {
       </Masonic.Item>
 
       <Masonic.Item>
-        <VideoWidget {...usPoliticsPageData.videos} />
+        <VideosWidget {...usPoliticsPageData.videos} />
       </Masonic.Item>
     </Masonic.List>
   );

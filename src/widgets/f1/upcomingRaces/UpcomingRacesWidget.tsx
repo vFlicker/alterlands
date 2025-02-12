@@ -1,18 +1,18 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '~/shared/theme/colors';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
+import { separatorCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
-import { UpcomingRace } from './UpcomingRaces';
-import { UpcomingRacesData } from './upcomingRacesTypes';
+import { UpcomingRace } from './UpcomingRace';
+import { UpcomingRaceData } from './upcomingRacesTypes';
 
 type UpcomingRacesWidgetProps = {
   widgetTitle: string;
-  data: UpcomingRacesData[];
+  data: UpcomingRaceData[];
   className?: string;
 };
 
@@ -65,16 +65,5 @@ const StyledUpcomingRaceList = styled.div`
 `;
 
 const StyledUpcomingRace = styled(UpcomingRace)`
-  &:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_16};
-    }
-  }
+  ${separatorCss}
 `;

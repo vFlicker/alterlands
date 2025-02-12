@@ -5,21 +5,21 @@ import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Card } from './Card';
-import { CardData } from './cardTypes';
+import { CardData } from './cardsTypes';
 
-type CardWidgetProps = {
+type CardsWidgetProps = {
   widgetTitle: string;
   data: CardData[];
   className?: string;
 };
 
-function CardWidget({
-  widgetTitle,
-  data,
+function CardsWidget({
   className,
-}: CardWidgetProps): JSX.Element {
+  data,
+  widgetTitle,
+}: CardsWidgetProps): JSX.Element {
   return (
-    <StyledCardWidgetWrapper className={className}>
+    <StyledCardsWidgetWrapper className={className}>
       <WidgetHeader
         title={widgetTitle}
         actions={<LabelButton color="white">See more</LabelButton>}
@@ -29,13 +29,13 @@ function CardWidget({
           <Card key={card.id} {...card} />
         ))}
       </StyledCardList>
-    </StyledCardWidgetWrapper>
+    </StyledCardsWidgetWrapper>
   );
 }
 
-export { CardWidget };
+export { CardsWidget };
 
-const StyledCardWidgetWrapper = styled.div``;
+const StyledCardsWidgetWrapper = styled.div``;
 
 const StyledCardList = styled.div`
   display: grid;

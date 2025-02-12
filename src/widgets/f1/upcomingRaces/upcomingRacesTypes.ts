@@ -1,4 +1,4 @@
-export type UpcomingRacesData = {
+export type UpcomingRaceData = {
   id: number;
   days: string;
   month: string;

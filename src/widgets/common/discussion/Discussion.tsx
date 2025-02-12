@@ -27,7 +27,7 @@ function Discussion({
 }: DiscussionProps): JSX.Element {
   return (
     <StyledDiscussionWrapper className={className}>
-      <StyledItem key={id}>
+      <StyledDiscussionBlock key={id}>
         <UserMeta
           avatar={avatar}
           date={date}
@@ -37,13 +37,13 @@ function Discussion({
         />
         <StyledTitle>{title}</StyledTitle>
         <Reactions likesCount={likesCount} sharesCount={reposts} filled />
-      </StyledItem>
+      </StyledDiscussionBlock>
 
-      <StyledMessagesWrapper>
+      <StyledAnswersWrapper>
         {answers.map((answer) => (
           <StyledMessageItem key={answer.id} {...answer} />
         ))}
-      </StyledMessagesWrapper>
+      </StyledAnswersWrapper>
     </StyledDiscussionWrapper>
   );
 }
@@ -56,14 +56,14 @@ const StyledDiscussionWrapper = styled.div`
   padding: 8px 0;
 `;
 
-const StyledItem = styled.div`
+const StyledDiscussionBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 24px;
 `;
 
-const StyledMessagesWrapper = styled.div`
+const StyledAnswersWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;

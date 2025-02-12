@@ -1,26 +1,26 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Color } from '~/shared/theme/colors';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { separatorCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Video } from './Video';
-import { VideoData } from './videoType';
+import { VideoData } from './videosTypes';
 
-type VideoWidgetProps = {
+type VideosWidgetProps = {
   widgetTitle: string;
   data: VideoData[];
   className?: string;
 };
 
-function VideoWidget({
-  widgetTitle,
-  data,
+function VideosWidget({
   className,
-}: VideoWidgetProps): JSX.Element {
+  data,
+  widgetTitle,
+}: VideosWidgetProps): JSX.Element {
   return (
-    <StyledVideoWidgetWrapper className={className}>
+    <StyledVideosWidgetWrapper className={className}>
       <WidgetHeader
         title={widgetTitle}
         actions={<LabelButton color="white">More</LabelButton>}
@@ -30,13 +30,13 @@ function VideoWidget({
           <StyledVideo key={video.id} {...video} />
         ))}
       </StyledVideoList>
-    </StyledVideoWidgetWrapper>
+    </StyledVideosWidgetWrapper>
   );
 }
 
-export { VideoWidget };
+export { VideosWidget };
 
-const StyledVideoWidgetWrapper = styled.div``;
+const StyledVideosWidgetWrapper = styled.div``;
 
 const StyledVideoList = styled.div`
   display: flex;
@@ -45,16 +45,5 @@ const StyledVideoList = styled.div`
 `;
 
 const StyledVideo = styled(Video)`
-  &:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_16};
-    }
-  }
+  ${separatorCss}
 `;

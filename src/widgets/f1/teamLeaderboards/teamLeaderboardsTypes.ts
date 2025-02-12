@@ -1,4 +1,4 @@
-export type TeamLeaderboardsData = {
+export type TeamLeaderboardData = {
   id: number;
   position: number;
   logo: string;

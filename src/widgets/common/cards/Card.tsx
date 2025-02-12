@@ -7,7 +7,7 @@ import { Button } from '~/shared/ui/atoms/Button';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { CardData } from './cardTypes';
+import { CardData } from './cardsTypes';
 
 type CardProps = CardData & {
   className?: string;
@@ -46,5 +46,4 @@ const StyledImage = styled.img`
 `;
 
 const StyledTitle = withAttrs({ variant: 'body-1', as: 'h2' }, Typography);
-
 const StyledPrice = withAttrs({ variant: 'heading-4', as: 'p' }, Typography);

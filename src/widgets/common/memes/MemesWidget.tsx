@@ -4,37 +4,37 @@ import { JSX } from 'react';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Meme } from './Meme';
-import { MemeData } from './memeTypes';
+import { MemeData } from './memesTypes';
 
-type MemeWidgetProps = {
+type MemesWidgetProps = {
   widgetTitle: string;
   data: MemeData[];
   className?: string;
 };
 
-function MemeWidget({
+function MemesWidget({
   className,
   data,
   widgetTitle,
-}: MemeWidgetProps): JSX.Element {
+}: MemesWidgetProps): JSX.Element {
   return (
-    <StyledMemeWidgetWrapper className={className}>
+    <StyledMemesWidgetWrapper className={className}>
       <WidgetHeader title={widgetTitle} />
 
-      <StyledList>
+      <StyledMemeList>
         {data.map((meme) => (
           <Meme key={meme.id} {...meme} />
         ))}
-      </StyledList>
-    </StyledMemeWidgetWrapper>
+      </StyledMemeList>
+    </StyledMemesWidgetWrapper>
   );
 }
 
-export { MemeWidget };
+export { MemesWidget };
 
-const StyledMemeWidgetWrapper = styled.div``;
+const StyledMemesWidgetWrapper = styled.div``;
 
-const StyledList = styled.div`
+const StyledMemeList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 16px;

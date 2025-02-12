@@ -11,7 +11,7 @@ import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { Chart } from './Chart';
-import { ChartData } from './topChartTypes';
+import { ChartData } from './topChartsTypes';
 
 type TopChartsWidgetProps = {
   widgetTitle: string;
@@ -51,11 +51,11 @@ function TopChartsWidget({
           </StyledTitleWrapper>
           <SliderButtons />
         </StyledHeader>
-        <StyledList>
+        <StyledChartList>
           {data.map((chart) => (
             <Chart key={chart.id} {...chart} />
           ))}
-        </StyledList>
+        </StyledChartList>
       </StyledContentWrapper>
     </StyledTopChartsWidgetWrapper>
   );
@@ -91,7 +91,7 @@ const StyledTitleWrapper = styled.div`
 
 const StyledTitle = withAttrs({ variant: 'heading-5' }, Typography);
 
-const StyledList = styled.div`
+const StyledChartList = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: ${Radius.RADIUS_8};

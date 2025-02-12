@@ -3,11 +3,11 @@ import { JSX } from 'react';
 
 import { Radius } from '~/shared/theme/radiuses';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
+import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { PostData } from './postType';
+import { PostData } from './postsTypes';
 
 type PostProps = PostData & {
   className?: string;

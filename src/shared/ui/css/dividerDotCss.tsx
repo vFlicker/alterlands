@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
-import { Color } from '../theme/colors';
-import { Radius } from '../theme/radiuses';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
 
 const dividerDotCss = css`
   content: '';

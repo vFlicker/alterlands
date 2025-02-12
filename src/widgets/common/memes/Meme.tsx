@@ -6,7 +6,7 @@ import { Radius } from '~/shared/theme/radiuses';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
-import { MemeData, MemeSize } from './memeTypes';
+import { MemeData, MemeSize } from './memesTypes';
 
 type MemeProps = MemeData & {
   className?: string;

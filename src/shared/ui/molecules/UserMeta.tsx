@@ -8,7 +8,7 @@ import { Avatar } from '../atoms/Avatar';
 import { Icon } from '../atoms/Icon';
 import { Typography } from '../atoms/Typography';
 import { VerifiedIcon } from '../atoms/VerifiedIcon';
-import { dividerDotCss } from '../dividerDotCss';
+import { dividerDotCss } from '../css/dividerDotCss';
 import { withAttrs } from '../withAttrs';
 
 type UserMetaProps = {

@@ -4,10 +4,10 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { dividerDotCss } from '~/shared/ui/dividerDotCss';
+import { dividerDotCss } from '~/shared/ui/css/dividerDotCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { ChartData } from './topChartTypes';
+import { ChartData } from './topChartsTypes';
 
 type ChartProps = ChartData & {
   className?: string;
@@ -55,6 +55,7 @@ const StyledRightWrapper = styled.div`
   display: flex;
   gap: 24px;
 
+  // TODO: чи можему ми зробити це універсально?
   & > *:not(:last-child) {
     position: relative;
     &::after {

@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { Reactions } from '~/shared/ui/molecules/Reactions/Reactions';
+import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { VideoData } from './videoType';
+import { VideoData } from './videosTypes';
 
 type VideoProps = VideoData & {
   className?: string;

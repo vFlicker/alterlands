@@ -6,18 +6,18 @@ import { Radius } from '~/shared/theme/radiuses';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
-import { TeamLeaderboardsData } from './teamLeaderboardsTypes';
+import { TeamLeaderboardData } from './teamLeaderboardsTypes';
 
 type TeamLeaderboardsWidgetProps = {
   widgetTitle: string;
-  data: TeamLeaderboardsData[];
+  data: TeamLeaderboardData[];
   className?: string;
 };
 
 function TeamLeaderboardsWidget({
-  widgetTitle,
-  data,
   className,
+  data,
+  widgetTitle,
 }: TeamLeaderboardsWidgetProps): JSX.Element {
   return (
     <StyledTeamLeaderboardsWidgetWrapper>

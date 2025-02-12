@@ -6,18 +6,18 @@ import { Radius } from '~/shared/theme/radiuses';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
-import { LeaderboardsData } from './leaderboardsTypes';
+import { LeaderboardData } from './leaderboardsTypes';
 
 type LeaderboardsWidgetProps = {
   widgetTitle: string;
-  data: LeaderboardsData[];
+  data: LeaderboardData[];
   className?: string;
 };
 
 function LeaderboardsWidget({
-  widgetTitle,
-  data,
   className,
+  data,
+  widgetTitle,
 }: LeaderboardsWidgetProps): JSX.Element {
   return (
     <StyledLeaderboardsWidgetWrapper className={className}>

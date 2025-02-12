@@ -9,9 +9,9 @@ import {
 } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { UpcomingRacesData } from './upcomingRacesTypes';
+import { UpcomingRaceData } from './upcomingRacesTypes';
 
-type UpcomingRaceProps = UpcomingRacesData & {
+type UpcomingRaceProps = UpcomingRaceData & {
   className?: string;
 };
 

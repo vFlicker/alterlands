@@ -24,11 +24,11 @@ function ChatWidget({
       <WidgetHeader title={widgetTitle} />
 
       <StyledChatWrapper>
-        <StyledList>
+        <StyledMessageList>
           {data.map((chatItem) => (
             <MessageItem key={chatItem.id} {...chatItem}></MessageItem>
           ))}
-        </StyledList>
+        </StyledMessageList>
 
         <Input
           placeholder="Write comment..."
@@ -49,7 +49,7 @@ const StyledChatWrapper = styled.div`
   gap: 16px;
 `;
 
-const StyledList = styled.div`
+const StyledMessageList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
