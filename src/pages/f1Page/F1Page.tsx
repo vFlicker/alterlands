@@ -1,15 +1,13 @@
 import { JSX } from 'react';
 
-import { Icon } from '~/shared/ui/atoms/Icon';
-import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { CardWidget } from '~/widgets/card';
 import { ChatWidget } from '~/widgets/chat';
 import { DiscussionWidget } from '~/widgets/discussion';
-import { Leaderboards } from '~/widgets/f1/Leaderboards';
-import { TeamLeaderboards } from '~/widgets/f1/TeamLeaderboards';
-import { UpcomingRaceWidget } from '~/widgets/f1/UpcomingRacesWidget';
+import { LeaderboardsWidget } from '~/widgets/f1/leaderboards';
+import { TeamLeaderboardsWidget } from '~/widgets/f1/teamLeaderboards';
+import { UpcomingRacesWidget } from '~/widgets/f1/upcomingRaces';
 import { MemeWidget } from '~/widgets/meme';
 import { NewsWidget } from '~/widgets/news';
 import { PostWidget } from '~/widgets/post';
@@ -21,28 +19,14 @@ function F1Page(): JSX.Element {
   return (
     <Masonic.List>
       <Masonic.Item>
-        <WidgetColumn
-          title="Upcoming races"
-          actionButton={
-            <IconButton size="small" variant="filled" color="transparent">
-              <Icon name="icon-maximize" />
-            </IconButton>
-          }
-        >
-          {f1PageData.upcomingRaces.map((race) => (
-            <UpcomingRaceWidget key={race.id} {...race} />
-          ))}
-        </WidgetColumn>
-
+        <UpcomingRacesWidget {...f1PageData.upcomingRaces} />
         <PostWidget {...f1PageData.posts} />
         <CardWidget {...f1PageData.merch} />
         <MemeWidget {...f1PageData.memes} />
       </Masonic.Item>
 
       <Masonic.Item>
-        <WidgetColumn title="Leaderboards">
-          <Leaderboards drivers={f1PageData.leaderboards} />
-        </WidgetColumn>
+        <LeaderboardsWidget {...f1PageData.leaderboards} />
 
         <WidgetColumn title="Opinion post widge">
           TODO: add post widge
@@ -54,10 +38,7 @@ function F1Page(): JSX.Element {
       </Masonic.Item>
 
       <Masonic.Item>
-        <WidgetColumn title="Team leaderboards">
-          <TeamLeaderboards teams={f1PageData.teamLeaderboards} />
-        </WidgetColumn>
-
+        <TeamLeaderboardsWidget {...f1PageData.teamLeaderboards} />
         <ChatWidget {...f1PageData.chat} />
         <NewsWidget {...f1PageData.news} />
         <VideoWidget {...f1PageData.videos} />

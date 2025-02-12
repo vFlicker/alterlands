@@ -9,25 +9,23 @@ import {
 } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type UpcomingRaceWidgetProps = {
-  days: string;
-  month: string;
-  title: string;
-  flagImage: string;
-  description: string;
-  trackImage: string;
+import { UpcomingRacesData } from './upcomingRacesTypes';
+
+type UpcomingRaceProps = UpcomingRacesData & {
+  className?: string;
 };
 
-function UpcomingRaceWidget({
+function UpcomingRace({
+  className,
   days,
   flagImage,
   month,
   description,
   title,
   trackImage,
-}: UpcomingRaceWidgetProps): JSX.Element {
+}: UpcomingRaceProps): JSX.Element {
   return (
-    <StyledUpcomingRaceWidgetWrapper>
+    <StyledUpcomingRaceWrapper className={className}>
       <StyledLeftCol>
         <StyledDays>{days}</StyledDays>
         <StyledMonth>{month}</StyledMonth>
@@ -42,13 +40,13 @@ function UpcomingRaceWidget({
         </StyledInfoWrapper>
         <StyledTrackImage src={trackImage} />
       </StyledRightCol>
-    </StyledUpcomingRaceWidgetWrapper>
+    </StyledUpcomingRaceWrapper>
   );
 }
 
-export { UpcomingRaceWidget };
+export { UpcomingRace };
 
-const StyledUpcomingRaceWidgetWrapper = styled.div`
+const StyledUpcomingRaceWrapper = styled.div`
   display: flex;
 `;
 
