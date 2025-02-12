@@ -3,13 +3,13 @@ import { JSX } from 'react';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
-import { MemeWidget } from '~/widgets/meme';
-import { NewsWidget } from '~/widgets/news';
-import { PostWidget } from '~/widgets/post';
+import { MemeWidget } from '~/widgets/common/meme';
+import { NewsWidget } from '~/widgets/common/news';
+import { PostWidget } from '~/widgets/common/post';
+import { VideoWidget } from '~/widgets/common/video';
 import { CitiesWidget } from '~/widgets/ukraine/CitiesWidget';
 import { TopChartsWidget } from '~/widgets/ukraine/TopCharts';
 import { TrendsWidget } from '~/widgets/ukraine/TrendsWidget';
-import { VideoWidget } from '~/widgets/video';
 
 import { ukrainePageData } from './ukrainePageData';
 
