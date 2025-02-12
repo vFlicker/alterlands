@@ -8,40 +8,20 @@ import { Typography } from '~/shared/ui/atoms/Typography';
 import { dividerDotCss } from '~/shared/ui/dividerDotCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type TrendsWidgetProps = {
-  data: {
-    id: number;
-    title: string;
-    postsCount: string;
-    votesCount: string;
-  }[];
+import { TrendData } from './trendsTypes';
+
+type TrendProps = TrendData & {
   className?: string;
 };
 
-function TrendsWidget({ className, data }: TrendsWidgetProps): JSX.Element {
-  return (
-    <StyledTrendsWidgetWrapper className={className}>
-      {data.map((topic) => (
-        <TrendItem key={topic.id} {...topic} />
-      ))}
-    </StyledTrendsWidgetWrapper>
-  );
-}
-
-type TrendItemProps = {
-  id: number;
-  title: string;
-  postsCount: string;
-  votesCount: string;
-};
-
-function TrendItem({
+function Trend({
+  className,
   title,
   postsCount,
   votesCount,
-}: TrendItemProps): JSX.Element {
+}: TrendProps): JSX.Element {
   return (
-    <StyledItemWrapper>
+    <StyledTrendWrapper className={className}>
       <StyledData>
         <StyledTitle>{title}</StyledTitle>
         <StyledAdditionalInfo>
@@ -50,18 +30,13 @@ function TrendItem({
         </StyledAdditionalInfo>
       </StyledData>
       <LabelButton color="white">Explore</LabelButton>
-    </StyledItemWrapper>
+    </StyledTrendWrapper>
   );
 }
 
-export { TrendsWidget };
+export { Trend };
 
-const StyledTrendsWidgetWrapper = styled.div`
-  display: grid;
-  gap: 8px;
-`;
-
-const StyledItemWrapper = styled.div`
+const StyledTrendWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

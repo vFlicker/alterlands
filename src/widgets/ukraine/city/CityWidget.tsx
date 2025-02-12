@@ -4,41 +4,59 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Button } from '~/shared/ui/atoms/Button';
+import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { dividerDotCss } from '~/shared/ui/dividerDotCss';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
+import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type CitiesWidgetProps = {
-  cities: { imageUrl: string; cityName: string; population: string }[];
+import { CityData } from './cityTypes';
+
+type CityWidgetProps = {
+  widgetTitle: string;
+  data: CityData[];
   className?: string;
 };
 
-function CitiesWidget({ cities, className }: CitiesWidgetProps): JSX.Element {
-  const { imageUrl, cityName, population } = cities[0];
+function CityWidget({
+  widgetTitle,
+  data,
+  className,
+}: CityWidgetProps): JSX.Element {
+  const { imageUrl, cityName, population } = data[0];
 
   return (
-    <StyledCitiesWidget className={className}>
-      <StyledImage src={imageUrl} alt="city" />
-      <StyledFooter>
-        <StyledLeftWrapper>
-          <StyledInfo>
-            <StyledCityName>{cityName}</StyledCityName>
-            <StyledPopulation>{population}</StyledPopulation>
-          </StyledInfo>
-          <SliderButtons />
-        </StyledLeftWrapper>
-        <Button color="accent" variant="outlined">
-          Follow
-        </Button>
-      </StyledFooter>
-    </StyledCitiesWidget>
+    <StyledCityWidgetWrapper>
+      <WidgetHeader
+        title={widgetTitle}
+        actions={<LabelButton color="white">More</LabelButton>}
+      />
+
+      <StyledCityWrapper className={className}>
+        <StyledImage src={imageUrl} alt="city" />
+        <StyledFooter>
+          <StyledLeftWrapper>
+            <StyledInfo>
+              <StyledCityName>{cityName}</StyledCityName>
+              <StyledPopulation>{population}</StyledPopulation>
+            </StyledInfo>
+            <SliderButtons />
+          </StyledLeftWrapper>
+          <Button color="accent" variant="outlined">
+            Follow
+          </Button>
+        </StyledFooter>
+      </StyledCityWrapper>
+    </StyledCityWidgetWrapper>
   );
 }
 
-export { CitiesWidget };
+export { CityWidget };
 
-const StyledCitiesWidget = styled.div`
+const StyledCityWidgetWrapper = styled.div``;
+
+const StyledCityWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;

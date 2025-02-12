@@ -179,57 +179,66 @@ const ukrainePageData = {
       },
     ],
   },
-  trends: [
-    {
-      id: 1,
-      title: 'Russian-Ukrainian War',
-      postsCount: '36k',
-      votesCount: '1.2k',
-    },
-    {
-      id: 2,
-      title: 'Alterlands Startups',
-      postsCount: '12k',
-      votesCount: '1.7k',
-    },
-    {
-      id: 3,
-      title: 'Trump',
-      postsCount: '17k',
-      votesCount: '1k',
-    },
-  ],
-  cities: [
-    {
-      id: 1,
-      imageUrl: ukraineImage.city.city1,
-      cityName: 'Kyiv',
-      population: '2 952 145',
-    },
-  ],
-  topCharts: [
-    {
-      id: 1,
-      imageUrl: avatarImage.artemPivovarovAvatar,
-      fullName: 'Artem Pivovarov',
-      songsCount: 45,
-      albumsCount: 4,
-    },
-    {
-      id: 2,
-      imageUrl: avatarImage.tinaKarolAvatar,
-      fullName: 'Tina Karol',
-      songsCount: 85,
-      albumsCount: 7,
-    },
-    {
-      id: 3,
-      imageUrl: avatarImage.nadiaDorofeevaAvatar,
-      fullName: 'Naadia Dorofeeva',
-      songsCount: 99,
-      albumsCount: 8,
-    },
-  ],
+  trends: {
+    widgetTitle: 'Trend Topics',
+    data: [
+      {
+        id: 1,
+        title: 'Russian-Ukrainian War',
+        postsCount: '36k',
+        votesCount: '1.2k',
+      },
+      {
+        id: 2,
+        title: 'Alterlands Startups',
+        postsCount: '12k',
+        votesCount: '1.7k',
+      },
+      {
+        id: 3,
+        title: 'Trump',
+        postsCount: '17k',
+        votesCount: '1k',
+      },
+    ],
+  },
+  cities: {
+    widgetTitle: 'Cities',
+    data: [
+      {
+        id: 1,
+        imageUrl: ukraineImage.city.city1,
+        cityName: 'Kyiv',
+        population: '2 952 145',
+      },
+    ],
+  },
+  topCharts: {
+    widgetTitle: 'Top Charts',
+    data: [
+      {
+        id: 1,
+        imageUrl: avatarImage.artemPivovarovAvatar,
+        fullName: 'Artem Pivovarov',
+        songsCount: 45,
+        albumsCount: 4,
+      },
+      {
+        id: 2,
+        imageUrl: avatarImage.tinaKarolAvatar,
+        fullName: 'Tina Karol',
+        songsCount: 85,
+        albumsCount: 7,
+      },
+      {
+        id: 3,
+        imageUrl: avatarImage.nadiaDorofeevaAvatar,
+        fullName: 'Naadia Dorofeeva',
+        songsCount: 99,
+        albumsCount: 8,
+      },
+    ],
+  },
 };
 
 export { ukrainePageData };

@@ -3,46 +3,38 @@ import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
-import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { dividerDotCss } from '~/shared/ui/dividerDotCss';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
+import { Chart } from './Chart';
+import { ChartData } from './topChartTypes';
+
 type TopChartsWidgetProps = {
-  data: {
-    id: number;
-    imageUrl: string;
-    fullName: string;
-    songsCount: number;
-    albumsCount: number;
-  }[];
+  widgetTitle: string;
+  data: ChartData[];
   className?: string;
 };
 
-const actionButtonIcons = [
-  'icon-music',
-  'icon-video',
-  'icon-star',
-  'icon-banknote',
-] as const;
+const actionButtonsNames = ['music', 'video', 'star', 'banknote'] as const;
 
 function TopChartsWidget({
+  widgetTitle,
   data,
   className,
 }: TopChartsWidgetProps): JSX.Element {
   return (
     <StyledTopChartsWidgetWrapper className={className}>
       <WidgetHeader
-        title="Top charts"
+        title={widgetTitle}
         actions={
           <StyledActionsWrapper>
-            {actionButtonIcons.map((iconName) => (
+            {actionButtonsNames.map((name) => (
               <IconButton size="medium" color="neutral" variant="filled">
-                <Icon name={iconName} />
+                <Icon name={`icon-${name}`} />
               </IconButton>
             ))}
           </StyledActionsWrapper>
@@ -60,17 +52,8 @@ function TopChartsWidget({
           <SliderButtons />
         </StyledHeader>
         <StyledList>
-          {data.map(({ albumsCount, fullName, id, imageUrl, songsCount }) => (
-            <StyledItem key={id}>
-              <StyledLeftWrapper>
-                <Avatar src={imageUrl} size="large" />
-                <StyledFullName>{fullName}</StyledFullName>
-              </StyledLeftWrapper>
-              <StyledRightWrapper>
-                <StyledText>Songs {songsCount}</StyledText>
-                <StyledText>Albums {albumsCount}</StyledText>
-              </StyledRightWrapper>
-            </StyledItem>
+          {data.map((chart) => (
+            <Chart key={chart.id} {...chart} />
           ))}
         </StyledList>
       </StyledContentWrapper>
@@ -114,35 +97,3 @@ const StyledList = styled.div`
   border-radius: ${Radius.RADIUS_8};
   background-color: ${Color.WHITE_5};
 `;
-
-const StyledItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-`;
-
-const StyledFullName = withAttrs({ variant: 'body-3' }, Typography);
-
-const StyledLeftWrapper = styled.div`
-  display: flex;
-  gap: 8px;
-  align-items: center;
-`;
-
-const StyledRightWrapper = styled.div`
-  display: flex;
-  gap: 24px;
-
-  & > *:not(:last-child) {
-    position: relative;
-    &::after {
-      ${dividerDotCss}
-    }
-  }
-`;
-
-const StyledText = withAttrs(
-  { variant: 'body-3', $color: Color.WHITE_64 },
-  Typography,
-);
