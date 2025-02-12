@@ -1,14 +1,15 @@
 import { JSX } from 'react';
 
 import { Masonic } from '~/shared/ui/atoms/Masonic';
-import { WidgetColumn } from '~/shared/ui/molecules/WidgetColumn';
 import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
 import { PostsWidget } from '~/widgets/common/posts';
 import { VideosWidget } from '~/widgets/common/videos';
 import { CitiesWidget } from '~/widgets/ukraine/cities';
+import { FeaturedProductsWidget } from '~/widgets/ukraine/featuredProducts';
 import { TopChartsWidget } from '~/widgets/ukraine/topCharts';
 import { TrendsWidget } from '~/widgets/ukraine/trends';
+import { VoteWidget } from '~/widgets/ukraine/vote';
 
 import { ukrainePageData } from './ukrainePageData';
 
@@ -24,13 +25,13 @@ function UkrainePage(): JSX.Element {
 
       <Masonic.Item>
         <TrendsWidget {...ukrainePageData.trends} />
-        <WidgetColumn title="Voice">TODO: add voice widget</WidgetColumn>
+        <VoteWidget />
         <PostsWidget {...ukrainePageData.posts} />
       </Masonic.Item>
 
       <Masonic.Item>
         <MemesWidget {...ukrainePageData.memes} />
-        <WidgetColumn title="Posts">TODO: add post posts</WidgetColumn>
+        <FeaturedProductsWidget />
       </Masonic.Item>
     </Masonic.List>
   );

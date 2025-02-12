@@ -1,0 +1,1 @@
+export { OpinionWidget } from './OpinionWidget';

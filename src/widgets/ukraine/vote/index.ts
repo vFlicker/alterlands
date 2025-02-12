@@ -1,0 +1,1 @@
+export { VoteWidget } from './VoteWidget';
