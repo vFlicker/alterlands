@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { Color } from '~/shared/theme/colors';
 
-export const separatorCss = css`
+const separatorLineCss = css`
   &:not(:last-child) {
     position: relative;
 
@@ -16,3 +16,5 @@ export const separatorCss = css`
     }
   }
 `;
+
+export { separatorLineCss };

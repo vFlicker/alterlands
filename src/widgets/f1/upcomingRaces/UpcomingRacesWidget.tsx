@@ -4,7 +4,7 @@ import { JSX } from 'react';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
-import { separatorCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { UpcomingRace } from './UpcomingRace';
@@ -65,5 +65,5 @@ const StyledUpcomingRaceList = styled.div`
 `;
 
 const StyledUpcomingRace = styled(UpcomingRace)`
-  ${separatorCss}
+  ${separatorLineCss}
 `;

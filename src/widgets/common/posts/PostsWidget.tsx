@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
-import { separatorCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Post } from './Post';
@@ -45,5 +45,5 @@ const StyledPostList = styled.div`
 `;
 
 const StyledPost = styled(Post)`
-  ${separatorCss}
+  ${separatorLineCss}
 `;

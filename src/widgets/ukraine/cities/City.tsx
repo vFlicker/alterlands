@@ -5,7 +5,7 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Button } from '~/shared/ui/atoms/Button';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { dividerDotCss } from '~/shared/ui/css/dividerDotCss';
+import { separatorDotCss } from '~/shared/ui/css/separatorDotCss';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
@@ -68,16 +68,14 @@ const StyledInfo = styled.div`
   display: flex;
   gap: 24px;
   padding: 2px 0;
-
-  & > div:not(:last-child) {
-    position: relative;
-    &::after {
-      ${dividerDotCss}
-    }
-  }
 `;
 
-const StyledCityName = withAttrs({ variant: 'heading-5' }, Typography);
+const StyledCityName = withAttrs(
+  { variant: 'heading-5' },
+  styled(Typography)`
+    ${separatorDotCss}
+  `,
+);
 
 const StyledPopulation = withAttrs(
   { variant: 'body-3', $color: Color.WHITE_64 },

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { separatorCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { News } from './News';
@@ -42,5 +42,5 @@ const StyledNewsList = styled.div`
 `;
 
 const StyledNews = styled(News)`
-  ${separatorCss}
+  ${separatorLineCss}
 `;

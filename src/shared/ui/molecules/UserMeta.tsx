@@ -8,7 +8,7 @@ import { Avatar } from '../atoms/Avatar';
 import { Icon } from '../atoms/Icon';
 import { Typography } from '../atoms/Typography';
 import { VerifiedIcon } from '../atoms/VerifiedIcon';
-import { dividerDotCss } from '../css/dividerDotCss';
+import { separatorDotCss } from '../css/separatorDotCss';
 import { withAttrs } from '../withAttrs';
 
 type UserMetaProps = {
@@ -37,7 +37,7 @@ function UserMeta({
     <StyledUserMetaWrapper className={className}>
       <Avatar size="small" src={avatar} />
       <StyledContent orientation={orientation}>
-        <StyledUserInfo>
+        <StyledUserInfo orientation={orientation}>
           <StyledUserFullName>{fullName}</StyledUserFullName>
           <VerifiedIcon />
         </StyledUserInfo>
@@ -62,12 +62,6 @@ const ContentVariantToCss = {
     flex-direction: row;
     align-items: center;
     gap: 22px;
-    & div:first-child {
-      position: relative;
-      &::after {
-        ${dividerDotCss}
-      }
-    }
   `,
   [Orientation.VERTICAL]: css`
     flex-direction: column;
@@ -86,10 +80,15 @@ const StyledContent = styled.div<Pick<UserMetaProps, 'orientation'>>`
   ${({ orientation }) => ContentVariantToCss[orientation]}
 `;
 
-const StyledUserInfo = styled.div`
+const StyledUserInfo = styled.div<Pick<UserMetaProps, 'orientation'>>`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  position: relative;
+
+  ${({ orientation }) =>
+    orientation === Orientation.HORIZONTAL && separatorDotCss}
 `;
 
 const StyledUserFullName = withAttrs({ variant: 'body-1' }, Typography);
@@ -97,12 +96,6 @@ const StyledUserFullName = withAttrs({ variant: 'body-1' }, Typography);
 const StyledTextWrapper = styled.div`
   display: flex;
   gap: 22px;
-  & div:first-child {
-    position: relative;
-    &::after {
-      ${dividerDotCss}
-    }
-  }
 `;
 
 const SecondaryText = withAttrs(
@@ -111,6 +104,8 @@ const SecondaryText = withAttrs(
     display: flex;
     align-items: center;
     gap: 2px;
+
+    ${separatorDotCss}
   `,
 );
 

@@ -2,12 +2,12 @@ import { JSX } from 'react';
 
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { CardsWidget } from '~/widgets/common/cards';
+import { ChatWidget } from '~/widgets/common/chat';
+import { DiscussionWidget } from '~/widgets/common/discussion';
 import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
 import { PostsWidget } from '~/widgets/common/posts';
 import { VideosWidget } from '~/widgets/common/videos';
-import { ChatWidget } from '~/widgets/common/chat';
-import { DiscussionWidget } from '~/widgets/common/discussion';
 import { LeaderboardsWidget } from '~/widgets/f1/leaderboards';
 import { TeamLeaderboardsWidget } from '~/widgets/f1/teamLeaderboards';
 import { UpcomingRacesWidget } from '~/widgets/f1/upcomingRaces';

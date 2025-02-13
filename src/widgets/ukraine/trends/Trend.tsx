@@ -5,7 +5,7 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { dividerDotCss } from '~/shared/ui/css/dividerDotCss';
+import { separatorDotCss } from '~/shared/ui/css/separatorDotCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { TrendData } from './trendsTypes';
@@ -56,16 +56,11 @@ const StyledTitle = withAttrs({ variant: 'heading-5', as: 'h2' }, Typography);
 const StyledAdditionalInfo = styled.div`
   display: flex;
   gap: 24px;
-
-  & > p:not(:last-child) {
-    position: relative;
-    &::after {
-      ${dividerDotCss}
-    }
-  }
 `;
 
 const StyledText = withAttrs(
   { variant: 'body-3', as: 'p', $color: Color.WHITE_64 },
-  Typography,
+  styled(Typography)`
+    ${separatorDotCss}
+  `,
 );
