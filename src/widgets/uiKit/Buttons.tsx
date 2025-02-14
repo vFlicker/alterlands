@@ -5,6 +5,7 @@ import { Button } from '~/shared/ui/atoms/Button';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { SecondaryButton } from '~/shared/ui/atoms/SecondaryButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
 
 function Buttons(): JSX.Element {
@@ -225,7 +226,7 @@ function Buttons(): JSX.Element {
         </IconButton>
       </StyledButtonsWrapper>
 
-      <Typography variant="heading-3">Label buttons (Secondary)</Typography>
+      <Typography variant="heading-3">Label buttons</Typography>
 
       <StyledButtonsWrapper>
         <LabelButton color="white">Neutral</LabelButton>
@@ -250,6 +251,13 @@ function Buttons(): JSX.Element {
         <LabelButton color="green" disabled>
           Neutral
         </LabelButton>
+      </StyledButtonsWrapper>
+
+      <Typography variant="heading-3">Secondary buttons</Typography>
+      <StyledButtonsWrapper>
+        <SecondaryButton color="green">Neutral</SecondaryButton>
+        <SecondaryButton color="blue">Neutral</SecondaryButton>
+        <SecondaryButton color="red">Neutral</SecondaryButton>
       </StyledButtonsWrapper>
     </StyledWrapper>
   );
