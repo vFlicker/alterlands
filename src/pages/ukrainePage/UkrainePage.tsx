@@ -26,7 +26,7 @@ function UkrainePage(): JSX.Element {
       <Masonic.Item>
         <TrendsWidget {...ukrainePageData.trends} />
         <VoteWidget />
-        <FeaturedProductsWidget />
+        <FeaturedProductsWidget {...ukrainePageData.featuredProducts} />
         <PostsWidget {...ukrainePageData.posts} />
       </Masonic.Item>
 

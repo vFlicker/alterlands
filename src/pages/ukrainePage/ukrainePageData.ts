@@ -239,6 +239,18 @@ const ukrainePageData = {
       },
     ],
   },
+  featuredProducts: {
+    widgetTitle: 'Featured products',
+    data: [
+      {
+        id: 1,
+        title: 'Monobank',
+        description:
+          'Перший український необанк у співпраці з Universal Bank, у ТОР 10 найбільших необанків світу, 8 млн клієнтів, TOP 1 на App Store та Google Play.',
+        imageUrl: ukraineImage.product.product1,
+      },
+    ],
+  },
 };
 
 export { ukrainePageData };

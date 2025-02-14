@@ -49,7 +49,7 @@ const StyledCityWrapper = styled.div`
 `;
 
 const StyledImage = styled.img`
-  border-radius: ${Radius.RADIUS_4};
+  border-radius: ${Radius.RADIUS_8};
 `;
 
 const StyledFooter = styled.div`
