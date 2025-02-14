@@ -26,12 +26,12 @@ function UkrainePage(): JSX.Element {
       <Masonic.Item>
         <TrendsWidget {...ukrainePageData.trends} />
         <VoteWidget />
+        <FeaturedProductsWidget />
         <PostsWidget {...ukrainePageData.posts} />
       </Masonic.Item>
 
       <Masonic.Item>
         <MemesWidget {...ukrainePageData.memes} />
-        <FeaturedProductsWidget />
       </Masonic.Item>
     </Masonic.List>
   );
