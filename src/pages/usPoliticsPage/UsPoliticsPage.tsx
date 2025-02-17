@@ -16,7 +16,7 @@ function UsPoliticsPage(): JSX.Element {
       </Masonic.Item>
 
       <Masonic.Item>
-        <OpinionWidget />
+        <OpinionWidget {...usPoliticsPageData.opinion} />
         <NewsWidget {...usPoliticsPageData.longreads} />
       </Masonic.Item>
 

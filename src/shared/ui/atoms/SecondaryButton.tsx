@@ -34,11 +34,11 @@ const SecondaryButtonColorToCss = {
     }
   `,
   [SecondaryButtonColor.BLUE]: css`
-    --color-button: ${Color.BLUE_1};
+    --color-button: ${Color.BLUE_2};
 
     &:hover,
     &:focus {
-      --color-button: ${Color.BLUE_2};
+      --color-button: ${Color.BLUE_3};
     }
 
     &:active {
