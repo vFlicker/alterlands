@@ -46,4 +46,9 @@ const StyledImage = styled.img`
 `;
 
 const StyledTitle = withAttrs({ variant: 'body-1', as: 'h2' }, Typography);
-const StyledPrice = withAttrs({ variant: 'heading-4', as: 'p' }, Typography);
+const StyledPrice = withAttrs(
+  { variant: 'heading-4', as: 'p' },
+  styled(Typography)`
+    margin-bottom: 4px;
+  `,
+);
