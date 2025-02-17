@@ -11,7 +11,7 @@ const separatorDotCss = css`
       content: '';
       position: absolute;
       top: 50%;
-      right: -14px;
+      right: -16px;
       width: 4px;
       height: 4px;
       border-radius: ${Radius.RADIUS_CIRCLE};

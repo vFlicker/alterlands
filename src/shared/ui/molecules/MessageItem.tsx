@@ -5,6 +5,8 @@ import { Message } from '~/shared/ui/atoms/Message';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 
+import { ChipColor } from '../atoms/Chip';
+
 type MessageItemProps = {
   id: number;
   avatar: string;
@@ -13,6 +15,11 @@ type MessageItemProps = {
   message: string;
   likesCount: string;
   reposts: string;
+  label?: {
+    text: string;
+    color: `${ChipColor}`;
+  };
+  viewCount?: string;
   verified?: boolean;
   className?: string;
 };
@@ -23,7 +30,9 @@ function MessageItem({
   date,
   fullName,
   verified,
+  viewCount,
   id,
+  label,
   likesCount,
   message,
   reposts,
@@ -34,7 +43,9 @@ function MessageItem({
         avatar={avatar}
         date={date}
         verified={verified}
+        viewCount={viewCount}
         fullName={fullName}
+        label={label}
         orientation="horizontal"
       />
       <StyledMessage>{message}</StyledMessage>

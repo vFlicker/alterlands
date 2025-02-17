@@ -10,6 +10,7 @@ const StyledVerifiedIcon = withAttrs(
   styled(Icon)`
     width: 18px;
     height: 17px;
+    margin-top: -2px;
     fill: ${Color.ACCENT};
   `,
 );

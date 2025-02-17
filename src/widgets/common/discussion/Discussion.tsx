@@ -19,6 +19,7 @@ function Discussion({
   date,
   fullName,
   viewCount,
+  verified,
   id,
   likesCount,
   reposts,
@@ -32,6 +33,7 @@ function Discussion({
           avatar={avatar}
           date={date}
           fullName={fullName}
+          verified={verified}
           viewCount={viewCount}
           orientation="horizontal"
         />

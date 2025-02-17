@@ -5,6 +5,7 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 
 import { Avatar } from '../atoms/Avatar';
+import { Chip, ChipColor } from '../atoms/Chip';
 import { Icon } from '../atoms/Icon';
 import { Typography } from '../atoms/Typography';
 import { VerifiedIcon } from '../atoms/VerifiedIcon';
@@ -16,6 +17,10 @@ type UserMetaProps = {
   fullName: string;
   date: string;
   orientation: `${Orientation}`;
+  label?: {
+    text: string;
+    color: `${ChipColor}`;
+  };
   verified?: boolean;
   viewCount?: string;
   className?: string;
@@ -32,6 +37,7 @@ function UserMeta({
   fullName,
   verified,
   date,
+  label,
   viewCount,
   orientation,
 }: UserMetaProps): JSX.Element {
@@ -53,6 +59,11 @@ function UserMeta({
           )}
         </StyledTextWrapper>
       </StyledContent>
+      {label && (
+        <Chip color={label.color} size="small">
+          {label.text}
+        </Chip>
+      )}
     </StyledUserMetaWrapper>
   );
 }
@@ -63,7 +74,7 @@ const ContentVariantToCss = {
   [Orientation.HORIZONTAL]: css`
     flex-direction: row;
     align-items: center;
-    gap: 22px;
+    gap: 26px;
   `,
   [Orientation.VERTICAL]: css`
     flex-direction: column;
@@ -73,6 +84,7 @@ const ContentVariantToCss = {
 
 const StyledUserMetaWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 8px;
 `;
 
@@ -85,7 +97,7 @@ const StyledContent = styled.div<Pick<UserMetaProps, 'orientation'>>`
 const StyledUserInfo = styled.div<Pick<UserMetaProps, 'orientation'>>`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 
   position: relative;
 
@@ -114,7 +126,7 @@ const SecondaryText = withAttrs(
 const StyledEyeIcon = withAttrs(
   { name: 'icon-eye' },
   styled(Icon)`
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   `,
 );
