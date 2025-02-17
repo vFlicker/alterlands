@@ -230,11 +230,8 @@ function Buttons(): JSX.Element {
 
       <StyledButtonsWrapper>
         <LabelButton color="white">Neutral</LabelButton>
-
         <LabelButton color="blue">Neutral</LabelButton>
-
         <LabelButton color="red">Neutral</LabelButton>
-
         <LabelButton color="green">Neutral</LabelButton>
       </StyledButtonsWrapper>
 

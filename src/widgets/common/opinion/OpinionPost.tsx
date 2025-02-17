@@ -64,7 +64,7 @@ export { OpinionPost };
 const StyledOpinionPostWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 34px;
 `;
 
 const StyledColumns = styled.div`

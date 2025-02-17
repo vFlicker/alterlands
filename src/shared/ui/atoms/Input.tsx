@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ComponentProps, JSX } from 'react';
 
@@ -9,6 +10,7 @@ import { TypographyVariantToCss } from './Typography';
 type InputBaseProps = {
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
+  $color?: string;
 };
 
 type InputProps = ComponentProps<typeof StyledInput>;
@@ -17,10 +19,11 @@ function Input({
   className,
   leftIcon,
   rightIcon,
+  $color,
   ...props
 }: InputProps): JSX.Element {
   return (
-    <StyledInputWrapper className={className}>
+    <StyledInputWrapper className={className} $color={$color}>
       {leftIcon && <IconBox>{leftIcon}</IconBox>}
       <StyledInput {...props} />
       {rightIcon && <IconBox>{rightIcon}</IconBox>}
@@ -30,14 +33,15 @@ function Input({
 
 export { Input };
 
-const StyledInputWrapper = styled.div`
+const StyledInputWrapper = styled.div<Pick<InputBaseProps, '$color'>>`
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
   width: 100%;
   padding: 7px 16px;
-  border: 1px solid ${Color.WHITE_16};
+  border-style: solid;
+  border-width: 1px;
   border-radius: ${Radius.RADIUS_24};
 
   &:hover {
@@ -55,6 +59,14 @@ const StyledInputWrapper = styled.div`
       stroke: ${Color.WHITE_87};
     }
   }
+
+  ${({ $color = Color.WHITE_16 }) => css`
+    border-color: ${$color};
+
+    svg {
+      stroke: ${$color};
+    }
+  `}
 `;
 
 const IconBox = styled.div`

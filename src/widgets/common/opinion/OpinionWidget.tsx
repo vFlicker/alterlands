@@ -3,13 +3,13 @@ import { JSX } from 'react';
 
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
-import { Input } from '~/shared/ui/atoms/Input';
 import { separatorLineCss } from '~/shared/ui/css/separatorCss';
 import { MessageItem } from '~/shared/ui/molecules/MessageItem';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { OpinionPost } from './OpinionPost';
 import { OpinionData } from './opinionTypes';
+import { SideInput } from './SideInput';
 
 type OpinionWidgetProps = {
   widgetTitle: string;
@@ -43,10 +43,7 @@ function OpinionWidget({
             ))}
           </StyledMessageList>
 
-          <Input
-            placeholder="Write comment..."
-            rightIcon={<Icon name="icon-send" />}
-          />
+          <SideInput candidates={data.candidates} />
         </StyledChatWrapper>
       </StyledContentWrapper>
     </StyledOpinionWidgetWrapper>
@@ -64,18 +61,19 @@ const StyledContentWrapper = styled.div`
 `;
 
 const StyledOpinionPost = styled(OpinionPost)`
-  padding-bottom: 12px;
+  padding-bottom: 16px;
   ${separatorLineCss}
 `;
 
 const StyledChatWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
+  padding-top: 8px;
 `;
 
 const StyledMessageList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 `;

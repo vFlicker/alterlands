@@ -8,6 +8,7 @@ import { TypographyVariantToCss } from './Typography';
 
 type LabelButtonProps = {
   color: `${LabelButtonColor}`;
+  isActive?: boolean;
 };
 
 const enum LabelButtonColor {
@@ -20,14 +21,15 @@ const enum LabelButtonColor {
 const LabelButtonColorToCss = {
   [LabelButtonColor.WHITE]: css`
     --color-text: ${Color.WHITE_64};
+    --color-button-active: ${Color.WHITE_8};
 
     &:hover,
     &:focus {
-      --color-button: ${Color.WHITE_8};
+      --color-button: ${Color.WHITE_16};
     }
 
     &:active {
-      --color-button: ${Color.WHITE_16};
+      --color-button: ${Color.WHITE_8};
     }
 
     &:disabled {
@@ -36,14 +38,15 @@ const LabelButtonColorToCss = {
   `,
   [LabelButtonColor.BLUE]: css`
     --color-text: ${Color.BLUE_1};
+    --color-button-active: ${Color.BLUE_4};
 
     &:hover,
     &:focus {
-      --color-button: ${Color.BLUE_4};
+      --color-button: ${Color.BLUE_3};
     }
 
     &:active {
-      --color-button: ${Color.BLUE_3};
+      --color-button: ${Color.BLUE_4};
     }
 
     &:disabled {
@@ -52,14 +55,15 @@ const LabelButtonColorToCss = {
   `,
   [LabelButtonColor.RED]: css`
     --color-text: ${Color.RED_1};
+    --color-button-active: ${Color.RED_5};
 
     &:hover,
     &:focus {
-      --color-button: ${Color.RED_5};
+      --color-button: ${Color.RED_4};
     }
 
     &:active {
-      --color-button: ${Color.RED_4};
+      --color-button: ${Color.RED_5};
     }
 
     &:disabled {
@@ -68,14 +72,15 @@ const LabelButtonColorToCss = {
   `,
   [LabelButtonColor.GREEN]: css`
     --color-text: ${Color.GREEN_1};
+    --color-button-active: ${Color.GREEN_4};
 
     &:hover,
     &:focus {
-      --color-button: ${Color.GREEN_4};
+      --color-button: ${Color.GREEN_3};
     }
 
     &:active {
-      --color-button: ${Color.GREEN_3};
+      --color-button: ${Color.GREEN_4};
     }
 
     &:disabled {
@@ -89,7 +94,8 @@ const StyledLabelButton = styled.button<LabelButtonProps>`
   border-radius: ${Radius.RADIUS_4};
 
   color: var(--color-text);
-  background-color: var(--color-button);
+  background-color: ${({ isActive }) =>
+    isActive ? 'var(--color-button-active)' : 'var(--color-button)'};
 
   ${TypographyVariantToCss['body-3']}
 
@@ -98,6 +104,7 @@ const StyledLabelButton = styled.button<LabelButtonProps>`
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+    background-color: var(--color-button-active);
   }
 
   ${({ color }) => LabelButtonColorToCss[color]}
