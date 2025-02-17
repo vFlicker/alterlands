@@ -109,8 +109,8 @@ const ButtonColorToCss = {
 
 const PADDING = {
   [ButtonSize.SMALL]: {
-    base: '5px',
-    icon: '10px',
+    base: '2px',
+    icon: '8px',
     text: '14px',
   },
   [ButtonSize.MEDIUM]: {
@@ -155,8 +155,8 @@ const StyledButton = styled.button<ButtonBaseProps>`
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   ${({ variant }) => ButtonVariantToCss[variant]}

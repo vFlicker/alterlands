@@ -2,6 +2,43 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { usPoliticsImage } from '~/shared/assets/images/usPolitics';
 
 const usPoliticsPageData = {
+  posts: {
+    widgetTitle: 'Posts',
+    data: [
+      {
+        id: 1,
+        date: '5m',
+        viewCount: '2k',
+        fullName: 'Sarah Johnson',
+        text: ["It's chaos wrapped in comedy daily"],
+        avatar: avatarImage.kamilaAvatar,
+        likesCount: '2k',
+        reposts: '165',
+      },
+      {
+        id: 2,
+        date: '1m',
+        viewCount: '2k',
+        fullName: 'Michael Smith',
+        text: [
+          'Politics today feels like a never-ending circus. Leaders make big promises, but chaos often follows. One moment it’s serious, and the next it’s like a comedy show. People are left confused but keep hoping for change. All we can do is stay hopeful and keep watching',
+        ],
+        avatar: avatarImage.cheeAvatar,
+        likesCount: '867',
+        reposts: '248',
+      },
+      {
+        id: 3,
+        date: '16h',
+        viewCount: '84k',
+        fullName: 'David Williams',
+        text: ['Somehow, everything keeps moving forward, even if messily'],
+        avatar: avatarImage.ethanAndersonAvatar,
+        likesCount: '54k',
+        reposts: '27k',
+      },
+    ],
+  },
   memes: {
     widgetTitle: 'Memes',
     data: [

@@ -12,7 +12,7 @@ const separatorLineCss = css`
       bottom: -6px;
       width: 100%;
       height: 1px;
-      background-color: ${Color.WHITE_16};
+      background-color: ${Color.WHITE_8};
     }
   }
 `;

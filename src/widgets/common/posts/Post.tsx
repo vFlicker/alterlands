@@ -34,16 +34,18 @@ function Post({
         avatar={avatar}
         orientation="horizontal"
       />
-      {text.map((row) => (
-        <StyledText key={row}>{row}</StyledText>
-      ))}
-      <StyledImage src={image} alt="Image description" />
-      <Reactions
-        likesCount={likesCount}
-        commentCount={messagesCount}
-        sharesCount={reposts}
-        filled
-      />
+      <StyledContentWrapper>
+        {text.map((row) => (
+          <StyledText key={row}>{row}</StyledText>
+        ))}
+        {image && <StyledImage src={image} alt="Image description" />}
+        <Reactions
+          likesCount={likesCount}
+          commentCount={messagesCount}
+          sharesCount={reposts}
+          filled
+        />
+      </StyledContentWrapper>
     </StyledPostWrapper>
   );
 }
@@ -58,6 +60,10 @@ const StyledPostWrapper = styled.div`
   width: 100%;
   max-width: 488px;
   padding: 8px 0;
+`;
+
+const StyledContentWrapper = styled.div`
+  padding: 4px 8px 8px;
 `;
 
 const StyledText = withAttrs(

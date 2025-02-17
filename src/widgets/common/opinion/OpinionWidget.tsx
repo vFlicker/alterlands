@@ -3,7 +3,7 @@ import { JSX } from 'react';
 
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
-import { separatorLineCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { MessageItem } from '~/shared/ui/molecules/MessageItem';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 

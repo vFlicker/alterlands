@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { Radius } from '~/shared/theme/radiuses';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
@@ -34,18 +35,25 @@ function Video({
         orientation="horizontal"
       />
       <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
-      <StyledText>{title}</StyledText>
-      <Reactions
-        likesCount={likesCount}
-        commentCount={messagesCount}
-        sharesCount={reposts}
-        filled
-      />
+      <StyledContentWrapper>
+        <StyledText>{title}</StyledText>
+        <Reactions
+          likesCount={likesCount}
+          commentCount={messagesCount}
+          sharesCount={reposts}
+          filled
+        />
+      </StyledContentWrapper>
     </StyledVideoWrapper>
   );
 }
 
 export { Video };
+
+const StyledVideoWrapper = styled.div`
+  width: 100%;
+  padding: 8px 0;
+`;
 
 const StyledUserMeta = styled(UserMeta)`
   margin-bottom: 8px;
@@ -54,17 +62,16 @@ const StyledUserMeta = styled(UserMeta)`
 const StyedVideo = styled.iframe`
   display: block;
   margin-bottom: 8px;
+  border-radius: ${Radius.RADIUS_8};
 `;
 
-const StyledVideoWrapper = styled.div`
-  width: 100%;
-  max-width: 488px;
-  padding: 8px 0;
+const StyledContentWrapper = styled.div`
+  padding: 0 8px;
 `;
 
 const StyledText = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   `,
 );

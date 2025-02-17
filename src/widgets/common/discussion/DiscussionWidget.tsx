@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { separatorLineCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Discussion } from './Discussion';

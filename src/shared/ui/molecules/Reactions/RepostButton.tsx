@@ -15,11 +15,6 @@ const StyledRepostButton = withAttrs(
   styled(Button)`
     line-height: 1.5;
 
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-
     &:active {
       svg {
         fill: ${Color.WHITE_98};

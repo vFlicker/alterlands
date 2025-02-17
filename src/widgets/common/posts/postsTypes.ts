@@ -4,9 +4,9 @@ export type PostData = {
   viewCount: string;
   fullName: string;
   text: string[];
-  image: string;
   avatar: string;
-  likesCount: string;
-  messagesCount: string;
-  reposts: string;
+  likesCount?: string;
+  reposts?: string;
+  messagesCount?: string;
+  image?: string;
 };

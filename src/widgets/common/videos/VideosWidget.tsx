@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { LabelButton } from '~/shared/ui/atoms/LabelButton';
-import { separatorLineCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Video } from './Video';
@@ -21,10 +20,7 @@ function VideosWidget({
 }: VideosWidgetProps): JSX.Element {
   return (
     <StyledVideosWidgetWrapper className={className}>
-      <WidgetHeader
-        title={widgetTitle}
-        actions={<LabelButton color="white">More</LabelButton>}
-      />
+      <WidgetHeader title={widgetTitle} />
       <StyledVideoList>
         {data.map((video) => (
           <StyledVideo key={video.id} {...video} />
@@ -41,9 +37,10 @@ const StyledVideosWidgetWrapper = styled.div``;
 const StyledVideoList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 24px;
 `;
 
 const StyledVideo = styled(Video)`
+  padding-bottom: 16px;
   ${separatorLineCss}
 `;

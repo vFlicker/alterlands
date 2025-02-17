@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
-import { separatorLineCss } from '~/shared/ui/css/separatorCss';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Post } from './Post';

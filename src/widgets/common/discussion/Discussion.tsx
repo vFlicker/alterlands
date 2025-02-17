@@ -21,6 +21,7 @@ function Discussion({
   viewCount,
   verified,
   id,
+  messagesCount,
   likesCount,
   reposts,
   title,
@@ -38,7 +39,12 @@ function Discussion({
           orientation="horizontal"
         />
         <StyledTitle>{title}</StyledTitle>
-        <Reactions likesCount={likesCount} sharesCount={reposts} filled />
+        <Reactions
+          likesCount={likesCount}
+          sharesCount={reposts}
+          commentCount={messagesCount}
+          filled
+        />
       </StyledDiscussionBlock>
 
       <StyledAnswersWrapper>
