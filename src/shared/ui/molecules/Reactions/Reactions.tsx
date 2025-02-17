@@ -29,7 +29,7 @@ function Reactions({
   const isDownActive = vote === 'down';
 
   return (
-    <StyledReactionsWrapper className={className}>
+    <StyledReactionsWrapper className={className} filled={filled}>
       {likesCount && (
         <VoteControl
           variant={variant}
@@ -58,8 +58,8 @@ function Reactions({
 
 export { Reactions };
 
-const StyledReactionsWrapper = styled.div`
+const StyledReactionsWrapper = styled.div<Pick<ReactionProps, 'filled'>>`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: ${({ filled }) => (filled ? '8px' : '4px')};
 `;

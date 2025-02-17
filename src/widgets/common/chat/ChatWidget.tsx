@@ -46,11 +46,11 @@ const StyledChatWidgetWrapper = styled.div``;
 const StyledChatWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 `;
 
 const StyledMessageList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 `;

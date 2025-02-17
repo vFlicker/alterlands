@@ -64,14 +64,19 @@ const VoteControlVariantToCss = {
 const StyledVoteControlWrapper = styled.div<Pick<VoteControlProps, 'variant'>>`
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 3px 6px;
+  gap: 3px;
+  padding: 3px 8px;
   border-radius: ${Radius.RADIUS_50};
 
   ${({ variant }) => VoteControlVariantToCss[variant]}
 `;
 
-const StyledCounter = withAttrs({ variant: 'body-2', as: 'span' }, Typography);
+const StyledCounter = withAttrs(
+  { variant: 'body-2', as: 'span' },
+  styled(Typography)`
+    line-height: 1.5;
+  `,
+);
 
 const StyledIcon = styled(Icon)``;
 

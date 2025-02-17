@@ -6,7 +6,7 @@ import { TypographyVariantToCss } from './Typography';
 
 const StyledMessage = styled.div`
   display: inline-flex;
-  padding: 9px;
+  padding: 8px;
   border-radius: 8px;
 
   ${TypographyVariantToCss['body-3']}

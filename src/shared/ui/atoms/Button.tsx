@@ -138,7 +138,7 @@ const StyledButton = styled.button<ButtonBaseProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 
   border-width: 1px;
   border-style: solid;

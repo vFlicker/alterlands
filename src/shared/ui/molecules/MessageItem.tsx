@@ -13,6 +13,7 @@ type MessageItemProps = {
   message: string;
   likesCount: string;
   reposts: string;
+  verified?: boolean;
   className?: string;
 };
 
@@ -21,6 +22,7 @@ function MessageItem({
   avatar,
   date,
   fullName,
+  verified,
   id,
   likesCount,
   message,
@@ -31,6 +33,7 @@ function MessageItem({
       <StyledUserMeta
         avatar={avatar}
         date={date}
+        verified={verified}
         fullName={fullName}
         orientation="horizontal"
       />
@@ -53,7 +56,7 @@ const StyledUserMeta = styled(UserMeta)`
 `;
 
 const StyledMessage = styled(Message)`
-  margin: 0 0 4px 36px;
+  margin: 0 0 2px 36px;
 `;
 
 const StyledReactions = styled(Reactions)`

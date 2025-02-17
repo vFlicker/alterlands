@@ -16,6 +16,7 @@ type UserMetaProps = {
   fullName: string;
   date: string;
   orientation: `${Orientation}`;
+  verified?: boolean;
   viewCount?: string;
   className?: string;
 };
@@ -29,6 +30,7 @@ function UserMeta({
   className,
   avatar,
   fullName,
+  verified,
   date,
   viewCount,
   orientation,
@@ -39,7 +41,7 @@ function UserMeta({
       <StyledContent orientation={orientation}>
         <StyledUserInfo orientation={orientation}>
           <StyledUserFullName>{fullName}</StyledUserFullName>
-          <VerifiedIcon />
+          {verified && <VerifiedIcon />}
         </StyledUserInfo>
         <StyledTextWrapper>
           <SecondaryText>{date}</SecondaryText>
