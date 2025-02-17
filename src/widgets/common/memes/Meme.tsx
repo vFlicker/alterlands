@@ -49,16 +49,18 @@ function Meme({
 export { Meme };
 
 const StyledImage = styled.img`
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border-radius: ${Radius.RADIUS_4};
 `;
 
 const MemeSizeToCss = {
   [MemeSize.LARGE]: css`
     max-width: 100%;
+    padding: 8px 0;
   `,
   [MemeSize.MEDIUM]: css`
     max-width: 234px;
+    padding: 2px 0;
 
     ${StyledImage} {
       height: 354px;
@@ -67,12 +69,12 @@ const MemeSizeToCss = {
   `,
   [MemeSize.SMALL]: css`
     max-width: 234px;
+    padding: 2px 0;
   `,
 };
 
 const StyledMemeWrapper = styled.div<Pick<MemeProps, 'size'>>`
   width: 100%;
-  padding: 8px 0;
   ${({ size }) => MemeSizeToCss[size]}
 `;
 

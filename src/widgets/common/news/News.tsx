@@ -50,14 +50,16 @@ const StyledUserMeta = styled(UserMeta)`
 `;
 
 const StyledNewsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   width: 100%;
-  max-width: 488px;
   padding: 8px 0;
 `;
 
 const StyledTitle = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   `,
 );
