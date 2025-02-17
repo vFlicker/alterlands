@@ -64,7 +64,7 @@ const f1PageData = {
     ],
   },
   teamLeaderboards: {
-    widgetTitle: 'Team Leaderboards',
+    widgetTitle: 'Team leaderboard',
     data: [
       {
         id: 1,
