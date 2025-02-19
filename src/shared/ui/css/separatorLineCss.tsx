@@ -2,18 +2,19 @@ import { css } from '@emotion/react';
 
 import { Color } from '~/shared/theme/colors';
 
-const separatorLineCss = css`
-  &:not(:last-child) {
-    position: relative;
+const separatorLineCss = (bottom: number) => css`
+  position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 100%;
-      height: 1px;
-      background-color: ${Color.WHITE_8};
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -${bottom}px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: ${Color.WHITE_8};
   }
 `;
 

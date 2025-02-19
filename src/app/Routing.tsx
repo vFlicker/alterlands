@@ -12,7 +12,7 @@ function Routing(): JSX.Element {
     <Routes>
       <Route
         path={AppRoute.ROOT}
-        element={<Navigate to={AppRoute.UI_KIT} replace />}
+        element={<Navigate to={AppRoute.UKRAINE} replace />}
       />
 
       <Route path={AppRoute.UKRAINE} element={<UkrainePage />} />

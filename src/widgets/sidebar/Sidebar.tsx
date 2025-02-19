@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
-import { Logotype } from '~/shared/ui/atoms/Logotype';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 
 import { Footer } from './Footer';
 import { ModeList } from './Mode';
@@ -13,7 +13,6 @@ import { ProfileType } from './ProfileType';
 function Sidebar(): JSX.Element {
   return (
     <StyledSidebarWrapper>
-      <StyledLogotype />
       <NavigationPanel />
       <NavList />
       <ProfileType />
@@ -38,23 +37,6 @@ const StyledSidebarWrapper = styled.aside`
   background-color: ${Color.DARK};
 
   & > *:not(:last-child) {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -16px;
-      left: 0;
-
-      display: block;
-      width: 100%;
-      height: 1px;
-
-      background-color: ${Color.WHITE_8};
-    }
+    ${separatorLineCss(17)}
   }
-`;
-
-const StyledLogotype = styled(Logotype)`
-  padding: 0px 12px 1px;
 `;

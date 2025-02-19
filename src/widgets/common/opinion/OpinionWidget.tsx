@@ -62,7 +62,10 @@ const StyledContentWrapper = styled.div`
 
 const StyledOpinionPost = styled(OpinionPost)`
   padding-bottom: 16px;
-  ${separatorLineCss}
+
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;
 
 const StyledChatWrapper = styled.div`

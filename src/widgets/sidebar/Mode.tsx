@@ -48,7 +48,7 @@ const StyledButton = withAttrs(
   {
     color: 'transparent',
     variant: 'filled',
-    size: 'medium',
+    size: 'large',
   },
   styled(IconButton)`
     svg {

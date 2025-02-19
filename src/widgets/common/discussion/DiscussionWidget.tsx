@@ -42,5 +42,7 @@ const StyledDiscussionList = styled.div`
 `;
 
 const StyledDiscussion = styled(Discussion)`
-  ${separatorLineCss}
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;

@@ -45,5 +45,7 @@ const StyledPostList = styled.div`
 `;
 
 const StyledPost = styled(Post)`
-  ${separatorLineCss}
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;

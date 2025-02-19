@@ -10,10 +10,14 @@ import { Routing } from './Routing';
 function App(): JSX.Element {
   return (
     <StyledAppWrapper>
-      <Sidebar />
+      <Header />
       <MainContent>
-        <Header />
+        <Sidebar />
         <StyledMain>
+          <div className="content">
+            <div>TopBar</div>
+            <div>ContentSection</div>
+          </div>
           <Routing />
         </StyledMain>
       </MainContent>
@@ -25,13 +29,13 @@ export const AppWithProviders = withProviders(App);
 
 const StyledAppWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 `;
 
 const MainContent = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: column;
 `;
 
 const StyledMain = styled.main`

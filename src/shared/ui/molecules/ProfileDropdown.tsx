@@ -20,7 +20,7 @@ type ProfileDropdownProps = {
 function ProfileDropdown({ className }: ProfileDropdownProps): JSX.Element {
   return (
     <StyledProfileDropdownWrapper className={className}>
-      <Avatar size="medium" src={avatarImage.currentUser} />
+      <Avatar size="large" src={avatarImage.currentUser} />
 
       <StyledProfileInfo>
         <StyledTop>

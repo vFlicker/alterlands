@@ -52,5 +52,8 @@ const StyledUpcomingRaceList = styled.div`
 
 const StyledUpcomingRace = styled(UpcomingRace)`
   padding-bottom: 8px;
-  ${separatorLineCss}
+
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;

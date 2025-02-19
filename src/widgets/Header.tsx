@@ -11,7 +11,9 @@ import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
+import { Logotype } from '~/shared/ui/atoms/Logotype';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const MenuItems = [
@@ -42,23 +44,28 @@ function Header(): JSX.Element {
 
   return (
     <StyledHeader>
-      <HeaderTags>
-        {MenuItems.map(({ icon, route, title }) => (
-          <HeaderTag key={route} to={route} isActive={pathname === route}>
-            {icon && <img src={icon} alt={title} />} {title}
-          </HeaderTag>
-        ))}
-      </HeaderTags>
-      <HeaderActions>
-        <StyledNotification>
-          <Icon size="medium" name="icon-notification" />
-        </StyledNotification>
-        <StyledSearch
-          placeholder="Search"
-          leftIcon={<Icon name="icon-search" />}
-        />
-        <Avatar size="small" src={avatarImage.currentUser} />
-      </HeaderActions>
+      <StyledLogoWrapper>
+        <StyledLogotype />
+      </StyledLogoWrapper>
+      <StyledContentWrapper>
+        <HeaderTags>
+          {MenuItems.map(({ icon, route, title }) => (
+            <HeaderTag key={route} to={route} isActive={pathname === route}>
+              {icon && <img src={icon} alt={title} />} {title}
+            </HeaderTag>
+          ))}
+        </HeaderTags>
+        <HeaderActions>
+          <StyledNotification>
+            <Icon size="medium" name="icon-notification" />
+          </StyledNotification>
+          <StyledSearch
+            placeholder="Search"
+            leftIcon={<Icon name="icon-search" />}
+          />
+          <Avatar size="small" src={avatarImage.currentUser} />
+        </HeaderActions>
+      </StyledContentWrapper>
     </StyledHeader>
   );
 }
@@ -72,11 +79,28 @@ const activeTag = css`
 
 const StyledHeader = styled.header`
   background-color: ${Color.DARK};
-  padding: 24px 48px 11px;
   display: flex;
   align-items: center;
+`;
+
+const StyledLogoWrapper = styled.div`
+  width: 100%;
+  width: 281px;
+  padding: 16px 8px;
+  border-right: 1px solid ${Color.WHITE_8};
+`;
+
+const StyledLogotype = styled(Logotype)`
+  padding-left: 12px;
+  ${separatorLineCss(17)}
+`;
+
+const StyledContentWrapper = styled.div`
+  display: flex;
+  flex-grow: 1;
   justify-content: space-between;
-  border-bottom: 1px solid ${Color.WHITE_8};
+  padding: 24px 48px 12px;
+  ${separatorLineCss(0)}
 `;
 
 const HeaderTags = styled.div`

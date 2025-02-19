@@ -42,5 +42,8 @@ const StyledVideoList = styled.div`
 
 const StyledVideo = styled(Video)`
   padding-bottom: 16px;
-  ${separatorLineCss}
+
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;

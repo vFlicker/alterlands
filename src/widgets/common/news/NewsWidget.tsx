@@ -42,5 +42,7 @@ const StyledNewsList = styled.div`
 `;
 
 const StyledNews = styled(News)`
-  ${separatorLineCss}
+  &:not(:last-child) {
+    ${separatorLineCss(8)}
+  }
 `;
