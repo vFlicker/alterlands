@@ -38,7 +38,7 @@ export { FeaturedProduct };
 const StyledFeaturedProductWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 `;
 
 const StyledImage = styled.img`
@@ -49,6 +49,7 @@ const StyledFooter = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 0px 4px;
 `;
 
 const StyledTitleWrapper = styled.div`

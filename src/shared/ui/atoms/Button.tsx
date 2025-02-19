@@ -112,11 +112,13 @@ const PADDING = {
     base: '2px',
     icon: '8px',
     text: '14px',
+    textWithoutIcon: '14px',
   },
   [ButtonSize.MEDIUM]: {
     base: '8px',
     icon: '16px',
     text: '20px',
+    textWithoutIcon: '36px',
   },
 };
 
@@ -125,9 +127,15 @@ const getPaddingCss = (
   hasRightIcon: boolean,
   size: `${ButtonSize}`,
 ) => {
-  const { base, icon, text } = PADDING[size];
+  const { base, icon, text, textWithoutIcon } = PADDING[size];
   const paddingLeft = hasLeftIcon ? icon : text;
   const paddingRight = hasRightIcon ? icon : text;
+
+  if (!hasLeftIcon && !hasRightIcon) {
+    return css`
+      padding: ${base} ${textWithoutIcon};
+    `;
+  }
 
   return css`
     padding: ${base} ${paddingRight} ${base} ${paddingLeft};
@@ -146,6 +154,7 @@ const StyledButton = styled.button<ButtonBaseProps>`
   color: ${Color.WHITE_98};
 
   ${TypographyVariantToCss['body-2']}
+  line-height: 1.5;
 
   cursor: pointer;
 

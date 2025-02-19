@@ -83,6 +83,9 @@ const StyledQuestion = styled.div`
 
   padding: 24px 48px;
   border-radius: ${Radius.RADIUS_4};
+
   ${TypographyVariantToCss['heading-5']}
+  text-align: center;
+
   background-color: ${Color.WHITE_16};
 `;

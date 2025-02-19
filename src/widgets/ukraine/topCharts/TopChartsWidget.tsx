@@ -33,9 +33,13 @@ function TopChartsWidget({
         actions={
           <StyledActionsWrapper>
             {actionButtonsNames.map((name) => (
-              <IconButton size="medium" color="neutral" variant="filled">
+              <StyledActionButton
+                size="medium"
+                color="neutral"
+                variant="filled"
+              >
                 <Icon name={`icon-${name}`} />
-              </IconButton>
+              </StyledActionButton>
             ))}
           </StyledActionsWrapper>
         }
@@ -44,10 +48,10 @@ function TopChartsWidget({
       <StyledContentWrapper>
         <StyledHeader>
           <StyledTitleWrapper>
-            <IconButton size="small" color="transparent" variant="filled">
+            <StyledSizeButton size="small" color="transparent" variant="filled">
               <Icon name="icon-full-screen" />
-            </IconButton>
-            <StyledTitle>Top musicians</StyledTitle>
+            </StyledSizeButton>
+            <StyledTitle>Top Musicians</StyledTitle>
           </StyledTitleWrapper>
           <SliderButtons />
         </StyledHeader>
@@ -70,6 +74,20 @@ const StyledActionsWrapper = styled.div`
   gap: 8px;
 `;
 
+const StyledActionButton = styled(IconButton)`
+  svg {
+    stroke: ${Color.WHITE_42};
+  }
+
+  &:first-child {
+    background-color: ${Color.WHITE_30};
+
+    svg {
+      stroke: ${Color.WHITE_98};
+    }
+  }
+`;
+
 const StyledContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -81,6 +99,20 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 4px 0;
+`;
+
+const StyledSizeButton = styled(IconButton)`
+  margin-top: -2px;
+
+  svg {
+    stroke: ${Color.WHITE_42};
+  }
+
+  &:hover {
+    svg {
+      stroke: ${Color.WHITE_98};
+    }
+  }
 `;
 
 const StyledTitleWrapper = styled.div`

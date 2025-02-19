@@ -32,7 +32,7 @@ function City({
           </StyledInfo>
           <SliderButtons />
         </StyledLeftWrapper>
-        <Button color="accent" variant="outlined">
+        <Button color="accent" variant="outlined" size="medium">
           Follow
         </Button>
       </StyledFooter>
@@ -49,7 +49,7 @@ const StyledCityWrapper = styled.div`
 `;
 
 const StyledImage = styled.img`
-  border-radius: ${Radius.RADIUS_8};
+  border-radius: ${Radius.RADIUS_4};
 `;
 
 const StyledFooter = styled.div`
@@ -66,7 +66,7 @@ const StyledLeftWrapper = styled.div`
 
 const StyledInfo = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 26px;
   padding: 2px 0;
 `;
 

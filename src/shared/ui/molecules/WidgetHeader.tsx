@@ -37,4 +37,9 @@ const StyledWidgetHeaderWrapper = styled.div`
   border-bottom: 1px solid ${Color.WHITE_16};
 `;
 
-const StyledTitle = withAttrs({ variant: 'heading-3' }, Typography);
+const StyledTitle = withAttrs(
+  { variant: 'heading-3' },
+  styled(Typography)`
+    text-transform: capitalize;
+  `,
+);

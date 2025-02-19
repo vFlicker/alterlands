@@ -180,25 +180,25 @@ const ukrainePageData = {
     ],
   },
   trends: {
-    widgetTitle: 'Trend Topics',
+    widgetTitle: 'Trend topics',
     data: [
       {
         id: 1,
         title: 'Russian-Ukrainian War',
         postsCount: '36k',
-        votesCount: '1.2k',
+        votesCount: '2.1m',
       },
       {
         id: 2,
         title: 'Alterlands Startups',
         postsCount: '12k',
-        votesCount: '1.7k',
+        votesCount: '24k',
       },
       {
         id: 3,
         title: 'Trump',
-        postsCount: '17k',
-        votesCount: '1k',
+        postsCount: '46k',
+        votesCount: '21k',
       },
     ],
   },
@@ -233,7 +233,7 @@ const ukrainePageData = {
       {
         id: 3,
         imageUrl: avatarImage.nadiaDorofeevaAvatar,
-        fullName: 'Naadia Dorofeeva',
+        fullName: 'Naaia Dorofeeva',
         songsCount: 99,
         albumsCount: 8,
       },

@@ -53,12 +53,7 @@ const StyledLeftWrapper = styled.div`
 
 const StyledRightWrapper = styled.div`
   display: flex;
-  gap: 24px;
-    position: relative;
-    &::after {
-
-    }
-  }
+  gap: 26px;
 `;
 
 const StyledText = withAttrs(

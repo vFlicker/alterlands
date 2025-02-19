@@ -55,7 +55,7 @@ const StyledTitle = withAttrs({ variant: 'heading-5', as: 'h2' }, Typography);
 
 const StyledAdditionalInfo = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 26px;
 `;
 
 const StyledText = withAttrs(

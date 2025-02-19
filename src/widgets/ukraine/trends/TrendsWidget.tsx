@@ -32,9 +32,10 @@ function TrendsWidget({
 
 export { TrendsWidget };
 
-const StyledTrendsWidgetWrapper = styled.div`
-  display: grid;
+const StyledTrendsWidgetWrapper = styled.div``;
+
+const StyledTrendList = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 `;
-
-const StyledTrendList = styled.div``;
