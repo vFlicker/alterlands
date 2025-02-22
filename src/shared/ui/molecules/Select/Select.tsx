@@ -79,7 +79,11 @@ function Select({
       </StyledHeader>
 
       {isOpen && (
-        <OptionList options={options} onOptionSelect={handleOptionSelect} />
+        <OptionList
+          options={options}
+          onOptionSelect={handleOptionSelect}
+          selected={selectedOption}
+        />
       )}
     </StyledSelectWrapper>
   );

@@ -9,15 +9,21 @@ import { SelectOption } from './selectTypes';
 
 type OptionListProps = {
   options: SelectOption[];
+  selected?: SelectOption;
   onOptionSelect: (evt: MouseEvent<HTMLDivElement>, value: string) => void;
 };
 
-function OptionList({ options, onOptionSelect }: OptionListProps): JSX.Element {
+function OptionList({
+  options,
+  selected,
+  onOptionSelect,
+}: OptionListProps): JSX.Element {
   return (
     <StyledOptionsList>
       {options.map((option) => (
         <StyledOptionItem
           key={option.value}
+          selected={selected?.value === option.value}
           onClick={(evt) => onOptionSelect(evt, option.value)}
         >
           {option.label}
@@ -44,11 +50,11 @@ const StyledOptionsList = styled.div`
   z-index: 2;
 `;
 
-const StyledOptionItem = styled.div`
+const StyledOptionItem = styled.div<{ selected: boolean }>`
   padding: 4px 12px;
   border-radius: ${Radius.RADIUS_4};
 
-  color: ${Color.WHITE_70};
+  color: ${({ selected }) => (selected ? Color.WHITE_98 : Color.WHITE_70)};
   ${TypographyVariantToCss['body-3']}
 
   cursor: pointer;
