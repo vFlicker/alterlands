@@ -8,6 +8,7 @@ import { Chips } from '~/widgets/uiKit/Chips';
 import { Icons } from '~/widgets/uiKit/Icons';
 import { Inputs } from '~/widgets/uiKit/Inputs';
 import { Selects } from '~/widgets/uiKit/Selects';
+import { Tabs } from '~/widgets/uiKit/Tabs';
 
 function UiKitPage(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ function UiKitPage(): JSX.Element {
         This is a description of the UI Kit page.
       </StyledParagraph>
       <Selects />
+      <Tabs />
       <Icons />
       <Inputs />
       <Buttons />
