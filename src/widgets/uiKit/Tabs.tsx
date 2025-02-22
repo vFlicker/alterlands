@@ -14,7 +14,7 @@ function Tabs(): JSX.Element {
 
       <StyledTabsWrapper>
         <div>
-          <Typography4>Underline default</Typography4>
+          <Typography4>Variant underline</Typography4>
 
           {colors.map((color) => (
             <div>

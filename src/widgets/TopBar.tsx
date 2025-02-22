@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { JSX, PropsWithChildren } from 'react';
 
+import { NavigationSelect } from '~/shared/features/navigationSelect';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Input } from '~/shared/ui/atoms/Input';
-import { NavigationSelect } from '~/shared/ui/molecules/NavigationSelect';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 type TopBarProps = PropsWithChildren<{
@@ -52,6 +52,7 @@ const StyledTopBar = styled.div`
 const StyledSelectsWrapper = styled.div`
   display: flex;
   gap: 16px;
+  width: 100%;
 `;
 
 const HeaderActions = styled.div`

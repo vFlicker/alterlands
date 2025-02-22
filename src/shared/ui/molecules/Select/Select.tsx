@@ -9,7 +9,7 @@ import { Icon } from '../../atoms/Icon';
 import { TypographyVariantToCss } from '../../atoms/Typography';
 import { withAttrs } from '../../withAttrs';
 import { OptionList } from './OptionList';
-import { SelectOption } from './selectTypes';
+import { SelectOption, SelectSize } from './selectTypes';
 
 type SelectProps = {
   options: SelectOption[];
@@ -26,11 +26,6 @@ const enum SelectVariant {
   OUTLINED = 'outlined',
   FILLED = 'filled',
   EMPTY = 'empty',
-}
-
-const enum SelectSize {
-  MEDIUM = 'medium',
-  SMALL = 'small',
 }
 
 function Select({
@@ -80,6 +75,7 @@ function Select({
 
       {isOpen && (
         <OptionList
+          size={size}
           options={options}
           onOptionSelect={handleOptionSelect}
           selected={selectedOption}
@@ -98,16 +94,30 @@ type StyledSelectWrapperProps = Pick<
 
 const SelectSizeToCss = {
   [SelectSize.MEDIUM]: css`
-    min-width: 240px;
+    width: 100%;
+    max-width: 240px;
     height: 40px;
     padding: 8px 16px;
   `,
   [SelectSize.SMALL]: css`
-    min-width: 76px;
+    width: 100%;
+    max-width: 76px;
     height: 28px;
     padding: 4px 12px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   `,
 };
+
+const StyledHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 const SelectVariantToCss = {
   [SelectVariant.OUTLINED]: css`
@@ -117,7 +127,13 @@ const SelectVariantToCss = {
   [SelectVariant.FILLED]: css`
     background-color: ${Color.WHITE_8};
   `,
-  [SelectVariant.EMPTY]: css``,
+  [SelectVariant.EMPTY]: css`
+    max-width: fit-content;
+
+    & ${StyledHeader} {
+      gap: 2px;
+    }
+  `,
 };
 
 const getSelectTextCss = (selectedOption: boolean) => {
@@ -137,6 +153,10 @@ const getSelectTextCss = (selectedOption: boolean) => {
 const StyledSelectWrapper = styled.div<StyledSelectWrapperProps>`
   position: relative;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
   ${TypographyVariantToCss['body-3']}
 
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
@@ -144,12 +164,6 @@ const StyledSelectWrapper = styled.div<StyledSelectWrapperProps>`
 
   ${({ size }) => SelectSizeToCss[size]}
   ${({ variant }) => SelectVariantToCss[variant]}
-`;
-
-const StyledHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 const StyledIcon = withAttrs(

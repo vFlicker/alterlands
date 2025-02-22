@@ -5,21 +5,23 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 
 import { TypographyVariantToCss } from '../../atoms/Typography';
-import { SelectOption } from './selectTypes';
+import { SelectOption, SelectSize } from './selectTypes';
 
 type OptionListProps = {
   options: SelectOption[];
+  size?: `${SelectSize}`;
   selected?: SelectOption;
   onOptionSelect: (evt: MouseEvent<HTMLDivElement>, value: string) => void;
 };
 
 function OptionList({
   options,
+  size,
   selected,
   onOptionSelect,
 }: OptionListProps): JSX.Element {
   return (
-    <StyledOptionsList>
+    <StyledOptionsList size={size}>
       {options.map((option) => (
         <StyledOptionItem
           key={option.value}
@@ -35,12 +37,12 @@ function OptionList({
 
 export { OptionList };
 
-const StyledOptionsList = styled.div`
+const StyledOptionsList = styled.div<{ size?: `${SelectSize}` }>`
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
 
-  width: 100%;
+  width: ${({ size }) => (size === 'small' ? 'max-content' : '240px')};
   padding: 8px;
   border: 1px solid ${Color.WHITE_12};
   border-radius: ${Radius.RADIUS_8};

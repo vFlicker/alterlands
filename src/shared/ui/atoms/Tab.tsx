@@ -40,26 +40,9 @@ const TabVariantToCss = {
     border: none;
 
     color: var(--text-color);
-    ${TypographyVariantToCss['body-3']}
+    ${TypographyVariantToCss['body-2']}
 
     background-color: var(--background-color);
-
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
-      ${TypographyVariantToCss['body-2']}
-    }
-
-    &:active:not(:disabled) {
-      ${TypographyVariantToCss['body-2']}
-    }
-
-    &[data-selected='true'] {
-      ${TypographyVariantToCss['body-2']}
-    }
-
-    &:disabled {
-      ${TypographyVariantToCss['body-2']}
-    }
   `,
   [TabVariant.UNDERLINE]: css`
     border-bottom: solid;
@@ -71,12 +54,12 @@ const TabVariantToCss = {
 
     background-color: var(--background-color);
 
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
+    &:hover:not(:disabled):not([data-selected='true']),
+    &:focus:not(:disabled):not([data-selected='true']) {
       border-width: 1px;
     }
 
-    &:active:not(:disabled) {
+    &:active:not(:disabled):not([data-selected='true']) {
       border-width: 1px;
     }
 
@@ -93,18 +76,18 @@ const TabVariantToCss = {
 
 const TabColorToCss = {
   [TabColor.DEFAULT]: css`
-    --border-color: ${Color.WHITE_8};
+    --border-color: ${Color.WHITE_16};
     --text-color: ${Color.WHITE_70};
     --background-color: transparent;
 
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
-      --border-color: ${Color.WHITE_16};
+    &:hover:not(:disabled):not([data-selected='true']),
+    &:focus:not(:disabled):not([data-selected='true']) {
+      --border-color: ${Color.WHITE_30};
       --text-color: ${Color.WHITE_98};
       --background-color: ${Color.WHITE_8};
     }
 
-    &:active:not(:disabled) {
+    &:active:not(:disabled):not([data-selected='true']) {
       --border-color: ${Color.WHITE_42};
       --text-color: ${Color.WHITE_98};
       --background-color: ${Color.WHITE_16};
@@ -117,13 +100,13 @@ const TabColorToCss = {
     }
   `,
   [TabColor.GREEN]: css`
-    --border-color: ${Color.WHITE_8};
+    --border-color: ${Color.WHITE_16};
     --text-color: ${Color.GREEN_3};
     --background-color: transparent;
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      --border-color: ${Color.WHITE_16};
+      --border-color: ${Color.WHITE_30};
       --text-color: ${Color.GREEN_1};
       --background-color: ${Color.WHITE_8};
     }
@@ -141,13 +124,13 @@ const TabColorToCss = {
     }
   `,
   [TabColor.GRAY]: css`
-    --border-color: ${Color.WHITE_8};
+    --border-color: ${Color.WHITE_16};
     --text-color: ${Color.WHITE_70};
     --background-color: transparent;
 
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      --border-color: ${Color.WHITE_16};
+      --border-color: ${Color.WHITE_30};
       --text-color: ${Color.WHITE_98};
       --background-color: ${Color.WHITE_8};
     }
