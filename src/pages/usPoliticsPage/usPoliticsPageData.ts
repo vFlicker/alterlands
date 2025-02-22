@@ -2,6 +2,10 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { usPoliticsImage } from '~/shared/assets/images/usPolitics';
 
 const usPoliticsPageData = {
+  menu: {
+    first: ['Feed', 'Shop', 'Partners', 'Contact us', 'Forum'],
+    second: ['Posts', 'Opinions', 'Infographics', 'States', 'Trump', 'Harris'],
+  },
   posts: {
     widgetTitle: 'Posts',
     data: [

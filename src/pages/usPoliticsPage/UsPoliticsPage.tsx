@@ -17,7 +17,7 @@ function UsPoliticsPage(): JSX.Element {
     <>
       <StyledTopBar />
 
-      <StyledContentSection />
+      <StyledContentSection menu={usPoliticsPageData.menu} />
 
       <Masonic.List>
         <Masonic.Item>

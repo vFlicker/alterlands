@@ -30,7 +30,7 @@ function F1Page(): JSX.Element {
         />
       </StyledTopBar>
 
-      <StyledContentSection />
+      <StyledContentSection menu={f1PageData.menu} />
 
       <Masonic.List>
         <Masonic.Item>

@@ -2,6 +2,17 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { f1Image } from '~/shared/assets/images/f1';
 
 const f1PageData = {
+  menu: {
+    first: ['Feed', 'Shop', 'Partners', 'Contact us', 'Forum'],
+    second: [
+      'Bahrain Grand Prix',
+      'Posts',
+      'Charts',
+      'Races',
+      'Officials',
+      'Rumors',
+    ],
+  },
   select: {
     options: [
       { label: 'McLaren', value: 'McLaren' },

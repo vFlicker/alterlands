@@ -2,6 +2,23 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { ukraineImage } from '~/shared/assets/images/ukraine';
 
 const ukrainePageData = {
+  menu: {
+    first: [
+      'Feed',
+      'Products',
+      'Properties',
+      'Fundings',
+      'Consult',
+      'Budget',
+      'Stats',
+      'Relations',
+      'Dashboard',
+      'Authors',
+      'Locations',
+      'Media',
+    ],
+    second: ['Posts', 'Charts', 'Officials'],
+  },
   posts: {
     widgetTitle: 'Officials',
     data: [

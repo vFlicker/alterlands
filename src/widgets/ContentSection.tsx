@@ -6,10 +6,12 @@ import { Tab } from '~/shared/ui/atoms/Tab';
 import { Select } from '~/shared/ui/molecules/Select';
 
 type ContentSectionProps = {
+  menu: {
+    first: string[];
+    second: string[];
+  };
   className?: string;
 };
-
-const firstMenuItems = ['Feed', 'Shop', 'Partners', 'Contact us', 'Forum'];
 
 const selectOptions = [
   { label: 'Static', value: 'static' },
@@ -17,22 +19,13 @@ const selectOptions = [
   { label: 'Customized', value: 'customized' },
 ];
 
-const secondMenuItems = [
-  'Bahrain Grand Prix',
-  'Posts',
-  'Charts',
-  'Races',
-  'Officials',
-  'Rumors',
-];
-
 const selectedOptionValue = selectOptions[0].value;
 
-function ContentSection({ className }: ContentSectionProps): JSX.Element {
+function ContentSection({ className, menu }: ContentSectionProps): JSX.Element {
   return (
     <StyledContentSection className={className}>
       <StyledFirstMenuWrapper>
-        {firstMenuItems.map((text, index) => (
+        {menu.first.map((text, index) => (
           <Tab
             key={text}
             color="default"
@@ -53,7 +46,7 @@ function ContentSection({ className }: ContentSectionProps): JSX.Element {
         />
 
         <div>
-          {secondMenuItems.map((text) => (
+          {menu.second.map((text) => (
             <Tab key={text} color="default" variant="default">
               {text}
             </Tab>
