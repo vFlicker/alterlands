@@ -2,6 +2,14 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { f1Image } from '~/shared/assets/images/f1';
 
 const f1PageData = {
+  select: {
+    options: [
+      { label: 'McLaren', value: 'McLaren' },
+      { label: 'Ferrari', value: 'Ferrari' },
+      { label: 'Red Bull', value: 'Red Bull' },
+    ],
+    value: 'McLaren',
+  },
   upcomingRaces: {
     widgetTitle: 'Upcoming races',
     data: [

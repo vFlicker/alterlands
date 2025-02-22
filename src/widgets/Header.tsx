@@ -4,8 +4,7 @@ import { JSX } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { avatarImage } from '~/shared/assets/images/avatars';
-import { commonImage } from '~/shared/assets/images/common';
-import { AppRoute } from '~/shared/libs/router';
+import { navigationItems } from '~/shared/libs/router';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
@@ -15,29 +14,6 @@ import { Logotype } from '~/shared/ui/atoms/Logotype';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
-
-const MenuItems = [
-  {
-    title: 'Ukraine',
-    route: AppRoute.UKRAINE,
-    icon: commonImage.iconUkraine,
-  },
-  {
-    title: 'Formula 1',
-    route: AppRoute.F1,
-    icon: null,
-  },
-  {
-    title: 'US Politics',
-    route: AppRoute.US_POLITICS,
-    icon: null,
-  },
-  {
-    title: 'UI Kit',
-    route: AppRoute.UI_KIT,
-    icon: null,
-  },
-];
 
 function Header(): JSX.Element {
   const { pathname } = useLocation();
@@ -49,7 +25,7 @@ function Header(): JSX.Element {
       </StyledLogoWrapper>
       <StyledContentWrapper>
         <HeaderTags>
-          {MenuItems.map(({ icon, route, title }) => (
+          {navigationItems.map(({ icon, route, title }) => (
             <HeaderTag key={route} to={route} isActive={pathname === route}>
               {icon && <img src={icon} alt={title} />} {title}
             </HeaderTag>

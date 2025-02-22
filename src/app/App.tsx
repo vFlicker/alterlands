@@ -14,10 +14,6 @@ function App(): JSX.Element {
       <MainContent>
         <Sidebar />
         <StyledMain>
-          <div className="content">
-            <div>TopBar</div>
-            <div>ContentSection</div>
-          </div>
           <Routing />
         </StyledMain>
       </MainContent>

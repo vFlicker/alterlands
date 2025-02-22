@@ -7,6 +7,7 @@ import { Buttons } from '~/widgets/uiKit/Buttons';
 import { Chips } from '~/widgets/uiKit/Chips';
 import { Icons } from '~/widgets/uiKit/Icons';
 import { Inputs } from '~/widgets/uiKit/Inputs';
+import { Selects } from '~/widgets/uiKit/Selects';
 
 function UiKitPage(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ function UiKitPage(): JSX.Element {
       <StyledParagraph>
         This is a description of the UI Kit page.
       </StyledParagraph>
+      <Selects />
       <Icons />
       <Inputs />
       <Buttons />
