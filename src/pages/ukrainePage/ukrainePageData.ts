@@ -2,6 +2,48 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { ukraineImage } from '~/shared/assets/images/ukraine';
 
 const ukrainePageData = {
+  header: {
+    title: 'Ukraine',
+    avatarUrl: ukraineImage.header.avatar,
+    flagUrl: ukraineImage.header.flag,
+    properties: [
+      { name: 'Сapital', value: 'Kyiv' },
+      { name: 'Language', value: 'Ukrainian' },
+      { name: 'Area', value: '603,500 km²' },
+      { name: 'Members', value: '13%' },
+      { name: 'President', value: 'Volodymyr Zelensky', link: 'linkUrl' },
+    ],
+    amountCards: [
+      {
+        id: 1,
+        title: 'Market Cap',
+        rate: 'increase' as const,
+        content: '99.71 (22.84%)',
+        amount: '521.01M',
+      },
+      {
+        id: 2,
+        title: 'Income (30d)',
+        rate: 'decrease' as const,
+        content: '99.71 (22.84%)',
+        amount: '11.45M ',
+      },
+      {
+        id: 3,
+        title: 'Expenses (30d)',
+        rate: 'increase' as const,
+        content: '99.71 (22.84%)',
+        amount: '8.12М',
+      },
+      {
+        id: 4,
+        title: 'Total Spent',
+        rate: 'increase' as const,
+        content: '99.71 (22.84%)',
+        amount: '24.46M',
+      },
+    ],
+  },
   menu: {
     first: [
       'Feed',

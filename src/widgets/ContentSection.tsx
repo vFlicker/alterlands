@@ -65,7 +65,12 @@ const StyledContentSection = styled.div`
   gap: 8px;
 `;
 
-const StyledFirstMenuWrapper = styled.div``;
+const StyledFirstMenuWrapper = styled.div`
+  overflow-x: scroll;
+  display: flex;
+  width: 100%;
+  max-width: 70cqw;
+`;
 
 const StyledSecondMenuWrapper = styled.div`
   display: flex;

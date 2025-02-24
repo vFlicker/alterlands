@@ -9,6 +9,7 @@ import { Icons } from '~/widgets/uiKit/Icons';
 import { Inputs } from '~/widgets/uiKit/Inputs';
 import { Selects } from '~/widgets/uiKit/Selects';
 import { Tabs } from '~/widgets/uiKit/Tabs';
+import { AmountCard } from '~/widgets/ukraine/topBar/AmountCard';
 
 function UiKitPage(): JSX.Element {
   return (
@@ -17,6 +18,14 @@ function UiKitPage(): JSX.Element {
       <StyledParagraph>
         This is a description of the UI Kit page.
       </StyledParagraph>
+
+      <AmountCard
+        id={1}
+        title="Market Cap"
+        rate="increase"
+        content="99.71 (22.84%)"
+        amount="521.01M"
+      />
       <Selects />
       <Tabs />
       <Icons />

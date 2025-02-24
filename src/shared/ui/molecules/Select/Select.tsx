@@ -129,6 +129,7 @@ const SelectVariantToCss = {
   `,
   [SelectVariant.EMPTY]: css`
     max-width: fit-content;
+    padding: 0;
 
     & ${StyledHeader} {
       gap: 2px;
@@ -169,7 +170,7 @@ const StyledSelectWrapper = styled.div<StyledSelectWrapperProps>`
 const StyledIcon = withAttrs(
   { size: 'medium' },
   styled(Icon)`
-    stroke: ${Color.WHITE_64};
+    stroke: ${Color.WHITE_87};
   `,
 );
 

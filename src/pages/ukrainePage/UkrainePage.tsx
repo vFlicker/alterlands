@@ -9,6 +9,7 @@ import { VideosWidget } from '~/widgets/common/videos';
 import { ContentSection } from '~/widgets/ContentSection';
 import { CitiesWidget } from '~/widgets/ukraine/cities';
 import { FeaturedProductsWidget } from '~/widgets/ukraine/featuredProducts';
+import { TopBar } from '~/widgets/ukraine/topBar/TopBar';
 import { TopChartsWidget } from '~/widgets/ukraine/topCharts';
 import { TrendsWidget } from '~/widgets/ukraine/trends';
 import { VoteWidget } from '~/widgets/ukraine/vote';
@@ -18,8 +19,7 @@ import { ukrainePageData } from './ukrainePageData';
 function UkrainePage(): JSX.Element {
   return (
     <>
-      <StyledTopBar>Top bar</StyledTopBar>
-
+      <StyledTopBar {...ukrainePageData.header} />
       <StyledContentSection menu={ukrainePageData.menu} />
 
       <Masonic.List>
@@ -47,7 +47,7 @@ function UkrainePage(): JSX.Element {
 
 export { UkrainePage };
 
-const StyledTopBar = styled.div`
+const StyledTopBar = styled(TopBar)`
   margin-bottom: 24px;
 `;
 

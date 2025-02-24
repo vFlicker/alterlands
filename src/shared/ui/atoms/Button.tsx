@@ -110,12 +110,12 @@ const ButtonColorToCss = {
 const PADDING = {
   [ButtonSize.SMALL]: {
     base: '2px',
-    icon: '8px',
+    icon: '7px',
     text: '14px',
     textWithoutIcon: '14px',
   },
   [ButtonSize.MEDIUM]: {
-    base: '8px',
+    base: '7px',
     icon: '16px',
     text: '20px',
     textWithoutIcon: '36px',
