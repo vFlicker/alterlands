@@ -1,10 +1,10 @@
 import { JSX } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { F1Page } from '~/pages/f1Page';
+import { F1Page } from '~/pages/f1';
 import { UiKitPage } from '~/pages/UiKitPage';
-import { UkrainePage } from '~/pages/ukrainePage';
-import { UsPoliticsPage } from '~/pages/usPoliticsPage';
+import { UkrainePage } from '~/pages/ukraine';
+import { UsPoliticsPage } from '~/pages/usPolitics';
 import { AppRoute } from '~/shared/libs/router';
 
 function Routing(): JSX.Element {
