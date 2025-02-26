@@ -40,7 +40,7 @@ const StyledTrendWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
+  padding: 12px 12px 8px 12px;
   border-radius: ${Radius.RADIUS_4};
   background-color: ${Color.WHITE_5};
 `;
@@ -48,7 +48,7 @@ const StyledTrendWrapper = styled.div`
 const StyledData = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 `;
 
 const StyledTitle = withAttrs({ variant: 'heading-5', as: 'h2' }, Typography);

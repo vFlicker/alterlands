@@ -105,6 +105,8 @@ const HeaderTags = styled.div`
 `;
 
 const HeaderTag = styled(Link)<{ isActive?: boolean }>`
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: 6px;
@@ -113,6 +115,18 @@ const HeaderTag = styled(Link)<{ isActive?: boolean }>`
   ${TypographyVariantToCss['body-3']}
 
   ${({ isActive = false }) => isActive && activeTag}
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: -12px;
+
+    width: 1px;
+    height: 24px;
+
+    background-color: ${Color.WHITE_16};
+  }
 `;
 
 const HeaderActions = styled.div`

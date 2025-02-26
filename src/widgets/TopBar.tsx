@@ -17,7 +17,7 @@ function TopBar({ className, children }: TopBarProps): JSX.Element {
   return (
     <StyledTopBar className={className}>
       <StyledSelectsWrapper>
-        <NavigationSelect />
+        <StyledNavigationSelect />
         {children}
       </StyledSelectsWrapper>
       <HeaderActions>
@@ -55,6 +55,13 @@ const StyledSelectsWrapper = styled.div`
   width: 100%;
 `;
 
+const StyledNavigationSelect = styled(NavigationSelect)`
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    max-width: 180px;
+  }
+`;
+
 const HeaderActions = styled.div`
   display: flex;
   align-items: center;
@@ -81,10 +88,15 @@ const StyledNotification = withAttrs(
 );
 
 const StyledSearch = styled(Input)`
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 180px;
+  }
 `;
 
 const StyledMoneyButton = withAttrs(

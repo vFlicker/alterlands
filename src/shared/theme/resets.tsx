@@ -19,7 +19,7 @@ const globalResets = css`
 
     ::-webkit-scrollbar {
       width: 8px;
-      height: 8px;
+      height: 5px;
     }
 
     ::-webkit-scrollbar-thumb {

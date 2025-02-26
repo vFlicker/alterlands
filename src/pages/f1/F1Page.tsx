@@ -22,7 +22,7 @@ function F1Page(): JSX.Element {
   return (
     <>
       <StyledTopBar>
-        <Select
+        <StyledSelect
           options={f1PageData.select.options}
           value={f1PageData.select.value}
           variant="outlined"
@@ -61,6 +61,13 @@ export { F1Page };
 
 const StyledTopBar = styled(TopBar)`
   margin-bottom: 16px;
+`;
+
+const StyledSelect = styled(Select)`
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    max-width: 180px;
+  }
 `;
 
 const StyledContentSection = styled(ContentSection)`
