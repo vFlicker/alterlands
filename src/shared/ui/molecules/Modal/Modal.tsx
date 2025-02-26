@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX, PropsWithChildren, useEffect, useRef } from 'react';
 
 import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
 
 import { Icon } from '../../atoms/Icon';
 import { IconButton } from '../../atoms/IconButton';
@@ -47,7 +48,7 @@ function Modal({ children, isOpen, onClose }: ModalProps): JSX.Element | null {
           <StyledCloseButton onClick={onClose}>
             <Icon name="icon-minimize" />
           </StyledCloseButton>
-          <StyledContent>{children}</StyledContent>
+          {children}
         </StyledModelInner>
       </StyledModel>
     </ReactPortal>
@@ -68,7 +69,7 @@ const StyledModel = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 
   z-index: 10;
   overflow: hidden;
@@ -79,13 +80,15 @@ const StyledModelInner = styled.div`
 
   display: flex;
 
-  width: 520px;
-  min-height: 40%;
-  padding: 32px 28px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90%;
+  padding: 32px 24px 24px 24px;
+  border-radius: ${Radius.RADIUS_16};
 
   background-color: ${Color.DARK};
 
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 
 const StyledCloseButton = withAttrs(
@@ -96,7 +99,7 @@ const StyledCloseButton = withAttrs(
   },
   styled(IconButton)`
     position: absolute;
-    top: 37px;
+    top: 36px;
     right: 28px;
     z-index: 9;
 
@@ -111,7 +114,3 @@ const StyledCloseButton = withAttrs(
     }
   `,
 );
-
-const StyledContent = styled.div`
-  width: 100%;
-`;

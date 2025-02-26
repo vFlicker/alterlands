@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { LogWidget } from '~/widgets/user/LogWidget';
+import { PersonalFileWidget } from '~/widgets/user/personalFileWidget';
 import { TopBar } from '~/widgets/user/topBar';
 
 import { userPageData } from './userPageData';
@@ -10,7 +10,7 @@ function UserPage(): JSX.Element {
   return (
     <StyledUserPageContainer>
       <TopBar {...userPageData.header} />
-      <LogWidget />
+      <PersonalFileWidget files={userPageData.personalFiles} />
     </StyledUserPageContainer>
   );
 }

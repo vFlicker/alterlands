@@ -33,7 +33,9 @@ function ChangeProfileButton(): JSX.Element {
       <StyledButton
         color="accent"
         variant="outlined"
-        rightIcon={<Icon name="icon-chevron-down" />}
+        rightIcon={
+          <Icon name={isOpen ? 'icon-chevron-up' : 'icon-chevron-down'} />
+        }
         onClick={handleButtonClick}
       >
         Verified
