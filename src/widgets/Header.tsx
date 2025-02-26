@@ -4,7 +4,7 @@ import { JSX } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { avatarImage } from '~/shared/assets/images/avatars';
-import { navigationItems } from '~/shared/libs/router';
+import { AppRoute, navigationItems } from '~/shared/libs/router';
 import { Color } from '~/shared/theme/colors';
 import { Avatar } from '~/shared/ui/atoms/Avatar';
 import { Icon } from '~/shared/ui/atoms/Icon';
@@ -39,7 +39,9 @@ function Header(): JSX.Element {
             placeholder="Search"
             leftIcon={<Icon name="icon-search" />}
           />
-          <Avatar size="small" src={avatarImage.currentUser} />
+          <Link to={AppRoute.USER}>
+            <Avatar size="small" src={avatarImage.currentUser} />
+          </Link>
         </HeaderActions>
       </StyledContentWrapper>
     </StyledHeader>

@@ -9,7 +9,7 @@ import { VideosWidget } from '~/widgets/common/videos';
 import { ContentSection } from '~/widgets/ContentSection';
 import { CitiesWidget } from '~/widgets/ukraine/cities';
 import { FeaturedProductsWidget } from '~/widgets/ukraine/featuredProducts';
-import { TopBar } from '~/widgets/ukraine/topBar/TopBar';
+import { TopBar } from '~/widgets/ukraine/topBar';
 import { TopChartsWidget } from '~/widgets/ukraine/topCharts';
 import { TrendsWidget } from '~/widgets/ukraine/trends';
 import { VoteWidget } from '~/widgets/ukraine/vote';
