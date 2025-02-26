@@ -88,7 +88,7 @@ const StyledContent = styled.div`
 `;
 
 const StyledName = withAttrs(
-  { variant: 'heading-3', as: 'div' },
+  { variant: 'heading-3' },
   styled(Typography)`
     display: flex;
     align-items: center;
@@ -97,19 +97,16 @@ const StyledName = withAttrs(
 );
 
 const StyledEmail = withAttrs(
-  { variant: 'body-2', as: 'div', $color: Color.WHITE_70 },
+  { variant: 'body-2', $color: Color.WHITE_70 },
   Typography,
 );
 
 const StyledBirthday = withAttrs(
-  { variant: 'body-3', as: 'div', $color: Color.WHITE_70 },
+  { variant: 'body-3', $color: Color.WHITE_70 },
   Typography,
 );
 
-const StyledDescription = withAttrs(
-  { variant: 'body-3', as: 'div' },
-  Typography,
-);
+const StyledDescription = withAttrs({ variant: 'body-3' }, Typography);
 
 const StyledLeftWrapper = styled.div`
   display: flex;
@@ -141,12 +138,6 @@ const StyledAdditionInfoItem = styled.div`
   gap: 8px;
 `;
 
-const StyledAdditionInfoCount = withAttrs(
-  { variant: 'heading-4', as: 'div' },
-  Typography,
-);
+const StyledAdditionInfoCount = withAttrs({ variant: 'heading-4' }, Typography);
 
-const StyledAdditionInfoLabel = withAttrs(
-  { variant: 'body-3', as: 'div' },
-  Typography,
-);
+const StyledAdditionInfoLabel = withAttrs({ variant: 'body-3' }, Typography);

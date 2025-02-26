@@ -163,7 +163,7 @@ const StyledAvatar = styled.img`
 const StyledInfoWrapper = styled.div``;
 
 const StyledCountryName = withAttrs(
-  { variant: 'heading-2', as: 'div' },
+  { variant: 'heading-2' },
   styled(Typography)`
     display: flex;
     align-items: center;

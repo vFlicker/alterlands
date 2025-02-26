@@ -5,6 +5,7 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
+import { SizeButton } from '~/shared/ui/atoms/SizeButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
@@ -48,9 +49,7 @@ function TopChartsWidget({
       <StyledContentWrapper>
         <StyledHeader>
           <StyledTitleWrapper>
-            <StyledSizeButton size="small" color="transparent" variant="filled">
-              <Icon name="icon-full-screen" />
-            </StyledSizeButton>
+            <SizeButton />
             <StyledTitle>Top Musicians</StyledTitle>
           </StyledTitleWrapper>
           <SliderButtons />
@@ -99,20 +98,6 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 4px 0;
-`;
-
-const StyledSizeButton = styled(IconButton)`
-  margin-top: -2px;
-
-  svg {
-    stroke: ${Color.WHITE_42};
-  }
-
-  &:hover {
-    svg {
-      stroke: ${Color.WHITE_98};
-    }
-  }
 `;
 
 const StyledTitleWrapper = styled.div`

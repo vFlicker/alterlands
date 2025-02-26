@@ -113,7 +113,7 @@ const StyledTextWrapper = styled.div`
 `;
 
 const SecondaryText = withAttrs(
-  { variant: 'body-4', $color: Color.WHITE_64, as: 'div' },
+  { variant: 'body-4', $color: Color.WHITE_64 },
   styled(Typography)`
     display: flex;
     align-items: center;
