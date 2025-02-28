@@ -10,7 +10,7 @@ import { TypographyVariantToCss } from './Typography';
 type ButtonBaseProps = {
   variant: `${ButtonVariant}`;
   color: `${ButtonColor}`;
-  size?: `${ButtonSize}`;
+  size: `${ButtonSize}`;
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
 };
@@ -109,37 +109,38 @@ const ButtonColorToCss = {
 
 const PADDING = {
   [ButtonSize.SMALL]: {
-    base: '2px',
-    icon: '7px',
-    text: '14px',
-    textWithoutIcon: '14px',
+    vertical: '2px',
+    fromIcon: '7px',
+    fromText: '14px',
   },
   [ButtonSize.MEDIUM]: {
-    base: '7px',
-    icon: '16px',
-    text: '20px',
-    textWithoutIcon: '36px',
+    vertical: '6px',
+    fromIcon: '16px',
+    fromText: '20px',
   },
 };
 
-const getPaddingCss = (
+const getButtonSizeCss = (
+  size: `${ButtonSize}`,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
-  size: `${ButtonSize}`,
 ) => {
-  const { base, icon, text, textWithoutIcon } = PADDING[size];
-  const paddingLeft = hasLeftIcon ? icon : text;
-  const paddingRight = hasRightIcon ? icon : text;
+  const { vertical, fromIcon, fromText } = PADDING[size];
+  const paddingLeft = hasLeftIcon ? fromIcon : fromText;
+  const paddingRight = hasRightIcon ? fromIcon : fromText;
+  const padding = `${vertical} ${paddingRight} ${vertical} ${paddingLeft}`;
 
-  if (!hasLeftIcon && !hasRightIcon) {
-    return css`
-      padding: ${base} ${textWithoutIcon};
-    `;
-  }
+  const ButtonSizeToCss = {
+    [ButtonSize.SMALL]: css`
+      padding: ${padding};
+    `,
+    [ButtonSize.MEDIUM]: css`
+      min-width: 120px;
+      padding: ${padding};
+    `,
+  };
 
-  return css`
-    padding: ${base} ${paddingRight} ${base} ${paddingLeft};
-  `;
+  return ButtonSizeToCss[size];
 };
 
 const StyledButton = styled.button<ButtonBaseProps>`
@@ -170,6 +171,6 @@ const StyledButton = styled.button<ButtonBaseProps>`
 
   ${({ variant }) => ButtonVariantToCss[variant]}
   ${({ color }) => ButtonColorToCss[color]}
-  ${({ leftIcon, rightIcon, size = ButtonSize.MEDIUM }) =>
-    getPaddingCss(!!leftIcon, !!rightIcon, size)}
+  ${({ size, leftIcon, rightIcon }) =>
+    getButtonSizeCss(size, !!leftIcon, !!rightIcon)}
 `;

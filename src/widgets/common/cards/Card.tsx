@@ -19,7 +19,7 @@ function Card({ className, imageUrl, price, title }: CardProps): JSX.Element {
       <StyledImage src={imageUrl} alt={title} />
       <StyledTitle>{title}</StyledTitle>
       <StyledPrice>{price}</StyledPrice>
-      <Button color="accent" variant="filled">
+      <Button size="medium" color="accent" variant="filled">
         Buy
       </Button>
     </StyledCardWrapper>

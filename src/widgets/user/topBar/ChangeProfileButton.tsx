@@ -4,6 +4,7 @@ import { JSX, MouseEvent, useState } from 'react';
 import { Button } from '~/shared/ui/atoms/Button';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { OptionList } from '~/shared/ui/molecules/Select';
+import { withAttrs } from '~/shared/ui/withAttrs';
 
 const options = [
   {
@@ -31,8 +32,6 @@ function ChangeProfileButton(): JSX.Element {
   return (
     <StyledChangeProfileButtonWrapper>
       <StyledButton
-        color="accent"
-        variant="outlined"
         rightIcon={
           <Icon name={isOpen ? 'icon-chevron-up' : 'icon-chevron-down'} />
         }
@@ -59,8 +58,14 @@ const StyledChangeProfileButtonWrapper = styled.div`
   position: relative;
 `;
 
-const StyledButton = styled(Button)`
-  height: 36px;
-  width: 124px;
-  padding: 7px 17px 7px 29px;
-`;
+const StyledButton = withAttrs(
+  {
+    size: 'medium',
+    color: 'accent',
+    variant: 'outlined',
+  },
+  styled(Button)`
+    width: 124px;
+    padding: 7px 17px 7px 29px;
+  `,
+);

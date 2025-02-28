@@ -88,7 +88,7 @@ const activeIconCss = css`
 `;
 
 const StyledVoteButton = withAttrs(
-  { variant: 'filled' },
+  { variant: 'filled', size: 'small' },
   styled(IconButton)<{ isActive: boolean }>`
     &:hover ${StyledIcon}, &:focus ${StyledIcon} {
       stroke: ${Color.ACCENT};

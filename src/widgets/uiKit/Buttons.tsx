@@ -14,55 +14,56 @@ function Buttons(): JSX.Element {
       <Typography variant="heading-3">Buttons</Typography>
 
       <StyledButtonsWrapper>
-        <Button color="accent" variant="filled">
+        <Button size="medium" color="accent" variant="filled">
           accent filled
         </Button>
-        <Button color="secondary" variant="filled">
+        <Button size="medium" color="secondary" variant="filled">
           secondary filled
         </Button>
-        <Button color="neutral" variant="filled">
+        <Button size="medium" color="neutral" variant="filled">
           neutral filled
         </Button>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
-        <Button color="accent" variant="filled" disabled>
+        <Button size="medium" color="accent" variant="filled" disabled>
           accent filled disabled
         </Button>
-        <Button color="secondary" variant="filled" disabled>
+        <Button size="medium" color="secondary" variant="filled" disabled>
           secondary filled disabled
         </Button>
-        <Button color="neutral" variant="filled" disabled>
+        <Button size="medium" color="neutral" variant="filled" disabled>
           neutral filled disabled
         </Button>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
-        <Button color="accent" variant="outlined">
+        <Button size="medium" color="accent" variant="outlined">
           accent outlined
         </Button>
-        <Button color="secondary" variant="outlined">
+        <Button size="medium" color="secondary" variant="outlined">
           secondary outlined
         </Button>
-        <Button color="neutral" variant="outlined">
+        <Button size="medium" color="neutral" variant="outlined">
           neutral outlined
         </Button>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
-        <Button color="accent" variant="outlined" disabled>
+        <Button size="medium" color="accent" variant="outlined" disabled>
           accent outlined disabled
         </Button>
-        <Button color="secondary" variant="outlined" disabled>
+        <Button size="medium" color="secondary" variant="outlined" disabled>
           secondary outlined disabled
         </Button>
-        <Button color="neutral" variant="outlined" disabled>
+        <Button size="medium" color="neutral" variant="outlined" disabled>
           neutral outlined disabled
         </Button>
       </StyledButtonsWrapper>
 
       <StyledButtonsWrapper>
         <Button
+          size="medium"
           variant="filled"
           color="accent"
           leftIcon={<Icon name="icon-plus" />}
@@ -70,6 +71,74 @@ function Buttons(): JSX.Element {
           filled accent icon left
         </Button>
         <Button
+          size="medium"
+          variant="filled"
+          color="accent"
+          rightIcon={<Icon name="icon-plus" />}
+        >
+          filled accent icon right
+        </Button>
+      </StyledButtonsWrapper>
+
+      <StyledButtonsWrapper>
+        <Button size="medium" color="accent" variant="filled">
+          accent filled
+        </Button>
+        <Button size="medium" color="secondary" variant="filled">
+          secondary filled
+        </Button>
+        <Button size="medium" color="neutral" variant="filled">
+          neutral filled
+        </Button>
+      </StyledButtonsWrapper>
+
+      <StyledButtonsWrapper>
+        <Button size="small" color="accent" variant="filled" disabled>
+          accent filled disabled
+        </Button>
+        <Button size="small" color="secondary" variant="filled" disabled>
+          secondary filled disabled
+        </Button>
+        <Button size="small" color="neutral" variant="filled" disabled>
+          neutral filled disabled
+        </Button>
+      </StyledButtonsWrapper>
+
+      <StyledButtonsWrapper>
+        <Button size="small" color="accent" variant="outlined">
+          accent outlined
+        </Button>
+        <Button size="small" color="secondary" variant="outlined">
+          secondary outlined
+        </Button>
+        <Button size="small" color="neutral" variant="outlined">
+          neutral outlined
+        </Button>
+      </StyledButtonsWrapper>
+
+      <StyledButtonsWrapper>
+        <Button size="small" color="accent" variant="outlined" disabled>
+          accent outlined disabled
+        </Button>
+        <Button size="small" color="secondary" variant="outlined" disabled>
+          secondary outlined disabled
+        </Button>
+        <Button size="small" color="neutral" variant="outlined" disabled>
+          neutral outlined disabled
+        </Button>
+      </StyledButtonsWrapper>
+
+      <StyledButtonsWrapper>
+        <Button
+          size="small"
+          variant="filled"
+          color="accent"
+          leftIcon={<Icon name="icon-plus" />}
+        >
+          filled accent icon left
+        </Button>
+        <Button
+          size="small"
           variant="filled"
           color="accent"
           rightIcon={<Icon name="icon-plus" />}

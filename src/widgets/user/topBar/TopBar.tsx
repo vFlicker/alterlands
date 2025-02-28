@@ -41,7 +41,7 @@ function TopBar({
         <StyledLeftWrapper>
           <StyledActionsWrapper>
             <ChangeProfileButton />
-            <StyledActionButton color="neutral" variant="filled">
+            <StyledActionButton size="medium" color="neutral" variant="filled">
               Edit profile
             </StyledActionButton>
           </StyledActionsWrapper>
@@ -120,8 +120,6 @@ const StyledActionsWrapper = styled.div`
 `;
 
 const StyledActionButton = styled(Button)`
-  height: 36px;
-  padding: 7px 24px;
   width: 124px;
 `;
 

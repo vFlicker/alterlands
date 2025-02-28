@@ -42,13 +42,13 @@ function Reactions({
       )}
 
       {commentCount && (
-        <MessageButton variant={variant} onClick={() => {}}>
+        <MessageButton size="small" variant={variant} onClick={() => {}}>
           {commentCount}
         </MessageButton>
       )}
 
       {sharesCount && (
-        <RepostButton variant={variant} onClick={() => {}}>
+        <RepostButton size="small" variant={variant} onClick={() => {}}>
           {sharesCount}
         </RepostButton>
       )}

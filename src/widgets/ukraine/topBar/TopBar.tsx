@@ -69,13 +69,13 @@ function TopBar({
       </StyledLeftWrapper>
 
       <StyledActionWrapper>
-        <StyledActionButton color="accent" variant="outlined">
+        <StyledActionButton size="medium" color="accent" variant="outlined">
           Details
         </StyledActionButton>
-        <StyledActionButton color="accent" variant="outlined">
+        <StyledActionButton size="medium" color="accent" variant="outlined">
           Offer
         </StyledActionButton>
-        <StyledActionButton color="accent" variant="filled">
+        <StyledActionButton size="medium" color="accent" variant="filled">
           Follow
         </StyledActionButton>
       </StyledActionWrapper>
