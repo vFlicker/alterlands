@@ -1,7 +1,9 @@
-import { achievementImage } from './achievements';
 import avatarImage from './avatar.png';
+import battleOfClansImage from './battle-of-clans.png';
+import { trophyImage } from './trophies';
 
 export const userImage = {
-  achievement: achievementImage,
+  trophy: trophyImage,
   avatar: avatarImage,
+  battleOfClans: battleOfClansImage,
 };

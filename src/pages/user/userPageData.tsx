@@ -23,6 +23,9 @@ const userPageData = {
       },
     ],
   },
+  menu: {
+    first: ['Trophy', 'Achievements', 'Marks', 'Feed & Widgets', 'Test'],
+  },
   personalFiles: [
     {
       title: 'Log',

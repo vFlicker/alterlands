@@ -7,7 +7,7 @@ import petCare from './pet-care.png';
 import piggyBank from './piggy-bank.png';
 import values from './values.png';
 
-export const achievementImage = {
+export const trophyImage = {
   accessCard,
   champagne,
   graduationCap,

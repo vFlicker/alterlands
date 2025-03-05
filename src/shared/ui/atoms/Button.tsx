@@ -115,7 +115,7 @@ const PADDING = {
   },
   [ButtonSize.MEDIUM]: {
     vertical: '6px',
-    fromIcon: '16px',
+    fromIcon: '10px',
     fromText: '20px',
   },
 };
@@ -165,8 +165,8 @@ const StyledButton = styled.button<ButtonBaseProps>`
   }
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
   }
 
   ${({ variant }) => ButtonVariantToCss[variant]}
