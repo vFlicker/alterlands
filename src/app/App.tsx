@@ -30,11 +30,11 @@ const StyledAppWrapper = styled.div`
 `;
 
 const MainContent = styled.div`
-  flex: 1;
   display: flex;
 `;
 
 const StyledMain = styled.main`
-  flex: 1;
+  max-width: 1920px;
   padding: 24px;
+  overflow-x: hidden;
 `;

@@ -19,6 +19,11 @@ const navigationItems = [
     icon: null,
   },
   {
+    title: 'UI/UX Designers Ukraine',
+    route: AppRoute.COMMUNITY,
+    icon: null,
+  },
+  {
     title: 'UI Kit',
     route: AppRoute.UI_KIT,
     icon: null,

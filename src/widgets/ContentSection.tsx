@@ -66,10 +66,9 @@ const StyledContentSection = styled.div`
 `;
 
 const StyledFirstMenuWrapper = styled.div`
-  overflow-x: scroll;
   display: flex;
-  width: 100%;
   max-width: 70cqw;
+  overflow-x: scroll;
 `;
 
 const StyledSecondMenuWrapper = styled.div`

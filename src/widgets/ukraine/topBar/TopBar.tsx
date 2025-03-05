@@ -149,6 +149,7 @@ const StyledCardsWrapper = styled.div`
   gap: 16px;
 
   @media (max-width: 1850px) {
+    justify-content: start;
     grid-column: 1 / 3;
   }
 `;
