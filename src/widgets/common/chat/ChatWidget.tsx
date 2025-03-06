@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { Input } from '~/shared/ui/atoms/Input';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { MessageItem } from '~/shared/ui/molecules/MessageItem';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
@@ -41,7 +42,9 @@ function ChatWidget({
 
 export { ChatWidget };
 
-const StyledChatWidgetWrapper = styled.div``;
+const StyledChatWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledChatWrapper = styled.div`
   display: flex;

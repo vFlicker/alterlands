@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Discussion } from './Discussion';
@@ -33,7 +34,9 @@ function DiscussionWidget({
 
 export { DiscussionWidget };
 
-const StyledDiscussionWidgetWrapper = styled.div``;
+const StyledDiscussionWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledDiscussionList = styled.div`
   display: flex;

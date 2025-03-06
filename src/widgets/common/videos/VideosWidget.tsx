@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Video } from './Video';
@@ -32,7 +33,9 @@ function VideosWidget({
 
 export { VideosWidget };
 
-const StyledVideosWidgetWrapper = styled.div``;
+const StyledVideosWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledVideoList = styled.div`
   display: flex;

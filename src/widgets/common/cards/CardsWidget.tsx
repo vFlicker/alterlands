@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Card } from './Card';
@@ -35,7 +36,9 @@ function CardsWidget({
 
 export { CardsWidget };
 
-const StyledCardsWidgetWrapper = styled.div``;
+const StyledCardsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledCardList = styled.div`
   display: grid;

@@ -17,12 +17,6 @@ const StyledMasonicItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  & > * {
-    padding: 20px 16px;
-    border-radius: ${Radius.RADIUS_16};
-    background-color: ${Color.DARK};
-  }
 `;
 
 export const Masonic = {

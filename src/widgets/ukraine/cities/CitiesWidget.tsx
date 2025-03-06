@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { Input } from '~/shared/ui/atoms/Input';
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { CityData } from './citiesTypes';
@@ -38,7 +39,9 @@ function CitiesWidget({
 
 export { CitiesWidget };
 
-const StyledCitiesWidgetWrapper = styled.div``;
+const StyledCitiesWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledInput = styled(Input)`
   margin-bottom: 16px;

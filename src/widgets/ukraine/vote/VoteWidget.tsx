@@ -10,6 +10,7 @@ import {
   Typography,
   TypographyVariantToCss,
 } from '~/shared/ui/atoms/Typography';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 function VoteWidget(): JSX.Element {
@@ -43,6 +44,8 @@ const StyledVoteWidgetWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  ${widgetWrapperCss}
 `;
 
 const StyledHeader = styled.div`

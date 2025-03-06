@@ -7,6 +7,7 @@ import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { SizeButton } from '~/shared/ui/atoms/SizeButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
@@ -66,7 +67,9 @@ function TopChartsWidget({
 
 export { TopChartsWidget };
 
-const StyledTopChartsWidgetWrapper = styled.div``;
+const StyledTopChartsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledActionsWrapper = styled.div`
   display: flex;

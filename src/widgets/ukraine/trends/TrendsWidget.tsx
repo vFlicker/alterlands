@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Trend } from './Trend';
@@ -32,7 +33,9 @@ function TrendsWidget({
 
 export { TrendsWidget };
 
-const StyledTrendsWidgetWrapper = styled.div``;
+const StyledTrendsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledTrendList = styled.div`
   display: flex;

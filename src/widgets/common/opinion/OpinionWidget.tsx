@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { MessageItem } from '~/shared/ui/molecules/MessageItem';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
@@ -52,7 +53,9 @@ function OpinionWidget({
 
 export { OpinionWidget };
 
-const StyledOpinionWidgetWrapper = styled.div``;
+const StyledOpinionWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledContentWrapper = styled.div`
   display: flex;

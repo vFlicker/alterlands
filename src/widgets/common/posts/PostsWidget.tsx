@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Post } from './Post';
@@ -36,7 +37,9 @@ function PostsWidget({
 
 export { PostsWidget };
 
-const StyledPostsWidgetWrapper = styled.div``;
+const StyledPostsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledPostList = styled.div`
   display: flex;

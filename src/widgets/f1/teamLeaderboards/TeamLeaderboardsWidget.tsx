@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { TeamLeaderboardData } from './teamLeaderboardsTypes';
@@ -49,7 +50,9 @@ function TeamLeaderboardsWidget({
 
 export { TeamLeaderboardsWidget };
 
-const StyledTeamLeaderboardsWidgetWrapper = styled.div``;
+const StyledTeamLeaderboardsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledTable = styled.div`
   display: flex;

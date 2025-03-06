@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { News } from './News';
@@ -33,7 +34,9 @@ function NewsWidget({
 
 export { NewsWidget };
 
-const StyledNewsWidgetWrapper = styled.div``;
+const StyledNewsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledNewsList = styled.div`
   display: flex;

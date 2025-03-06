@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { Meme } from './Meme';
@@ -32,7 +33,9 @@ function MemesWidget({
 
 export { MemesWidget };
 
-const StyledMemesWidgetWrapper = styled.div``;
+const StyledMemesWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledMemeList = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { UpcomingRace } from './UpcomingRace';
@@ -42,7 +43,9 @@ function UpcomingRacesWidget({
 
 export { UpcomingRacesWidget };
 
-const StyledUpcomingRacesWidgetWrapper = styled.div``;
+const StyledUpcomingRacesWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledUpcomingRaceList = styled.div`
   display: flex;

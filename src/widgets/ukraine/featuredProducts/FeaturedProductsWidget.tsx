@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { FeaturedProduct } from './FeaturedProduct';
@@ -27,4 +28,6 @@ function FeaturedProductsWidget({
 
 export { FeaturedProductsWidget };
 
-const StyledFeaturedProductsWidgetWrapper = styled.div``;
+const StyledFeaturedProductsWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
