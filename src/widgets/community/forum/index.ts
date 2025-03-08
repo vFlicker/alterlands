@@ -1,0 +1,1 @@
+export { ForumWidget } from './ForumWidget';

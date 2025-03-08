@@ -5,7 +5,8 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { BannerWidget } from '~/widgets/common/banner';
-import { News, NewsWidget as ForumWidget } from '~/widgets/common/news';
+import { News } from '~/widgets/common/news';
+import { ForumWidget } from '~/widgets/community/forum';
 import { TopBar } from '~/widgets/community/TopBar';
 
 import { communityPageData } from './communityPageData';
