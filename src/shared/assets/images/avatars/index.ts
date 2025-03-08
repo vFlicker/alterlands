@@ -16,6 +16,7 @@ import jessicaDavisAvatar from './jessica-davis-avatar.jpg';
 import kamilaAvatar from './kamila-avatar.jpg';
 import landoAvatar from './lando-avatar.jpg';
 import maksymLevchenkoAvatar from './maksym-levchenko-avatar.jpg';
+import mediumAvatar from './medium-avatar.jpg';
 import nadiaDorofeevaAvatar from './nadia-dorofeeva-avatar.jpg';
 import officePresidentUkraine from './office-president-ukraine.jpg';
 import oleksandrShevchenkoAvatar from './oleksandr-shevchenko-avatar.jpg';
@@ -27,6 +28,8 @@ import skySportsAvatar from './sky-sports-avatar.jpg';
 import theNewYorkTimesAvatar from './the-new-york-times-avatar.jpg';
 import tinaKarolAvatar from './tina-karol-avatar.jpg';
 import ukrainianPravdaAvatar from './ukrainian-pravda-avatar.jpg';
+import uxPubAvatar from './ux-pub-avatar.jpg';
+import wiredAvatar from './wired-avatar.jpg';
 import yahooNewsAvatar from './yahoo-news-avatar.jpg';
 import zelenskiyAvatar from './zelenskiy-avatar.jpg';
 
@@ -49,6 +52,7 @@ export const avatarImage = {
   kamilaAvatar,
   landoAvatar,
   maksymLevchenkoAvatar,
+  mediumAvatar,
   nadiaDorofeevaAvatar,
   officePresidentUkraine,
   oleksandrShevchenkoAvatar,
@@ -60,6 +64,8 @@ export const avatarImage = {
   theNewYorkTimesAvatar,
   tinaKarolAvatar,
   ukrainianPravdaAvatar,
+  uxPubAvatar,
+  wiredAvatar,
   yahooNewsAvatar,
   zelenskiyAvatar,
   currentUser: annaKushchAvatar,

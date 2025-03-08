@@ -1,25 +1,39 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { Tab } from '~/shared/ui/atoms/Tab';
+import { Color } from '~/shared/theme/colors';
+import { Radius } from '~/shared/theme/radiuses';
+import { Masonic } from '~/shared/ui/atoms/Masonic';
+import { BannerWidget } from '~/widgets/common/banner';
+import { News, NewsWidget as ForumWidget } from '~/widgets/common/news';
+import { TopBar } from '~/widgets/community/TopBar';
 
 import { communityPageData } from './communityPageData';
 
 function CommunityPage(): JSX.Element {
   return (
     <StyledWrapper>
-      <StyledTabsWrapper>
-        {communityPageData.menu.first.map((text, index) => (
-          <StyledTab
-            key={text}
-            color="default"
-            variant="underline"
-            selected={index === 0}
-          >
-            {text}
-          </StyledTab>
-        ))}
-      </StyledTabsWrapper>
+      <StyledTopBar
+        breadcrumbs={communityPageData.breadcrumbs}
+        menu={communityPageData.menu.first}
+        pageTitle={communityPageData.pageTitle}
+      />
+
+      <Masonic.List>
+        <Masonic.Item>
+          <StyledNewsWrapper>
+            {communityPageData.news.map((news) => (
+              <StyledNews key={news.id} {...news} />
+            ))}
+          </StyledNewsWrapper>
+
+          <BannerWidget {...communityPageData.banner} />
+        </Masonic.Item>
+
+        <Masonic.Item>
+          <StyledForumWidget {...communityPageData.forum} />
+        </Masonic.Item>
+      </Masonic.List>
     </StyledWrapper>
   );
 }
@@ -28,11 +42,22 @@ export { CommunityPage };
 
 const StyledWrapper = styled.div``;
 
-const StyledTabsWrapper = styled.div`
-  display: flex;
-  overflow-x: auto;
+const StyledTopBar = styled(TopBar)`
+  margin-bottom: 24px;
 `;
 
-const StyledTab = styled(Tab)`
-  padding: 8px 32px;
+const StyledNewsWrapper = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
+const StyledNews = styled(News)`
+  padding: 16px;
+  border: 1px solid ${Color.WHITE_16};
+  border-radius: ${Radius.RADIUS_16};
+`;
+
+const StyledForumWidget = styled(ForumWidget)`
+  border: 1px solid ${Color.WHITE_16};
+  background-color: transparent;
 `;

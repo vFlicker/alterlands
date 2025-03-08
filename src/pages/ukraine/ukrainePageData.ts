@@ -165,6 +165,7 @@ const ukrainePageData = {
         fullName: 'BBC News Ukraine',
         title:
           'Sociologist Oleksiy Antipovych: "Zaluzhny embodies the hopes and aspirations of Ukrainians"',
+        verified: false,
         likesCount: '32k',
         messagesCount: '523',
         reposts: '1.2k',
@@ -177,6 +178,7 @@ const ukrainePageData = {
         fullName: 'President of Ukraine - Volodymyr Zelensky',
         title:
           'President: National communities are very important for preserving internal peace in Ukraine and realizing its geopolitical choice',
+        verified: false,
         likesCount: '3k',
         messagesCount: '2k',
         reposts: '406',
@@ -189,6 +191,7 @@ const ukrainePageData = {
         fullName: 'RBK Ukraine',
         title:
           "Fico's statement on the termination of electricity supply will not affect Ukraine's energy supply",
+        verified: false,
         likesCount: '2k',
         messagesCount: '1k',
         reposts: '750',

@@ -93,6 +93,7 @@ const usPoliticsPageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'Indiana CAPITAL Chronicle',
+        verified: false,
         title:
           'A nation exhausted: The neuroscience of why Americans are tuning out political news',
         likesCount: '32k',
@@ -105,6 +106,7 @@ const usPoliticsPageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'The New York Times',
+        verified: false,
         title: 'Will the U.S. Ever Be Ready for a Female President?',
         likesCount: '3k',
         messagesCount: '2k',
@@ -116,6 +118,7 @@ const usPoliticsPageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'CNN',
+        verified: false,
         title:
           'Trump names ambassador to Panama after suggesting US control of Panama Canal',
         likesCount: '2k',

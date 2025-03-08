@@ -365,6 +365,7 @@ const f1PageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'Sky Sports',
+        verified: false,
         title:
           'F1 news, rumours and gossip: Formula 1 latest updates on teams, driver transfer market and contracts',
         likesCount: '32k',
@@ -377,6 +378,7 @@ const f1PageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'Formula 1',
+        verified: false,
         title:
           'Formula 1 comes to life in brick form as full LEGO range unveiled',
         likesCount: '3k',
@@ -389,6 +391,7 @@ const f1PageData = {
         date: '12h',
         viewCount: '91k',
         fullName: 'Formula 1',
+        verified: false,
         title:
           'What time is the Formula 1 2024 Las Vegas Grand Prix and how can I watch it?',
         likesCount: '2k',

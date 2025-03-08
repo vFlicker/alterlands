@@ -20,6 +20,7 @@ function News({
   likesCount,
   messagesCount,
   reposts,
+  verified,
   title,
   viewCount,
 }: NewsProps): JSX.Element {
@@ -30,6 +31,7 @@ function News({
         date={date}
         fullName={fullName}
         viewCount={viewCount}
+        verified={verified}
         orientation="horizontal"
       />
       <StyledTitle>{title}</StyledTitle>

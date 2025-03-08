@@ -5,6 +5,7 @@ export type NewsData = {
   viewCount: string;
   fullName: string;
   title: string;
+  verified: boolean;
   likesCount: string;
   messagesCount: string;
   reposts: string;

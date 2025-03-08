@@ -1,11 +1,24 @@
 import styled from '@emotion/styled';
+import { Children, JSX, PropsWithChildren } from 'react';
 
-import { Color } from '~/shared/theme/colors';
-import { Radius } from '~/shared/theme/radiuses';
+type MasonicListProps = PropsWithChildren<{
+  className?: string;
+}>;
 
-const StyledMasonicList = styled.div`
+function MasonicList({ className, children }: MasonicListProps): JSX.Element {
+  const itemCount = Children.count(children);
+
+  return (
+    <StyledMasonicList className={className} itemCount={itemCount}>
+      {children}
+    </StyledMasonicList>
+  );
+}
+
+const StyledMasonicList = styled.div<{ itemCount: number }>`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: ${({ itemCount = 3 }) =>
+    itemCount === 2 ? '2fr 1fr' : '1fr 1fr 1fr'};
   gap: 16px;
 
   @media screen and (max-width: 1280px) {
@@ -20,6 +33,6 @@ const StyledMasonicItem = styled.div`
 `;
 
 export const Masonic = {
-  List: StyledMasonicList,
+  List: MasonicList,
   Item: StyledMasonicItem,
 };

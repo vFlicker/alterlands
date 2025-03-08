@@ -40,7 +40,7 @@ function Header(): JSX.Element {
             leftIcon={<Icon name="icon-search" />}
           />
           <Link to={AppRoute.USER}>
-            <Avatar size="small" src={avatarImage.currentUser} />
+            <Avatar size="medium" src={avatarImage.currentUser} />
           </Link>
         </HeaderActions>
       </StyledContentWrapper>

@@ -34,7 +34,8 @@ const MainContent = styled.div`
 `;
 
 const StyledMain = styled.main`
-  max-width: 1920px;
+  max-width: 1640px;
+  margin: 0 auto;
   padding: 24px;
   overflow-x: hidden;
 `;
