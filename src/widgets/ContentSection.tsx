@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Tab } from '~/shared/ui/atoms/Tab';
 import { Select } from '~/shared/ui/molecules/Select';
+import { withAttrs } from '~/shared/ui/withAttrs';
 
 type ContentSectionProps = {
   menu: {
@@ -38,12 +39,7 @@ function ContentSection({ className, menu }: ContentSectionProps): JSX.Element {
       </StyledFirstMenuWrapper>
 
       <StyledSecondMenuWrapper>
-        <StyledSelect
-          options={selectOptions}
-          size="small"
-          variant="empty"
-          value={selectedOptionValue}
-        />
+        <StyledSelect options={selectOptions} value={selectedOptionValue} />
 
         <div>
           {menu.second.map((text) => (
@@ -77,17 +73,20 @@ const StyledSecondMenuWrapper = styled.div`
   gap: 16px;
 `;
 
-const StyledSelect = styled(Select)`
-  position: relative;
+const StyledSelect = withAttrs(
+  { size: 'small', variant: 'empty' },
+  styled(Select)`
+    position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -9px;
-    width: 1px;
-    height: 24px;
-    background-color: ${Color.WHITE_16};
-    transform: translateY(-50%);
-  }
-`;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -9px;
+      width: 1px;
+      height: 24px;
+      background-color: ${Color.WHITE_16};
+      transform: translateY(-50%);
+    }
+  `,
+);

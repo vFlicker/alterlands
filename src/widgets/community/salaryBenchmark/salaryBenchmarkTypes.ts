@@ -1,5 +1,5 @@
-export type AmountCardData = {
-  id: number;
+export type SalaryBenchmarkData = {
+  id: string;
   title: string;
   rate: {
     direction: 'increase' | 'decrease';
@@ -7,4 +7,5 @@ export type AmountCardData = {
     postfix: string;
   };
   amount: string;
+  imageUrl: string;
 };

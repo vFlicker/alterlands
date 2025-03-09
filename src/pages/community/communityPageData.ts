@@ -25,6 +25,33 @@ const communityPageData = {
       'Salary Info',
     ],
   },
+  salaryBenchmark: {
+    widgetTitle: 'Salary benchmark',
+    data: [
+      {
+        id: '1',
+        title: 'Average salary worldwide',
+        rate: {
+          direction: 'increase' as const,
+          value: '12.85%',
+          postfix: 'past year',
+        },
+        amount: '73,509',
+        imageUrl: communityImage.salaryBenchmark.graph1,
+      },
+      {
+        id: '2',
+        title: 'Average salary in your country',
+        rate: {
+          direction: 'increase' as const,
+          value: '6.12%',
+          postfix: 'last month',
+        },
+        amount: '500',
+        imageUrl: communityImage.salaryBenchmark.graph2,
+      },
+    ],
+  },
   news: [
     {
       id: 2,

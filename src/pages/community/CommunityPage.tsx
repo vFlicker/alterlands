@@ -7,6 +7,7 @@ import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { BannerWidget } from '~/widgets/common/banner';
 import { News } from '~/widgets/common/news';
 import { ForumWidget } from '~/widgets/community/forum';
+import { SalaryBenchmarkWidget } from '~/widgets/community/salaryBenchmark';
 import { TopBar } from '~/widgets/community/TopBar';
 
 import { communityPageData } from './communityPageData';
@@ -32,7 +33,8 @@ function CommunityPage(): JSX.Element {
         </Masonic.Item>
 
         <Masonic.Item>
-          <StyledForumWidget {...communityPageData.forum} />
+          <ForumWidget {...communityPageData.forum} />
+          <SalaryBenchmarkWidget {...communityPageData.salaryBenchmark} />
         </Masonic.Item>
       </Masonic.List>
     </StyledWrapper>
@@ -56,9 +58,4 @@ const StyledNews = styled(News)`
   padding: 16px;
   border: 1px solid ${Color.WHITE_16};
   border-radius: ${Radius.RADIUS_16};
-`;
-
-const StyledForumWidget = styled(ForumWidget)`
-  border: 1px solid ${Color.WHITE_16};
-  background-color: transparent;
 `;

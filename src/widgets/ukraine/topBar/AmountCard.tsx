@@ -1,16 +1,16 @@
-import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
+import { RateLine } from '~/shared/ui/atoms/RateLine';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { Select } from '~/shared/ui/molecules/Select';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { Icon } from '../../../shared/ui/atoms/Icon';
 import { IconButton } from '../../../shared/ui/atoms/IconButton';
-import { AmountCardData, Rate } from './topBarTypes';
+import { AmountCardData } from './topBarTypes';
 
 type AmountCardProps = AmountCardData & {
   className?: string;
@@ -25,13 +25,9 @@ const currencyOptions = [
 function AmountCard({
   className,
   amount,
-  content,
   rate,
   title,
 }: AmountCardProps): JSX.Element {
-  const rateSign = rate === 'increase' ? '+' : '-';
-  const arrow = rate === 'increase' ? '▲' : '▼';
-
   return (
     <StyledAmountCardWrapper className={className}>
       <StyledHeader>
@@ -40,10 +36,7 @@ function AmountCard({
           <Icon name="icon-info" />
         </StyledInfoButton>
       </StyledHeader>
-      <StyledContent $rate={rate}>
-        {rateSign}
-        {content} {arrow} past year
-      </StyledContent>
+      <RateLine {...rate} />
       <StyledFooter>
         <StyledAmount>{amount}</StyledAmount>
         <Select
@@ -58,18 +51,6 @@ function AmountCard({
 }
 
 export { AmountCard };
-
-const getContentColorCss = (rate: Rate) => {
-  if (rate === 'increase') {
-    return css`
-      color: ${Color.GREEN_5};
-    `;
-  }
-
-  return css`
-    color: ${Color.RED_7};
-  `;
-};
 
 const StyledAmountCardWrapper = styled.div`
   width: 100%;
@@ -107,14 +88,6 @@ const StyledInfoButton = withAttrs(
         stroke: ${Color.WHITE_98};
       }
     }
-  `,
-);
-
-const StyledContent = withAttrs(
-  { variant: 'body-1', as: 'h3' },
-  styled(Typography)`
-    margin-bottom: 20px;
-    ${({ $rate }: { $rate: Rate }) => getContentColorCss($rate)};
   `,
 );
 

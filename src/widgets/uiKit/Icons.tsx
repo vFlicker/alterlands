@@ -11,6 +11,10 @@ function Icons(): JSX.Element {
       <Typography variant="heading-3">Icons</Typography>
 
       <StyledBlock>
+        <StyledIcon name={IconName.ICON_OPEN_DOOR} />
+        <StyledIcon name={IconName.ICON_GRAPH} />
+        <StyledIcon name={IconName.ICON_MIDDLE_SMILE} />
+        <StyledIcon name={IconName.ICON_DOLLAR} />
         <StyledIcon name={IconName.ICON_ARROW_BIG_DOWN} />
         <StyledIcon name={IconName.ICON_ARROW_BIG_UP} />
         <StyledIcon name={IconName.ICON_BANKNOTE} />

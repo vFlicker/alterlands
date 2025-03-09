@@ -3,6 +3,7 @@ import { JSX } from 'react';
 
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { Select } from '~/shared/ui/molecules/Select';
+import { withAttrs } from '~/shared/ui/withAttrs';
 import { CardsWidget } from '~/widgets/common/cards';
 import { ChatWidget } from '~/widgets/common/chat';
 import { DiscussionWidget } from '~/widgets/common/discussion';
@@ -25,8 +26,6 @@ function F1Page(): JSX.Element {
         <StyledSelect
           options={f1PageData.select.options}
           value={f1PageData.select.value}
-          variant="outlined"
-          size="medium"
         />
       </StyledTopBar>
 
@@ -63,12 +62,15 @@ const StyledTopBar = styled(TopBar)`
   margin-bottom: 16px;
 `;
 
-const StyledSelect = styled(Select)`
-  @media screen and (max-width: 1280px) {
-    width: 100%;
-    max-width: 180px;
-  }
-`;
+const StyledSelect = withAttrs(
+  { variant: 'outlined', size: 'medium' },
+  styled(Select)`
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+      max-width: 180px;
+    }
+  `,
+);
 
 const StyledContentSection = styled(ContentSection)`
   margin-bottom: 16px;

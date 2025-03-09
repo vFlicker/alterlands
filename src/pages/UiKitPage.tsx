@@ -22,9 +22,12 @@ function UiKitPage(): JSX.Element {
       <AmountCard
         id={1}
         title="Market Cap"
-        rate="increase"
-        content="99.71 (22.84%)"
-        amount="521.01M"
+        rate={{
+          direction: 'increase',
+          value: '99.71 (22.84%)',
+          postfix: '521.01M',
+        }}
+        amount="$1.01B"
       />
       <Selects />
       <Tabs />

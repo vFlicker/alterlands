@@ -28,6 +28,22 @@ function Icon(props: IconProps) {
 export { Icon, IconName, IconSize };
 
 const IconNameToCss = {
+  [IconName.ICON_OPEN_DOOR]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_GRAPH]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_MIDDLE_SMILE]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_DOLLAR]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
   [IconName.ICON_ARROW_BIG_DOWN]: css`
     fill: none;
     stroke: currentColor;

@@ -101,7 +101,6 @@ const SelectSizeToCss = {
   `,
   [SelectSize.SMALL]: css`
     width: 100%;
-    max-width: 76px;
     height: 28px;
     padding: 4px 12px;
 

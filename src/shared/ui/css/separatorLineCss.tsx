@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { Color } from '~/shared/theme/colors';
 
-const separatorLineCss = (bottom: number) => css`
+const separatorLineCss = (bottom: number, color?: Color) => css`
   position: relative;
 
   &::after {
@@ -14,7 +14,7 @@ const separatorLineCss = (bottom: number) => css`
     width: 100%;
     height: 1px;
 
-    background-color: ${Color.WHITE_8};
+    background-color: ${color ? color : Color.WHITE_8};
   }
 `;
 
