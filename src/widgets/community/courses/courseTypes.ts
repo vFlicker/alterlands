@@ -1,8 +1,10 @@
+export type CourseTier = 'Pro' | 'E' | 'GE';
+
 export type CourseData = {
   id: number;
   imageSrc: string;
   creatorName: string;
-  creatorTier: 'Pro' | 'E' | 'GE';
+  creatorTier: CourseTier;
   title: string;
   labels: string[];
   price: string;

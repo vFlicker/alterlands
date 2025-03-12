@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { JSX } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
+import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { CourseCard } from './CourseCard';
@@ -36,7 +37,9 @@ function CoursesWidget({
 
 export { CoursesWidget };
 
-const StyledCoursesWidgetWrapper = styled.div``;
+const StyledCoursesWidgetWrapper = styled.div`
+  ${widgetWrapperCss}
+`;
 
 const StyledCourseList = styled.div`
   display: grid;
