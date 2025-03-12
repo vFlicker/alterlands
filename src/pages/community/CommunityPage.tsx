@@ -6,6 +6,7 @@ import { Radius } from '~/shared/theme/radiuses';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { BannerWidget } from '~/widgets/common/banner';
 import { News } from '~/widgets/common/news';
+import { CoursesWidget } from '~/widgets/community/courses';
 import { ForumWidget } from '~/widgets/community/forum';
 import { SalaryBenchmarkWidget } from '~/widgets/community/salaryBenchmark';
 import { TopBar } from '~/widgets/community/TopBar';
@@ -30,6 +31,7 @@ function CommunityPage(): JSX.Element {
           </StyledNewsWrapper>
 
           <BannerWidget {...communityPageData.banner} />
+          <CoursesWidget {...communityPageData.courses} />
         </Masonic.Item>
 
         <Masonic.Item>

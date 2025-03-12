@@ -137,6 +137,65 @@ const communityPageData = {
       imageSrc: communityImage.banner,
     },
   },
+  courses: {
+    widgetTitle: 'Courses',
+    data: [
+      {
+        id: 1,
+        creatorTier: 'Pro' as const,
+        creatorName: 'Daniel Scott',
+        imageSrc: communityImage.course.course1,
+        title: 'Adobe Illustrator CC – Advanced Training Course',
+        labels: [
+          'Adobe Illustrator',
+          'Design Tools',
+          'Photo & Video Editing Tools',
+          'Graphic Design',
+        ],
+        price: '0.00$',
+        examPrice: '$100',
+      },
+      {
+        id: 2,
+        creatorTier: 'E' as const,
+        creatorName: 'Alan Ayoubi',
+        imageSrc: communityImage.course.course2,
+        title: 'Adobe Illustrator Mega Course - From Beginner to Advanced',
+        labels: [
+          'Adobe Illustrator',
+          'Graphic Design',
+          'Photo & Video Editing Tools',
+          'Graphic Design',
+        ],
+        price: '0.00$',
+        examPrice: '$100',
+      },
+      {
+        id: 3,
+        creatorTier: 'Pro' as const,
+        creatorName: 'Vako Shvili',
+        imageSrc: communityImage.course.course3,
+        title: 'Complete Web Design: from Figma to Webflow',
+        labels: [
+          'Web Design',
+          'Web & Mobile Design',
+          'UX & Web & Mobile Design',
+        ],
+        price: '0.00$',
+        examPrice: '$100',
+      },
+      {
+        id: 4,
+        creatorTier: 'GE' as const,
+        creatorName: 'Ray Dombroski',
+        imageSrc: communityImage.course.course4,
+        title: 'Typographic Logos: Typography and Lettering for Logo Design',
+        labels: ['Logo Design', 'Design Tools', 'Photo & Video Editing Tools'],
+        price: '0.00$',
+        examPrice: '$80',
+      },
+    ],
+  },
 };
 
 export { communityPageData };

@@ -33,6 +33,9 @@ const enum Color {
   BLUE_4 = 'var(--blue-4)',
   BLUE_5 = 'var(--blue-5)',
 
+  PURPLE_1 = 'var(--purple-1)',
+  PURPLE_2 = 'var(--purple-2)',
+
   RED_1 = 'var(--red-1)',
   RED_2 = 'var(--red-2)',
   RED_3 = 'var(--red-3)',
@@ -81,6 +84,9 @@ const globalColors = css`
     --blue-3: #203e65;
     --blue-4: #112744;
     --blue-5: #0b1727;
+
+    --purple-1: #8c0edf;
+    --purple-2: #2f1338;
 
     --red-1: #c01d1d;
     --red-2: #b41212;
