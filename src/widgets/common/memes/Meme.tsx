@@ -74,7 +74,6 @@ const MemeSizeToCss = {
 };
 
 const StyledMemeWrapper = styled.div<Pick<MemeProps, 'size'>>`
-  width: 100%;
   ${({ size }) => MemeSizeToCss[size]}
 `;
 

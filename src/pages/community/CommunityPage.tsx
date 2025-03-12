@@ -5,6 +5,7 @@ import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { BannerWidget } from '~/widgets/common/banner';
+import { MemesWidget } from '~/widgets/common/memes';
 import { News } from '~/widgets/common/news';
 import { CoursesWidget } from '~/widgets/community/courses';
 import { ForumWidget } from '~/widgets/community/forum';
@@ -32,6 +33,7 @@ function CommunityPage(): JSX.Element {
 
           <BannerWidget {...communityPageData.banner} />
           <CoursesWidget {...communityPageData.courses} />
+          <MemesWidget {...communityPageData.memes} />
         </Masonic.Item>
 
         <Masonic.Item>
