@@ -9,6 +9,7 @@ import { MemesWidget } from '~/widgets/common/memes';
 import { News } from '~/widgets/common/news';
 import { CoursesWidget } from '~/widgets/community/courses';
 import { ForumWidget } from '~/widgets/community/forum';
+import { RequestWidget } from '~/widgets/community/request';
 import { SalaryBenchmarkWidget } from '~/widgets/community/salaryBenchmark';
 import { TopBar } from '~/widgets/community/TopBar';
 
@@ -39,6 +40,7 @@ function CommunityPage(): JSX.Element {
         <Masonic.Item>
           <ForumWidget {...communityPageData.forum} />
           <SalaryBenchmarkWidget {...communityPageData.salaryBenchmark} />
+          <RequestWidget />
         </Masonic.Item>
       </Masonic.List>
     </StyledWrapper>
