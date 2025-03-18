@@ -12,6 +12,7 @@ import { ForumWidget } from '~/widgets/community/forum';
 import { RequestWidget } from '~/widgets/community/request';
 import { SalaryBenchmarkWidget } from '~/widgets/community/salaryBenchmark';
 import { TopBar } from '~/widgets/community/TopBar';
+import { VacancyWidget } from '~/widgets/community/vacancy';
 
 import { communityPageData } from './communityPageData';
 
@@ -41,6 +42,7 @@ function CommunityPage(): JSX.Element {
           <ForumWidget {...communityPageData.forum} />
           <SalaryBenchmarkWidget {...communityPageData.salaryBenchmark} />
           <RequestWidget />
+          <VacancyWidget {...communityPageData.vacancies} />
         </Masonic.Item>
       </Masonic.List>
     </StyledWrapper>

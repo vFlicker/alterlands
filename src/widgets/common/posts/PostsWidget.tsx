@@ -16,9 +16,9 @@ type PostsWidgetProps = {
 };
 
 function PostsWidget({
+  className,
   widgetTitle,
   data,
-  className,
 }: PostsWidgetProps): JSX.Element {
   return (
     <StyledPostsWidgetWrapper className={className}>

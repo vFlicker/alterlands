@@ -4,6 +4,7 @@ import { JSX } from 'react';
 
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
+import { Label } from '~/shared/ui/atoms/Label';
 import {
   Typography,
   TypographyVariantToCss,
@@ -36,7 +37,7 @@ function CourseCard({
       <StyledTitle>{title}</StyledTitle>
       <StyledLabelsList>
         {labels.map((label) => (
-          <StyledLabel key={label}>{label}</StyledLabel>
+          <Label key={label}>{label}</Label>
         ))}
       </StyledLabelsList>
 
@@ -120,20 +121,6 @@ const StyledLabelsList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-`;
-
-const StyledLabel = styled.div`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 3px 12px;
-  border: 1px solid ${Color.WHITE_30};
-  border-radius: ${Radius.RADIUS_100};
-
-  color: ${Color.WHITE_70};
-  ${TypographyVariantToCss['body-5']}
-  line-height: 1.5;
 `;
 
 const StyledPriceWrapper = styled.div`
