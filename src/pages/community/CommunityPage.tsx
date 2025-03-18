@@ -56,8 +56,17 @@ const StyledTopBar = styled(TopBar)`
 `;
 
 const StyledNewsWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+
+  @media (max-width: 1650px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const StyledNews = styled(News)`

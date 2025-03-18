@@ -89,7 +89,7 @@ const StyledCreatorInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 `;
 
 const StyledTier = styled.div<{ level: CourseTier }>`
@@ -106,9 +106,7 @@ const StyledTier = styled.div<{ level: CourseTier }>`
 
 const StyledCreatorName = withAttrs(
   { variant: 'body-3', $color: Color.WHITE_70 },
-  styled(Typography)`
-    margin-bottom: 4px;
-  `,
+  Typography,
 );
 
 const StyledTitle = withAttrs(

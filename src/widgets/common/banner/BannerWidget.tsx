@@ -25,7 +25,11 @@ function BannerWidget({
         title={widgetTitle}
         actions={<LabelButton color="white">Read more</LabelButton>}
       />
-      <StyledImage src={data.imageSrc} />
+
+      <StyledBannerWrapper>
+        <StyledImage src={data.imageSrc} />
+        <StyledBannerText>Welcome to the world of Design</StyledBannerText>
+      </StyledBannerWrapper>
     </StyledBannerWidgetWrapper>
   );
 }
@@ -36,6 +40,27 @@ const StyledBannerWidgetWrapper = styled.div`
   ${widgetWrapperCss}
 `;
 
+const StyledBannerWrapper = styled.div`
+  position: relative;
+`;
+
 const StyledImage = styled.img`
+  height: 320px;
   border-radius: ${Radius.RADIUS_8};
+`;
+
+const StyledBannerText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-30%, -50%);
+
+  font-weight: 700;
+  font-size: 42px;
+  text-align: center;
+
+  @media (max-width: 1280px) {
+    left: 30%;
+    transform: translate(-20%, -50%);
+  }
 `;

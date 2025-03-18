@@ -45,4 +45,18 @@ const StyledCourseList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+
+  @media (max-width: 1650px) {
+    grid-template-columns: repeat(3, 1fr);
+    & > *:nth-child(4n) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+    & > *:nth-child(3n) {
+      display: none;
+    }
+  }
 `;
