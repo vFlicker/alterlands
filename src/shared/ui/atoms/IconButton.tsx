@@ -8,6 +8,7 @@ type IconButtonProps = {
   size: `${IconButtonSize}`;
   variant: `${IconButtonVariant}`;
   color: `${IconButtonColor}`;
+  active?: boolean;
 };
 
 const enum IconButtonSize {
@@ -92,6 +93,24 @@ const IconButtonColorToCss = {
   `,
 };
 
+const IconButtonColorToCssActive = {
+  [IconButtonColor.ACCENT]: css`
+    &:not(:disabled) {
+      --color-button: ${Color.ACCENT};
+    }
+  `,
+  [IconButtonColor.NEUTRAL]: css`
+    &:not(:disabled) {
+      --color-button: ${Color.WHITE_16};
+    }
+  `,
+  [IconButtonColor.TRANSPARENT]: css`
+    &:not(:disabled) {
+      --color-button: transparent;
+    }
+  `,
+};
+
 const StyledIconButton = styled.button<IconButtonProps>`
   display: inline-flex;
   align-items: center;
@@ -118,6 +137,7 @@ const StyledIconButton = styled.button<IconButtonProps>`
   ${({ size }) => IconButtonSizeToCss[size]}
   ${({ variant }) => IconButtonVariantToCss[variant]}
   ${({ color }) => IconButtonColorToCss[color]}
+  ${({ active, color }) => active && IconButtonColorToCssActive[color]}
 `;
 
 export {

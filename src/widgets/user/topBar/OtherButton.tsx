@@ -1,27 +1,27 @@
 import styled from '@emotion/styled';
 import { JSX, MouseEvent, useState } from 'react';
 
-import { Button } from '~/shared/ui/atoms/Button';
 import { Icon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { OptionList } from '~/shared/ui/molecules/Select';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 const options = [
   {
-    label: 'Verified',
-    value: 'Verified',
+    label: 'YouTube Work',
+    value: 'YouTube Work',
   },
   {
-    label: 'Anonymous',
-    value: 'Anonymous',
+    label: 'Notifications',
+    value: 'Notifications',
   },
   {
-    label: 'Job account',
-    value: 'Job account',
+    label: 'Contract',
+    value: 'Contract',
   },
 ];
 
-function ChangeProfileButton(): JSX.Element {
+function OtherButton(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButtonClick = (evt: MouseEvent<HTMLButtonElement>) => {
@@ -31,14 +31,9 @@ function ChangeProfileButton(): JSX.Element {
 
   return (
     <StyledChangeProfileButtonWrapper>
-      <StyledButton
-        rightIcon={
-          <Icon name={isOpen ? 'icon-chevron-up' : 'icon-chevron-down'} />
-        }
-        onClick={handleButtonClick}
-      >
-        Verified
-      </StyledButton>
+      <StyledIconButton onClick={handleButtonClick}>
+        <Icon name="icon-dots" />
+      </StyledIconButton>
 
       {isOpen && (
         <OptionList
@@ -52,20 +47,20 @@ function ChangeProfileButton(): JSX.Element {
   );
 }
 
-export { ChangeProfileButton };
+export { OtherButton };
 
 const StyledChangeProfileButtonWrapper = styled.div`
   position: relative;
 `;
 
-const StyledButton = withAttrs(
+const StyledIconButton = withAttrs(
   {
     size: 'medium',
-    color: 'accent',
-    variant: 'outlined',
+    variant: 'filled',
+    color: 'neutral',
   },
-  styled(Button)`
-    width: 124px;
-    padding: 6px 17px 6px 29px;
+  styled(IconButton)`
+    width: 37px;
+    height: 37px;
   `,
 );

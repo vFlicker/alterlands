@@ -8,17 +8,17 @@ import { PersonalFileWidget } from '~/widgets/user/personalFileWidget';
 import { TopBar } from '~/widgets/user/topBar';
 import { Trophy } from '~/widgets/user/Trophy';
 
-import { userPageData } from './userPageData';
+import { currentUserPageData } from './currentUserPageData';
 
-function UserPage(): JSX.Element {
+function CurrentUserPage(): JSX.Element {
   return (
     <StyledUserPageContainer>
-      <TopBar {...userPageData.header} />
+      <TopBar userRole="owner" {...currentUserPageData.header} />
       <StyledTopWrapper>
-        <PersonalFileWidget files={userPageData.personalFiles} />
+        <PersonalFileWidget files={currentUserPageData.personalFiles} />
         <StyledMenuWrapper>
           <StyledTabsWrapper>
-            {userPageData.menu.first.map((text, index) => (
+            {currentUserPageData.menu.first.map((text, index) => (
               <Tab
                 key={text}
                 color="default"
@@ -41,12 +41,12 @@ function UserPage(): JSX.Element {
         </StyledMenuWrapper>
       </StyledTopWrapper>
 
-      <Trophy />
+      <Trophy userRole="owner" {...currentUserPageData.trophy} />
     </StyledUserPageContainer>
   );
 }
 
-export { UserPage };
+export { CurrentUserPage };
 
 const StyledUserPageContainer = styled.div`
   display: flex;

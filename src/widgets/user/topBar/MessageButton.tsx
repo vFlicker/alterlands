@@ -8,20 +8,16 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 
 const options = [
   {
-    label: 'Verified',
-    value: 'Verified',
+    label: 'Paid Message — $5.00',
+    value: 'Paid Message — $5.00',
   },
   {
-    label: 'Anonymous',
-    value: 'Anonymous',
-  },
-  {
-    label: 'Job account',
-    value: 'Job account',
+    label: 'Learn More',
+    value: 'Learn More',
   },
 ];
 
-function ChangeProfileButton(): JSX.Element {
+function MessageButton(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButtonClick = (evt: MouseEvent<HTMLButtonElement>) => {
@@ -37,7 +33,7 @@ function ChangeProfileButton(): JSX.Element {
         }
         onClick={handleButtonClick}
       >
-        Verified
+        Message
       </StyledButton>
 
       {isOpen && (
@@ -52,7 +48,7 @@ function ChangeProfileButton(): JSX.Element {
   );
 }
 
-export { ChangeProfileButton };
+export { MessageButton };
 
 const StyledChangeProfileButtonWrapper = styled.div`
   position: relative;
@@ -65,7 +61,7 @@ const StyledButton = withAttrs(
     variant: 'outlined',
   },
   styled(Button)`
-    width: 124px;
-    padding: 6px 17px 6px 29px;
+    min-width: 102px;
+    padding: 6px 7px 6px 19px;
   `,
 );

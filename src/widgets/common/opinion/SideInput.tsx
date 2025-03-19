@@ -29,7 +29,7 @@ function SideInput({ className, candidates }: SideInputProps): JSX.Element {
       <StyledSideButtonsWrapper>
         <LabelButton
           color="white"
-          isActive={activeButton === 'neutral'}
+          active={activeButton === 'neutral'}
           onClick={() => setActiveButton('neutral')}
         >
           Neutral
@@ -38,7 +38,7 @@ function SideInput({ className, candidates }: SideInputProps): JSX.Element {
           <LabelButton
             key={candidate.id}
             color={candidate.color}
-            isActive={activeButton === candidate.color}
+            active={activeButton === candidate.color}
             onClick={() => setActiveButton(candidate.color)}
           >
             <StyledSideButtonText>{candidate.color}</StyledSideButtonText> side

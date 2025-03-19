@@ -6,7 +6,8 @@ const enum AppRoute {
   F1 = '/f1',
   US_POLITICS = '/us-politics',
   COMMUNITY = '/community',
-  USER = '/user',
+  CURRENT_USER = '/me',
+  MR_BEAST = '/users/mr-beast',
   UI_KIT = '/ui-kit',
 }
 

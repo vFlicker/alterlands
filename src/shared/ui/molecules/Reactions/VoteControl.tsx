@@ -36,11 +36,11 @@ function VoteControl({
 }: VoteControlProps): JSX.Element {
   return (
     <StyledVoteControlWrapper className={className} variant={variant}>
-      <StyledVoteButton isActive={isUpActive} onClick={onUp}>
+      <StyledVoteButton active={isUpActive} onClick={onUp}>
         <StyledIcon name="icon-arrow-big-up" />
       </StyledVoteButton>
       <StyledCounter>{count}</StyledCounter>
-      <StyledVoteButton isActive={isDownActive} onClick={onDown}>
+      <StyledVoteButton active={isDownActive} onClick={onDown}>
         <StyledIcon name="icon-arrow-big-down" />
       </StyledVoteButton>
     </StyledVoteControlWrapper>
@@ -89,7 +89,7 @@ const activeIconCss = css`
 
 const StyledVoteButton = withAttrs(
   { variant: 'filled', size: 'small' },
-  styled(IconButton)<{ isActive: boolean }>`
+  styled(IconButton)<{ active: boolean }>`
     &:hover ${StyledIcon}, &:focus ${StyledIcon} {
       stroke: ${Color.ACCENT};
     }
@@ -99,6 +99,6 @@ const StyledVoteButton = withAttrs(
       fill: ${Color.ACCENT};
     }
 
-    ${({ isActive }) => isActive && activeIconCss}
+    ${({ active }) => active && activeIconCss}
   `,
 );

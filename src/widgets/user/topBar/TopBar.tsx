@@ -9,21 +9,29 @@ import { VerifiedIcon } from '~/shared/ui/atoms/VerifiedIcon';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
 import { ChangeProfileButton } from './ChangeProfileButton';
+import { FollowButton } from './FollowButton';
+import { MessageButton } from './MessageButton';
+import { OtherButton } from './OtherButton';
 import { UserData } from './topBarTypes';
 
 type TopBarProps = UserData & {
+  userRole: 'owner' | 'viewer';
   className?: string;
 };
 
 function TopBar({
   className,
+  userRole,
   avatarUrl,
   birthday,
   description,
   email,
   name,
   additionalInfo,
+  socialMedia,
 }: TopBarProps): JSX.Element {
+  const isOwner = userRole === 'owner';
+
   return (
     <StyledTopBarWrapper className={className}>
       <StyledAvatar src={avatarUrl} alt={name} />
@@ -36,15 +44,30 @@ function TopBar({
           <StyledEmail>{email}</StyledEmail>
           <StyledBirthday>{birthday}</StyledBirthday>
           <StyledDescription>{description}</StyledDescription>
+          {socialMedia && (
+            <StyledSocialMediaList>
+              {socialMedia.map(({ iconUrl, url, name }) => (
+                <a key={name} href={url} target="_blank">
+                  <img src={iconUrl} alt={name} />
+                </a>
+              ))}
+            </StyledSocialMediaList>
+          )}
         </StyledContent>
 
         <StyledLeftWrapper>
-          <StyledActionsWrapper>
-            <ChangeProfileButton />
-            <StyledActionButton size="medium" color="neutral" variant="filled">
-              Edit profile
-            </StyledActionButton>
-          </StyledActionsWrapper>
+          {isOwner && (
+            <StyledActionsWrapper>
+              <ChangeProfileButton />
+              <StyledActionButton
+                size="medium"
+                color="neutral"
+                variant="filled"
+              >
+                Edit profile
+              </StyledActionButton>
+            </StyledActionsWrapper>
+          )}
           <StyledAdditionInfoList>
             {additionalInfo.map(({ count, label }) => (
               <StyledAdditionInfoItem key={label}>
@@ -53,6 +76,13 @@ function TopBar({
               </StyledAdditionInfoItem>
             ))}
           </StyledAdditionInfoList>
+          {!isOwner && (
+            <StyledActionsWrapper>
+              <FollowButton />
+              <MessageButton />
+              <OtherButton />
+            </StyledActionsWrapper>
+          )}
         </StyledLeftWrapper>
       </StyledWrapper>
     </StyledTopBarWrapper>
@@ -108,6 +138,12 @@ const StyledBirthday = withAttrs(
 
 const StyledDescription = withAttrs({ variant: 'body-3' }, Typography);
 
+const StyledSocialMediaList = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+`;
+
 const StyledLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -125,6 +161,7 @@ const StyledActionButton = styled(Button)`
 
 const StyledAdditionInfoList = styled.div`
   display: flex;
+  justify-content: flex-end;
   gap: 45px;
   padding: 0 8px;
 `;

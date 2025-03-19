@@ -24,6 +24,11 @@ const navigationItems = [
     icon: null,
   },
   {
+    title: 'MrBeast',
+    route: AppRoute.MR_BEAST,
+    icon: null,
+  },
+  {
     title: 'UI Kit',
     route: AppRoute.UI_KIT,
     icon: null,

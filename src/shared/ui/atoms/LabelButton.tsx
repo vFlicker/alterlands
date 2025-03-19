@@ -8,7 +8,7 @@ import { TypographyVariantToCss } from './Typography';
 
 type LabelButtonProps = {
   color: `${LabelButtonColor}`;
-  isActive?: boolean;
+  active?: boolean;
 };
 
 const enum LabelButtonColor {
@@ -94,8 +94,8 @@ const StyledLabelButton = styled.button<LabelButtonProps>`
   border-radius: ${Radius.RADIUS_4};
 
   color: var(--color-text);
-  background-color: ${({ isActive }) =>
-    isActive ? 'var(--color-button-active)' : 'var(--color-button)'};
+  background-color: ${({ active }) =>
+    active ? 'var(--color-button-active)' : 'var(--color-button)'};
 
   ${TypographyVariantToCss['body-3']}
 

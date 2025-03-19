@@ -8,20 +8,20 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 
 const options = [
   {
-    label: 'Verified',
-    value: 'Verified',
+    label: '✅ Follow All',
+    value: '✅ Follow All',
   },
   {
-    label: 'Anonymous',
-    value: 'Anonymous',
+    label: '☑️ Follow UX/UI',
+    value: '☑️ Follow UX/UI',
   },
   {
-    label: 'Job account',
-    value: 'Job account',
+    label: '☑️ Follow MyDog',
+    value: '☑️ Follow MyDog',
   },
 ];
 
-function ChangeProfileButton(): JSX.Element {
+function FollowButton(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButtonClick = (evt: MouseEvent<HTMLButtonElement>) => {
@@ -37,7 +37,7 @@ function ChangeProfileButton(): JSX.Element {
         }
         onClick={handleButtonClick}
       >
-        Verified
+        Follow
       </StyledButton>
 
       {isOpen && (
@@ -52,7 +52,7 @@ function ChangeProfileButton(): JSX.Element {
   );
 }
 
-export { ChangeProfileButton };
+export { FollowButton };
 
 const StyledChangeProfileButtonWrapper = styled.div`
   position: relative;
@@ -62,10 +62,10 @@ const StyledButton = withAttrs(
   {
     size: 'medium',
     color: 'accent',
-    variant: 'outlined',
+    variant: 'filled',
   },
   styled(Button)`
-    width: 124px;
-    padding: 6px 17px 6px 29px;
+    min-width: 102px;
+    padding: 6px 7px 6px 19px;
   `,
 );

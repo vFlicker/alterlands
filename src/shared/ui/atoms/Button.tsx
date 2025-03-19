@@ -165,6 +165,7 @@ const StyledButton = styled.button<ButtonBaseProps>`
   }
 
   svg {
+    flex-shrink: 0;
     width: 23px;
     height: 23px;
   }

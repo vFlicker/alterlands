@@ -1,9 +1,9 @@
-import { userImage } from '~/shared/assets/images/user';
+import { currentUserImage } from '~/shared/assets/images/user/current';
 
-const userPageData = {
+const currentUserPageData = {
   header: {
     name: 'Anna Kushch',
-    avatarUrl: userImage.avatar,
+    avatarUrl: currentUserImage.avatar,
     email: '@anna.kushch',
     birthday: '20.12.2002',
     description:
@@ -140,6 +140,26 @@ const userPageData = {
       ],
     },
   ],
+  trophy: {
+    title: 'Drink',
+    achievementTitle: 'Battle of clans',
+    achievementSubtitle: 'Gold invanotry',
+    description:
+      'The Drink Trophy is a sleek, modern award designed to celebrate excellence in beverage crafting and innovation.',
+    smallImage: currentUserImage.battleOfClans,
+    bigImage: currentUserImage.trophy.champagne,
+    trophies: [
+      { image: currentUserImage.trophy.champagne, times: 1 },
+      { image: currentUserImage.trophy.graduationCap, times: 1 },
+      { image: currentUserImage.trophy.values, times: 1 },
+      { image: currentUserImage.trophy.mission, times: 1 },
+      { image: currentUserImage.trophy.accessCard, times: 1 },
+      { image: currentUserImage.trophy.champagne, times: 1 },
+      { image: currentUserImage.trophy.law, times: 1 },
+      { image: currentUserImage.trophy.piggyBank, times: 1 },
+      { image: currentUserImage.trophy.petCare, times: 1 },
+    ],
+  },
 };
 
-export { userPageData };
+export { currentUserPageData };

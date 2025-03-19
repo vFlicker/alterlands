@@ -5,7 +5,8 @@ import { CommunityPage } from '~/pages/community';
 import { F1Page } from '~/pages/f1';
 import { UiKitPage } from '~/pages/UiKitPage';
 import { UkrainePage } from '~/pages/ukraine';
-import { UserPage } from '~/pages/user/UserPage';
+import { CurrentUserPage } from '~/pages/user/CurrentUserPage';
+import { MrBeastPage } from '~/pages/user/MrBeastPage';
 import { UsPoliticsPage } from '~/pages/usPolitics';
 import { AppRoute } from '~/shared/libs/router';
 
@@ -21,7 +22,8 @@ function Routing(): JSX.Element {
       <Route path={AppRoute.F1} element={<F1Page />} />
       <Route path={AppRoute.US_POLITICS} element={<UsPoliticsPage />} />
       <Route path={AppRoute.COMMUNITY} element={<CommunityPage />} />
-      <Route path={AppRoute.USER} element={<UserPage />} />
+      <Route path={AppRoute.CURRENT_USER} element={<CurrentUserPage />} />
+      <Route path={AppRoute.MR_BEAST} element={<MrBeastPage />} />
       <Route path={AppRoute.UI_KIT} element={<UiKitPage />} />
     </Routes>
   );

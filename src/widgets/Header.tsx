@@ -26,7 +26,7 @@ function Header(): JSX.Element {
       <StyledContentWrapper>
         <HeaderTags>
           {navigationItems.map(({ icon, route, title }) => (
-            <HeaderTag key={route} to={route} isActive={pathname === route}>
+            <HeaderTag key={route} to={route} active={pathname === route}>
               {icon && <img src={icon} alt={title} />} {title}
             </HeaderTag>
           ))}
@@ -39,7 +39,7 @@ function Header(): JSX.Element {
             placeholder="Search"
             leftIcon={<Icon name="icon-search" />}
           />
-          <Link to={AppRoute.USER}>
+          <Link to={AppRoute.CURRENT_USER}>
             <Avatar size="medium" src={avatarImage.currentUser} />
           </Link>
         </HeaderActions>
@@ -104,7 +104,7 @@ const HeaderTags = styled.div`
   }
 `;
 
-const HeaderTag = styled(Link)<{ isActive?: boolean }>`
+const HeaderTag = styled(Link)<{ active?: boolean }>`
   position: relative;
 
   display: flex;
@@ -114,7 +114,7 @@ const HeaderTag = styled(Link)<{ isActive?: boolean }>`
   color: ${Color.WHITE_64};
   ${TypographyVariantToCss['body-3']}
 
-  ${({ isActive = false }) => isActive && activeTag}
+  ${({ active = false }) => active && activeTag}
 
   &:not(:last-child)::after {
     content: '';

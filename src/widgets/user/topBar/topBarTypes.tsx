@@ -10,4 +10,9 @@ export type UserData = {
   birthday: string;
   description: string;
   additionalInfo: AdditionalInfo[];
+  socialMedia?: {
+    name: string;
+    url: string;
+    iconUrl: string;
+  }[];
 };
