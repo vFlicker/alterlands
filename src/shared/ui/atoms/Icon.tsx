@@ -28,6 +28,10 @@ function Icon(props: IconProps) {
 export { Icon, IconName, IconSize };
 
 const IconNameToCss = {
+  [IconName.ICON_LOCK]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
   [IconName.ICON_OPEN_DOOR]: css`
     fill: none;
     stroke: currentColor;

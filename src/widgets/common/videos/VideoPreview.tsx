@@ -16,7 +16,7 @@ function VideoPreview({
   className,
   date,
   fullName,
-  videoImageSrc,
+  videoImageUrl,
   title,
   viewCount,
 }: VideoPreviewProps): JSX.Element {
@@ -25,7 +25,7 @@ function VideoPreview({
       <StyedVideoImage
         width="160"
         height="80"
-        src={videoImageSrc}
+        src={videoImageUrl}
       ></StyedVideoImage>
       <StyledContentWrapper>
         <StyledTitle>{title}</StyledTitle>

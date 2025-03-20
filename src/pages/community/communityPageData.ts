@@ -29,7 +29,7 @@ const communityPageData = {
     widgetTitle: 'Salary benchmark',
     data: [
       {
-        id: '1',
+        id: 1,
         title: 'Average salary worldwide',
         rate: {
           direction: 'increase' as const,
@@ -40,7 +40,7 @@ const communityPageData = {
         imageUrl: communityImage.salaryBenchmark.graph1,
       },
       {
-        id: '2',
+        id: 2,
         title: 'Average salary in your country',
         rate: {
           direction: 'increase' as const,

@@ -94,7 +94,7 @@ const mrBeastPageData = {
       previewVideoImages: [
         {
           id: 1,
-          videoImageSrc: mrBeastImage.preview.preview1,
+          videoImageUrl: mrBeastImage.preview.preview1,
           date: '5d',
           viewCount: '4m',
           fullName: 'MrBeast',
@@ -102,7 +102,7 @@ const mrBeastPageData = {
         },
         {
           id: 2,
-          videoImageSrc: mrBeastImage.preview.preview2,
+          videoImageUrl: mrBeastImage.preview.preview2,
           date: '10d',
           viewCount: '2m',
           fullName: 'MrBeast',
@@ -110,7 +110,7 @@ const mrBeastPageData = {
         },
         {
           id: 23,
-          videoImageSrc: mrBeastImage.preview.preview3,
+          videoImageUrl: mrBeastImage.preview.preview3,
           date: '15d',
           viewCount: '6m',
           fullName: 'MrBeast',
@@ -188,6 +188,40 @@ const mrBeastPageData = {
           likesCount: '1.4m',
           messagesCount: '120k',
           reposts: '24k',
+        },
+      ],
+    },
+    backstagePhoto: {
+      widgetTitle: 'Backstage photos',
+      data: [
+        {
+          id: 1,
+          imageUrl: mrBeastImage.backstagePhoto.photo1,
+        },
+        {
+          id: 2,
+          imageUrl: mrBeastImage.backstagePhoto.photo2,
+        },
+        {
+          id: 3,
+          imageUrl: mrBeastImage.backstagePhoto.photo3,
+        },
+      ],
+    },
+    privateBackstagePhoto: {
+      widgetTitle: 'Private backstage photos',
+      data: [
+        {
+          id: 1,
+          imageUrl: mrBeastImage.privateBackstagePhoto.photo1,
+        },
+        {
+          id: 2,
+          imageUrl: mrBeastImage.privateBackstagePhoto.photo2,
+        },
+        {
+          id: 3,
+          imageUrl: mrBeastImage.privateBackstagePhoto.photo3,
         },
       ],
     },

@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { PhotosWidget } from '~/widgets/common/photos/PhotosWidget';
+import { PrivatePhotosWidget } from '~/widgets/common/photos/PrivatePhotosWidget';
 import { PostsWidget } from '~/widgets/common/posts';
 import { VideosGridWidget } from '~/widgets/common/videos';
 
@@ -10,9 +12,17 @@ function YoutubeSection(): JSX.Element {
   return (
     <StyledYoutubeSectionWrapper>
       <VideosGridWidget {...mrBeastPageData.youtubeSection.videos} />
-      <StyledColWrapper>
-        <PostsWidget {...mrBeastPageData.youtubeSection.posts} />
-      </StyledColWrapper>
+      <StyledColsWrapper>
+        <StyledCol>
+          <PostsWidget {...mrBeastPageData.youtubeSection.posts} />
+          <PrivatePhotosWidget
+            {...mrBeastPageData.youtubeSection.privateBackstagePhoto}
+          />
+        </StyledCol>
+        <StyledCol>
+          <PhotosWidget {...mrBeastPageData.youtubeSection.backstagePhoto} />
+        </StyledCol>
+      </StyledColsWrapper>
     </StyledYoutubeSectionWrapper>
   );
 }
@@ -26,8 +36,14 @@ const StyledYoutubeSectionWrapper = styled.div`
   width: 100%;
 `;
 
-const StyledColWrapper = styled.div`
+const StyledColsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+`;
+
+const StyledCol = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 `;

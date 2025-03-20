@@ -15,7 +15,7 @@ export type VideoPreviewData = {
   id: number;
   date: string;
   fullName: string;
-  videoImageSrc: string;
+  videoImageUrl: string;
   title: string;
   viewCount: string;
 };

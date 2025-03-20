@@ -1,5 +1,5 @@
 export type SalaryBenchmarkData = {
-  id: string;
+  id: number;
   title: string;
   rate: {
     direction: 'increase' | 'decrease';
