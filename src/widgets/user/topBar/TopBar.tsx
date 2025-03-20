@@ -95,6 +95,7 @@ const StyledTopBarWrapper = styled.div`
   display: flex;
   gap: 24px;
   align-items: center;
+  width: 100%;
   padding: 24px;
   border-radius: ${Radius.RADIUS_16};
   background-color: ${Color.DARK};
@@ -109,6 +110,8 @@ const StyledAvatar = styled.img`
 const StyledWrapper = styled.div`
   display: flex;
   gap: 24px;
+  justify-content: space-between;
+  flex-grow: 1;
 `;
 
 const StyledContent = styled.div`

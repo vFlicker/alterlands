@@ -8,32 +8,32 @@ import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { Video } from './Video';
 import { VideoData } from './videosTypes';
 
-type VideosWidgetProps = {
+type VideosListWidgetProps = {
   widgetTitle: string;
   data: VideoData[];
   className?: string;
 };
 
-function VideosWidget({
+function VideosListWidget({
   className,
   data,
   widgetTitle,
-}: VideosWidgetProps): JSX.Element {
+}: VideosListWidgetProps): JSX.Element {
   return (
-    <StyledVideosWidgetWrapper className={className}>
+    <StyledVideosListWidgetWrapper className={className}>
       <WidgetHeader title={widgetTitle} />
       <StyledVideoList>
         {data.map((video) => (
           <StyledVideo key={video.id} {...video} />
         ))}
       </StyledVideoList>
-    </StyledVideosWidgetWrapper>
+    </StyledVideosListWidgetWrapper>
   );
 }
 
-export { VideosWidget };
+export { VideosListWidget };
 
-const StyledVideosWidgetWrapper = styled.div`
+const StyledVideosListWidgetWrapper = styled.div`
   ${widgetWrapperCss}
 `;
 

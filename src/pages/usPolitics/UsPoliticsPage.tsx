@@ -6,7 +6,7 @@ import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
 import { OpinionWidget } from '~/widgets/common/opinion';
 import { PostsWidget } from '~/widgets/common/posts';
-import { VideosWidget } from '~/widgets/common/videos';
+import { VideosListWidget } from '~/widgets/common/videos';
 import { ContentSection } from '~/widgets/ContentSection';
 import { TopBar } from '~/widgets/TopBar';
 
@@ -31,7 +31,7 @@ function UsPoliticsPage(): JSX.Element {
         </Masonic.Item>
 
         <Masonic.Item>
-          <VideosWidget {...usPoliticsPageData.videos} />
+          <VideosListWidget {...usPoliticsPageData.videos} />
         </Masonic.Item>
       </Masonic.List>
     </>

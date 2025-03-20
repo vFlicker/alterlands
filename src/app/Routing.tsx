@@ -6,7 +6,7 @@ import { F1Page } from '~/pages/f1';
 import { UiKitPage } from '~/pages/UiKitPage';
 import { UkrainePage } from '~/pages/ukraine';
 import { CurrentUserPage } from '~/pages/user/CurrentUserPage';
-import { MrBeastPage } from '~/pages/user/MrBeastPage';
+import { MrBeastPage } from '~/pages/user/mrBeast';
 import { UsPoliticsPage } from '~/pages/usPolitics';
 import { AppRoute } from '~/shared/libs/router';
 

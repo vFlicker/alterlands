@@ -13,10 +13,11 @@ import { separatorDotCss } from '../css/separatorDotCss';
 import { withAttrs } from '../withAttrs';
 
 type UserMetaProps = {
-  avatar: string;
   fullName: string;
   date: string;
   orientation: `${Orientation}`;
+  avatar?: string;
+  variant?: `${Variant}`;
   label?: {
     text: string;
     color: `${ChipColor}`;
@@ -25,6 +26,11 @@ type UserMetaProps = {
   viewCount?: string;
   className?: string;
 };
+
+const enum Variant {
+  MINI = 'mini',
+  DEFAULT = 'default',
+}
 
 const enum Orientation {
   VERTICAL = 'vertical',
@@ -39,14 +45,19 @@ function UserMeta({
   date,
   label,
   viewCount,
+  variant = Variant.DEFAULT,
   orientation,
 }: UserMetaProps): JSX.Element {
+  const isMini = variant === Variant.MINI;
+
   return (
     <StyledUserMetaWrapper className={className}>
-      <Avatar size="small" src={avatar} />
+      {!isMini && <Avatar size="small" src={avatar} />}
       <StyledContent orientation={orientation}>
         <StyledUserInfo orientation={orientation}>
-          <StyledUserFullName>{fullName}</StyledUserFullName>
+          <StyledUserFullName $color={isMini ? Color.WHITE_64 : Color.WHITE_98}>
+            {fullName}
+          </StyledUserFullName>
           {verified && <VerifiedIcon />}
         </StyledUserInfo>
         <StyledTextWrapper>

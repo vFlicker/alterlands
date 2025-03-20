@@ -10,7 +10,7 @@ import { DiscussionWidget } from '~/widgets/common/discussion';
 import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
 import { PostsWidget } from '~/widgets/common/posts';
-import { VideosWidget } from '~/widgets/common/videos';
+import { VideosListWidget } from '~/widgets/common/videos';
 import { ContentSection } from '~/widgets/ContentSection';
 import { LeaderboardsWidget } from '~/widgets/f1/leaderboards';
 import { TeamLeaderboardsWidget } from '~/widgets/f1/teamLeaderboards';
@@ -49,7 +49,7 @@ function F1Page(): JSX.Element {
           <TeamLeaderboardsWidget {...f1PageData.teamLeaderboards} />
           <ChatWidget {...f1PageData.chat} />
           <NewsWidget {...f1PageData.news} />
-          <VideosWidget {...f1PageData.videos} />
+          <VideosListWidget {...f1PageData.videos} />
         </Masonic.Item>
       </Masonic.List>
     </>

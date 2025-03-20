@@ -5,7 +5,7 @@ import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { MemesWidget } from '~/widgets/common/memes';
 import { NewsWidget } from '~/widgets/common/news';
 import { PostsWidget } from '~/widgets/common/posts';
-import { VideosWidget } from '~/widgets/common/videos';
+import { VideosListWidget } from '~/widgets/common/videos';
 import { ContentSection } from '~/widgets/ContentSection';
 import { CitiesWidget } from '~/widgets/ukraine/cities';
 import { FeaturedProductsWidget } from '~/widgets/ukraine/featuredProducts';
@@ -26,7 +26,7 @@ function UkrainePage(): JSX.Element {
         <Masonic.Item>
           <CitiesWidget {...ukrainePageData.cities} />
           <TopChartsWidget {...ukrainePageData.topCharts} />
-          <VideosWidget {...ukrainePageData.videos} />
+          <VideosListWidget {...ukrainePageData.videos} />
           <NewsWidget {...ukrainePageData.news} />
         </Masonic.Item>
 

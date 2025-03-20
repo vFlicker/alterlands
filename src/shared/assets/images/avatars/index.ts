@@ -21,6 +21,7 @@ import landoAvatar from './lando-avatar.jpg';
 import maksymLevchenkoAvatar from './maksym-levchenko-avatar.jpg';
 import matoffoAvatar from './matoffo-avatar.jpg';
 import mediumAvatar from './medium-avatar.jpg';
+import mrBeastAvatar from './mr-beast-avatar.png';
 import nadiaDorofeevaAvatar from './nadia-dorofeeva-avatar.jpg';
 import officePresidentUkraine from './office-president-ukraine.jpg';
 import oleksandrShevchenkoAvatar from './oleksandr-shevchenko-avatar.jpg';
@@ -66,6 +67,7 @@ export const avatarImage = {
   landoAvatar,
   maksymLevchenkoAvatar,
   mediumAvatar,
+  mrBeastAvatar,
   nadiaDorofeevaAvatar,
   officePresidentUkraine,
   oleksandrShevchenkoAvatar,

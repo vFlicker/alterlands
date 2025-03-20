@@ -10,3 +10,12 @@ export type VideoData = {
   messagesCount: string;
   reposts: string;
 };
+
+export type VideoPreviewData = {
+  id: number;
+  date: string;
+  fullName: string;
+  videoImageSrc: string;
+  title: string;
+  viewCount: string;
+};

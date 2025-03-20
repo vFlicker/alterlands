@@ -1,1 +1,2 @@
-export { VideosWidget } from './VideosWidget';
+export { VideosGridWidget } from './VideosGridWidget';
+export { VideosListWidget } from './VideosListWidget';
