@@ -225,6 +225,17 @@ const mrBeastPageData = {
         },
       ],
     },
+    products: {
+      widgetTitle: 'Products',
+      data: [
+        {
+          id: 1,
+          imageUrl: mrBeastImage.product.product1,
+          name: 'Feastables',
+          price: '102 грн',
+        },
+      ],
+    },
   },
 };
 

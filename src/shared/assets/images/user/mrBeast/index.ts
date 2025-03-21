@@ -3,6 +3,7 @@ import { backstagePhotoImage } from './backstagePhoto';
 import { postImage } from './posts';
 import { previewImage } from './previews';
 import { privateBackstagePhotoImage } from './privateBackstagePhoto';
+import { productImage } from './products';
 import streamyAwardsImage from './streamy-awards.png';
 import streamyAwardsBigImage from './streamy-awards-big.png';
 import { trophyImage } from './trophies';
@@ -16,4 +17,5 @@ export const mrBeastImage = {
   post: postImage,
   backstagePhoto: backstagePhotoImage,
   privateBackstagePhoto: privateBackstagePhotoImage,
+  product: productImage,
 };
