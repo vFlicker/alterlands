@@ -26,7 +26,7 @@ function VideosGridWidget({
     <StyledVideosGridWidgetWrapper className={className}>
       <WidgetHeader title={widgetTitle} />
       <StyledVideosWrapper>
-        <StyledMainVideo {...mainVideo} />
+        <StyledMainVideo height="196" {...mainVideo} />
         <StyledVideoPreviewList>
           {previewVideoImages.map((preview) => (
             <StyledVideoPreview key={preview.id} {...preview} />
@@ -49,18 +49,18 @@ const StyledVideosWrapper = styled.div`
   grid-template-columns: 536px 1fr;
 `;
 
-const StyledMainVideo = styled(Video)``;
+const StyledMainVideo = styled(Video)`
+  padding: 0;
+`;
 
 const StyledVideoPreviewList = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 `;
 
 const StyledVideoPreview = styled(VideoPreview)`
-  padding-bottom: 16px;
-
   &:not(:last-child) {
-    ${separatorLineCss(8)}
+    ${separatorLineCss(16)}
   }
 `;

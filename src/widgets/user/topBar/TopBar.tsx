@@ -94,7 +94,7 @@ export { TopBar };
 const StyledTopBarWrapper = styled.div`
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items: start;
   width: 100%;
   padding: 24px;
   border-radius: ${Radius.RADIUS_16};
@@ -144,7 +144,7 @@ const StyledDescription = withAttrs({ variant: 'body-3' }, Typography);
 const StyledSocialMediaList = styled.div`
   display: flex;
   gap: 12px;
-  margin-top: auto;
+  margin-top: 12px;
 `;
 
 const StyledLeftWrapper = styled.div`

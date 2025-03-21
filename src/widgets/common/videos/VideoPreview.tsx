@@ -45,7 +45,8 @@ export { VideoPreview };
 
 const StyledVideoPreviewWrapper = styled.div`
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
   width: 100%;
 `;
 

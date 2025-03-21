@@ -10,11 +10,13 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 import { VideoData } from './videosTypes';
 
 type VideoProps = VideoData & {
+  height?: string;
   className?: string;
 };
 
 function Video({
   className,
+  height,
   avatar,
   date,
   fullName,
@@ -34,7 +36,11 @@ function Video({
         viewCount={viewCount}
         orientation="horizontal"
       />
-      <StyedVideo width="100%" height="244" src={videoSrc}></StyedVideo>
+      <StyedVideo
+        width="100%"
+        height={height ?? '244'}
+        src={videoSrc}
+      ></StyedVideo>
       <StyledContentWrapper>
         <StyledText>{title}</StyledText>
         <Reactions

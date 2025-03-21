@@ -122,7 +122,7 @@ const StyledLeftWrapper = styled.div`
 const StyledShopButton = withAttrs(
   { color: 'accent', variant: 'outlined', size: 'medium' },
   styled(Button)`
-    padding: 8px 36px;
+    padding: 7px 36px;
   `,
 );
 

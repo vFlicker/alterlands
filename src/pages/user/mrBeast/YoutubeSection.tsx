@@ -23,10 +23,10 @@ function YoutubeSection(): JSX.Element {
           />
         </StyledCol>
         <StyledCol>
-          <FilesWidget />
           <ProductsWidget {...mrBeastPageData.youtubeSection.products} />
           <MemoryWidget />
           <PhotosWidget {...mrBeastPageData.youtubeSection.backstagePhoto} />
+          <FilesWidget />
         </StyledCol>
       </StyledColsWrapper>
     </StyledYoutubeSectionWrapper>

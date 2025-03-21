@@ -62,10 +62,10 @@ function FilesWidget({ className }: FilesWidgetProps): JSX.Element {
       />
 
       <div>
-        <div>
-          You see this content because MrBeast has added you to the
-          <span>YouTube Work</span> group
-        </div>
+        <StyledNotificationText>
+          You see this content because MrBeast has added you to the{' '}
+          <span>YouTube&nbsp;Work</span> group
+        </StyledNotificationText>
 
         <StyledList>
           {menuItems.map(({ date, image, title }) => (
@@ -96,10 +96,17 @@ const StyledIconButton = withAttrs(
   styled(IconButton)`
     svg {
       stroke: ${Color.WHITE_64};
+    }
+  `,
+);
 
-      &:hover {
-        stroke: ${Color.WHITE_98};
-      }
+const StyledNotificationText = withAttrs(
+  { variant: 'body-3', $color: Color.WHITE_64 },
+  styled(Typography)`
+    margin-bottom: 16px;
+
+    span {
+      color: ${Color.GREEN_2};
     }
   `,
 );
@@ -125,7 +132,7 @@ const StyledItem = styled.div`
 const StyledImage = styled.img`
   width: 24px;
   height: 24px;
-  margin-right: 8px;
+  margin-right: 12px;
 `;
 
 const StyledTitle = withAttrs({ variant: 'body-2' }, Typography);
@@ -134,5 +141,6 @@ const StyledDate = withAttrs(
   { variant: 'body-5', $color: Color.WHITE_70 },
   styled(Typography)`
     margin-left: auto;
+    padding-right: 4px;
   `,
 );
