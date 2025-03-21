@@ -1,0 +1,1 @@
+export { MemoryWidget } from './MemoryWidget';

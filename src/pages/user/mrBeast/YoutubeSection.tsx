@@ -5,6 +5,7 @@ import { PhotosWidget } from '~/widgets/common/photos/PhotosWidget';
 import { PrivatePhotosWidget } from '~/widgets/common/photos/PrivatePhotosWidget';
 import { PostsWidget } from '~/widgets/common/posts';
 import { VideosGridWidget } from '~/widgets/common/videos';
+import { MemoryWidget } from '~/widgets/user/Memory';
 import { ProductsWidget } from '~/widgets/user/products';
 
 import { mrBeastPageData } from './mrBeastPageData';
@@ -22,6 +23,7 @@ function YoutubeSection(): JSX.Element {
         </StyledCol>
         <StyledCol>
           <ProductsWidget {...mrBeastPageData.youtubeSection.products} />
+          <MemoryWidget />
           <PhotosWidget {...mrBeastPageData.youtubeSection.backstagePhoto} />
         </StyledCol>
       </StyledColsWrapper>
