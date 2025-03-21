@@ -1,5 +1,6 @@
 import avatarImage from './avatar.png';
 import { backstagePhotoImage } from './backstagePhoto';
+import { fileImage } from './files';
 import { memoryImage } from './memries';
 import { postImage } from './posts';
 import { previewImage } from './previews';
@@ -20,4 +21,5 @@ export const mrBeastImage = {
   privateBackstagePhoto: privateBackstagePhotoImage,
   product: productImage,
   memory: memoryImage,
+  file: fileImage,
 };

@@ -78,6 +78,5 @@ const StyledPhotoList = styled.div`
 `;
 
 const StyledPhoto = styled.img`
-  filter: blur(6px);
   border-radius: ${Radius.RADIUS_4};
 `;
