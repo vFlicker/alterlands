@@ -3,6 +3,7 @@ import { JSX, useState } from 'react';
 
 import { LabelButton } from '~/shared/ui/atoms/LabelButton';
 import { withAttrs } from '~/shared/ui/withAttrs';
+import { CardCommentWidget } from '~/widgets/user/cardComment/CardCommentWidget';
 import { Gallery } from '~/widgets/user/gallery';
 import { NewCollection } from '~/widgets/user/newCollection';
 
@@ -13,6 +14,22 @@ const menuButtons = [
   { label: 'Happy Clients', value: 'happyClients' },
   { label: 'Reviews', value: 'reviews' },
 ] as const;
+
+const initialData = [
+  {
+    id: 1,
+    date: '2023-10-01',
+    viewCount: '1000',
+    fullName: 'John Doe',
+    image: 'image1.jpg',
+    avatar: 'avatar1.jpg',
+    likesCount: '100',
+    messagesCount: '10',
+    reposts: '5',
+    comment: 'Great service!',
+  },
+  // Add more data as needed
+];
 
 function StoreSection(): JSX.Element {
   const [category, setCategory] = useState<MenuItem>('happyClients');
@@ -37,7 +54,12 @@ function StoreSection(): JSX.Element {
           <Gallery />
         </>
       )}
-      {category === 'happyClients' && <div>Happy Clients</div>}
+      {category === 'happyClients' && (
+        <CardCommentWidget
+          widgetTitle="Happy Clients"
+          data={[...initialData]}
+        />
+      )}
       {category === 'reviews' && <div>Reviews</div>}
     </StyledStoreSectionWrapper>
   );
