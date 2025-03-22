@@ -33,14 +33,13 @@ const StyledCardWrapper = styled.div`
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  max-width: 156px;
   padding: 8px 8px 12px 8px;
   border-radius: ${Radius.RADIUS_8};
   background-color: ${Color.WHITE_8};
 `;
 
 const StyledImage = styled.img`
-  width: 142px;
+  width: 100%;
   height: 150px;
   border-radius: ${Radius.RADIUS_4};
 `;
@@ -49,6 +48,7 @@ const StyledTitle = withAttrs({ variant: 'body-1', as: 'h2' }, Typography);
 const StyledPrice = withAttrs(
   { variant: 'heading-4', as: 'p' },
   styled(Typography)`
+    margin-top: auto;
     margin-bottom: 4px;
   `,
 );

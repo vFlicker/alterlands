@@ -11,6 +11,7 @@ import { TopBar } from '~/widgets/user/topBar';
 import { Trophy } from '~/widgets/user/Trophy';
 
 import { mrBeastPageData } from './mrBeastPageData';
+import { StoreSection } from './StoreSection';
 import { YoutubeSection } from './YoutubeSection';
 
 type MenuItem =
@@ -24,7 +25,7 @@ type MenuItem =
 
 function MrBeastPage(): JSX.Element {
   const [activeMenuItem, setActiveMenuItem] =
-    useState<MenuItem>('MrBeast YouTube');
+    useState<MenuItem>('MrBeast Store');
 
   return (
     <StyledUserPageContainer>
@@ -61,7 +62,7 @@ function MrBeastPage(): JSX.Element {
       )}
       {activeMenuItem === 'General' && <div>General</div>}
       {activeMenuItem === 'MrBeast Burger' && <div>MrBeast Burger</div>}
-      {activeMenuItem === 'MrBeast Store' && <div>MrBeast Store</div>}
+      {activeMenuItem === 'MrBeast Store' && <StoreSection />}
       {activeMenuItem === 'MrBeast YouTube' && <YoutubeSection />}
       {activeMenuItem === 'News' && <div>News</div>}
       {activeMenuItem === 'Hiring' && <div>Hiring</div>}

@@ -1,7 +1,9 @@
 import avatarImage from './avatar.png';
 import { backstagePhotoImage } from './backstagePhoto';
 import { fileImage } from './files';
+import { galleryImage } from './gallery';
 import { memoryImage } from './memries';
+import { newCollectionImage } from './newCollection';
 import { postImage } from './posts';
 import { previewImage } from './previews';
 import { privateBackstagePhotoImage } from './privateBackstagePhoto';
@@ -22,4 +24,6 @@ export const mrBeastImage = {
   product: productImage,
   memory: memoryImage,
   file: fileImage,
+  newCollection: newCollectionImage,
+  gallery: galleryImage,
 };
