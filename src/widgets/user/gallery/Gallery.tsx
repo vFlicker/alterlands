@@ -46,12 +46,12 @@ const StyledGalleryWrapper = styled.div`
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 `;
 
 const StyledRow = styled.div`
   display: grid;
-  gap: 8px;
+  gap: 16px;
 `;
 
 const StyledRow1 = styled(StyledRow)`
