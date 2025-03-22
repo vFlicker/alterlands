@@ -1,0 +1,1 @@
+export { trophyData } from './trophyData';

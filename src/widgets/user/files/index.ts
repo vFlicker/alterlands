@@ -1,0 +1,1 @@
+export { FilesWidget } from './FilesWidget';

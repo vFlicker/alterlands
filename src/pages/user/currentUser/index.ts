@@ -1,0 +1,1 @@
+export { CurrentUserPage } from './CurrentUserPage';

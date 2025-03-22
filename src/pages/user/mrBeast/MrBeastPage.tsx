@@ -1,71 +1,61 @@
 import styled from '@emotion/styled';
 import { JSX, useState } from 'react';
 
-import { Color } from '~/shared/theme/colors';
-import { Icon } from '~/shared/ui/atoms/Icon';
-import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Tab } from '~/shared/ui/atoms/Tab';
+import { TrophyButton } from '~/shared/ui/molecules/TrophyButton';
 import { withAttrs } from '~/shared/ui/withAttrs';
 import { PersonalFileWidget } from '~/widgets/user/personalFileWidget';
 import { TopBar } from '~/widgets/user/topBar';
-import { Trophy } from '~/widgets/user/Trophy';
+import { Trophy } from '~/widgets/user/trophy';
 
+import { MrBeastPageMenu, mrBeastPageMenu } from './mrBeastPageConfig';
 import { mrBeastPageData } from './mrBeastPageData';
-import { StoreSection } from './StoreSection';
-import { YoutubeSection } from './YoutubeSection';
+import { StoreSection } from './sections/store';
+import { trophyData } from './sections/trophy/trophyData';
+import { YoutubeSection } from './sections/youtube';
 
-type MenuItem =
-  | 'Trophies'
-  | 'General'
-  | 'MrBeast YouTube'
-  | 'MrBeast Store'
-  | 'MrBeast Burger'
-  | 'News'
-  | 'Hiring';
+const Section: Record<MrBeastPageMenu, JSX.Element> = {
+  trophies: <Trophy userRole="viewer" {...trophyData} />,
+  general: <div>General</div>,
+  youtube: <YoutubeSection />,
+  store: <StoreSection />,
+  burger: <div>MrBeast Burger</div>,
+  news: <div>News</div>,
+  hiring: <div>Hiring</div>,
+};
 
 function MrBeastPage(): JSX.Element {
-  const [activeMenuItem, setActiveMenuItem] =
-    useState<MenuItem>('MrBeast Store');
+  const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('trophies');
+
+  const tabs = mrBeastPageMenu.slice(1);
 
   return (
     <StyledUserPageContainer>
       <TopBar userRole="viewer" {...mrBeastPageData.header} />
-      <StyledTopWrapper>
-        <StyledFileWidgetWrapper>
-          <PersonalFileWidget files={mrBeastPageData.personalFiles} />
-          <StyledTrophyButton
-            active={activeMenuItem === 'Trophies'}
-            onClick={() => setActiveMenuItem('Trophies')}
-          >
-            <Icon name="icon-trophy" />
-          </StyledTrophyButton>
-        </StyledFileWidgetWrapper>
-        <StyledMenuWrapper>
-          <StyledTabsWrapper>
-            {mrBeastPageData.menu.first.map((text) => (
-              <Tab
-                key={text}
-                color="default"
-                variant="underline"
-                onClick={() => setActiveMenuItem(text as MenuItem)}
-                selected={activeMenuItem === text}
-              >
-                {text}
-              </Tab>
-            ))}
-          </StyledTabsWrapper>
-        </StyledMenuWrapper>
-      </StyledTopWrapper>
 
-      {activeMenuItem === 'Trophies' && (
-        <Trophy userRole="viewer" {...mrBeastPageData.trophy} />
-      )}
-      {activeMenuItem === 'General' && <div>General</div>}
-      {activeMenuItem === 'MrBeast Burger' && <div>MrBeast Burger</div>}
-      {activeMenuItem === 'MrBeast Store' && <StoreSection />}
-      {activeMenuItem === 'MrBeast YouTube' && <YoutubeSection />}
-      {activeMenuItem === 'News' && <div>News</div>}
-      {activeMenuItem === 'Hiring' && <div>Hiring</div>}
+      <StyledMenuWrapper>
+        <StyledPersonalFileWidgetWrapper>
+          <PersonalFileWidget files={mrBeastPageData.personalFiles} />
+          <TrophyButton
+            active={activeMenu === 'trophies'}
+            onClick={() => setActiveMenu('trophies')}
+          />
+        </StyledPersonalFileWidgetWrapper>
+
+        <StyledTabsWrapper>
+          {tabs.map(({ label, value }) => (
+            <StyledTab
+              key={value}
+              onClick={() => setActiveMenu(value)}
+              selected={activeMenu === value}
+            >
+              {label}
+            </StyledTab>
+          ))}
+        </StyledTabsWrapper>
+      </StyledMenuWrapper>
+
+      {Section[activeMenu]}
     </StyledUserPageContainer>
   );
 }
@@ -81,7 +71,7 @@ const StyledUserPageContainer = styled.div`
   margin: 0 auto;
 `;
 
-const StyledTopWrapper = styled.div`
+const StyledMenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -90,7 +80,7 @@ const StyledTopWrapper = styled.div`
   padding: 0 8px;
 `;
 
-const StyledFileWidgetWrapper = styled.div`
+const StyledPersonalFileWidgetWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -98,31 +88,7 @@ const StyledFileWidgetWrapper = styled.div`
 
 const StyledTabsWrapper = styled.div`
   display: flex;
-`;
-
-const StyledMenuWrapper = styled.div`
-  display: flex;
   width: 100%;
-  justify-content: space-between;
 `;
 
-const StyledTrophyButton = withAttrs(
-  { variant: 'filled', color: 'accent', size: 'medium' },
-  styled(IconButton)`
-    width: 38px;
-    height: 38px;
-    background-color: ${Color.WHITE_8};
-
-    &:hover {
-      background-color: ${Color.ACCENT_1};
-    }
-    ${({ active }) =>
-      active &&
-      `
-      background-color: ${Color.ACCENT};
-      &:hover {
-        background-color: ${Color.ACCENT_1};
-      }
-    `}
-  `,
-);
+const StyledTab = withAttrs({ color: 'default', variant: 'underline' }, Tab);

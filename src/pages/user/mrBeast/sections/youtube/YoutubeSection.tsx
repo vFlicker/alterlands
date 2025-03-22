@@ -1,31 +1,28 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { PhotosWidget } from '~/widgets/common/photos/PhotosWidget';
-import { PrivatePhotosWidget } from '~/widgets/common/photos/PrivatePhotosWidget';
+import { PhotosWidget, PrivatePhotosWidget } from '~/widgets/common/photos';
 import { PostsWidget } from '~/widgets/common/posts';
 import { VideosGridWidget } from '~/widgets/common/videos';
-import { FilesWidget } from '~/widgets/user/files/FilesWidget';
+import { FilesWidget } from '~/widgets/user/files';
 import { MemoryWidget } from '~/widgets/user/memory';
 import { ProductsWidget } from '~/widgets/user/products';
 
-import { mrBeastPageData } from './mrBeastPageData';
+import { youtubeSectionData } from './youtubeSectionData';
 
 function YoutubeSection(): JSX.Element {
   return (
     <StyledYoutubeSectionWrapper>
-      <VideosGridWidget {...mrBeastPageData.youtubeSection.videos} />
+      <VideosGridWidget {...youtubeSectionData.videos} />
       <StyledColsWrapper>
         <StyledCol>
-          <PostsWidget {...mrBeastPageData.youtubeSection.posts} />
-          <PrivatePhotosWidget
-            {...mrBeastPageData.youtubeSection.privateBackstagePhoto}
-          />
+          <PostsWidget {...youtubeSectionData.posts} />
+          <PrivatePhotosWidget {...youtubeSectionData.privateBackstagePhoto} />
         </StyledCol>
         <StyledCol>
-          <ProductsWidget {...mrBeastPageData.youtubeSection.products} />
+          <ProductsWidget {...youtubeSectionData.products} />
           <MemoryWidget />
-          <PhotosWidget {...mrBeastPageData.youtubeSection.backstagePhoto} />
+          <PhotosWidget {...youtubeSectionData.backstagePhoto} />
           <FilesWidget />
         </StyledCol>
       </StyledColsWrapper>

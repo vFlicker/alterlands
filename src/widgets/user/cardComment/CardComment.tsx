@@ -33,6 +33,7 @@ function CardComment({
         orientation="vertical"
       />
       <StyledImage src={image} alt="Image description" />
+      <p>{comment}</p>
       <Reactions
         likesCount={likesCount}
         commentCount={messagesCount}

@@ -10,7 +10,7 @@ import {
 import { SliderButtons } from '~/shared/ui/molecules/SliderButtons';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-interface TrophyProps {
+type TrophyWidgetProps = {
   title: string;
   description: string;
   achievementTitle: string;
@@ -23,9 +23,9 @@ interface TrophyProps {
   }[];
   userRole: 'owner' | 'viewer';
   className?: string;
-}
+};
 
-function Trophy({
+function TrophyWidget({
   className,
   userRole,
   achievementTitle,
@@ -35,7 +35,7 @@ function Trophy({
   smallImage,
   title,
   trophies,
-}: TrophyProps): JSX.Element {
+}: TrophyWidgetProps): JSX.Element {
   const isOwner = userRole === 'owner';
   const emptySlots = 25 - trophies.length;
   const emptySpaces = isOwner ? Array(emptySlots).fill(null) : [];
@@ -44,7 +44,7 @@ function Trophy({
   const gridItems = [...trophies, ...emptySpaces];
 
   return (
-    <StyledTrophyWrapper className={className}>
+    <StyledTrophyWidgetWrapper className={className}>
       <StyledGridSection>
         {!isOwner && <StyledGridTitle>Trophy</StyledGridTitle>}
 
@@ -82,13 +82,13 @@ function Trophy({
           <StyledDescription>{description}</StyledDescription>
         </StyledContent>
       </StyledAboutTrophyWrapper>
-    </StyledTrophyWrapper>
+    </StyledTrophyWidgetWrapper>
   );
 }
 
-export { Trophy };
+export { TrophyWidget as Trophy };
 
-const StyledTrophyWrapper = styled.div`
+const StyledTrophyWidgetWrapper = styled.div`
   display: flex;
   width: 100%;
   gap: 8px;

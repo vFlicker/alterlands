@@ -7,37 +7,32 @@ import { CardCommentWidget } from '~/widgets/user/cardComment/CardCommentWidget'
 import { Gallery } from '~/widgets/user/gallery';
 import { NewCollection } from '~/widgets/user/newCollection';
 
-type MenuItem = 'posts' | 'happyClients' | 'reviews';
+import { StoreSectionMenu, storeSectionMenu } from './storeSectionConfig';
+import { storeSectionData } from './storeSectionData';
 
-const menuButtons = [
-  { label: 'Posts', value: 'posts' },
-  { label: 'Happy Clients', value: 'happyClients' },
-  { label: 'Reviews', value: 'reviews' },
-] as const;
-
-const initialData = [
-  {
-    id: 1,
-    date: '2023-10-01',
-    viewCount: '1000',
-    fullName: 'John Doe',
-    image: 'image1.jpg',
-    avatar: 'avatar1.jpg',
-    likesCount: '100',
-    messagesCount: '10',
-    reposts: '5',
-    comment: 'Great service!',
-  },
-  // Add more data as needed
-];
+const Section: Record<StoreSectionMenu, JSX.Element> = {
+  happyClients: (
+    <CardCommentWidget
+      widgetTitle="Happy Clients"
+      data={[...storeSectionData]}
+    />
+  ),
+  posts: (
+    <>
+      <NewCollection />
+      <Gallery />
+    </>
+  ),
+  reviews: <div>Reviews</div>,
+};
 
 function StoreSection(): JSX.Element {
-  const [category, setCategory] = useState<MenuItem>('happyClients');
+  const [category, setCategory] = useState<StoreSectionMenu>('happyClients');
 
   return (
     <StyledStoreSectionWrapper>
       <StyledMenuList>
-        {menuButtons.map(({ label, value }) => (
+        {storeSectionMenu.map(({ label, value }) => (
           <StyledLabelButton
             key={value}
             active={category === value}
@@ -48,19 +43,7 @@ function StoreSection(): JSX.Element {
         ))}
       </StyledMenuList>
 
-      {category === 'posts' && (
-        <>
-          <NewCollection />
-          <Gallery />
-        </>
-      )}
-      {category === 'happyClients' && (
-        <CardCommentWidget
-          widgetTitle="Happy Clients"
-          data={[...initialData]}
-        />
-      )}
-      {category === 'reviews' && <div>Reviews</div>}
+      {Section[category]}
     </StyledStoreSectionWrapper>
   );
 }

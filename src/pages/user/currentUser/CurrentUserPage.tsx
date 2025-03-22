@@ -6,7 +6,7 @@ import { Icon } from '~/shared/ui/atoms/Icon';
 import { Tab } from '~/shared/ui/atoms/Tab';
 import { PersonalFileWidget } from '~/widgets/user/personalFileWidget';
 import { TopBar } from '~/widgets/user/topBar';
-import { Trophy } from '~/widgets/user/Trophy';
+import { Trophy } from '~/widgets/user/trophy/TrophyWidget';
 
 import { currentUserPageData } from './currentUserPageData';
 
