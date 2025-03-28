@@ -6,28 +6,28 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 import { CardCommentWidget } from '~/widgets/user/cardComment/CardCommentWidget';
 import { Gallery } from '~/widgets/user/gallery';
 import { NewCollection } from '~/widgets/user/newCollection';
+import { ReviewsWidget } from '~/widgets/user/reviews';
 
 import { StoreSectionMenu, storeSectionMenu } from './storeSectionConfig';
 import { storeSectionData } from './storeSectionData';
 
 const Section: Record<StoreSectionMenu, JSX.Element> = {
-  happyClients: (
-    <CardCommentWidget
-      widgetTitle="Happy Clients"
-      data={[...storeSectionData]}
-    />
-  ),
+  happyClients: <CardCommentWidget {...storeSectionData.happyClients} />,
   posts: (
     <>
       <NewCollection />
       <Gallery />
     </>
   ),
-  reviews: <div>Reviews</div>,
+  reviews: (
+    <div>
+      <ReviewsWidget {...storeSectionData.reviews} />
+    </div>
+  ),
 };
 
 function StoreSection(): JSX.Element {
-  const [category, setCategory] = useState<StoreSectionMenu>('happyClients');
+  const [category, setCategory] = useState<StoreSectionMenu>('reviews');
 
   return (
     <StyledStoreSectionWrapper>
