@@ -38,7 +38,7 @@ const StyledCardCommentWidgetWrapper = styled.div`
 `;
 
 const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 8px;
 `;

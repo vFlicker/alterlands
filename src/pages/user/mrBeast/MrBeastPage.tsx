@@ -25,7 +25,7 @@ const Section: Record<MrBeastPageMenu, JSX.Element> = {
 };
 
 function MrBeastPage(): JSX.Element {
-  const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('trophies');
+  const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('store');
 
   const tabs = mrBeastPageMenu.slice(1);
 

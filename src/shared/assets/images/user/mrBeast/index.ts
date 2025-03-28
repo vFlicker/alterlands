@@ -2,6 +2,7 @@ import avatarImage from './avatar.png';
 import { backstagePhotoImage } from './backstagePhoto';
 import { fileImage } from './files';
 import { galleryImage } from './gallery';
+import { happyClientImage } from './happyClients';
 import { memoryImage } from './memries';
 import { newCollectionImage } from './newCollection';
 import { postImage } from './posts';
@@ -26,4 +27,5 @@ export const mrBeastImage = {
   file: fileImage,
   newCollection: newCollectionImage,
   gallery: galleryImage,
+  happyClient: happyClientImage,
 };
