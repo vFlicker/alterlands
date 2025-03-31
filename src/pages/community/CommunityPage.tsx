@@ -40,9 +40,12 @@ function CommunityPage(): JSX.Element {
 
         <Masonic.Item>
           <ForumWidget {...communityPageData.forum} />
-          <SalaryBenchmarkWidget {...communityPageData.salaryBenchmark} />
-          <RequestWidget />
-          <VacancyWidget {...communityPageData.vacancies} />
+          <SalaryBenchmarkWidget
+            theme="light"
+            {...communityPageData.salaryBenchmark}
+          />
+          <RequestWidget {...communityPageData.request} />
+          <VacancyWidget theme="light" {...communityPageData.vacancies} />
         </Masonic.Item>
       </Masonic.List>
     </StyledWrapper>

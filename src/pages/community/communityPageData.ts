@@ -27,30 +27,35 @@ const communityPageData = {
   },
   salaryBenchmark: {
     widgetTitle: 'Salary benchmark',
-    data: [
-      {
-        id: 1,
-        title: 'Average salary worldwide',
-        rate: {
-          direction: 'increase' as const,
-          value: '12.85%',
-          postfix: 'past year',
+    data: {
+      hasOptions: true,
+      hasActions: true,
+      description: 'This job is ranked 15th in terms of income in Ukraine',
+      items: [
+        {
+          id: 1,
+          title: 'Average salary worldwide',
+          rate: {
+            direction: 'increase' as const,
+            value: '12.85%',
+            postfix: 'past year',
+          },
+          amount: '73,509',
+          imageUrl: communityImage.salaryBenchmark.graph1,
         },
-        amount: '73,509',
-        imageUrl: communityImage.salaryBenchmark.graph1,
-      },
-      {
-        id: 2,
-        title: 'Average salary in your country',
-        rate: {
-          direction: 'increase' as const,
-          value: '6.12%',
-          postfix: 'last month',
+        {
+          id: 2,
+          title: 'Average salary in your country',
+          rate: {
+            direction: 'increase' as const,
+            value: '6.12%',
+            postfix: 'last month',
+          },
+          amount: '500',
+          imageUrl: communityImage.salaryBenchmark.graph2,
         },
-        amount: '500',
-        imageUrl: communityImage.salaryBenchmark.graph2,
-      },
-    ],
+      ],
+    },
   },
   news: [
     {
@@ -425,6 +430,13 @@ const communityPageData = {
         ],
       },
     ],
+  },
+  request: {
+    widgetTitle: 'Alterlands Ukraine Request',
+    data: {
+      title: 'UI/UX design assessment',
+      description: 'PROs and Experts only',
+    },
   },
 };
 

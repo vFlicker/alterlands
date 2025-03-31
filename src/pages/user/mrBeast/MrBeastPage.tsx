@@ -11,6 +11,7 @@ import { Trophy } from '~/widgets/user/trophy';
 import { MrBeastPageMenu, mrBeastPageMenu } from './mrBeastPageConfig';
 import { mrBeastPageData } from './mrBeastPageData';
 import { BurgerSection } from './sections/burger';
+import { HiringSection } from './sections/hiring';
 import { StoreSection } from './sections/store';
 import { trophyData } from './sections/trophy/trophyData';
 import { YoutubeSection } from './sections/youtube';
@@ -22,11 +23,11 @@ const Section: Record<MrBeastPageMenu, JSX.Element> = {
   store: <StoreSection />,
   burger: <BurgerSection />,
   news: <div>News</div>,
-  hiring: <div>Hiring</div>,
+  hiring: <HiringSection />,
 };
 
 function MrBeastPage(): JSX.Element {
-  const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('store');
+  const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('hiring');
 
   const tabs = mrBeastPageMenu.slice(1);
 

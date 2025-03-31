@@ -8,15 +8,30 @@ import { Typography } from '~/shared/ui/atoms/Typography';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-function RequestWidget(): JSX.Element {
+type RequestWidgetProps = {
+  widgetTitle: string;
+  data: {
+    title: string;
+    description: string;
+  };
+  className?: string;
+};
+
+function RequestWidget({
+  className,
+  data,
+  widgetTitle,
+}: RequestWidgetProps): JSX.Element {
+  const { title, description } = data;
+
   return (
-    <RequestWidgetWrapper>
-      <StyledWidgetHeader title="Alterlands Ukraine Request" />
+    <RequestWidgetWrapper className={className}>
+      <StyledWidgetHeader title={widgetTitle} />
 
       <StyledContent>
         <StyledTextWrapper>
-          <StyledTitle>UI/UX design assessment</StyledTitle>
-          <StyledSubtitle>PROs and Experts only</StyledSubtitle>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledSubtitle>{description}</StyledSubtitle>
         </StyledTextWrapper>
 
         <StyledContributeButton>Contribute</StyledContributeButton>

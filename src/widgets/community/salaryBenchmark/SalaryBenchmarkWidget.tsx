@@ -12,7 +12,13 @@ import { SalaryBenchmarkData } from './salaryBenchmarkTypes';
 
 type SalaryBenchmarkWidgetProps = {
   widgetTitle: string;
-  data: SalaryBenchmarkData[];
+  data: {
+    hasActions: boolean;
+    hasOptions: boolean;
+    description: string;
+    items: SalaryBenchmarkData[];
+  };
+  theme: 'light' | 'dark';
   className?: string;
 };
 
@@ -26,39 +32,54 @@ const actionButtonsNames = [
 function SalaryBenchmarkWidget({
   className,
   data,
+  theme,
   widgetTitle,
 }: SalaryBenchmarkWidgetProps): JSX.Element {
+  const { hasActions, description, items, hasOptions } = data;
+
   return (
-    <StyledSalaryBenchmarkWidgetWrapper className={className}>
+    <StyledSalaryBenchmarkWidgetWrapper theme={theme} className={className}>
       <WidgetHeader
         title={widgetTitle}
         actions={
-          <StyledActionsWrapper>
-            {actionButtonsNames.map((name) => (
-              <StyledActionButton
-                size="medium"
-                color="neutral"
-                variant="filled"
-              >
-                <Icon name={`icon-${name}`} />
-              </StyledActionButton>
-            ))}
-          </StyledActionsWrapper>
+          hasActions ? (
+            <StyledActionsWrapper>
+              {actionButtonsNames.map((name) => (
+                <StyledActionButton
+                  size="medium"
+                  color="neutral"
+                  variant="filled"
+                >
+                  <Icon name={`icon-${name}`} />
+                </StyledActionButton>
+              ))}
+            </StyledActionsWrapper>
+          ) : undefined
         }
       />
 
-      <SalaryBenchmark data={data} />
+      <SalaryBenchmark
+        hasOptions={hasOptions}
+        description={description}
+        data={items}
+      />
     </StyledSalaryBenchmarkWidgetWrapper>
   );
 }
 
 export { SalaryBenchmarkWidget };
 
-const StyledSalaryBenchmarkWidgetWrapper = styled.div`
+const StyledSalaryBenchmarkWidgetWrapper = styled.div<{
+  theme: 'light' | 'dark';
+}>`
   padding: 20px 16px;
-  border: 1px solid ${Color.WHITE_16};
   border-radius: ${Radius.RADIUS_16};
-  background-color: transparent;
+
+  border: 1px solid
+    ${({ theme }) => (theme === 'dark' ? 'transparent' : Color.WHITE_16)};
+
+  background-color: ${({ theme }) =>
+    theme === 'dark' ? Color.DARK : 'transparent'};
 `;
 
 const StyledActionsWrapper = styled.div`

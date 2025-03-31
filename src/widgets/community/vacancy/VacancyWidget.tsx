@@ -12,21 +12,23 @@ import { VacancyData } from './vacancyTypes';
 type VacancyWidgetProps = {
   widgetTitle: string;
   data: VacancyData[];
+  theme: 'light' | 'dark';
   className?: string;
 };
 
 function VacancyWidget({
   className,
   widgetTitle,
+  theme,
   data,
 }: VacancyWidgetProps): JSX.Element {
   return (
-    <StyledVacancyWidgetWrapper className={className}>
+    <StyledVacancyWidgetWrapper className={className} theme={theme}>
       <WidgetHeader title={widgetTitle} />
 
       <StyledVacancyList>
         {data.map((vacancy) => (
-          <StyledVacancy key={vacancy.id} {...vacancy} />
+          <StyledVacancy theme={theme} key={vacancy.id} {...vacancy} />
         ))}
       </StyledVacancyList>
     </StyledVacancyWidgetWrapper>
@@ -35,11 +37,15 @@ function VacancyWidget({
 
 export { VacancyWidget };
 
-const StyledVacancyWidgetWrapper = styled.div`
+const StyledVacancyWidgetWrapper = styled.div<{ theme: 'light' | 'dark' }>`
   padding: 20px 16px;
-  border: 1px solid ${Color.WHITE_16};
   border-radius: ${Radius.RADIUS_16};
-  background-color: transparent;
+
+  border: 1px solid
+    ${({ theme }) => (theme === 'dark' ? 'transparent' : Color.WHITE_16)};
+
+  background-color: ${({ theme }) =>
+    theme === 'dark' ? Color.DARK : 'transparent'};
 `;
 
 const StyledVacancyList = styled.div`
@@ -50,6 +56,9 @@ const StyledVacancyList = styled.div`
 
 const StyledVacancy = styled(Vacancy)`
   &:not(:last-child) {
-    ${separatorLineCss(16, Color.WHITE_16)}
+    ${({ theme }) =>
+      theme === 'dark'
+        ? separatorLineCss(16, Color.WHITE_8)
+        : separatorLineCss(16, Color.WHITE_16)}
   }
 `;

@@ -10,6 +10,8 @@ import { SalaryBenchmarkCard } from './SalaryBenchmarkCard';
 import { SalaryBenchmarkData } from './salaryBenchmarkTypes';
 
 type SalaryBenchmarkProps = {
+  description: string;
+  hasOptions: boolean;
   data: SalaryBenchmarkData[];
   className?: string;
 };
@@ -22,16 +24,18 @@ const salaryLevels = [
 
 function SalaryBenchmark({
   className,
+  hasOptions,
+  description,
   data,
 }: SalaryBenchmarkProps): JSX.Element {
   return (
     <StyledSalaryBenchmarkWrapper className={className}>
-      <StyledTitle>
-        This job is ranked 15th in terms of income in Ukraine
-      </StyledTitle>
+      <StyledTitle>{description}</StyledTitle>
       <StyledHeaderWrapper>
         <StyledSubtitle>Salary rate</StyledSubtitle>
-        <StyledSelect options={salaryLevels} value={salaryLevels[0].value} />
+        {hasOptions && (
+          <StyledSelect options={salaryLevels} value={salaryLevels[0].value} />
+        )}
       </StyledHeaderWrapper>
 
       <StyledCardsWrapper>
