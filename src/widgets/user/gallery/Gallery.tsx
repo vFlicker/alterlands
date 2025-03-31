@@ -16,21 +16,21 @@ function Gallery({ className }: GalleryProps): JSX.Element {
 
       <StyledWrapper>
         <StyledRow3>
-          <StyledImage src={mrBeastImage.gallery.item1} />
-          <StyledImage src={mrBeastImage.gallery.item2} />
-          <StyledImage src={mrBeastImage.gallery.item3} />
+          <StyledImage src={mrBeastImage.store.gallery.item1} />
+          <StyledImage src={mrBeastImage.store.gallery.item2} />
+          <StyledImage src={mrBeastImage.store.gallery.item3} />
         </StyledRow3>
         <StyledRow1>
-          <StyledImage src={mrBeastImage.gallery.item4} />
+          <StyledImage src={mrBeastImage.store.gallery.item4} />
         </StyledRow1>
         <StyledRow3>
-          <StyledImage src={mrBeastImage.gallery.item5} />
-          <StyledImage src={mrBeastImage.gallery.item6} />
-          <StyledImage src={mrBeastImage.gallery.item7} />
+          <StyledImage src={mrBeastImage.store.gallery.item5} />
+          <StyledImage src={mrBeastImage.store.gallery.item6} />
+          <StyledImage src={mrBeastImage.store.gallery.item7} />
         </StyledRow3>
         <StyledRow2>
-          <StyledImage src={mrBeastImage.gallery.item8} />
-          <StyledImage src={mrBeastImage.gallery.item9} />
+          <StyledImage src={mrBeastImage.store.gallery.item8} />
+          <StyledImage src={mrBeastImage.store.gallery.item9} />
         </StyledRow2>
       </StyledWrapper>
     </StyledGalleryWrapper>

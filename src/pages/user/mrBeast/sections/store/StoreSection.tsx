@@ -13,7 +13,7 @@ import { StoreSectionMenu, storeSectionMenu } from './storeSectionConfig';
 import { storeSectionData } from './storeSectionData';
 
 function StoreSection(): JSX.Element {
-  const [category, setCategory] = useState<StoreSectionMenu>('reviews');
+  const [category, setCategory] = useState<StoreSectionMenu>('posts');
 
   return (
     <StyledStoreSectionWrapper>

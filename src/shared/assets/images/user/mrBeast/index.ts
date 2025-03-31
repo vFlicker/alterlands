@@ -1,14 +1,12 @@
 import avatarImage from './avatar.png';
 import { backstagePhotoImage } from './backstagePhoto';
 import { fileImage } from './files';
-import { galleryImage } from './gallery';
-import { happyClientImage } from './happyClients';
 import { memoryImage } from './memries';
-import { newCollectionImage } from './newCollection';
 import { postImage } from './posts';
 import { previewImage } from './previews';
 import { privateBackstagePhotoImage } from './privateBackstagePhoto';
 import { productImage } from './products';
+import { storeImage } from './store';
 import streamyAwardsImage from './streamy-awards.png';
 import streamyAwardsBigImage from './streamy-awards-big.png';
 import { trophyImage } from './trophies';
@@ -25,7 +23,5 @@ export const mrBeastImage = {
   product: productImage,
   memory: memoryImage,
   file: fileImage,
-  newCollection: newCollectionImage,
-  gallery: galleryImage,
-  happyClient: happyClientImage,
+  store: storeImage,
 };

@@ -13,31 +13,31 @@ type NewCollectionProps = {
 const cards = [
   {
     id: 1,
-    imageUrl: mrBeastImage.newCollection.item1,
+    imageUrl: mrBeastImage.store.newCollection.item1,
     title: 'KIDS BASICS - PANTHER TEE - BLUE',
     price: '45.00$',
   },
   {
     id: 2,
-    imageUrl: mrBeastImage.newCollection.item2,
+    imageUrl: mrBeastImage.store.newCollection.item2,
     title: 'KIDS GLOW IN THE DARK PANTHER HOODIE - BLACK',
     price: '55.00$',
   },
   {
     id: 3,
-    imageUrl: mrBeastImage.newCollection.item3,
+    imageUrl: mrBeastImage.store.newCollection.item3,
     title: 'KIDS BEAST GAMES HOODIE - BLACK',
     price: '55.00$',
   },
   {
     id: 4,
-    imageUrl: mrBeastImage.newCollection.item4,
+    imageUrl: mrBeastImage.store.newCollection.item4,
     title: 'BEAST ORIGINAL',
     price: '55.00$',
   },
   {
     id: 5,
-    imageUrl: mrBeastImage.newCollection.item5,
+    imageUrl: mrBeastImage.store.newCollection.item5,
     title: 'BEAST ACTIVE',
     price: '55.00$',
   },
