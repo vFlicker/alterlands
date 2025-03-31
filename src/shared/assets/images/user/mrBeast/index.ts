@@ -1,5 +1,6 @@
 import avatarImage from './avatar.png';
 import { backstagePhotoImage } from './backstagePhoto';
+import { burgerImage } from './burger';
 import { fileImage } from './files';
 import { memoryImage } from './memries';
 import { postImage } from './posts';
@@ -24,4 +25,5 @@ export const mrBeastImage = {
   memory: memoryImage,
   file: fileImage,
   store: storeImage,
+  burger: burgerImage,
 };
