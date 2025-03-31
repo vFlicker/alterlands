@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { mrBeastImage } from '~/shared/assets/images/user/mrBeast';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { Icon } from '~/shared/ui/atoms/Icon';
-import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { Typography } from '~/shared/ui/atoms/Typography';
 import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
 import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';

@@ -12,6 +12,7 @@ import { MrBeastPageMenu, mrBeastPageMenu } from './mrBeastPageConfig';
 import { mrBeastPageData } from './mrBeastPageData';
 import { BurgerSection } from './sections/burger';
 import { HiringSection } from './sections/hiring';
+import { NewsSection } from './sections/news';
 import { StoreSection } from './sections/store';
 import { trophyData } from './sections/trophy/trophyData';
 import { YoutubeSection } from './sections/youtube';
@@ -22,7 +23,7 @@ const Section: Record<MrBeastPageMenu, JSX.Element> = {
   youtube: <YoutubeSection />,
   store: <StoreSection />,
   burger: <BurgerSection />,
-  news: <div>News</div>,
+  news: <NewsSection />,
   hiring: <HiringSection />,
 };
 
