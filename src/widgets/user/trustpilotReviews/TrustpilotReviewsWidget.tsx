@@ -16,6 +16,14 @@ type TrustpilotReviewsWidgetProps = {
   className?: string;
 };
 
+const ratingText = {
+  1: 'Very Bad',
+  2: 'Bad',
+  3: 'Average',
+  4: 'Good',
+  5: 'Excellent',
+};
+
 function TrustpilotReviewsWidget({
   className,
   rating,
@@ -35,7 +43,11 @@ function TrustpilotReviewsWidget({
       <StyledTrustpilotReviewsWrapper>
         <ColorfulRating value={rating} />
         <StyledText>
-          Trustpilot: <span>Average | {rating}</span> reviews
+          Trustpilot:{' '}
+          <span>
+            {ratingText[rating]} | {rating}
+          </span>{' '}
+          reviews
         </StyledText>
       </StyledTrustpilotReviewsWrapper>
     </StyledTrustpilotReviewsWidgetWrapper>

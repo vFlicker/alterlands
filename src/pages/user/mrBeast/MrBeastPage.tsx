@@ -10,6 +10,7 @@ import { Trophy } from '~/widgets/user/trophy';
 
 import { MrBeastPageMenu, mrBeastPageMenu } from './mrBeastPageConfig';
 import { mrBeastPageData } from './mrBeastPageData';
+import { BurgerSection } from './sections/burger';
 import { StoreSection } from './sections/store';
 import { trophyData } from './sections/trophy/trophyData';
 import { YoutubeSection } from './sections/youtube';
@@ -19,7 +20,7 @@ const Section: Record<MrBeastPageMenu, JSX.Element> = {
   general: <div>General</div>,
   youtube: <YoutubeSection />,
   store: <StoreSection />,
-  burger: <div>MrBeast Burger</div>,
+  burger: <BurgerSection />,
   news: <div>News</div>,
   hiring: <div>Hiring</div>,
 };
