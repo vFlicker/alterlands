@@ -1,4 +1,5 @@
 import activeStars from './active-stars.svg';
+import { colorfulStarImage } from './colorfulStar';
 import facebook from './facebook.png';
 import iconUkraine from './icon-ukraine.png';
 import inactiveStars from './inactive-stars.svg';
@@ -16,4 +17,5 @@ export const commonImage = {
   inactiveStars,
   x,
   youtube,
+  colorfulStar: colorfulStarImage,
 };

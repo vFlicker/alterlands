@@ -7,24 +7,10 @@ import { CardCommentWidget } from '~/widgets/user/cardComment/CardCommentWidget'
 import { Gallery } from '~/widgets/user/gallery';
 import { NewCollection } from '~/widgets/user/newCollection';
 import { ReviewsWidget } from '~/widgets/user/reviews';
+import { TrustpilotReviewsWidget } from '~/widgets/user/trustpilotReviews';
 
 import { StoreSectionMenu, storeSectionMenu } from './storeSectionConfig';
 import { storeSectionData } from './storeSectionData';
-
-const Section: Record<StoreSectionMenu, JSX.Element> = {
-  happyClients: <CardCommentWidget {...storeSectionData.happyClients} />,
-  posts: (
-    <>
-      <NewCollection />
-      <Gallery />
-    </>
-  ),
-  reviews: (
-    <div>
-      <ReviewsWidget {...storeSectionData.reviews} />
-    </div>
-  ),
-};
 
 function StoreSection(): JSX.Element {
   const [category, setCategory] = useState<StoreSectionMenu>('reviews');
@@ -63,3 +49,26 @@ const StyledMenuList = styled.div`
 `;
 
 const StyledLabelButton = withAttrs({ color: 'white' }, LabelButton);
+
+const StyledReviewSection = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  align-items: start;
+`;
+
+const Section: Record<StoreSectionMenu, JSX.Element> = {
+  happyClients: <CardCommentWidget {...storeSectionData.happyClients} />,
+  posts: (
+    <>
+      <NewCollection />
+      <Gallery />
+    </>
+  ),
+  reviews: (
+    <StyledReviewSection>
+      <ReviewsWidget {...storeSectionData.reviews} />
+      <TrustpilotReviewsWidget widgetTitle="Trustpilot reviews" rating={3} />
+    </StyledReviewSection>
+  ),
+};
