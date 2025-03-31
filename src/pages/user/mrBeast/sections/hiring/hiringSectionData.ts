@@ -79,7 +79,6 @@ const hiringSectionData = {
           'Photo & Video Editing Tools',
           'Creativity',
           'Design Tools',
-          'Composition',
         ],
         jobAttributes: [
           'Full time',
@@ -104,7 +103,6 @@ const hiringSectionData = {
           'Social Media Strategy Development',
           'Problem-Solving',
           'Copywriting',
-          'Adaptability',
         ],
         jobAttributes: [
           'Part time',

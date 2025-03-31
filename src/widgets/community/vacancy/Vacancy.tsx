@@ -66,7 +66,7 @@ const StyledUserMeta = styled(UserMeta)`
 const StyledTitle = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   `,
 );
 
@@ -79,7 +79,7 @@ const StyledDescription = withAttrs(
     overflow: hidden;
     text-overflow: ellipsis;
 
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   `,
 );
 
@@ -88,7 +88,7 @@ const StyledSkillList = styled.div`
   flex-wrap: wrap;
   gap: 4px;
 
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 `;
 
 const StyledJubAttributeList = styled.div`
