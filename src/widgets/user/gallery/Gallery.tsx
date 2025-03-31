@@ -21,21 +21,21 @@ function Gallery({
 
       <StyledWrapper>
         <StyledRow3>
+          <StyledImage src={imageUrls[0]} />
           <StyledImage src={imageUrls[1]} />
           <StyledImage src={imageUrls[2]} />
-          <StyledImage src={imageUrls[3]} />
         </StyledRow3>
         <StyledRow1>
-          <StyledImage src={imageUrls[4]} />
+          <StyledImage src={imageUrls[3]} />
         </StyledRow1>
         <StyledRow3>
+          <StyledImage src={imageUrls[4]} />
           <StyledImage src={imageUrls[5]} />
           <StyledImage src={imageUrls[6]} />
-          <StyledImage src={imageUrls[7]} />
         </StyledRow3>
         <StyledRow2>
+          <StyledImage src={imageUrls[7]} />
           <StyledImage src={imageUrls[8]} />
-          <StyledImage src={imageUrls[9]} />
         </StyledRow2>
       </StyledWrapper>
     </StyledGalleryWrapper>
