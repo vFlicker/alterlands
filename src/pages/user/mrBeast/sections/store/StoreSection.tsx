@@ -61,8 +61,8 @@ const Section: Record<StoreSectionMenu, JSX.Element> = {
   happyClients: <CardCommentWidget {...storeSectionData.happyClients} />,
   posts: (
     <>
-      <NewCollection />
-      <Gallery />
+      <NewCollection {...storeSectionData.newCollection} />
+      <Gallery {...storeSectionData.gallery} />
     </>
   ),
   reviews: (

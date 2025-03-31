@@ -2,6 +2,55 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { mrBeastImage } from '~/shared/assets/images/user/mrBeast';
 
 export const storeSectionData = {
+  newCollection: {
+    widgetTitle: 'New collection',
+    data: [
+      {
+        id: 1,
+        imageUrl: mrBeastImage.store.newCollection.item1,
+        title: 'KIDS BASICS - PANTHER TEE - BLUE',
+        price: '45.00$',
+      },
+      {
+        id: 2,
+        imageUrl: mrBeastImage.store.newCollection.item2,
+        title: 'KIDS GLOW IN THE DARK PANTHER HOODIE - BLACK',
+        price: '55.00$',
+      },
+      {
+        id: 3,
+        imageUrl: mrBeastImage.store.newCollection.item3,
+        title: 'KIDS BEAST GAMES HOODIE - BLACK',
+        price: '55.00$',
+      },
+      {
+        id: 4,
+        imageUrl: mrBeastImage.store.newCollection.item4,
+        title: 'BEAST ORIGINAL',
+        price: '55.00$',
+      },
+      {
+        id: 5,
+        imageUrl: mrBeastImage.store.newCollection.item5,
+        title: 'BEAST ACTIVE',
+        price: '55.00$',
+      },
+    ],
+  },
+  gallery: {
+    widgetTitle: 'Gallery',
+    data: [
+      mrBeastImage.store.gallery.item1,
+      mrBeastImage.store.gallery.item2,
+      mrBeastImage.store.gallery.item3,
+      mrBeastImage.store.gallery.item4,
+      mrBeastImage.store.gallery.item5,
+      mrBeastImage.store.gallery.item6,
+      mrBeastImage.store.gallery.item7,
+      mrBeastImage.store.gallery.item8,
+      mrBeastImage.store.gallery.item9,
+    ],
+  },
   happyClients: {
     widgetTitle: 'Happy Clients',
     data: [

@@ -1,36 +1,41 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
-import { mrBeastImage } from '~/shared/assets/images/user/mrBeast';
 import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 type GalleryProps = {
+  data: string[];
+  widgetTitle: string;
   className?: string;
 };
 
-function Gallery({ className }: GalleryProps): JSX.Element {
+function Gallery({
+  className,
+  data: imageUrls,
+  widgetTitle,
+}: GalleryProps): JSX.Element {
   return (
     <StyledGalleryWrapper className={className}>
-      <WidgetHeader title="Gallery" />
+      <WidgetHeader title={widgetTitle} />
 
       <StyledWrapper>
         <StyledRow3>
-          <StyledImage src={mrBeastImage.store.gallery.item1} />
-          <StyledImage src={mrBeastImage.store.gallery.item2} />
-          <StyledImage src={mrBeastImage.store.gallery.item3} />
+          <StyledImage src={imageUrls[1]} />
+          <StyledImage src={imageUrls[2]} />
+          <StyledImage src={imageUrls[3]} />
         </StyledRow3>
         <StyledRow1>
-          <StyledImage src={mrBeastImage.store.gallery.item4} />
+          <StyledImage src={imageUrls[4]} />
         </StyledRow1>
         <StyledRow3>
-          <StyledImage src={mrBeastImage.store.gallery.item5} />
-          <StyledImage src={mrBeastImage.store.gallery.item6} />
-          <StyledImage src={mrBeastImage.store.gallery.item7} />
+          <StyledImage src={imageUrls[5]} />
+          <StyledImage src={imageUrls[6]} />
+          <StyledImage src={imageUrls[7]} />
         </StyledRow3>
         <StyledRow2>
-          <StyledImage src={mrBeastImage.store.gallery.item8} />
-          <StyledImage src={mrBeastImage.store.gallery.item9} />
+          <StyledImage src={imageUrls[8]} />
+          <StyledImage src={imageUrls[9]} />
         </StyledRow2>
       </StyledWrapper>
     </StyledGalleryWrapper>
