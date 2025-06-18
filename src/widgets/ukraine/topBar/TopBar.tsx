@@ -125,6 +125,7 @@ const StyledActionWrapper = styled.div`
   grid-column: 2;
   grid-row: 1;
   justify-self: right;
+  align-items: baseline;
 
   display: flex;
   gap: 8px;
