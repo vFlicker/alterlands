@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { AlterlandsSliderWidget } from '~/widgets/alterlands/alterlandsSlider';
 import { BooksWidget } from '~/widgets/alterlands/books';
+import { CrowdfundingWidget } from '~/widgets/alterlands/crowdfunding';
 import { SocialsWidget } from '~/widgets/alterlands/socials';
 import { TransactionsWidget } from '~/widgets/alterlands/transactions';
 import { NewsWidget } from '~/widgets/common/news';
@@ -33,6 +34,7 @@ function AlterlandPage(): JSX.Element {
         </Masonic.Item>
 
         <Masonic.Item>
+          <CrowdfundingWidget {...alterlandsPageData.crowdfunding} />
           <TransactionsWidget {...alterlandsPageData.transactions} />
           <NewsWidget {...alterlandsPageData.patchNotes} />
         </Masonic.Item>

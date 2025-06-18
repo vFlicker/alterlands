@@ -288,6 +288,21 @@ const alterlandsPageData = {
       },
     ],
   },
+  crowdfunding: {
+    widgetTitle: 'Crowdfunding',
+    data: [
+      {
+        id: 1,
+        imageUrl: alterlandsImage.crowdfunding.monobank,
+        title: 'Monobank',
+      },
+      {
+        id: 2,
+        imageUrl: alterlandsImage.crowdfunding.patreon,
+        title: 'Patreon',
+      },
+    ],
+  },
 };
 
 export { alterlandsPageData };
