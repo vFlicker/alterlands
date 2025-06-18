@@ -1,7 +1,7 @@
 export type AmountCardData = {
   id: number;
   title: string;
-  rate: {
+  rate?: {
     direction: 'increase' | 'decrease';
     value: string;
     postfix: string;

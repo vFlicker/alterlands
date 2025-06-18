@@ -36,7 +36,7 @@ function AmountCard({
           <Icon name="icon-info" />
         </StyledInfoButton>
       </StyledHeader>
-      <RateLine {...rate} />
+      {rate && <RateLine {...rate} />}
       <StyledFooter>
         <StyledAmount>{amount}</StyledAmount>
         <Select

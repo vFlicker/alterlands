@@ -1,5 +1,6 @@
 import adaptiqAvatar from './adaptiq-avatar.jpg';
 import alexaAvatar from './alexa-avatar.jpg';
+import alterlandAvatar from './alterland-avatar.png';
 import annaKushchAvatar from './anna-kushch-avatar.png';
 import artemPivovarovAvatar from './artem-pivovarov-avatar.jpg';
 import bbcAvatar from './bbc-avatar.jpg';
@@ -43,6 +44,7 @@ import zelenskiyAvatar from './zelenskiy-avatar.jpg';
 
 export const avatarImage = {
   adaptiqAvatar,
+  alterlandAvatar,
   cre8TeamAvatar,
   matoffoAvatar,
   stormotionAvatar,

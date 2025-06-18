@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
+import { AlterlandPage } from '~/pages/alterlands';
 import { CommunityPage } from '~/pages/community';
 import { F1Page } from '~/pages/f1';
 import { UiKitPage } from '~/pages/UiKitPage';
@@ -15,9 +16,10 @@ function Routing(): JSX.Element {
     <Routes>
       <Route
         path={AppRoute.ROOT}
-        element={<Navigate to={AppRoute.UKRAINE} replace />}
+        element={<Navigate to={AppRoute.ALTERLANDS} replace />}
       />
 
+      <Route path={AppRoute.ALTERLANDS} element={<AlterlandPage />} />
       <Route path={AppRoute.UKRAINE} element={<UkrainePage />} />
       <Route path={AppRoute.F1} element={<F1Page />} />
       <Route path={AppRoute.US_POLITICS} element={<UsPoliticsPage />} />

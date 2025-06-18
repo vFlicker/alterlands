@@ -18,16 +18,19 @@ function CurrentUserPage(): JSX.Element {
         <PersonalFileWidget files={currentUserPageData.personalFiles} />
         <StyledMenuWrapper>
           <StyledTabsWrapper>
-            {currentUserPageData.menu.first.map((text, index) => (
-              <Tab
-                key={text}
-                color="default"
-                variant="underline"
-                selected={index === 0}
-              >
-                {text}
-              </Tab>
-            ))}
+            {currentUserPageData.menu.first.map(
+              ({ disabled, title }, index) => (
+                <Tab
+                  key={title}
+                  color="default"
+                  variant="underline"
+                  selected={index === 0}
+                  disabled={disabled}
+                >
+                  {title}
+                </Tab>
+              ),
+            )}
           </StyledTabsWrapper>
 
           <Button

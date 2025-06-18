@@ -24,7 +24,13 @@ const currentUserPageData = {
     ],
   },
   menu: {
-    first: ['Trophy', 'Achievements', 'Marks', 'Feed & Widgets', 'Test'],
+    first: [
+      { title: 'Trophy', disabled: false },
+      { title: 'Achievements', disabled: false },
+      { title: 'Marks', disabled: false },
+      { title: 'Feed & Widgets', disabled: false },
+      { title: 'Test', disabled: false },
+    ],
   },
   personalFiles: [
     {

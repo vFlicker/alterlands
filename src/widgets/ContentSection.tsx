@@ -8,8 +8,11 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 
 type ContentSectionProps = {
   menu: {
-    first: string[];
-    second: string[];
+    first: {
+      title: string;
+      disabled?: boolean;
+    }[];
+    second?: string[];
   };
   className?: string;
 };
@@ -26,29 +29,32 @@ function ContentSection({ className, menu }: ContentSectionProps): JSX.Element {
   return (
     <StyledContentSection className={className}>
       <StyledFirstMenuWrapper>
-        {menu.first.map((text, index) => (
+        {menu.first.map(({ title, disabled }, index) => (
           <Tab
-            key={text}
+            key={title}
             color="default"
             variant="underline"
             selected={index === 0}
+            disabled={disabled}
           >
-            {text}
+            {title}
           </Tab>
         ))}
       </StyledFirstMenuWrapper>
 
-      <StyledSecondMenuWrapper>
-        <StyledSelect options={selectOptions} value={selectedOptionValue} />
+      {menu.second && (
+        <StyledSecondMenuWrapper>
+          <StyledSelect options={selectOptions} value={selectedOptionValue} />
 
-        <div>
-          {menu.second.map((text) => (
-            <Tab key={text} color="default" variant="default">
-              {text}
-            </Tab>
-          ))}
-        </div>
-      </StyledSecondMenuWrapper>
+          <div>
+            {menu.second.map((text) => (
+              <Tab key={text} color="default" variant="default">
+                {text}
+              </Tab>
+            ))}
+          </div>
+        </StyledSecondMenuWrapper>
+      )}
     </StyledContentSection>
   );
 }

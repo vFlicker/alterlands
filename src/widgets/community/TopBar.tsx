@@ -9,7 +9,10 @@ import { withAttrs } from '~/shared/ui/withAttrs';
 type TopBarProps = {
   pageTitle: string;
   breadcrumbs: string[];
-  menu: string[];
+  menu: {
+    title: string;
+    disabled?: boolean;
+  }[];
   className?: string;
 };
 
@@ -24,14 +27,15 @@ function TopBar({
       <StyledBreadcrumbs items={breadcrumbs} />
       <StyledPageTitle>{pageTitle}</StyledPageTitle>
       <StyledTabsWrapper>
-        {menu.map((text, index) => (
+        {menu.map(({ title, disabled }, index) => (
           <StyledTab
-            key={text}
+            key={title}
             color="default"
             variant="underline"
             selected={index === 0}
+            disabled={disabled}
           >
-            {text}
+            {title}
           </StyledTab>
         ))}
       </StyledTabsWrapper>

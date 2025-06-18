@@ -4,6 +4,11 @@ import { AppRoute } from './appRoute';
 
 const navigationItems = [
   {
+    title: 'Alterlands',
+    route: AppRoute.ALTERLANDS,
+    icon: null,
+  },
+  {
     title: 'Ukraine',
     route: AppRoute.UKRAINE,
     icon: commonImage.iconUkraine,

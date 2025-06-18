@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 const enum IconName {
+  ICON_ARROW_UP_LEFT = 'icon-arrow-up-left',
+  ICON_ARROW_DOWN_RIGHT = 'icon-arrow-down-right',
   ICON_LOCK = 'icon-lock',
   ICON_OPEN_DOOR = 'icon-open-door',
   ICON_GRAPH = 'icon-graph',
@@ -61,6 +63,20 @@ const StyledSpriteWithIcons = styled.svg`
 function SpriteWithIcons() {
   return (
     <StyledSpriteWithIcons xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-arrow-up-left" viewBox="0 0 12 12">
+        <path
+          d="M1 11V1M1 1H11M1 1L11 11"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="icon-arrow-down-right" viewBox="0 0 12 12">
+        <path
+          d="M1 1L11 11M11 11V1M11 11H1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
       <symbol id="icon-lock" viewBox="0 0 24 24">
         <path
           d="M8 10.4V8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8V10.4M12.8 15.2C12.8 15.6418 12.4418 16 12 16C11.5582 16 11.2 15.6418 11.2 15.2C11.2 14.7582 11.5582 14.4 12 14.4C12.4418 14.4 12.8 14.7582 12.8 15.2ZM6.4 10.4H17.6C18.4837 10.4 19.2 11.1163 19.2 12V18.4C19.2 19.2837 18.4837 20 17.6 20H6.4C5.51634 20 4.8 19.2837 4.8 18.4V12C4.8 11.1163 5.51634 10.4 6.4 10.4Z"

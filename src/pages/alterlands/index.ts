@@ -1,0 +1,1 @@
+export { AlterlandPage } from './AlterlandsPage';

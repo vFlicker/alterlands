@@ -3,7 +3,13 @@ import { usPoliticsImage } from '~/shared/assets/images/usPolitics';
 
 const usPoliticsPageData = {
   menu: {
-    first: ['Feed', 'Shop', 'Partners', 'Contact us', 'Forum'],
+    first: [
+      { title: 'Feed', disabled: false },
+      { title: 'Shop', disabled: false },
+      { title: 'Partners', disabled: false },
+      { title: 'Contact us', disabled: false },
+      { title: 'Forum', disabled: false },
+    ],
     second: ['Posts', 'Opinions', 'Infographics', 'States', 'Trump', 'Harris'],
   },
   posts: {

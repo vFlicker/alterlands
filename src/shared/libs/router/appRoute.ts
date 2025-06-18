@@ -2,6 +2,7 @@ const BASE_NAME = '/alterlands';
 
 const enum AppRoute {
   ROOT = '/',
+  ALTERLANDS = '/alterlands',
   UKRAINE = '/ukraine',
   F1 = '/f1',
   US_POLITICS = '/us-politics',

@@ -24,7 +24,7 @@ type Property = {
 type TopBarProps = {
   title: string;
   avatarUrl: string;
-  flagUrl: string;
+  flagUrl?: string;
   properties: Property[];
   amountCards: AmountCardData[];
   className?: string;
@@ -44,7 +44,7 @@ function TopBar({
         <StyledAvatar src={avatarUrl} />
         <StyledInfoWrapper>
           <StyledCountryName>
-            {title} <StyledFlag src={flagUrl} alt="ua" />
+            {title} {flagUrl && <StyledFlag src={flagUrl} alt="ua" />}
           </StyledCountryName>
           <StyledPropertyList>
             {properties.map(({ name, value, link }) => (
@@ -144,6 +144,7 @@ const StyledCardsWrapper = styled.div`
   grid-column: 2;
   grid-row: 2;
   justify-content: end;
+  align-items: flex-end;
 
   display: flex;
   gap: 16px;

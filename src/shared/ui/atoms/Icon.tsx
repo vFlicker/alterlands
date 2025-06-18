@@ -28,6 +28,14 @@ function Icon(props: IconProps) {
 export { Icon, IconName, IconSize };
 
 const IconNameToCss = {
+  [IconName.ICON_ARROW_UP_LEFT]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
+  [IconName.ICON_ARROW_DOWN_RIGHT]: css`
+    fill: none;
+    stroke: currentColor;
+  `,
   [IconName.ICON_LOCK]: css`
     fill: none;
     stroke: currentColor;

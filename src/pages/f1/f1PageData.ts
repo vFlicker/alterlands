@@ -3,7 +3,13 @@ import { f1Image } from '~/shared/assets/images/f1';
 
 const f1PageData = {
   menu: {
-    first: ['Feed', 'Shop', 'Partners', 'Contact us', 'Forum'],
+    first: [
+      { title: 'Feed', disabled: false },
+      { title: 'Shop', disabled: false },
+      { title: 'Partners', disabled: false },
+      { title: 'Contact us', disabled: false },
+      { title: 'Forum', disabled: false },
+    ],
     second: [
       'Bahrain Grand Prix',
       'Posts',
