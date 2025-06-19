@@ -14,6 +14,7 @@ type VacancyWidgetProps = {
   data: VacancyData[];
   theme: 'light' | 'dark';
   className?: string;
+  onClick?: () => void;
 };
 
 function VacancyWidget({
@@ -21,6 +22,7 @@ function VacancyWidget({
   widgetTitle,
   theme,
   data,
+  onClick,
 }: VacancyWidgetProps): JSX.Element {
   return (
     <StyledVacancyWidgetWrapper className={className} theme={theme}>
@@ -28,7 +30,12 @@ function VacancyWidget({
 
       <StyledVacancyList>
         {data.map((vacancy) => (
-          <StyledVacancy theme={theme} key={vacancy.id} {...vacancy} />
+          <StyledVacancy
+            theme={theme}
+            key={vacancy.id}
+            {...vacancy}
+            onClick={onClick}
+          />
         ))}
       </StyledVacancyList>
     </StyledVacancyWidgetWrapper>

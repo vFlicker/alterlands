@@ -12,6 +12,7 @@ import { VacancyData } from './vacancyTypes';
 
 type VacancyProps = VacancyData & {
   className?: string;
+  onClick?: () => void;
 };
 
 function Vacancy({
@@ -24,6 +25,7 @@ function Vacancy({
   skills,
   title,
   viewCount,
+  onClick,
 }: VacancyProps): JSX.Element {
   return (
     <StyledVacancyWrapper className={className}>
@@ -35,7 +37,7 @@ function Vacancy({
         orientation="horizontal"
       />
 
-      <StyledTitle>{title}</StyledTitle>
+      <StyledTitle onClick={onClick}>{title}</StyledTitle>
       <StyledDescription>{description}</StyledDescription>
 
       {skills && (
@@ -63,6 +65,7 @@ const StyledTitle = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
     margin-bottom: 4px;
+    cursor: pointer;
   `,
 );
 

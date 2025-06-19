@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import { AppRoute } from '~/shared/libs/router';
 import { Masonic } from '~/shared/ui/atoms/Masonic';
 import { AlterlandsSliderWidget } from '~/widgets/alterlands/alterlandsSlider';
 import { BooksWidget } from '~/widgets/alterlands/books';
@@ -16,6 +18,8 @@ import { TopBar } from '~/widgets/ukraine/topBar';
 import { alterlandsPageData } from './alterlandsPageData';
 
 function AlterlandPage(): JSX.Element {
+  const navigate = useNavigate();
+
   return (
     <>
       <StyledTopBar {...alterlandsPageData.header} />
@@ -24,7 +28,11 @@ function AlterlandPage(): JSX.Element {
       <Masonic.List>
         <Masonic.Item>
           <AlterlandsSliderWidget {...alterlandsPageData.slider} />
-          <VacancyWidget theme="dark" {...alterlandsPageData.vacancies} />
+          <VacancyWidget
+            theme="dark"
+            {...alterlandsPageData.vacancies}
+            onClick={() => navigate(AppRoute.VACANCY)}
+          />
         </Masonic.Item>
 
         <Masonic.Item>
