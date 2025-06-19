@@ -4,10 +4,10 @@ import { JSX } from 'react';
 import { Color } from '~/shared/theme/colors';
 import { Label } from '~/shared/ui/atoms/Label';
 import { Typography } from '~/shared/ui/atoms/Typography';
-import { separatorDotCss } from '~/shared/ui/css/separatorDotCss';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
+import { AttributeList } from './AttributeList';
 import { VacancyData } from './vacancyTypes';
 
 type VacancyProps = VacancyData & {
@@ -46,11 +46,7 @@ function Vacancy({
         </StyledSkillList>
       )}
 
-      <StyledJubAttributeList>
-        {jobAttributes.map((attribute) => (
-          <StyledJubAttribute key={attribute}>{attribute}</StyledJubAttribute>
-        ))}
-      </StyledJubAttributeList>
+      <AttributeList attributes={jobAttributes} />
     </StyledVacancyWrapper>
   );
 }
@@ -90,17 +86,3 @@ const StyledSkillList = styled.div`
 
   margin-bottom: 12px;
 `;
-
-const StyledJubAttributeList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 26px;
-  row-gap: 2px;
-`;
-
-const StyledJubAttribute = withAttrs(
-  { variant: 'body-2', $color: Color.WHITE_70 },
-  styled(Typography)`
-    ${separatorDotCss}
-  `,
-);
