@@ -10,6 +10,7 @@ import { NewsData } from './newsTypes';
 
 type NewsProps = NewsData & {
   className?: string;
+  onClick?: () => void;
 };
 
 function News({
@@ -23,6 +24,7 @@ function News({
   verified,
   title,
   viewCount,
+  onClick,
 }: NewsProps): JSX.Element {
   return (
     <StyledNewsWrapper className={className}>
@@ -34,7 +36,7 @@ function News({
         verified={verified}
         orientation="horizontal"
       />
-      <StyledTitle>{title}</StyledTitle>
+      <StyledTitle onClick={onClick}>{title}</StyledTitle>
       <Reactions
         likesCount={likesCount}
         commentCount={messagesCount}
@@ -63,5 +65,6 @@ const StyledTitle = withAttrs(
   { variant: 'heading-5' },
   styled(Typography)`
     margin-bottom: 6px;
+    cursor: pointer;
   `,
 );

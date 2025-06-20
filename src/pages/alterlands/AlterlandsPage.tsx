@@ -44,7 +44,10 @@ function AlterlandPage(): JSX.Element {
         <Masonic.Item>
           <CrowdfundingWidget {...alterlandsPageData.crowdfunding} />
           <TransactionsWidget {...alterlandsPageData.transactions} />
-          <NewsWidget {...alterlandsPageData.patchNotes} />
+          <NewsWidget
+            {...alterlandsPageData.patchNotes}
+            onClick={() => navigate(AppRoute.PATCH_NOTES)}
+          />
         </Masonic.Item>
       </Masonic.List>
     </>

@@ -5,6 +5,13 @@ import { Color } from '~/shared/theme/colors';
 
 import { Typography } from './Typography';
 
+export type Block = {
+  title?: string;
+  paragraph?: string;
+  list?: string[];
+  image?: string;
+};
+
 type ListProps = {
   className?: string;
   items: string[];
@@ -13,6 +20,10 @@ type ListProps = {
 type Props = {
   className?: string;
   children: React.ReactNode;
+};
+
+type ImageProps = {
+  src: string;
 };
 
 function Subtitle({ children }: Props): JSX.Element {
@@ -25,6 +36,10 @@ function Paragraph({ children }: Props): JSX.Element {
       {children}
     </Typography>
   );
+}
+
+function Image({ src }: ImageProps): JSX.Element {
+  return <StyledImage src={src} />;
 }
 
 function List({ className, items }: ListProps): JSX.Element {
@@ -62,8 +77,15 @@ const StyledListItem = styled.li`
   }
 `;
 
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+`;
+
 export const BlockElement = {
   Title: Subtitle,
-  Paragraph: Paragraph,
-  List: List,
+  Paragraph,
+  List,
+  Image,
 };

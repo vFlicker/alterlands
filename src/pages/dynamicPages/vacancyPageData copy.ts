@@ -1,4 +1,5 @@
 import { alterlandsImage } from '~/shared/assets/images/alterlands';
+import { Block } from '~/shared/ui/atoms/BlockElement';
 
 export const vacancyPageData = {
   jobAttributes: [
@@ -78,7 +79,6 @@ export const vacancyPageData = {
         ],
       },
     ],
-
     [
       { title: 'Working at Alterlands' },
       {
@@ -86,7 +86,7 @@ export const vacancyPageData = {
           "We are excited to announce an opportunity to connect with talented and creative designers who may be a perfect fit for our team in the future. By expressing your interest, you'll be added to our pool of potential candidates, and we'll reach out when",
       },
     ],
-  ],
+  ] as Block[][],
   sidebar: [
     {
       title: 'Location',

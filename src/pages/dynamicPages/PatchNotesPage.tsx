@@ -1,44 +1,48 @@
 import styled from '@emotion/styled';
 import { Fragment, JSX } from 'react';
 
-import { vacancyImage } from '~/shared/assets/images/alterlands/vacancy';
 import { avatarImage } from '~/shared/assets/images/avatars';
 import { Color } from '~/shared/theme/colors';
 import { Radius } from '~/shared/theme/radiuses';
 import { BlockElement } from '~/shared/ui/atoms/BlockElement';
-import { Button } from '~/shared/ui/atoms/Button';
 import { Typography } from '~/shared/ui/atoms/Typography';
+import { separatorLineCss } from '~/shared/ui/css/separatorLineCss';
+import { Reactions } from '~/shared/ui/molecules/Reactions';
 import { UserMeta } from '~/shared/ui/molecules/UserMeta';
 import { withAttrs } from '~/shared/ui/withAttrs';
-import { AttributeList } from '~/widgets/community/vacancy';
 
-import { vacancyPageData } from './vacancyPageData copy';
+import { patchNotesPageData } from './patchNotesPageData';
 
-function VacancyPage(): JSX.Element {
+function PatchNotesPage(): JSX.Element {
   return (
-    <StyledVacancyPageContainer>
+    <StyledPatchNotesPageContainer>
       <StyledBreadcrumbs>
         <span>Alterlands</span>
-        <span>UI/UX Designer Vacancy</span>
+        <span>Patch Notes</span>
       </StyledBreadcrumbs>
       <StyledContentWrapper>
         <StyledUserMeta
           fullName="Alterlands"
           avatar={avatarImage.alterlandAvatar}
           orientation="horizontal"
-          date="12h"
-          viewCount="521"
+          date="5h"
+          viewCount="3k"
         />
         <StyledContent>
           <StyledContentLeft>
-            <StyledTitle>UX/UI Designer</StyledTitle>
-            <StyledAttributeList attributes={vacancyPageData.jobAttributes} />
-            {vacancyPageData.blocks.map((block) => {
+            <StyledTitle>New update | Version 1.2.0</StyledTitle>
+            <StyledReactions
+              likesCount="765"
+              commentCount="865"
+              sharesCount="89"
+              filled
+            />
+            {patchNotesPageData.blocks.map((block) => {
               return (
                 <StyledBlock>
-                  {block.map(({ title, paragraph, list }) => {
+                  {block.map(({ title, image, paragraph, list }, index) => {
                     return (
-                      <Fragment key={title}>
+                      <Fragment key={index}>
                         {title && (
                           <BlockElement.Title>{title}</BlockElement.Title>
                         )}
@@ -48,49 +52,42 @@ function VacancyPage(): JSX.Element {
                           </BlockElement.Paragraph>
                         )}
                         {list && <BlockElement.List items={list} />}
+                        {image && <BlockElement.Image src={image} />}
                       </Fragment>
                     );
                   })}
                 </StyledBlock>
               );
             })}
-            <StyledButton size="medium" color="accent" variant="filled">
-              Apply
-            </StyledButton>
           </StyledContentLeft>
           <StyledContentRight>
             <StyledSidebar>
-              <SidebarList>
-                {vacancyPageData.sidebar.map(({ title, value, imageSrc }) => (
-                  <SidebarListItem key={title}>
-                    <StyledIcon src={imageSrc} />
-                    <SidebarListTitle>{title}</SidebarListTitle>
-                    <SidebarListValue>{value}</SidebarListValue>
-                  </SidebarListItem>
+              <StyledAsideTitle>You also can read</StyledAsideTitle>
+              <StyledAsideList>
+                {patchNotesPageData.news.map(({ date, title, views }) => (
+                  <StyledAsideItem key={title}>
+                    <StyledAsideUserMeta
+                      fullName="Alterlands"
+                      avatar={avatarImage.alterlandAvatar}
+                      orientation="horizontal"
+                      date={date}
+                      viewCount={views}
+                    />
+                    <StyledAsideItemTitle>{title}</StyledAsideItemTitle>
+                  </StyledAsideItem>
                 ))}
-              </SidebarList>
-              <Button color="accent" size="medium" variant="filled">
-                Apply
-              </Button>
-              <StyledFooter>
-                <StyledFooterText>Share a link to this job</StyledFooterText>
-                <StyledFooterList>
-                  {vacancyImage.social.map((icon, index) => (
-                    <StyledFooterIcon key={index} src={icon} />
-                  ))}
-                </StyledFooterList>
-              </StyledFooter>
+              </StyledAsideList>
             </StyledSidebar>
           </StyledContentRight>
         </StyledContent>
       </StyledContentWrapper>
-    </StyledVacancyPageContainer>
+    </StyledPatchNotesPageContainer>
   );
 }
 
-export { VacancyPage };
+export { PatchNotesPage };
 
-const StyledVacancyPageContainer = styled.div`
+const StyledPatchNotesPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -146,7 +143,7 @@ const StyledTitle = withAttrs(
   `,
 );
 
-const StyledAttributeList = styled(AttributeList)`
+const StyledReactions = styled(Reactions)`
   margin-bottom: 40px;
 `;
 
@@ -154,14 +151,9 @@ const StyledBlock = styled.div`
   margin-bottom: 40px;
 `;
 
-const StyledButton = styled(Button)`
-  margin-right: auto;
-`;
-
 const StyledSidebar = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 260px;
   padding: 24px;
 
@@ -169,47 +161,30 @@ const StyledSidebar = styled.div`
   background-color: ${Color.WHITE_8};
 `;
 
-const SidebarList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const SidebarListItem = styled.div`
-  position: relative;
-  padding-left: 36px;
-`;
-
-const StyledIcon = styled.img`
-  position: absolute;
-  left: 0;
-  top: 12px;
-  transform: translateY(-50%);
-
-  width: 24px;
-  height: 24px;
-`;
-
-const SidebarListTitle = withAttrs({ variant: 'heading-5' }, Typography);
-
-const SidebarListValue = withAttrs(
-  { variant: 'body-3', $color: Color.WHITE_70 },
-  Typography,
+const StyledAsideTitle = withAttrs(
+  { variant: 'body-1', $color: Color.WHITE_64 },
+  styled(Typography)`
+    margin-bottom: 16px;
+  `,
 );
 
-const StyledFooter = styled.div`
+const StyledAsideUserMeta = styled(UserMeta)`
+  margin-bottom: 12px;
+`;
+
+const StyledAsideList = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: 32px;
 `;
 
-const StyledFooterText = withAttrs({ variant: 'body-1' }, Typography);
-
-const StyledFooterList = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
+const StyledAsideItem = styled.div`
+  &:not(:last-child) {
+    ${separatorLineCss(16, Color.WHITE_16)}
+  }
 `;
 
-const StyledFooterIcon = styled.img``;
+const StyledAsideItemTitle = withAttrs(
+  { variant: 'heading-5', $color: Color.WHITE_87 },
+  Typography,
+);

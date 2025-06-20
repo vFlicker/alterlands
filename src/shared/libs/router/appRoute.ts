@@ -4,6 +4,7 @@ const enum AppRoute {
   ROOT = '/',
   ALTERLANDS = '/alterlands',
   VACANCY = '/vacancy',
+  PATCH_NOTES = '/patch-notes',
   UKRAINE = '/ukraine',
   F1 = '/f1',
   US_POLITICS = '/us-politics',

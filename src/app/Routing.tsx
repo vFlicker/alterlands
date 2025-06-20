@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { AlterlandPage } from '~/pages/alterlands';
 import { CommunityPage } from '~/pages/community';
-import { VacancyPage } from '~/pages/dynamicPages/VacancyPage';
+import { PatchNotesPage, VacancyPage } from '~/pages/dynamicPages';
 import { F1Page } from '~/pages/f1';
 import { UiKitPage } from '~/pages/UiKitPage';
 import { UkrainePage } from '~/pages/ukraine';
@@ -22,6 +22,7 @@ function Routing(): JSX.Element {
 
       <Route path={AppRoute.ALTERLANDS} element={<AlterlandPage />} />
       <Route path={AppRoute.VACANCY} element={<VacancyPage />} />
+      <Route path={AppRoute.PATCH_NOTES} element={<PatchNotesPage />} />
       <Route path={AppRoute.UKRAINE} element={<UkrainePage />} />
       <Route path={AppRoute.F1} element={<F1Page />} />
       <Route path={AppRoute.US_POLITICS} element={<UsPoliticsPage />} />

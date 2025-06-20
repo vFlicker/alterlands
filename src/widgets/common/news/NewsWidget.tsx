@@ -12,12 +12,14 @@ type NewsWidgetProps = {
   widgetTitle: string;
   data: NewsData[];
   className?: string;
+  onClick?: () => void;
 };
 
 function NewsWidget({
   className,
   data,
   widgetTitle,
+  onClick,
 }: NewsWidgetProps): JSX.Element {
   return (
     <StyledNewsWidgetWrapper className={className}>
@@ -25,7 +27,7 @@ function NewsWidget({
 
       <StyledNewsList>
         {data.map((news) => (
-          <StyledNews key={news.id} {...news} />
+          <StyledNews key={news.id} {...news} onClick={onClick} />
         ))}
       </StyledNewsList>
     </StyledNewsWidgetWrapper>
