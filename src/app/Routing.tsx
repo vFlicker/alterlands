@@ -12,7 +12,11 @@ import { MrBeastPage } from '~/pages/user/mrBeast';
 import { UsPoliticsPage } from '~/pages/usPolitics';
 import { AppRoute } from '~/shared/libs/router';
 
+import { useScrollToTop } from './hooks/useScrollToTop';
+
 function Routing(): JSX.Element {
+  useScrollToTop();
+
   return (
     <Routes>
       <Route
