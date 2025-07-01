@@ -1,5 +1,3 @@
-const BASE_NAME = '/alterlands';
-
 const enum AppRoute {
   ROOT = '/',
   ALTERLANDS_FEED = '/alterlands/feed',
@@ -15,4 +13,4 @@ const enum AppRoute {
   UI_KIT = '/ui-kit',
 }
 
-export { AppRoute, BASE_NAME };
+export { AppRoute };

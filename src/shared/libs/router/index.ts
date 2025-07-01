@@ -1,2 +1,2 @@
-export { AppRoute, BASE_NAME } from './appRoute';
+export { AppRoute } from './appRoute';
 export { navigationItems } from './navigationItems';
