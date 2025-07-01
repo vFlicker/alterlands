@@ -28,6 +28,7 @@ const Section: Record<MrBeastPageMenu, JSX.Element> = {
 };
 
 function MrBeastPage(): JSX.Element {
+  const [isTrophyVisible, setIsTrophyVisible] = useState(false);
   const [activeMenu, setActiveMenu] = useState<MrBeastPageMenu>('hiring');
 
   const tabs = mrBeastPageMenu.slice(1);
@@ -40,8 +41,8 @@ function MrBeastPage(): JSX.Element {
         <StyledPersonalFileWidgetWrapper>
           <PersonalFileWidget files={mrBeastPageData.personalFiles} />
           <TrophyButton
-            active={activeMenu === 'trophies'}
-            onClick={() => setActiveMenu('trophies')}
+            active={isTrophyVisible}
+            onClick={() => setIsTrophyVisible((prev) => !prev)}
           />
         </StyledPersonalFileWidgetWrapper>
 
@@ -58,7 +59,8 @@ function MrBeastPage(): JSX.Element {
         </StyledTabsWrapper>
       </StyledMenuWrapper>
 
-      {Section[activeMenu]}
+      {isTrophyVisible && <Trophy userRole="viewer" {...trophyData} />}
+      {!isTrophyVisible && Section[activeMenu]}
     </StyledUserPageContainer>
   );
 }
