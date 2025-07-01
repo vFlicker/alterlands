@@ -29,6 +29,7 @@ const buildProject = () => {
 const setupGitHubPages = () => {
   console.log('📄 Creating GitHub Pages files...');
   fs.writeFileSync(path.join(DIST_DIR, '.nojekyll'), '');
+  fs.writeFileSync(path.join(DIST_DIR, 'CNAME '), 'alterlands.com');
 };
 
 const setupGitRepository = () => {
