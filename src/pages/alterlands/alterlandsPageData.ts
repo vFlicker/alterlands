@@ -1,5 +1,6 @@
 import { alterlandsImage } from '~/shared/assets/images/alterlands';
 import { avatarImage } from '~/shared/assets/images/avatars';
+import { AppRoute } from '~/shared/libs/router';
 
 const alterlandsPageData = {
   header: {
@@ -37,12 +38,12 @@ const alterlandsPageData = {
   },
   menu: {
     first: [
-      { title: 'Feed', disabled: false },
+      { title: 'Feed', disabled: false, route: AppRoute.ALTERLANDS_FEED },
       { title: 'Products', disabled: true },
       { title: 'Properties', disabled: true },
       { title: 'Fundings', disabled: true },
       { title: 'Consult', disabled: true },
-      { title: 'Budget', disabled: false },
+      { title: 'Budget', disabled: false, route: AppRoute.ALTERLANDS_BUDGET },
       { title: 'Stats', disabled: true },
       { title: 'Relations', disabled: true },
       { title: 'Dashboard', disabled: true },
@@ -300,6 +301,31 @@ const alterlandsPageData = {
         id: 2,
         imageUrl: alterlandsImage.crowdfunding.patreon,
         title: 'Patreon',
+      },
+    ],
+  },
+  incoming: {
+    widgetTitle: 'Incoming',
+    data: [
+      {
+        id: 1,
+        transactionId: '1234567890',
+        timestamp: '2025-03-12T10:00:00Z',
+        transactionTitle: 'Design services',
+        signedBy: 'Maksym Rudenko',
+        amount: 1200,
+        currency: 'EUR',
+        reportsAndDetails: ['Report 1', 'Report 2'],
+      },
+      {
+        id: 2,
+        transactionId: '0987654321',
+        timestamp: '2025-03-13T11:00:00Z',
+        transactionTitle: 'IT Technologies and Services',
+        signedBy: 'Olena Zelenska',
+        amount: 2200,
+        currency: 'EUR',
+        reportsAndDetails: ['Report A', 'Report B'],
       },
     ],
   },

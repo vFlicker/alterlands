@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { AlterlandPage } from '~/pages/alterlands';
+import { AlterlandBudgetPage, AlterlandPage } from '~/pages/alterlands';
 import { CommunityPage } from '~/pages/community';
 import { PatchNotesPage, VacancyPage } from '~/pages/dynamicPages';
 import { F1Page } from '~/pages/f1';
@@ -21,10 +21,14 @@ function Routing(): JSX.Element {
     <Routes>
       <Route
         path={AppRoute.ROOT}
-        element={<Navigate to={AppRoute.ALTERLANDS} replace />}
+        element={<Navigate to={AppRoute.ALTERLANDS_FEED} replace />}
       />
 
-      <Route path={AppRoute.ALTERLANDS} element={<AlterlandPage />} />
+      <Route path={AppRoute.ALTERLANDS_FEED} element={<AlterlandPage />} />
+      <Route
+        path={AppRoute.ALTERLANDS_BUDGET}
+        element={<AlterlandBudgetPage />}
+      />
       <Route path={AppRoute.VACANCY} element={<VacancyPage />} />
       <Route path={AppRoute.PATCH_NOTES} element={<PatchNotesPage />} />
       <Route path={AppRoute.UKRAINE} element={<UkrainePage />} />

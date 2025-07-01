@@ -5,7 +5,7 @@ import { AppRoute } from './appRoute';
 const navigationItems = [
   {
     title: 'Alterlands',
-    route: AppRoute.ALTERLANDS,
+    route: AppRoute.ALTERLANDS_FEED,
     icon: null,
   },
   {

@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
+import { AppRoute } from '~/shared/libs/router';
 import { Color } from '~/shared/theme/colors';
 import { Tab } from '~/shared/ui/atoms/Tab';
 import { Select } from '~/shared/ui/molecules/Select';
@@ -11,6 +13,7 @@ type ContentSectionProps = {
     first: {
       title: string;
       disabled?: boolean;
+      route?: AppRoute;
     }[];
     second?: string[];
   };
@@ -26,20 +29,33 @@ const selectOptions = [
 const selectedOptionValue = selectOptions[0].value;
 
 function ContentSection({ className, menu }: ContentSectionProps): JSX.Element {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const onTabClick = (route?: AppRoute) => {
+    if (route) navigate(route);
+  };
+
   return (
     <StyledContentSection className={className}>
       <StyledFirstMenuWrapper>
-        {menu.first.map(({ title, disabled }, index) => (
-          <Tab
-            key={title}
-            color="default"
-            variant="underline"
-            selected={index === 0}
-            disabled={disabled}
-          >
-            {title}
-          </Tab>
-        ))}
+        {menu.first.map(({ title, disabled, route }, index) => {
+          const hasNoRoute = menu.first.every(({ route }) => !route);
+          const selected = hasNoRoute ? index === 0 : pathname === route;
+
+          return (
+            <Tab
+              key={title}
+              color="default"
+              variant="underline"
+              selected={selected}
+              disabled={disabled}
+              onClick={() => onTabClick(route)}
+            >
+              {title}
+            </Tab>
+          );
+        })}
       </StyledFirstMenuWrapper>
 
       {menu.second && (
