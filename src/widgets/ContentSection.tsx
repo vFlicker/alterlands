@@ -99,6 +99,7 @@ const StyledSelect = withAttrs(
   { size: 'small', variant: 'empty' },
   styled(Select)`
     position: relative;
+    padding: 4px 15px;
 
     &::after {
       content: '';

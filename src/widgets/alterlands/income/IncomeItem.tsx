@@ -22,15 +22,13 @@ function IncomeItem({
 }: IncomeItemProps): JSX.Element {
   return (
     <StyledIncomeItemWrapper className={className}>
-      <Typography variant="body-2">{transactionTitle}</Typography>
-      <Typography variant="body-2">
-        {new Date(timestamp).toLocaleDateString()}
-      </Typography>
-      <Typography variant="body-2">
+      <StylesText>{transactionTitle}</StylesText>
+      <StylesText>{new Date(timestamp).toLocaleDateString()}</StylesText>
+      <StylesText>
         {amount} {currency}
-      </Typography>
-      <Typography variant="body-2">Signed by: {signedBy}</Typography>
-      <Typography variant="body-2">Transaction ID: {transactionId}</Typography>
+      </StylesText>
+      <StylesText>Signed by: {signedBy}</StylesText>
+      <StylesText>Transaction ID: {transactionId}</StylesText>
       {reportsAndDetails && reportsAndDetails.length > 0 && (
         <ul>
           {reportsAndDetails.map((report) => (
@@ -52,3 +50,5 @@ const StyledIncomeItemWrapper = styled.div`
   width: 100%;
   padding-top: 4px;
 `;
+
+const StylesText = withAttrs({ variant: 'body-2' }, Typography);
