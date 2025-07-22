@@ -1,15 +1,17 @@
 import styled from '@emotion/styled';
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
+import { Modal } from '~/shared/ui/molecules/Modal';
 import { SliderFooter } from '~/shared/ui/molecules/SliderFooter';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { IncomeHeader } from './IncomeHeader';
 import { IncomeItem } from './IncomeItem';
 import { IncomeData } from './incomeTypes';
+import { TransactionDetails } from './TransactionDetails';
 
 type IncomeWidgetProps = {
   widgetTitle: string;
@@ -22,6 +24,8 @@ function IncomeWidget({
   data,
   widgetTitle,
 }: IncomeWidgetProps): JSX.Element {
+  const [showModal, setShowDialogModal] = useState(false);
+
   return (
     <StyledIncomeWidgetWrapper className={className}>
       <WidgetHeader
@@ -37,11 +41,19 @@ function IncomeWidget({
         <IncomeHeader />
         <StyledSocialList>
           {data.map((income) => (
-            <IncomeItem key={income.id} {...income} />
+            <IncomeItem
+              key={income.id}
+              onClick={() => setShowDialogModal(true)}
+              {...income}
+            />
           ))}
         </StyledSocialList>
       </StyledIncomeTable>
       <SliderFooter />
+
+      <StyledModal isOpen={showModal} onClose={() => setShowDialogModal(false)}>
+        <TransactionDetails />
+      </StyledModal>
     </StyledIncomeWidgetWrapper>
   );
 }
@@ -64,4 +76,8 @@ const StyledSocialList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+`;
+
+const StyledModal = styled(Modal)`
+  max-width: 680px;
 `;

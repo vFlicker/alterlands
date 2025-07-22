@@ -10,6 +10,7 @@ import { withAttrs } from '../../withAttrs';
 import { ReactPortal } from './ReactPortal';
 
 type ModalProps = PropsWithChildren<{
+  className?: string;
   isOpen: boolean;
   onClose: () => void;
 }>;
@@ -19,7 +20,12 @@ const enum EscKeyEvent {
   Esc = 'Esc',
 }
 
-function Modal({ children, isOpen, onClose }: ModalProps): JSX.Element | null {
+function Modal({
+  className,
+  children,
+  isOpen,
+  onClose,
+}: ModalProps): JSX.Element | null {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +50,7 @@ function Modal({ children, isOpen, onClose }: ModalProps): JSX.Element | null {
   return (
     <ReactPortal>
       <StyledModel ref={modalRef} onClick={handleBackdropClick}>
-        <StyledModelInner>
+        <StyledModelInner className={className}>
           <StyledCloseButton onClick={onClose}>
             <Icon name="icon-minimize" />
           </StyledCloseButton>

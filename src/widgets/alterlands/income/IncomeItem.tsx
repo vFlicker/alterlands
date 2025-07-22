@@ -13,6 +13,7 @@ import { IncomeData } from './incomeTypes';
 
 type IncomeItemProps = IncomeData & {
   className?: string;
+  onClick: () => void;
 };
 
 const formatDateToEnUS = (date: Date): string => {
@@ -33,6 +34,7 @@ function IncomeItem({
   timestamp,
   transactionId,
   transactionTitle,
+  onClick,
 }: IncomeItemProps): JSX.Element {
   return (
     <StyledIncomeItemWrapper className={className}>
@@ -50,7 +52,7 @@ function IncomeItem({
           {reportsAndDetails.map((report) => (
             <li key={report}>{report}</li>
           ))}
-          <StyledIconButton size="small" variant="filled" color="transparent">
+          <StyledIconButton onClick={onClick}>
             <Icon name="icon-maximize" />
           </StyledIconButton>
         </StyledReportsList>
@@ -138,13 +140,20 @@ const StyledChip = withAttrs(
   `,
 );
 
-const StyledIconButton = styled(IconButton)`
-  width: 16px;
-  height: 16px;
-
-  svg {
+const StyledIconButton = withAttrs(
+  {
+    size: 'small',
+    variant: 'filled',
+    color: 'transparent',
+  },
+  styled(IconButton)`
     width: 16px;
     height: 16px;
-    stroke: ${Color.WHITE_87};
-  }
-`;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: ${Color.WHITE_87};
+    }
+  `,
+);
