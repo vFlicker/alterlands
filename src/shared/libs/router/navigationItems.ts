@@ -4,11 +4,6 @@ import { AppRoute } from './appRoute';
 
 const navigationItems = [
   {
-    title: 'Alterlands',
-    route: AppRoute.ALTERLANDS_FEED,
-    icon: null,
-  },
-  {
     title: 'Ukraine',
     route: AppRoute.UKRAINE,
     icon: commonImage.iconUkraine,
@@ -31,11 +26,6 @@ const navigationItems = [
   {
     title: 'MrBeast',
     route: AppRoute.MR_BEAST,
-    icon: null,
-  },
-  {
-    title: 'UI Kit',
-    route: AppRoute.UI_KIT,
     icon: null,
   },
 ];

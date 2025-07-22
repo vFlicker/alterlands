@@ -1,6 +1,8 @@
 import { JSX } from 'react';
+import { Link } from 'react-router-dom';
 
 import { commonImage } from '~/shared/assets/images/common';
+import { AppRoute } from '~/shared/libs/router';
 
 type LogotypeProps = {
   className?: string;
@@ -8,9 +10,9 @@ type LogotypeProps = {
 
 function Logotype({ className }: LogotypeProps): JSX.Element {
   return (
-    <div className={className}>
+    <Link to={AppRoute.ALTERLANDS_FEED} className={className}>
       <img width="166" height="38" src={commonImage.logo} alt="Alterlands" />
-    </div>
+    </Link>
   );
 }
 

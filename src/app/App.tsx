@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { JSX, useEffect, useState } from 'react';
+import { JSX } from 'react';
 
 import { ScreenSizeWarningPage } from '~/pages/ScreenSizeWarningPage';
 import { Header } from '~/widgets/Header';
