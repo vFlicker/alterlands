@@ -4,6 +4,7 @@ import { JSX } from 'react';
 import { Icon } from '~/shared/ui/atoms/Icon';
 import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
+import { SliderFooter } from '~/shared/ui/molecules/SliderFooter';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
 import { IncomeHeader } from './IncomeHeader';
@@ -40,6 +41,7 @@ function IncomeWidget({
           ))}
         </StyledSocialList>
       </StyledIncomeTable>
+      <SliderFooter />
     </StyledIncomeWidgetWrapper>
   );
 }
@@ -54,6 +56,8 @@ const StyledIncomeTable = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  margin-bottom: 16px;
 `;
 
 const StyledSocialList = styled.div`
