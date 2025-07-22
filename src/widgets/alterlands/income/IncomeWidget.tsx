@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 import { JSX } from 'react';
 
+import { Icon } from '~/shared/ui/atoms/Icon';
+import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { widgetWrapperCss } from '~/shared/ui/css/widgetWrapperCss';
 import { WidgetHeader } from '~/shared/ui/molecules/WidgetHeader';
 
+import { IncomeHeader } from './IncomeHeader';
 import { IncomeItem } from './IncomeItem';
 import { IncomeData } from './incomeTypes';
 
@@ -20,12 +23,23 @@ function IncomeWidget({
 }: IncomeWidgetProps): JSX.Element {
   return (
     <StyledIncomeWidgetWrapper className={className}>
-      <WidgetHeader title={widgetTitle} />
-      <StyledSocialList>
-        {data.map((income) => (
-          <IncomeItem key={income.id} {...income} />
-        ))}
-      </StyledSocialList>
+      <WidgetHeader
+        title={widgetTitle}
+        actions={
+          <IconButton size="small" variant="filled" color="transparent">
+            <Icon name="icon-chevron-down" />
+          </IconButton>
+        }
+      />
+
+      <StyledIncomeTable>
+        <IncomeHeader />
+        <StyledSocialList>
+          {data.map((income) => (
+            <IncomeItem key={income.id} {...income} />
+          ))}
+        </StyledSocialList>
+      </StyledIncomeTable>
     </StyledIncomeWidgetWrapper>
   );
 }
@@ -36,8 +50,14 @@ const StyledIncomeWidgetWrapper = styled.div`
   ${widgetWrapperCss}
 `;
 
+const StyledIncomeTable = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
 const StyledSocialList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 `;
