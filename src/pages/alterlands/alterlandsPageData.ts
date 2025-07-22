@@ -3,6 +3,29 @@ import { avatarImage } from '~/shared/assets/images/avatars';
 import { AppRoute } from '~/shared/libs/router';
 import { IncomeData } from '~/widgets/alterlands/income';
 
+const amountCards = [
+  {
+    id: 1,
+    title: 'Total assets',
+    amount: '5,274.17',
+  },
+  {
+    id: 2,
+    title: 'Other Assets',
+    amount: '1,173.67 ',
+  },
+  {
+    id: 3,
+    title: 'Liabilities',
+    amount: '-780.00',
+  },
+  {
+    id: 4,
+    title: 'Net Assets',
+    amount: '4,494.17',
+  },
+];
+
 const alterlandsPageData = {
   header: {
     title: 'Alterlands',
@@ -14,28 +37,7 @@ const alterlandsPageData = {
       { name: 'Members', value: '100%' },
       { name: 'Consul', value: 'Maksym Rudenko', link: 'linkUrl' },
     ],
-    amountCards: [
-      {
-        id: 1,
-        title: 'Total assets',
-        amount: '5,274.17',
-      },
-      {
-        id: 2,
-        title: 'Other Assets',
-        amount: '1,173.67 ',
-      },
-      {
-        id: 3,
-        title: 'Liabilities',
-        amount: '-780.00',
-      },
-      {
-        id: 4,
-        title: 'Net Assets',
-        amount: '4,494.17',
-      },
-    ],
+    amountCards: amountCards,
   },
   menu: {
     first: [
@@ -529,6 +531,47 @@ const alterlandsPageData = {
         reportsAndDetails: ['Document', 'Contract', 'Act', 'Video', 'Photos'],
       },
     ] as IncomeData[],
+  },
+  assets: {
+    widgetTitle: 'Assets',
+    data: {
+      amountCards: [
+        ...amountCards,
+        {
+          id: 5,
+          title: 'Liquid Assets',
+          amount: '4,100.50',
+        },
+      ],
+      transactions: [
+        {
+          id: 1,
+          name: 'PE Rudenko Maksym (ФОП)',
+          records: ['UA123... (USD) — $0', 'UA456... (EUR) — €3000'],
+        },
+        {
+          id: 2,
+          name: 'Alterlands OÜ (Estonia)',
+          records: [
+            'EST123... (USD) — $0',
+            'ES456... (EUR) — €0',
+            'ETH: 1 ETH',
+            'BTC: 0.1 BTC',
+            'LTC: 47.05',
+          ],
+        },
+        {
+          id: 3,
+          name: 'Other',
+          records: ['UA123... (USD) — $0', 'UA456... (EUR) — €3000'],
+        },
+        {
+          id: 4,
+          name: 'Закритий для виду',
+          records: [],
+        },
+      ],
+    },
   },
 };
 
