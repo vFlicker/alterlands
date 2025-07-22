@@ -1,13 +1,21 @@
 import styled from '@emotion/styled';
-import { JSX } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
+import { ScreenSizeWarningPage } from '~/pages/ScreenSizeWarningPage';
 import { Header } from '~/widgets/Header';
 import { Sidebar } from '~/widgets/sidebar';
 
+import { useScreenWidth } from './hooks/useScreenWidth';
 import { withProviders } from './providers';
 import { Routing } from './Routing';
 
 function App(): JSX.Element {
+  const screenWidth = useScreenWidth();
+
+  if (screenWidth < 1280) {
+    return <ScreenSizeWarningPage />;
+  }
+
   return (
     <StyledAppWrapper>
       <Header />
