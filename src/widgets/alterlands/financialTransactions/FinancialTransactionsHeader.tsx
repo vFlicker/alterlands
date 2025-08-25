@@ -61,13 +61,13 @@ const StyledFinancialTransactionsHeaderWrapper = styled.div`
 const StyledLeft = styled.div`
   display: grid;
   gap: 24px;
-  grid-template-columns: 100px 100px 272px;
+  grid-template-columns: 100px 100px 200px;
 `;
 
 const StyledRight = styled.div`
   display: grid;
   gap: 24px;
-  grid-template-columns: 100px 100px 100px 100px minmax(400px, 1fr);
+  grid-template-columns: 100px 100px 100px 100px minmax(500px, 1fr);
 
   @media (max-width: 1900px) {
     grid-template-columns: 100px 100px 100px 100px;

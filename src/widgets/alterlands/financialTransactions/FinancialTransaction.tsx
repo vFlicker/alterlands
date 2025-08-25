@@ -49,8 +49,10 @@ function FinancialTransaction({
         <StyledAmount>{amount}</StyledAmount>
         <StyledCurrency>{currency}</StyledCurrency>
         <StyledReportsList>
-          {reportsAndDetails.map((report) => (
-            <li key={report}>{report}</li>
+          {reportsAndDetails.map(({ name, active }) => (
+            <StyledReportsItem isActive={active} key={name}>
+              {name}
+            </StyledReportsItem>
           ))}
           <StyledIconButton onClick={onClick}>
             <Icon name="icon-maximize" />
@@ -79,13 +81,13 @@ const StyledFinancialTransactionWrapper = styled.div`
 const StyledLeft = styled.div`
   display: grid;
   gap: 24px;
-  grid-template-columns: 100px 100px 272px;
+  grid-template-columns: 100px 100px 200px;
 `;
 
 const StyledRight = styled.div`
   display: grid;
   gap: 24px;
-  grid-template-columns: 100px 100px 100px 100px minmax(400px, 1fr);
+  grid-template-columns: 100px 100px 100px 100px minmax(500px, 1fr);
 
   @media (max-width: 1900px) {
     grid-template-columns: 100px 100px 100px 100px;
@@ -108,29 +110,38 @@ const StyledReportsList = styled.ul`
   flex-wrap: nowrap;
   gap: 33px;
 
-  li {
-    position: relative;
-
-    white-space: nowrap;
-    color: ${Color.ACCENT};
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -17px;
-      bottom: 0;
-
-      width: 1px;
-      height: 100%;
-
-      background-color: ${Color.WHITE_30};
-    }
-  }
-
   @media (max-width: 1900px) {
     display: none;
   }
+`;
+
+const StyledReportsItem = styled.li<{ isActive: boolean }>`
+  position: relative;
+
+  white-space: nowrap;
+  color: ${Color.ACCENT};
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -17px;
+    bottom: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: ${Color.WHITE_30};
+  }
+
+  ${({ isActive }) =>
+    !isActive &&
+    `
+    color: ${Color.ACCENT_3};
+    cursor: not-allowed;
+  `}
 `;
 
 const StyledChip = withAttrs(

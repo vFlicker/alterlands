@@ -15,5 +15,8 @@ export type FinancialTransactionData = {
   signedBy: string;
   amount: number;
   currency: string;
-  reportsAndDetails: string[];
+  reportsAndDetails: {
+    name: string;
+    active: boolean;
+  }[];
 };
