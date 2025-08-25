@@ -1,6 +1,6 @@
 import { ChipColor } from '~/shared/ui/atoms/Chip';
 
-import { Status } from './incomeTypes';
+import { Status } from './financialTransactionTypes';
 
 export const statusColor: Record<Status, `${ChipColor}`> = {
   'Ready to pay': 'yellow',

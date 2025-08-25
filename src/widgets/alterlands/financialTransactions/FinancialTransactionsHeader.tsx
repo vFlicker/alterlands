@@ -7,13 +7,15 @@ import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-type IncomeItemProps = {
+type FinancialTransactionsHeaderProps = {
   className?: string;
 };
 
-function IncomeHeader({ className }: IncomeItemProps): JSX.Element {
+function FinancialTransactionsHeader({
+  className,
+}: FinancialTransactionsHeaderProps): JSX.Element {
   return (
-    <StyledIncomeItemWrapper className={className}>
+    <StyledFinancialTransactionsHeaderWrapper className={className}>
       <StyledLeft>
         <StyledText>Transaction ID</StyledText>
         <StyledText>
@@ -41,13 +43,13 @@ function IncomeHeader({ className }: IncomeItemProps): JSX.Element {
         <StyledCurrency>Currency</StyledCurrency>
         <StyledReports>Reports & Transaction Details</StyledReports>
       </StyledRight>
-    </StyledIncomeItemWrapper>
+    </StyledFinancialTransactionsHeaderWrapper>
   );
 }
 
-export { IncomeHeader };
+export { FinancialTransactionsHeader };
 
-const StyledIncomeItemWrapper = styled.div`
+const StyledFinancialTransactionsHeaderWrapper = styled.div`
   display: flex;
   gap: 24px;
   justify-content: space-between;

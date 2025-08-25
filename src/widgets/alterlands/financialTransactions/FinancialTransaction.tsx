@@ -8,10 +8,10 @@ import { IconButton } from '~/shared/ui/atoms/IconButton';
 import { TypographyVariantToCss } from '~/shared/ui/atoms/Typography';
 import { withAttrs } from '~/shared/ui/withAttrs';
 
-import { statusColor } from './incomeItemConfig';
-import { IncomeData } from './incomeTypes';
+import { statusColor } from './financialTransactionsConfig';
+import { FinancialTransactionData } from './financialTransactionTypes';
 
-type IncomeItemProps = IncomeData & {
+type FinancialTransactionProps = FinancialTransactionData & {
   className?: string;
   onClick: () => void;
 };
@@ -24,7 +24,7 @@ const formatDateToEnUS = (date: Date): string => {
   });
 };
 
-function IncomeItem({
+function FinancialTransaction({
   className,
   amount,
   currency,
@@ -35,9 +35,9 @@ function IncomeItem({
   transactionId,
   transactionTitle,
   onClick,
-}: IncomeItemProps): JSX.Element {
+}: FinancialTransactionProps): JSX.Element {
   return (
-    <StyledIncomeItemWrapper className={className}>
+    <StyledFinancialTransactionWrapper className={className}>
       <StyledLeft>
         <div>{transactionId}</div>
         <div>{formatDateToEnUS(new Date(timestamp))}</div>
@@ -57,13 +57,13 @@ function IncomeItem({
           </StyledIconButton>
         </StyledReportsList>
       </StyledRight>
-    </StyledIncomeItemWrapper>
+    </StyledFinancialTransactionWrapper>
   );
 }
 
-export { IncomeItem };
+export { FinancialTransaction };
 
-const StyledIncomeItemWrapper = styled.div`
+const StyledFinancialTransactionWrapper = styled.div`
   display: flex;
   gap: 24px;
   justify-content: space-between;

@@ -6,7 +6,7 @@ export type Status =
   | 'Cancelled'
   | 'Rejected';
 
-export type IncomeData = {
+export type FinancialTransactionData = {
   id: number;
   transactionId: string;
   timestamp: string;
